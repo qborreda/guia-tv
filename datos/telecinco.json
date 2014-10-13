@@ -1,0 +1,486 @@
+{
+    "canal": {
+        "id": "1",
+        "nombre": "telecinco",
+        "nombre_completo": "Telecinco",
+        "icono": "/elmundo/iconos/v2.1/television/logos/grandes/telecinco.jpg"
+    },
+    "programas": [{
+        "id_programa": "150712",
+        "nombre": "La que se avecina",
+        "episodio": "Una exmujer, un ex presidente y una madre...",
+        "hora_inicio": 1405286100000,
+        "hora_fin": 1405291800000,
+        "duracion": 95,
+        "categoria": "1",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=150712&e=34478160-1"
+    }, {
+        "id_programa": "150711",
+        "nombre": "La que se avecina",
+        "episodio": "Un trilero, dos tortillas y el capricho de los...",
+        "hora_inicio": 1405291800000,
+        "hora_fin": 1405296900000,
+        "duracion": 85,
+        "categoria": "1",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=150711&e=34478161-1"
+    }, {
+        "id_programa": "1439143",
+        "nombre": "Premiere vip",
+        "episodio": "",
+        "hora_inicio": 1405296900000,
+        "hora_fin": 1405306800000,
+        "duracion": 165,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1439143&e=34482365-1"
+    }, {
+        "id_programa": "905934",
+        "nombre": "Fusión Sonora",
+        "episodio": "",
+        "hora_inicio": 1405306800000,
+        "hora_fin": 1405313700000,
+        "duracion": 115,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=905934&e=34035630-1"
+    }, {
+        "id_programa": "1130417",
+        "nombre": "Zumba GH Edition",
+        "episodio": "",
+        "hora_inicio": 1405313700000,
+        "hora_fin": 1405314000000,
+        "duracion": 5,
+        "categoria": "90",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1130417&e=34035631-1"
+    }, {
+        "id_programa": "1152379",
+        "nombre": "Informativos Telecinco matinal",
+        "episodio": "",
+        "hora_inicio": 1405314000000,
+        "hora_fin": 1405320900000,
+        "duracion": 115,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1152379&e=34035632-1"
+    }, {
+        "id_programa": "1440551",
+        "nombre": "El Programa del verano",
+        "episodio": "",
+        "hora_inicio": 1405320900000,
+        "hora_fin": 1405334700000,
+        "duracion": 230,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1440551&e=34503784-1"
+    }, {
+        "id_programa": "1440550",
+        "nombre": "Mujeres y hombres y viceversa",
+        "episodio": "",
+        "hora_inicio": 1405334700000,
+        "hora_fin": 1405341000000,
+        "duracion": 105,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1440550&e=34503785-1"
+    }, {
+        "id_programa": "1440549",
+        "nombre": "De buena ley",
+        "episodio": "",
+        "hora_inicio": 1405341000000,
+        "hora_fin": 1405342800000,
+        "duracion": 30,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1440549&e=34503786-1"
+    }, {
+        "id_programa": "1152401",
+        "nombre": "Informativos Telecinco mediodía",
+        "episodio": "",
+        "hora_inicio": 1405342800000,
+        "hora_fin": 1405346400000,
+        "duracion": 60,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1152401&e=34035636-1"
+    }, {
+        "id_programa": "1440548",
+        "nombre": "Sálvame diario",
+        "episodio": "",
+        "hora_inicio": 1405346400000,
+        "hora_fin": 1405361400000,
+        "duracion": 250,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1440548&e=34503788-1"
+    }, {
+        "id_programa": "1440547",
+        "nombre": "Pasapalabra",
+        "episodio": "",
+        "hora_inicio": 1405361400000,
+        "hora_fin": 1405364700000,
+        "duracion": 55,
+        "categoria": "INT_2",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1440547&e=34503789-1"
+    }, {
+        "id_programa": "1152403",
+        "nombre": "Informativos Telecinco noche",
+        "episodio": "",
+        "hora_inicio": 1405364700000,
+        "hora_fin": 1405368000000,
+        "duracion": 55,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1152403&e=34035639-1"
+    }, {
+        "id_programa": "1440546",
+        "nombre": "Cazamariposas Vip",
+        "episodio": "",
+        "hora_inicio": 1405368000000,
+        "hora_fin": 1405369800000,
+        "duracion": 30,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1440546&e=34503791-1"
+    }, {
+        "id_programa": "1440545",
+        "nombre": "Chiringuito de Pepe",
+        "episodio": "Abierto por vacaciones",
+        "hora_inicio": 1405369800000,
+        "hora_fin": 1405376100000,
+        "duracion": 105,
+        "categoria": "1",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1440545&e=34503792-1"
+    }, {
+        "id_programa": "1440544",
+        "nombre": "Hable con ellas",
+        "episodio": "",
+        "hora_inicio": 1405376100000,
+        "hora_fin": 1405384200000,
+        "duracion": 135,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1440544&e=34503793-1"
+    }, {
+        "id_programa": "1440543",
+        "nombre": "Premier casino",
+        "episodio": "",
+        "hora_inicio": 1405384200000,
+        "hora_fin": 1405393200000,
+        "duracion": 150,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1440543&e=34503794-1"
+    }, {
+        "id_programa": "905934",
+        "nombre": "Fusión Sonora",
+        "episodio": "",
+        "hora_inicio": 1405393200000,
+        "hora_fin": 1405398300000,
+        "duracion": 85,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=905934&e=34035644-1"
+    }, {
+        "id_programa": "1130417",
+        "nombre": "Zumba GH Edition",
+        "episodio": "",
+        "hora_inicio": 1405398300000,
+        "hora_fin": 1405400400000,
+        "duracion": 35,
+        "categoria": "90",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1130417&e=34035645-1"
+    }, {
+        "id_programa": "1152379",
+        "nombre": "Informativos Telecinco matinal",
+        "episodio": "",
+        "hora_inicio": 1405400400000,
+        "hora_fin": 1405407300000,
+        "duracion": 115,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1152379&e=34035646-1"
+    }, {
+        "id_programa": "1440849",
+        "nombre": "El Programa del verano",
+        "episodio": "",
+        "hora_inicio": 1405407300000,
+        "hora_fin": 1405421100000,
+        "duracion": 230,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1440849&e=34510854-1"
+    }, {
+        "id_programa": "1440848",
+        "nombre": "Mujeres y hombres y viceversa",
+        "episodio": "",
+        "hora_inicio": 1405421100000,
+        "hora_fin": 1405427400000,
+        "duracion": 105,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1440848&e=34510855-1"
+    }, {
+        "id_programa": "1440847",
+        "nombre": "De buena ley",
+        "episodio": "",
+        "hora_inicio": 1405427400000,
+        "hora_fin": 1405429200000,
+        "duracion": 30,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1440847&e=34510856-1"
+    }, {
+        "id_programa": "1152401",
+        "nombre": "Informativos Telecinco mediodía",
+        "episodio": "",
+        "hora_inicio": 1405429200000,
+        "hora_fin": 1405432800000,
+        "duracion": 60,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1152401&e=34035650-1"
+    }, {
+        "id_programa": "1440846",
+        "nombre": "Sálvame diario",
+        "episodio": "",
+        "hora_inicio": 1405432800000,
+        "hora_fin": 1405447800000,
+        "duracion": 250,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1440846&e=34510858-1"
+    }, {
+        "id_programa": "1440845",
+        "nombre": "Pasapalabra",
+        "episodio": "",
+        "hora_inicio": 1405447800000,
+        "hora_fin": 1405451100000,
+        "duracion": 55,
+        "categoria": "INT_2",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1440845&e=34510859-1"
+    }, {
+        "id_programa": "828351",
+        "nombre": "Informativos Telecinco",
+        "episodio": "",
+        "hora_inicio": 1405451100000,
+        "hora_fin": 1405454400000,
+        "duracion": 55,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=828351&e=34510860-1"
+    }, {
+        "id_programa": "1440843",
+        "nombre": "Hay una cosa que te quiero decir",
+        "episodio": "",
+        "hora_inicio": 1405454400000,
+        "hora_fin": 1405470600000,
+        "duracion": 270,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1440843&e=34510861-1"
+    }, {
+        "id_programa": "1440850",
+        "nombre": "Premier casino",
+        "episodio": "",
+        "hora_inicio": 1405470600000,
+        "hora_fin": 1405479600000,
+        "duracion": 150,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1440850&e=34510862-1"
+    }, {
+        "id_programa": "905934",
+        "nombre": "Fusión Sonora",
+        "episodio": "",
+        "hora_inicio": 1405479600000,
+        "hora_fin": 1405484700000,
+        "duracion": 85,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=905934&e=34035657-1"
+    }, {
+        "id_programa": "1130417",
+        "nombre": "Zumba GH Edition",
+        "episodio": "",
+        "hora_inicio": 1405484700000,
+        "hora_fin": 1405485000000,
+        "duracion": 5,
+        "categoria": "90",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1130417&e=34035658-1"
+    }, {
+        "id_programa": "1152379",
+        "nombre": "Informativos Telecinco matinal",
+        "episodio": "",
+        "hora_inicio": 1405485000000,
+        "hora_fin": 1405493700000,
+        "duracion": 145,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1152379&e=34035659-1"
+    }, {
+        "id_programa": "765522",
+        "nombre": "El programa de Ana Rosa",
+        "episodio": "",
+        "hora_inicio": 1405493700000,
+        "hora_fin": 1405507500000,
+        "duracion": 230,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=765522&e=34035660-1"
+    }, {
+        "id_programa": "720989",
+        "nombre": "Mujeres y hombres y viceversa",
+        "episodio": "",
+        "hora_inicio": 1405507500000,
+        "hora_fin": 1405513800000,
+        "duracion": 105,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=720989&e=34035661-1"
+    }, {
+        "id_programa": "755141",
+        "nombre": "De buena ley",
+        "episodio": "",
+        "hora_inicio": 1405513800000,
+        "hora_fin": 1405515600000,
+        "duracion": 30,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=755141&e=34035662-1"
+    }, {
+        "id_programa": "1152401",
+        "nombre": "Informativos Telecinco mediodía",
+        "episodio": "",
+        "hora_inicio": 1405515600000,
+        "hora_fin": 1405519200000,
+        "duracion": 60,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1152401&e=34035663-1"
+    }, {
+        "id_programa": "898763",
+        "nombre": "Sálvame diario",
+        "episodio": "",
+        "hora_inicio": 1405519200000,
+        "hora_fin": 1405534500000,
+        "duracion": 255,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=898763&e=34035664-1"
+    }, {
+        "id_programa": "776860",
+        "nombre": "Pasapalabra",
+        "episodio": "",
+        "hora_inicio": 1405534500000,
+        "hora_fin": 1405537500000,
+        "duracion": 50,
+        "categoria": "INT_2",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=776860&e=34035665-1"
+    }, {
+        "id_programa": "1152403",
+        "nombre": "Informativos Telecinco noche",
+        "episodio": "",
+        "hora_inicio": 1405537500000,
+        "hora_fin": 1405540800000,
+        "duracion": 55,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1152403&e=34035666-1"
+    }, {
+        "id_programa": "713409",
+        "nombre": "Programa sin determinar",
+        "episodio": "",
+        "hora_inicio": 1405540800000,
+        "hora_fin": 1405549800000,
+        "duracion": 150,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=713409&e=34035667-1"
+    }, {
+        "id_programa": "713409",
+        "nombre": "Programa sin determinar",
+        "episodio": "",
+        "hora_inicio": 1405549800000,
+        "hora_fin": 1405557000000,
+        "duracion": 120,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=713409&e=34035668-1"
+    }, {
+        "id_programa": "951195",
+        "nombre": "Premier casino",
+        "episodio": "",
+        "hora_inicio": 1405557000000,
+        "hora_fin": 1405566000000,
+        "duracion": 150,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=951195&e=34035669-1"
+    }, {
+        "id_programa": "905934",
+        "nombre": "Fusión Sonora",
+        "episodio": "",
+        "hora_inicio": 1405566000000,
+        "hora_fin": 1405571100000,
+        "duracion": 85,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=905934&e=34035670-1"
+    }, {
+        "id_programa": "1130417",
+        "nombre": "Zumba GH Edition",
+        "episodio": "",
+        "hora_inicio": 1405571100000,
+        "hora_fin": 1405571400000,
+        "duracion": 5,
+        "categoria": "90",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1130417&e=34035671-1"
+    }, {
+        "id_programa": "1152379",
+        "nombre": "Informativos Telecinco matinal",
+        "episodio": "",
+        "hora_inicio": 1405571400000,
+        "hora_fin": 1405580100000,
+        "duracion": 145,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1152379&e=34035672-1"
+    }, {
+        "id_programa": "765522",
+        "nombre": "El programa de Ana Rosa",
+        "episodio": "",
+        "hora_inicio": 1405580100000,
+        "hora_fin": 1405593900000,
+        "duracion": 230,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=765522&e=34035673-1"
+    }, {
+        "id_programa": "720989",
+        "nombre": "Mujeres y hombres y viceversa",
+        "episodio": "",
+        "hora_inicio": 1405593900000,
+        "hora_fin": 1405600200000,
+        "duracion": 105,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=720989&e=34035674-1"
+    }, {
+        "id_programa": "755141",
+        "nombre": "De buena ley",
+        "episodio": "",
+        "hora_inicio": 1405600200000,
+        "hora_fin": 1405602000000,
+        "duracion": 30,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=755141&e=34035675-1"
+    }, {
+        "id_programa": "1152401",
+        "nombre": "Informativos Telecinco mediodía",
+        "episodio": "",
+        "hora_inicio": 1405602000000,
+        "hora_fin": 1405605600000,
+        "duracion": 60,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1152401&e=34035676-1"
+    }, {
+        "id_programa": "898763",
+        "nombre": "Sálvame diario",
+        "episodio": "",
+        "hora_inicio": 1405605600000,
+        "hora_fin": 1405620900000,
+        "duracion": 255,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=898763&e=34035677-1"
+    }, {
+        "id_programa": "776860",
+        "nombre": "Pasapalabra",
+        "episodio": "",
+        "hora_inicio": 1405620900000,
+        "hora_fin": 1405623900000,
+        "duracion": 50,
+        "categoria": "INT_2",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=776860&e=34035678-1"
+    }, {
+        "id_programa": "1152403",
+        "nombre": "Informativos Telecinco noche",
+        "episodio": "",
+        "hora_inicio": 1405623900000,
+        "hora_fin": 1405627200000,
+        "duracion": 55,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1152403&e=34035679-1"
+    }, {
+        "id_programa": "713409",
+        "nombre": "Programa sin determinar",
+        "episodio": "",
+        "hora_inicio": 1405627200000,
+        "hora_fin": 1405636200000,
+        "duracion": 150,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=713409&e=34035680-1"
+    }]
+}

@@ -1,0 +1,736 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"array",
+				"arrayCompleto"
+			],
+			[
+				"rel",
+				"relative"
+			],
+			[
+				"lista",
+				"listaCanales"
+			],
+			[
+				"json",
+				"json_canales"
+			],
+			[
+				"j",
+				"json_canal"
+			],
+			[
+				"get",
+				"get	.get()"
+			],
+			[
+				"cargaD",
+				"cargaDatosCanal"
+			],
+			[
+				"canales",
+				"canalesUsuario"
+			],
+			[
+				"has",
+				"hasTouch"
+			],
+			[
+				"my",
+				"myDirective"
+			],
+			[
+				"module",
+				"verbose_module	AngularJS"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "index.html",
+			"settings":
+			{
+				"buffer_size": 2744,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "_/js/app.js",
+			"settings":
+			{
+				"buffer_size": 31893,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "_/scss/estilos.scss",
+			"settings":
+			{
+				"buffer_size": 18580,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 211.0,
+		"selected_items":
+		[
+			[
+				"upda",
+				"Package Control: Upgrade/Overwrite All Packages"
+			],
+			[
+				"pack",
+				"Package Control: Upgrade Package"
+			],
+			[
+				"list",
+				"Package Control: List Packages"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"sets",
+				"Set Syntax: Sass"
+			],
+			[
+				"pack list",
+				"Package Control: List Packages"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Upgrade/Overwrite All Packages"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"inden",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"packa li",
+				"Package Control: List Packages"
+			],
+			[
+				"sft",
+				"SFTP: Diff Remote File"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 450.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/Enrique.Borreda/Dropbox/_sandbox/guia-tv/.gitignore",
+		"/C/Users/Enrique.Borreda/Dropbox/_sandbox/guia-tv/stylesheets/screen.css",
+		"/C/Users/Quique/AppData/Roaming/Sublime Text 3/Packages/User/Package Control.sublime-settings",
+		"/C/Users/Quique/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/C/Users/Quique/Dropbox/_sandbox/guia-tv/_/js/app.js",
+		"/C/Users/Quique/Dropbox/_sandbox/guia-tv/_/scss/estilos.scss",
+		"/C/Users/Quique/AppData/Roaming/Sublime Text 3/Packages/User/JavaScript.sublime-settings",
+		"/C/Users/Quique/AppData/Roaming/Sublime Text 3/Packages/User/HTML.sublime-settings",
+		"/C/Users/Quique/Dropbox/Sublime/__User/Preferences.sublime-settings",
+		"/C/Users/Quique/AppData/Roaming/Sublime Text 3/Packages/User/Sass.sublime-settings",
+		"/C/Users/Quique/Dropbox/_sandbox/guia-tv/scripts/app.min.js",
+		"/C/Users/Quique/Dropbox/_sandbox/guia-tv/css/estilos.css",
+		"/Users/quique/Dropbox/_sandbox/guia-tv/js/app.js",
+		"/Users/quique/Dropbox/_sandbox/guia-tv/_scripts/_tv.js",
+		"/Users/quique/Dropbox/_sandbox/_angularjs/guia-tv/guia-tv-angular.sublime-project",
+		"/C/Users/Enrique.Borreda/AppData/Roaming/Sublime Text 3/Packages/User/JavaScript.sublime-settings",
+		"/C/Users/Enrique.Borreda/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/C/Users/Enrique.Borreda/AppData/Roaming/Sublime Text 3/Packages/Default/Default (Windows).sublime-keymap",
+		"/C/Users/Enrique.Borreda/Dropbox/_sandbox/guia-tv/gulpfile.js",
+		"/C/Users/Enrique.Borreda/Dropbox/_sandbox/guia-tv/datos/telecinco.json",
+		"/C/Users/Enrique.Borreda/Dropbox/_sandbox/guia-tv/datos/la1.js",
+		"/C/Users/Enrique.Borreda/Dropbox/_sandbox/guia-tv/datos/la1.json",
+		"/C/Users/Enrique.Borreda/Dropbox/_sandbox/guia-tv/datos/la2.json",
+		"/C/Users/Enrique.Borreda/Dropbox/_sandbox/guia-tv/datos/lasexta.json",
+		"/C/Users/Enrique.Borreda/Dropbox/_sandbox/guia-tv/datos/historia.json",
+		"/C/Users/Enrique.Borreda/Dropbox/_sandbox/guia-tv/datos/cuatro.json",
+		"/C/Users/Enrique.Borreda/Dropbox/_sandbox/guia-tv/datos/antena3.json",
+		"/C/Users/Enrique.Borreda/Dropbox/_sandbox/guia-tv/scripts/conversor.js",
+		"/C/Users/Enrique.Borreda/Dropbox/_sandbox/guia-tv/conversor.html",
+		"/C/Users/Enrique.Borreda/Dropbox/_sandbox/guia-tv/datos/antena3.js",
+		"/C/Users/Enrique.Borreda/Dropbox/_sandbox/guia-tv/datos/telecinco.js",
+		"/C/Users/Enrique.Borreda/Dropbox/_sandbox/guia-tv/datos/la2.js",
+		"/C/Users/Enrique.Borreda/Dropbox/_sandbox/guia-tv/datos/lasexta.js",
+		"/C/Users/Enrique.Borreda/Dropbox/_sandbox/guia-tv/datos/cuatro.js",
+		"/C/Users/Enrique.Borreda/Dropbox/_sandbox/guia-tv/datos/historia.js",
+		"/C/Users/Enrique.Borreda/Dropbox/_sandbox/guia-tv/js/app.js",
+		"/C/Users/Enrique.Borreda/Dropbox/_sandbox/guia-tv/css/estilos.css",
+		"/C/Users/Enrique.Borreda/Dropbox/_sandbox/_angularjs/guia-tv/app/datos/canales.json",
+		"/C/Users/Enrique.Borreda/Dropbox/_sandbox/encapsular_jquery/constructor.js",
+		"/C/Users/Enrique.Borreda/Dropbox/_sandbox/encapsular_jquery/index.html",
+		"/C/Users/Enrique.Borreda/Dropbox/_sandbox/_angularjs/guia-tv/app/controllers/canalController.js",
+		"/C/Users/Enrique.Borreda/Dropbox/_sandbox/guia-tv/package.json",
+		"/C/Users/Enrique.Borreda/Dropbox/_sandbox/guia-tv/guia-tv.sublime-project",
+		"/C/Users/Enrique.Borreda/Dropbox/_sandbox/guia-tv/guia-tv.sublime-workspace",
+		"/C/Users/Enrique.Borreda/Dropbox/_sandbox/_angularjs/guia-tv/_datos/antena3.js",
+		"/C/_codigo/elmundo/uedit/web/css_desktop/js/ue-valoracion.js",
+		"/C/_codigo/elmundo/uedit/web/css_desktop/js/ue-login.js",
+		"/C/_codigo/elmundo/uedit/web/css_desktop/js/ue-utils.js",
+		"/C/_codigo/elmundo/uedit/web/css_desktop/js/ue-publi.js",
+		"/C/_codigo/elmundo/sftp-config-alt.json",
+		"/C/_codigo/elmundo/uedit/web/css_desktop/js/json2.js",
+		"/C/_codigo/elmundo/uedit/web/css_desktop/scss/_comunes/_publicidad.scss",
+		"/C/Users/Enrique.Borreda/AppData/Roaming/Sublime Text 3/Packages/User/Sass.sublime-settings",
+		"/C/_codigo/elmundo/uedit/web/css_desktop/scss/_comunes/_botones.scss",
+		"/C/_codigo/elmundo/uedit/web/css_desktop/scss/_comunes/_variables.scss",
+		"/C/_codigo/elmundo/uedit/web/css_desktop/scss/base.scss",
+		"/C/_codigo/elmundo/uedit/web/css_desktop/scss/_componentes/_carrusel.scss",
+		"/C/_codigo/elmundo/uedit/web/css_desktop/js/bundle.js",
+		"/C/_codigo/elmundo/uedit/web/css_desktop/.gitignore",
+		"/C/_codigo/elmundo/uedit/web/css_movil/.gitignore",
+		"/C/_codigo/elmundo/uedit/web/css_movil/README",
+		"/C/_codigo/elmundo/uedit/web/css_desktop/js/showid_src.js",
+		"/C/_codigo/elmundo/uedit/web/css_desktop/js/ie8.js",
+		"/C/_codigo/elmundo/uedit/web/css_desktop/js/elmundomotor/personaliza2.js",
+		"/C/_codigo/elmundo/uedit/web/css_desktop/scss/ie9.scss",
+		"/C/Users/Enrique.Borreda/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/C/Users/Enrique.Borreda/AppData/Roaming/Sublime Text 3/Packages/User/CSS.sublime-settings",
+		"/C/_codigo/elmundo/uedit/web/css_registro/css/base.css",
+		"/C/_codigo/elmundo/uedit/web/css_registro/css/registro.css",
+		"/C/_codigo/elmundo/uedit/web/css_desktop/js/elmundomotor/funciones.js",
+		"/C/_codigo/elmundo/uedit/web/css_desktop/js/elmundomotor/buscador2.js",
+		"/C/_codigo/elmundo/uedit/web/css_desktop/js/economia/numeros.js",
+		"/C/_codigo/elmundo/uedit/web/css_desktop/js/elmundomotor/acordeon.js",
+		"/C/_codigo/elmundo/uedit/web/css_desktop/js/ue-redes_sociales.js",
+		"/C/_codigo/elmundo/uedit/web/css_desktop/js/ue-comentarios.js",
+		"/C/_codigo/elmundo/uedit/web/css_desktop/js/ue-tabs.js",
+		"/C/_codigo/elmundo/uedit/web/css_desktop/js/ue-lbox.js",
+		"/C/_codigo/elmundo/uedit/web/css_desktop/js/ue-debates-handler.js",
+		"/C/_codigo/elmundo/uedit/web/css_desktop/js/ue-album.js",
+		"/C/_codigo/elmundo/uedit/web/css_desktop/js/ue-ajax.js",
+		"/C/_codigo/elmundo/uedit/web/css_desktop/js/html5.js",
+		"/C/_codigo/elmundo/uedit/web/css_desktop/js/kaltura/ue-kaltura.js",
+		"/C/_codigo/elmundo/uedit/web/css_desktop/js/kaltura/kalturaLib.js",
+		"/C/_codigo/elmundo/uedit/web/css_desktop/js/deportes/f1.js",
+		"/C/_codigo/elmundo/uedit/web/css_desktop/js/deportes/tactil_dragDrop.js",
+		"/C/_codigo/elmundo/uedit/web/css_desktop/scss/_bloques/_flexibles.scss",
+		"/C/_codigo/elmundo/uedit/web/css_desktop/js/economia/indicesajax.js",
+		"/C/_codigo/elmundo/uedit/web/css_desktop/scss/_desarrollo/_desarrollo_footer.scss",
+		"/C/_codigo/elmundo/uedit/web/css_desktop/scss/_albumes/_album.scss",
+		"/C/Users/Enrique.Borreda/Desktop/estilo.css",
+		"/C/_codigo/elmundo/uedit/web/css_registro/js/ue-utils.js",
+		"/C/_codigo/elmundo/uedit/web/css_desktop/js/ue-login-externo.js",
+		"/C/Users/Enrique.Borreda/AppData/Roaming/Sublime Text 3/Packages/User/Git.sublime-settings",
+		"/C/_codigo/elmundo/sftp-config.json",
+		"/C/_codigo/elmundo/uedit/web/css_desktop/js/ue-carrusel.js",
+		"/C/Users/Enrique.Borreda/Documents/ng-book-code/7_beginning-directives/js/angular.js",
+		"/C/Users/Enrique.Borreda/Documents/ng-book-code/7_beginning-directives/js/wip.js",
+		"/C/_codigo/elmundo.sublime-workspace",
+		"/C/Users/Enrique.Borreda/Documents/_codigo/elmundo/uedit/web/css_movil/js/ue-utils.js",
+		"/C/Users/Enrique.Borreda/AppData/Roaming/Sublime Text 3/Packages/User/Default (Windows).sublime-keymap",
+		"/C/Users/Enrique.Borreda/Documents/_codigo/elmundo/uedit/web/css_desktop/js/ue-utils.js",
+		"/C/Users/Enrique.Borreda/Documents/_codigo/elmundo/uedit/web/css_desktop/js/ue-lbox.js",
+		"/C/Users/Enrique.Borreda/Documents/_codigo/elmundo/uedit/web/css_desktop/js/bundle.js",
+		"/C/Users/Enrique.Borreda/Documents/_codigo/elmundo/sftp-config.json",
+		"/C/Users/Enrique.Borreda/Documents/_sandbox/encapsular_jquery/css_desktop/sftp-config.json",
+		"/C/Users/Enrique.Borreda/Documents/_sandbox/encapsular_jquery/index.html",
+		"/C/Users/Enrique.Borreda/Documents/_sandbox/encapsular_jquery/constructor.js",
+		"/C/Users/Enrique.Borreda/AppData/Roaming/Sublime Text 3/Packages/User/HTML.sublime-settings"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"json_canales",
+			"arrayCanales",
+			"json_canales",
+			"));",
+			"arrayProgramas1",
+			"arrayProgramas1.push(new Programa(",
+			"));",
+			"arrayProgramas510",
+			"arrayProgramas510.push(new Programa(",
+			"));",
+			"arrayProgramas4",
+			"arrayProgramas4.push(new Programa(",
+			"));",
+			"arrayProgramas496",
+			"arrayProgramas496.push(new Programa(",
+			"));",
+			"new Programa(",
+			"arrayProgramas148",
+			"));",
+			"new Programa(",
+			"arrayProgramas3",
+			"));",
+			"((",
+			"new Programa",
+			"arrayProgramas2",
+			"'",
+			";\n"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"arrayCanales",
+			"]);",
+			"arrayProgramas",
+			"arrayProgramas.push([",
+			"]);",
+			"arrayProgramas",
+			"arrayProgramas.push([",
+			"]);",
+			"arrayProgramas",
+			"arrayProgramas.push([",
+			"]);",
+			"arrayProgramas",
+			"arrayProgramas.push([",
+			"]);",
+			"[",
+			"arrayProgramas",
+			"]);",
+			"[",
+			"arrayProgramas",
+			"]);",
+			"([",
+			"",
+			"arrayProgramas",
+			"\""
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2744,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								284,
+								284
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"SideBarAutoAddFoldersForOpenedFiles": 1,
+							"bh_regions":
+							[
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content"
+							],
+							"encoding_helper_encoding": "UTF-8",
+							"incomplete_sync": null,
+							"is_xml": false,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "_/js/app.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 31893,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1403,
+								1403
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content"
+							],
+							"encoding_helper_encoding": "UTF-8",
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 2,
+					"file": "_/scss/estilos.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 18580,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content"
+							],
+							"encoding_helper_encoding": "UTF-8",
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.5,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.sftp":
+	{
+		"height": 100.0
+	},
+	"project": "guia-tv.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"",
+				"C:\\Users\\Enrique.Borreda\\Dropbox\\_sandbox\\_angularjs\\guia-tv\\guia-tv-angular.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 174.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

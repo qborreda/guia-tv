@@ -1,0 +1,711 @@
+{
+    "canal": {
+        "id": "3",
+        "nombre": "la1",
+        "nombre_completo": "La 1",
+        "icono": "/elmundo/iconos/v2.1/television/logos/grandes/tve1.jpg"
+    },
+    "programas": [{
+        "id_programa": "6842",
+        "nombre": "Cine: La lista de Schindler",
+        "episodio": "",
+        "hora_inicio": 1405287900000,
+        "hora_fin": 1405299000000,
+        "duracion": 185,
+        "categoria": "104",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=6842&e=34478535-3"
+    }, {
+        "id_programa": "771414",
+        "nombre": "TVE es música",
+        "episodio": "",
+        "hora_inicio": 1405299000000,
+        "hora_fin": 1405310400000,
+        "duracion": 190,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=771414&e=34478536-3"
+    }, {
+        "id_programa": "788402",
+        "nombre": "Noticias 24h",
+        "episodio": "",
+        "hora_inicio": 1405310400000,
+        "hora_fin": 1405312200000,
+        "duracion": 30,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=788402&e=34267724-3"
+    }, {
+        "id_programa": "722754",
+        "nombre": "Telediario matinal",
+        "episodio": "",
+        "hora_inicio": 1405312200000,
+        "hora_fin": 1405314900000,
+        "duracion": 45,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=722754&e=34267725-3"
+    }, {
+        "id_programa": "1435427",
+        "nombre": "Vive San Fermín",
+        "episodio": "",
+        "hora_inicio": 1405314900000,
+        "hora_fin": 1405319400000,
+        "duracion": 75,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1435427&e=34501988-3"
+    }, {
+        "id_programa": "722754",
+        "nombre": "Telediario matinal",
+        "episodio": "",
+        "hora_inicio": 1405319400000,
+        "hora_fin": 1405325100000,
+        "duracion": 95,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=722754&e=34267727-3"
+    }, {
+        "id_programa": "859229",
+        "nombre": "La mañana de La 1",
+        "episodio": "",
+        "hora_inicio": 1405325100000,
+        "hora_fin": 1405339200000,
+        "duracion": 235,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=859229&e=34267728-3"
+    }, {
+        "id_programa": "796740",
+        "nombre": "Informativo territorial",
+        "episodio": "",
+        "hora_inicio": 1405339200000,
+        "hora_fin": 1405341000000,
+        "duracion": 30,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=796740&e=34267729-3"
+    }, {
+        "id_programa": "813189",
+        "nombre": "Corazón",
+        "episodio": "",
+        "hora_inicio": 1405341000000,
+        "hora_fin": 1405342800000,
+        "duracion": 30,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=813189&e=34267730-3"
+    }, {
+        "id_programa": "1179402",
+        "nombre": "Telediario 1",
+        "episodio": "",
+        "hora_inicio": 1405342800000,
+        "hora_fin": 1405346100000,
+        "duracion": 55,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1179402&e=34267731-3"
+    }, {
+        "id_programa": "1157420",
+        "nombre": "El tiempo TVE 1",
+        "episodio": "",
+        "hora_inicio": 1405346100000,
+        "hora_fin": 1405346400000,
+        "duracion": 5,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1157420&e=34267732-3"
+    }, {
+        "id_programa": "796740",
+        "nombre": "Informativo territorial",
+        "episodio": "",
+        "hora_inicio": 1405346400000,
+        "hora_fin": 1405346700000,
+        "duracion": 5,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=796740&e=34267733-3"
+    }, {
+        "id_programa": "1438940",
+        "nombre": "Tour de Francia: 10ª etapa: Mulhouse-La Planche des Belles Filles",
+        "episodio": "",
+        "hora_inicio": 1405346700000,
+        "hora_fin": 1405353600000,
+        "duracion": 115,
+        "categoria": "90",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1438940&e=34501996-3"
+    }, {
+        "id_programa": "249442",
+        "nombre": "Documental: Españoles en el mundo",
+        "episodio": "",
+        "hora_inicio": 1405353600000,
+        "hora_fin": 1405356900000,
+        "duracion": 55,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=249442&e=34501997-3"
+    }, {
+        "id_programa": "717921",
+        "nombre": "España directo",
+        "episodio": "",
+        "hora_inicio": 1405356900000,
+        "hora_fin": 1405362600000,
+        "duracion": 95,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=717921&e=34267735-3"
+    }, {
+        "id_programa": "1395623",
+        "nombre": "Aquí la Tierra",
+        "episodio": "",
+        "hora_inicio": 1405362600000,
+        "hora_fin": 1405364400000,
+        "duracion": 30,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1395623&e=34267736-3"
+    }, {
+        "id_programa": "766456",
+        "nombre": "Telediario 2",
+        "episodio": "",
+        "hora_inicio": 1405364400000,
+        "hora_fin": 1405368900000,
+        "duracion": 75,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=766456&e=34267737-3"
+    }, {
+        "id_programa": "1157421",
+        "nombre": "El tiempo TVE 2",
+        "episodio": "",
+        "hora_inicio": 1405368900000,
+        "hora_fin": 1405369800000,
+        "duracion": 15,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1157421&e=34267738-3"
+    }, {
+        "id_programa": "125313",
+        "nombre": "Cine: Chantaje",
+        "episodio": "",
+        "hora_inicio": 1405369800000,
+        "hora_fin": 1405375200000,
+        "duracion": 90,
+        "categoria": "104",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=125313&e=34502002-3"
+    }, {
+        "id_programa": "1440007",
+        "nombre": "Documental: Españoles en el mundo",
+        "episodio": "",
+        "hora_inicio": 1405375200000,
+        "hora_fin": 1405378500000,
+        "duracion": 55,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1440007&e=34502003-3"
+    }, {
+        "id_programa": "1063970",
+        "nombre": "Documental: Españoles en el mundo",
+        "episodio": "",
+        "hora_inicio": 1405378500000,
+        "hora_fin": 1405381500000,
+        "duracion": 50,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1063970&e=34502004-3"
+    }, {
+        "id_programa": "1333128",
+        "nombre": "En Portada",
+        "episodio": "",
+        "hora_inicio": 1405381500000,
+        "hora_fin": 1405383900000,
+        "duracion": 40,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1333128&e=34502005-3"
+    }, {
+        "id_programa": "771414",
+        "nombre": "TVE es música",
+        "episodio": "",
+        "hora_inicio": 1405383900000,
+        "hora_fin": 1405396800000,
+        "duracion": 215,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=771414&e=34267742-3"
+    }, {
+        "id_programa": "788402",
+        "nombre": "Noticias 24h",
+        "episodio": "",
+        "hora_inicio": 1405396800000,
+        "hora_fin": 1405398600000,
+        "duracion": 30,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=788402&e=34267743-3"
+    }, {
+        "id_programa": "722754",
+        "nombre": "Telediario matinal",
+        "episodio": "",
+        "hora_inicio": 1405398600000,
+        "hora_fin": 1405411500000,
+        "duracion": 215,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=722754&e=34267744-3"
+    }, {
+        "id_programa": "859229",
+        "nombre": "La mañana de La 1",
+        "episodio": "",
+        "hora_inicio": 1405411500000,
+        "hora_fin": 1405425600000,
+        "duracion": 235,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=859229&e=34267747-3"
+    }, {
+        "id_programa": "796740",
+        "nombre": "Informativo territorial",
+        "episodio": "",
+        "hora_inicio": 1405425600000,
+        "hora_fin": 1405427400000,
+        "duracion": 30,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=796740&e=34267748-3"
+    }, {
+        "id_programa": "813189",
+        "nombre": "Corazón",
+        "episodio": "",
+        "hora_inicio": 1405427400000,
+        "hora_fin": 1405429200000,
+        "duracion": 30,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=813189&e=34267749-3"
+    }, {
+        "id_programa": "1179402",
+        "nombre": "Telediario 1",
+        "episodio": "",
+        "hora_inicio": 1405429200000,
+        "hora_fin": 1405432500000,
+        "duracion": 55,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1179402&e=34267750-3"
+    }, {
+        "id_programa": "1157420",
+        "nombre": "El tiempo TVE 1",
+        "episodio": "",
+        "hora_inicio": 1405432500000,
+        "hora_fin": 1405432800000,
+        "duracion": 5,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1157420&e=34267751-3"
+    }, {
+        "id_programa": "796740",
+        "nombre": "Informativo territorial",
+        "episodio": "",
+        "hora_inicio": 1405432800000,
+        "hora_fin": 1405433100000,
+        "duracion": 5,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=796740&e=34267752-3"
+    }, {
+        "id_programa": "14389",
+        "nombre": "Cine: Atomic Twister",
+        "episodio": "",
+        "hora_inicio": 1405433100000,
+        "hora_fin": 1405438500000,
+        "duracion": 90,
+        "categoria": "104",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=14389&e=34502174-3"
+    }, {
+        "id_programa": "1050181",
+        "nombre": "Documental: Españoles en el mundo",
+        "episodio": "",
+        "hora_inicio": 1405438500000,
+        "hora_fin": 1405442400000,
+        "duracion": 65,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1050181&e=34502175-3"
+    }, {
+        "id_programa": "717921",
+        "nombre": "España directo",
+        "episodio": "",
+        "hora_inicio": 1405442400000,
+        "hora_fin": 1405449000000,
+        "duracion": 110,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=717921&e=34267754-3"
+    }, {
+        "id_programa": "1395623",
+        "nombre": "Aquí la Tierra",
+        "episodio": "",
+        "hora_inicio": 1405449000000,
+        "hora_fin": 1405450800000,
+        "duracion": 30,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1395623&e=34267755-3"
+    }, {
+        "id_programa": "766456",
+        "nombre": "Telediario 2",
+        "episodio": "",
+        "hora_inicio": 1405450800000,
+        "hora_fin": 1405455300000,
+        "duracion": 75,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=766456&e=34267756-3"
+    }, {
+        "id_programa": "1157421",
+        "nombre": "El tiempo TVE 2",
+        "episodio": "",
+        "hora_inicio": 1405455300000,
+        "hora_fin": 1405456200000,
+        "duracion": 15,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1157421&e=34267757-3"
+    }, {
+        "id_programa": "1121561",
+        "nombre": "Comando al sol",
+        "episodio": "",
+        "hora_inicio": 1405456200000,
+        "hora_fin": 1405459200000,
+        "duracion": 50,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1121561&e=34267758-3"
+    }, {
+        "id_programa": "1440028",
+        "nombre": "Capitan q",
+        "episodio": "",
+        "hora_inicio": 1405459200000,
+        "hora_fin": 1405462200000,
+        "duracion": 50,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1440028&e=34502181-3"
+    }, {
+        "id_programa": "1440027",
+        "nombre": "El pueblo mas divertido",
+        "episodio": "",
+        "hora_inicio": 1405462200000,
+        "hora_fin": 1405467900000,
+        "duracion": 95,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1440027&e=34502182-3"
+    }, {
+        "id_programa": "801027",
+        "nombre": "Informe semanal",
+        "episodio": "",
+        "hora_inicio": 1405467900000,
+        "hora_fin": 1405470900000,
+        "duracion": 50,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=801027&e=34267761-3"
+    }, {
+        "id_programa": "771414",
+        "nombre": "TVE es música",
+        "episodio": "",
+        "hora_inicio": 1405470900000,
+        "hora_fin": 1405483200000,
+        "duracion": 205,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=771414&e=34502184-3"
+    }, {
+        "id_programa": "788402",
+        "nombre": "Noticias 24h",
+        "episodio": "",
+        "hora_inicio": 1405483200000,
+        "hora_fin": 1405485000000,
+        "duracion": 30,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=788402&e=34267763-3"
+    }, {
+        "id_programa": "722754",
+        "nombre": "Telediario matinal",
+        "episodio": "",
+        "hora_inicio": 1405485000000,
+        "hora_fin": 1405497900000,
+        "duracion": 215,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=722754&e=34267764-3"
+    }, {
+        "id_programa": "859229",
+        "nombre": "La mañana de La 1",
+        "episodio": "",
+        "hora_inicio": 1405497900000,
+        "hora_fin": 1405512000000,
+        "duracion": 235,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=859229&e=34267767-3"
+    }, {
+        "id_programa": "796740",
+        "nombre": "Informativo territorial",
+        "episodio": "",
+        "hora_inicio": 1405512000000,
+        "hora_fin": 1405513800000,
+        "duracion": 30,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=796740&e=34267768-3"
+    }, {
+        "id_programa": "813189",
+        "nombre": "Corazón",
+        "episodio": "",
+        "hora_inicio": 1405513800000,
+        "hora_fin": 1405515600000,
+        "duracion": 30,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=813189&e=34267769-3"
+    }, {
+        "id_programa": "1179402",
+        "nombre": "Telediario 1",
+        "episodio": "",
+        "hora_inicio": 1405515600000,
+        "hora_fin": 1405518900000,
+        "duracion": 55,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1179402&e=34267770-3"
+    }, {
+        "id_programa": "1157420",
+        "nombre": "El tiempo TVE 1",
+        "episodio": "",
+        "hora_inicio": 1405518900000,
+        "hora_fin": 1405519200000,
+        "duracion": 5,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1157420&e=34267771-3"
+    }, {
+        "id_programa": "796740",
+        "nombre": "Informativo territorial",
+        "episodio": "",
+        "hora_inicio": 1405519200000,
+        "hora_fin": 1405519500000,
+        "duracion": 5,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=796740&e=34267772-3"
+    }, {
+        "id_programa": "1440033",
+        "nombre": "Ciclismo - tour de francia 2014",
+        "episodio": "",
+        "hora_inicio": 1405519500000,
+        "hora_fin": 1405524900000,
+        "duracion": 90,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1440033&e=34502212-3"
+    }, {
+        "id_programa": "1050181",
+        "nombre": "Documental: Españoles en el mundo",
+        "episodio": "",
+        "hora_inicio": 1405524900000,
+        "hora_fin": 1405528500000,
+        "duracion": 60,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1050181&e=34502213-3"
+    }, {
+        "id_programa": "717921",
+        "nombre": "España directo",
+        "episodio": "",
+        "hora_inicio": 1405528500000,
+        "hora_fin": 1405535400000,
+        "duracion": 115,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=717921&e=34267774-3"
+    }, {
+        "id_programa": "1395623",
+        "nombre": "Aquí la Tierra",
+        "episodio": "",
+        "hora_inicio": 1405535400000,
+        "hora_fin": 1405537200000,
+        "duracion": 30,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1395623&e=34267775-3"
+    }, {
+        "id_programa": "766456",
+        "nombre": "Telediario 2",
+        "episodio": "",
+        "hora_inicio": 1405537200000,
+        "hora_fin": 1405541700000,
+        "duracion": 75,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=766456&e=34267776-3"
+    }, {
+        "id_programa": "1157421",
+        "nombre": "El tiempo TVE 2",
+        "episodio": "",
+        "hora_inicio": 1405541700000,
+        "hora_fin": 1405542600000,
+        "duracion": 15,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1157421&e=34267777-3"
+    }, {
+        "id_programa": "1430695",
+        "nombre": "MasterChef",
+        "episodio": "",
+        "hora_inicio": 1405542600000,
+        "hora_fin": 1405550700000,
+        "duracion": 135,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1430695&e=34267778-3"
+    }, {
+        "id_programa": "1339324",
+        "nombre": "Cocina2",
+        "episodio": "",
+        "hora_inicio": 1405550700000,
+        "hora_fin": 1405552500000,
+        "duracion": 30,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1339324&e=34267779-3"
+    }, {
+        "id_programa": "1132224",
+        "nombre": "Documental: Un país para comérselo",
+        "episodio": "",
+        "hora_inicio": 1405552500000,
+        "hora_fin": 1405555500000,
+        "duracion": 50,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1132224&e=34267780-3"
+    }, {
+        "id_programa": "771414",
+        "nombre": "TVE es música",
+        "episodio": "",
+        "hora_inicio": 1405555500000,
+        "hora_fin": 1405569600000,
+        "duracion": 235,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=771414&e=34267781-3"
+    }, {
+        "id_programa": "788402",
+        "nombre": "Noticias 24h",
+        "episodio": "",
+        "hora_inicio": 1405569600000,
+        "hora_fin": 1405571400000,
+        "duracion": 30,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=788402&e=34267782-3"
+    }, {
+        "id_programa": "722754",
+        "nombre": "Telediario matinal",
+        "episodio": "",
+        "hora_inicio": 1405571400000,
+        "hora_fin": 1405574100000,
+        "duracion": 45,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=722754&e=34267783-3"
+    }, {
+        "id_programa": "80899",
+        "nombre": "Programa por determinar",
+        "episodio": "",
+        "hora_inicio": 1405574100000,
+        "hora_fin": 1405578600000,
+        "duracion": 75,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=80899&e=34277196-3"
+    }, {
+        "id_programa": "722754",
+        "nombre": "Telediario matinal",
+        "episodio": "",
+        "hora_inicio": 1405578600000,
+        "hora_fin": 1405584300000,
+        "duracion": 95,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=722754&e=34267785-3"
+    }, {
+        "id_programa": "859229",
+        "nombre": "La mañana de La 1",
+        "episodio": "",
+        "hora_inicio": 1405584300000,
+        "hora_fin": 1405598400000,
+        "duracion": 235,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=859229&e=34267786-3"
+    }, {
+        "id_programa": "796740",
+        "nombre": "Informativo territorial",
+        "episodio": "",
+        "hora_inicio": 1405598400000,
+        "hora_fin": 1405600200000,
+        "duracion": 30,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=796740&e=34267787-3"
+    }, {
+        "id_programa": "813189",
+        "nombre": "Corazón",
+        "episodio": "",
+        "hora_inicio": 1405600200000,
+        "hora_fin": 1405602000000,
+        "duracion": 30,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=813189&e=34267788-3"
+    }, {
+        "id_programa": "1179402",
+        "nombre": "Telediario 1",
+        "episodio": "",
+        "hora_inicio": 1405602000000,
+        "hora_fin": 1405605300000,
+        "duracion": 55,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1179402&e=34267789-3"
+    }, {
+        "id_programa": "1157420",
+        "nombre": "El tiempo TVE 1",
+        "episodio": "",
+        "hora_inicio": 1405605300000,
+        "hora_fin": 1405605600000,
+        "duracion": 5,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1157420&e=34267790-3"
+    }, {
+        "id_programa": "796740",
+        "nombre": "Informativo territorial",
+        "episodio": "",
+        "hora_inicio": 1405605600000,
+        "hora_fin": 1405605900000,
+        "duracion": 5,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=796740&e=34267791-3"
+    }, {
+        "id_programa": "1435425",
+        "nombre": "Ciclismo - tour de francia 2014",
+        "episodio": "",
+        "hora_inicio": 1405605900000,
+        "hora_fin": 1405611900000,
+        "duracion": 100,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1435425&e=34404730-3"
+    }, {
+        "id_programa": "1081211",
+        "nombre": "Amar en tiempos revueltos",
+        "episodio": "",
+        "hora_inicio": 1405611900000,
+        "hora_fin": 1405614600000,
+        "duracion": 45,
+        "categoria": "1",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1081211&e=34404731-3"
+    }, {
+        "id_programa": "717921",
+        "nombre": "España directo",
+        "episodio": "",
+        "hora_inicio": 1405614600000,
+        "hora_fin": 1405621800000,
+        "duracion": 120,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=717921&e=34267793-3"
+    }, {
+        "id_programa": "1395623",
+        "nombre": "Aquí la Tierra",
+        "episodio": "",
+        "hora_inicio": 1405621800000,
+        "hora_fin": 1405623600000,
+        "duracion": 30,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1395623&e=34267794-3"
+    }, {
+        "id_programa": "766456",
+        "nombre": "Telediario 2",
+        "episodio": "",
+        "hora_inicio": 1405623600000,
+        "hora_fin": 1405628100000,
+        "duracion": 75,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=766456&e=34267795-3"
+    }, {
+        "id_programa": "1157421",
+        "nombre": "El tiempo TVE 2",
+        "episodio": "",
+        "hora_inicio": 1405628100000,
+        "hora_fin": 1405629000000,
+        "duracion": 15,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1157421&e=34267796-3"
+    }, {
+        "id_programa": "1424624",
+        "nombre": "Mr Selfridge",
+        "episodio": "",
+        "hora_inicio": 1405629000000,
+        "hora_fin": 1405634400000,
+        "duracion": 90,
+        "categoria": "1",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1424624&e=34277209-3"
+    }, {
+        "id_programa": "898962",
+        "nombre": "Programación a determinar",
+        "episodio": "",
+        "hora_inicio": 1405634400000,
+        "hora_fin": 1405639800000,
+        "duracion": 90,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=898962&e=34404737-3"
+    }]
+}

@@ -1,0 +1,990 @@
+{
+    "canal": {
+        "id": "4",
+        "nombre": "la2",
+        "nombre_completo": "La 2",
+        "icono": "/elmundo/iconos/v2.1/television/logos/grandes/tve2.jpg"
+    },
+    "programas": [{
+        "id_programa": "1440067",
+        "nombre": "Millennium",
+        "episodio": "",
+        "hora_inicio": 1405288800000,
+        "hora_fin": 1405292400000,
+        "duracion": 60,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1440067&e=34502133-4"
+    }, {
+        "id_programa": "1289143",
+        "nombre": "Metrópolis",
+        "episodio": "",
+        "hora_inicio": 1405292400000,
+        "hora_fin": 1405294200000,
+        "duracion": 30,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1289143&e=34502134-4"
+    }, {
+        "id_programa": "1440065",
+        "nombre": "Documental: Artistas",
+        "episodio": "",
+        "hora_inicio": 1405294200000,
+        "hora_fin": 1405297200000,
+        "duracion": 50,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1440065&e=34502135-4"
+    }, {
+        "id_programa": "1264067",
+        "nombre": "Documental: Refugios nazis en el Mediterráneo",
+        "episodio": "",
+        "hora_inicio": 1405297200000,
+        "hora_fin": 1405300500000,
+        "duracion": 55,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1264067&e=34502136-4"
+    }, {
+        "id_programa": "1266167",
+        "nombre": "Documental: Refugios nazis en el Mediterráneo",
+        "episodio": "",
+        "hora_inicio": 1405300500000,
+        "hora_fin": 1405303800000,
+        "duracion": 55,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1266167&e=34502137-4"
+    }, {
+        "id_programa": "771414",
+        "nombre": "TVE es música",
+        "episodio": "",
+        "hora_inicio": 1405303800000,
+        "hora_fin": 1405312200000,
+        "duracion": 140,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=771414&e=34079785-4"
+    }, {
+        "id_programa": "898723",
+        "nombre": "That's English",
+        "episodio": "",
+        "hora_inicio": 1405312200000,
+        "hora_fin": 1405314000000,
+        "duracion": 30,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=898723&e=34268315-4"
+    }, {
+        "id_programa": "1119961",
+        "nombre": "Documental: Los colores del desierto",
+        "episodio": "",
+        "hora_inicio": 1405314000000,
+        "hora_fin": 1405317600000,
+        "duracion": 60,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1119961&e=34502140-4"
+    }, {
+        "id_programa": "1173565",
+        "nombre": "Tv English",
+        "episodio": "",
+        "hora_inicio": 1405317600000,
+        "hora_fin": 1405319100000,
+        "duracion": 25,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1173565&e=34268317-4"
+    }, {
+        "id_programa": "1030280",
+        "nombre": "Documental: Los años del NO-DO",
+        "episodio": "",
+        "hora_inicio": 1405319100000,
+        "hora_fin": 1405322700000,
+        "duracion": 60,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1030280&e=34502142-4"
+    }, {
+        "id_programa": "1166419",
+        "nombre": "Biodiario",
+        "episodio": "",
+        "hora_inicio": 1405322700000,
+        "hora_fin": 1405323000000,
+        "duracion": 5,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1166419&e=34502143-4"
+    }, {
+        "id_programa": "1193579",
+        "nombre": "Documental: Los oficios de la cultura",
+        "episodio": "",
+        "hora_inicio": 1405323000000,
+        "hora_fin": 1405324800000,
+        "duracion": 30,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1193579&e=34502144-4"
+    }, {
+        "id_programa": "721208",
+        "nombre": "España en comunidad",
+        "episodio": "",
+        "hora_inicio": 1405324800000,
+        "hora_fin": 1405326600000,
+        "duracion": 30,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=721208&e=34268321-4"
+    }, {
+        "id_programa": "1440062",
+        "nombre": "Zoom Tendencias",
+        "episodio": "",
+        "hora_inicio": 1405326600000,
+        "hora_fin": 1405327500000,
+        "duracion": 15,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1440062&e=34502146-4"
+    }, {
+        "id_programa": "1189741",
+        "nombre": "Documental: Kennedy y Castro: la historia secreta",
+        "episodio": "",
+        "hora_inicio": 1405327500000,
+        "hora_fin": 1405330800000,
+        "duracion": 55,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1189741&e=34502147-4"
+    }, {
+        "id_programa": "1016959",
+        "nombre": "Documental: Viaje por la tierra",
+        "episodio": "",
+        "hora_inicio": 1405330800000,
+        "hora_fin": 1405334400000,
+        "duracion": 60,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1016959&e=34502148-4"
+    }, {
+        "id_programa": "792691",
+        "nombre": "Documental: Los misterios del alce",
+        "episodio": "",
+        "hora_inicio": 1405334400000,
+        "hora_fin": 1405337700000,
+        "duracion": 55,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=792691&e=34502149-4"
+    }, {
+        "id_programa": "1241786",
+        "nombre": "Don Matteo",
+        "episodio": "Un buen año",
+        "hora_inicio": 1405337700000,
+        "hora_fin": 1405341300000,
+        "duracion": 60,
+        "categoria": "1",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1241786&e=34502150-4"
+    }, {
+        "id_programa": "1440059",
+        "nombre": "Verano azul",
+        "episodio": "La burbuja",
+        "hora_inicio": 1405341300000,
+        "hora_fin": 1405344600000,
+        "duracion": 55,
+        "categoria": "1",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1440059&e=34502151-4"
+    }, {
+        "id_programa": "813029",
+        "nombre": "Saber y ganar",
+        "episodio": "",
+        "hora_inicio": 1405344600000,
+        "hora_fin": 1405346700000,
+        "duracion": 35,
+        "categoria": "INT_2",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=813029&e=34268328-4"
+    }, {
+        "id_programa": "633870",
+        "nombre": "Documental: Colibríes: magia en el aire",
+        "episodio": "",
+        "hora_inicio": 1405346700000,
+        "hora_fin": 1405350000000,
+        "duracion": 55,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=633870&e=34502153-4"
+    }, {
+        "id_programa": "1109662",
+        "nombre": "Documental: Gigantes de las profundidades",
+        "episodio": "",
+        "hora_inicio": 1405350000000,
+        "hora_fin": 1405353600000,
+        "duracion": 60,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1109662&e=34502154-4"
+    }, {
+        "id_programa": "1006306",
+        "nombre": "Documental: La historia de la vida",
+        "episodio": "",
+        "hora_inicio": 1405353600000,
+        "hora_fin": 1405356300000,
+        "duracion": 45,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1006306&e=34502155-4"
+    }, {
+        "id_programa": "868302",
+        "nombre": "Documental: Paraí­sos cercanos",
+        "episodio": "",
+        "hora_inicio": 1405356300000,
+        "hora_fin": 1405359600000,
+        "duracion": 55,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=868302&e=34502156-4"
+    }, {
+        "id_programa": "609136",
+        "nombre": "Documental: Pequeños universos-El universo escondido",
+        "episodio": "",
+        "hora_inicio": 1405359600000,
+        "hora_fin": 1405361100000,
+        "duracion": 25,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=609136&e=34502157-4"
+    }, {
+        "id_programa": "1440057",
+        "nombre": "Don Matteo",
+        "episodio": "El último salto",
+        "hora_inicio": 1405361100000,
+        "hora_fin": 1405364700000,
+        "duracion": 60,
+        "categoria": "1",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1440057&e=34502158-4"
+    }, {
+        "id_programa": "1042405",
+        "nombre": "Documental: Matar al camarada Stalin",
+        "episodio": "",
+        "hora_inicio": 1405364700000,
+        "hora_fin": 1405368000000,
+        "duracion": 55,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1042405&e=34502159-4"
+    }, {
+        "id_programa": "691326",
+        "nombre": "Cine: Gomorra",
+        "episodio": "",
+        "hora_inicio": 1405368000000,
+        "hora_fin": 1405376100000,
+        "duracion": 135,
+        "categoria": "104",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=691326&e=34502160-4"
+    }, {
+        "id_programa": "813050",
+        "nombre": "La 2 Noticias",
+        "episodio": "",
+        "hora_inicio": 1405376100000,
+        "hora_fin": 1405377000000,
+        "duracion": 15,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=813050&e=34268336-4"
+    }, {
+        "id_programa": "252447",
+        "nombre": "Comisario Brunetti",
+        "episodio": "El peor remedio",
+        "hora_inicio": 1405377000000,
+        "hora_fin": 1405382400000,
+        "duracion": 90,
+        "categoria": "1",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=252447&e=34502162-4"
+    }, {
+        "id_programa": "1439978",
+        "nombre": "Festivales de verano",
+        "episodio": "",
+        "hora_inicio": 1405382400000,
+        "hora_fin": 1405386600000,
+        "duracion": 70,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1439978&e=34502163-4"
+    }, {
+        "id_programa": "1280127",
+        "nombre": "Cine: Lo que sé de Lola",
+        "episodio": "",
+        "hora_inicio": 1405386600000,
+        "hora_fin": 1405392900000,
+        "duracion": 105,
+        "categoria": "104",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1280127&e=34502164-4"
+    }, {
+        "id_programa": "771414",
+        "nombre": "TVE es música",
+        "episodio": "",
+        "hora_inicio": 1405392900000,
+        "hora_fin": 1405398600000,
+        "duracion": 95,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=771414&e=34268340-4"
+    }, {
+        "id_programa": "898723",
+        "nombre": "That's English",
+        "episodio": "",
+        "hora_inicio": 1405398600000,
+        "hora_fin": 1405400400000,
+        "duracion": 30,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=898723&e=34268341-4"
+    }, {
+        "id_programa": "719612",
+        "nombre": "Documental: Documental",
+        "episodio": "",
+        "hora_inicio": 1405400400000,
+        "hora_fin": 1405404000000,
+        "duracion": 60,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=719612&e=34268342-4"
+    }, {
+        "id_programa": "1173565",
+        "nombre": "Tv English",
+        "episodio": "",
+        "hora_inicio": 1405404000000,
+        "hora_fin": 1405405500000,
+        "duracion": 25,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1173565&e=34268343-4"
+    }, {
+        "id_programa": "1021860",
+        "nombre": "Documental: Los años del NO-DO",
+        "episodio": "",
+        "hora_inicio": 1405405500000,
+        "hora_fin": 1405409100000,
+        "duracion": 60,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1021860&e=34406654-4"
+    }, {
+        "id_programa": "830149",
+        "nombre": "Biodiario",
+        "episodio": "",
+        "hora_inicio": 1405409100000,
+        "hora_fin": 1405409400000,
+        "duracion": 5,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=830149&e=34268345-4"
+    }, {
+        "id_programa": "842047",
+        "nombre": "Documental: Los oficios de la cultura",
+        "episodio": "",
+        "hora_inicio": 1405409400000,
+        "hora_fin": 1405411200000,
+        "duracion": 30,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=842047&e=34406656-4"
+    }, {
+        "id_programa": "1169055",
+        "nombre": "El escarabajo verde",
+        "episodio": "",
+        "hora_inicio": 1405411200000,
+        "hora_fin": 1405413000000,
+        "duracion": 30,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1169055&e=34268347-4"
+    }, {
+        "id_programa": "908988",
+        "nombre": "Cámara abierta 2.0",
+        "episodio": "",
+        "hora_inicio": 1405413000000,
+        "hora_fin": 1405413900000,
+        "duracion": 15,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=908988&e=34268348-4"
+    }, {
+        "id_programa": "631185",
+        "nombre": "Documental: Docufilia",
+        "episodio": "",
+        "hora_inicio": 1405413900000,
+        "hora_fin": 1405417200000,
+        "duracion": 55,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=631185&e=34268349-4"
+    }, {
+        "id_programa": "719612",
+        "nombre": "Documental: Documental",
+        "episodio": "",
+        "hora_inicio": 1405417200000,
+        "hora_fin": 1405420200000,
+        "duracion": 50,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=719612&e=34502249-4"
+    }, {
+        "id_programa": "719612",
+        "nombre": "Documental: Documental",
+        "episodio": "",
+        "hora_inicio": 1405420200000,
+        "hora_fin": 1405423500000,
+        "duracion": 55,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=719612&e=34268351-4"
+    }, {
+        "id_programa": "1186053",
+        "nombre": "Don Matteo",
+        "episodio": "",
+        "hora_inicio": 1405423500000,
+        "hora_fin": 1405427100000,
+        "duracion": 60,
+        "categoria": "1",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1186053&e=34268352-4"
+    }, {
+        "id_programa": "724454",
+        "nombre": "Verano azul",
+        "episodio": "",
+        "hora_inicio": 1405427100000,
+        "hora_fin": 1405431000000,
+        "duracion": 65,
+        "categoria": "1",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=724454&e=34268353-4"
+    }, {
+        "id_programa": "813029",
+        "nombre": "Saber y ganar",
+        "episodio": "",
+        "hora_inicio": 1405431000000,
+        "hora_fin": 1405433100000,
+        "duracion": 35,
+        "categoria": "INT_2",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=813029&e=34268354-4"
+    }, {
+        "id_programa": "757206",
+        "nombre": "Documental: Grandes documentales",
+        "episodio": "",
+        "hora_inicio": 1405433100000,
+        "hora_fin": 1405439400000,
+        "duracion": 105,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=757206&e=34268355-4"
+    }, {
+        "id_programa": "631185",
+        "nombre": "Documental: Docufilia",
+        "episodio": "",
+        "hora_inicio": 1405439400000,
+        "hora_fin": 1405442700000,
+        "duracion": 55,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=631185&e=34268356-4"
+    }, {
+        "id_programa": "699265",
+        "nombre": "Documental: Paraí­sos cercanos",
+        "episodio": "",
+        "hora_inicio": 1405442700000,
+        "hora_fin": 1405446000000,
+        "duracion": 55,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=699265&e=34268357-4"
+    }, {
+        "id_programa": "730056",
+        "nombre": "Documental: El universo escondido",
+        "episodio": "",
+        "hora_inicio": 1405446000000,
+        "hora_fin": 1405447800000,
+        "duracion": 30,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=730056&e=34268358-4"
+    }, {
+        "id_programa": "1186053",
+        "nombre": "Don Matteo",
+        "episodio": "",
+        "hora_inicio": 1405447800000,
+        "hora_fin": 1405451100000,
+        "duracion": 55,
+        "categoria": "1",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1186053&e=34268359-4"
+    }, {
+        "id_programa": "631185",
+        "nombre": "Documental: Docufilia",
+        "episodio": "",
+        "hora_inicio": 1405451100000,
+        "hora_fin": 1405454400000,
+        "duracion": 55,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=631185&e=34268360-4"
+    }, {
+        "id_programa": "9575",
+        "nombre": "Cine: El perro del hortelano",
+        "episodio": "",
+        "hora_inicio": 1405454400000,
+        "hora_fin": 1405461000000,
+        "duracion": 110,
+        "categoria": "104",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=9575&e=34502260-4"
+    }, {
+        "id_programa": "813050",
+        "nombre": "La 2 Noticias",
+        "episodio": "",
+        "hora_inicio": 1405461000000,
+        "hora_fin": 1405461900000,
+        "duracion": 15,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=813050&e=34268363-4"
+    }, {
+        "id_programa": "54138",
+        "nombre": "Cine: Cyrano de Bergerac",
+        "episodio": "",
+        "hora_inicio": 1405461900000,
+        "hora_fin": 1405470300000,
+        "duracion": 140,
+        "categoria": "104",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=54138&e=34502262-4"
+    }, {
+        "id_programa": "616973",
+        "nombre": "Festivales de verano",
+        "episodio": "",
+        "hora_inicio": 1405470300000,
+        "hora_fin": 1405474500000,
+        "duracion": 70,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=616973&e=34502263-4"
+    }, {
+        "id_programa": "687750",
+        "nombre": "Zoom Net",
+        "episodio": "",
+        "hora_inicio": 1405474500000,
+        "hora_fin": 1405475400000,
+        "duracion": 15,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=687750&e=34406675-4"
+    }, {
+        "id_programa": "771414",
+        "nombre": "TVE es música",
+        "episodio": "",
+        "hora_inicio": 1405475400000,
+        "hora_fin": 1405485000000,
+        "duracion": 160,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=771414&e=34268366-4"
+    }, {
+        "id_programa": "898723",
+        "nombre": "That's English",
+        "episodio": "",
+        "hora_inicio": 1405485000000,
+        "hora_fin": 1405486800000,
+        "duracion": 30,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=898723&e=34268367-4"
+    }, {
+        "id_programa": "719612",
+        "nombre": "Documental: Documental",
+        "episodio": "",
+        "hora_inicio": 1405486800000,
+        "hora_fin": 1405490400000,
+        "duracion": 60,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=719612&e=34268368-4"
+    }, {
+        "id_programa": "1173565",
+        "nombre": "Tv English",
+        "episodio": "",
+        "hora_inicio": 1405490400000,
+        "hora_fin": 1405491900000,
+        "duracion": 25,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1173565&e=34268369-4"
+    }, {
+        "id_programa": "1021860",
+        "nombre": "Documental: Los años del NO-DO",
+        "episodio": "",
+        "hora_inicio": 1405491900000,
+        "hora_fin": 1405495500000,
+        "duracion": 60,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1021860&e=34406680-4"
+    }, {
+        "id_programa": "830149",
+        "nombre": "Biodiario",
+        "episodio": "",
+        "hora_inicio": 1405495500000,
+        "hora_fin": 1405495800000,
+        "duracion": 5,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=830149&e=34268371-4"
+    }, {
+        "id_programa": "842047",
+        "nombre": "Documental: Los oficios de la cultura",
+        "episodio": "",
+        "hora_inicio": 1405495800000,
+        "hora_fin": 1405497600000,
+        "duracion": 30,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=842047&e=34406682-4"
+    }, {
+        "id_programa": "721209",
+        "nombre": "Agrosfera",
+        "episodio": "",
+        "hora_inicio": 1405497600000,
+        "hora_fin": 1405499400000,
+        "duracion": 30,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=721209&e=34268373-4"
+    }, {
+        "id_programa": "687750",
+        "nombre": "Zoom Net",
+        "episodio": "",
+        "hora_inicio": 1405499400000,
+        "hora_fin": 1405500300000,
+        "duracion": 15,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=687750&e=34268374-4"
+    }, {
+        "id_programa": "631185",
+        "nombre": "Documental: Docufilia",
+        "episodio": "",
+        "hora_inicio": 1405500300000,
+        "hora_fin": 1405503600000,
+        "duracion": 55,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=631185&e=34502274-4"
+    }, {
+        "id_programa": "631185",
+        "nombre": "Documental: Docufilia",
+        "episodio": "",
+        "hora_inicio": 1405503600000,
+        "hora_fin": 1405507200000,
+        "duracion": 60,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=631185&e=34268375-4"
+    }, {
+        "id_programa": "719612",
+        "nombre": "Documental: Documental",
+        "episodio": "",
+        "hora_inicio": 1405507200000,
+        "hora_fin": 1405510800000,
+        "duracion": 60,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=719612&e=34268377-4"
+    }, {
+        "id_programa": "1186053",
+        "nombre": "Don Matteo",
+        "episodio": "",
+        "hora_inicio": 1405510800000,
+        "hora_fin": 1405514400000,
+        "duracion": 60,
+        "categoria": "1",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1186053&e=34268378-4"
+    }, {
+        "id_programa": "724454",
+        "nombre": "Verano azul",
+        "episodio": "",
+        "hora_inicio": 1405514400000,
+        "hora_fin": 1405517400000,
+        "duracion": 50,
+        "categoria": "1",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=724454&e=34268379-4"
+    }, {
+        "id_programa": "813029",
+        "nombre": "Saber y ganar",
+        "episodio": "",
+        "hora_inicio": 1405517400000,
+        "hora_fin": 1405519500000,
+        "duracion": 35,
+        "categoria": "INT_2",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=813029&e=34268380-4"
+    }, {
+        "id_programa": "757206",
+        "nombre": "Documental: Grandes documentales",
+        "episodio": "",
+        "hora_inicio": 1405519500000,
+        "hora_fin": 1405525800000,
+        "duracion": 105,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=757206&e=34268381-4"
+    }, {
+        "id_programa": "631185",
+        "nombre": "Documental: Docufilia",
+        "episodio": "",
+        "hora_inicio": 1405525800000,
+        "hora_fin": 1405529100000,
+        "duracion": 55,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=631185&e=34268382-4"
+    }, {
+        "id_programa": "699265",
+        "nombre": "Documental: Paraí­sos cercanos",
+        "episodio": "",
+        "hora_inicio": 1405529100000,
+        "hora_fin": 1405532700000,
+        "duracion": 60,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=699265&e=34268383-4"
+    }, {
+        "id_programa": "730056",
+        "nombre": "Documental: El universo escondido",
+        "episodio": "",
+        "hora_inicio": 1405532700000,
+        "hora_fin": 1405534200000,
+        "duracion": 25,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=730056&e=34268384-4"
+    }, {
+        "id_programa": "1186053",
+        "nombre": "Don Matteo",
+        "episodio": "",
+        "hora_inicio": 1405534200000,
+        "hora_fin": 1405537500000,
+        "duracion": 55,
+        "categoria": "1",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1186053&e=34268385-4"
+    }, {
+        "id_programa": "631185",
+        "nombre": "Documental: Docufilia",
+        "episodio": "",
+        "hora_inicio": 1405537500000,
+        "hora_fin": 1405540800000,
+        "duracion": 55,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=631185&e=34268386-4"
+    }, {
+        "id_programa": "1041307",
+        "nombre": "¡Cómo nos reímos!",
+        "episodio": "",
+        "hora_inicio": 1405540800000,
+        "hora_fin": 1405548000000,
+        "duracion": 120,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1041307&e=34406697-4"
+    }, {
+        "id_programa": "813050",
+        "nombre": "La 2 Noticias",
+        "episodio": "",
+        "hora_inicio": 1405548000000,
+        "hora_fin": 1405548900000,
+        "duracion": 15,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=813050&e=34268388-4"
+    }, {
+        "id_programa": "811523",
+        "nombre": "Documentos TV",
+        "episodio": "",
+        "hora_inicio": 1405548900000,
+        "hora_fin": 1405552500000,
+        "duracion": 60,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=811523&e=34268389-4"
+    }, {
+        "id_programa": "719612",
+        "nombre": "Documental: Documental",
+        "episodio": "",
+        "hora_inicio": 1405552500000,
+        "hora_fin": 1405555500000,
+        "duracion": 50,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=719612&e=34406700-4"
+    }, {
+        "id_programa": "616973",
+        "nombre": "Festivales de verano",
+        "episodio": "",
+        "hora_inicio": 1405555500000,
+        "hora_fin": 1405559700000,
+        "duracion": 70,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=616973&e=34406701-4"
+    }, {
+        "id_programa": "1437825",
+        "nombre": "Documental: La noche temática",
+        "episodio": "",
+        "hora_inicio": 1405559700000,
+        "hora_fin": 1405560000000,
+        "duracion": 5,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1437825&e=34502291-4"
+    }, {
+        "id_programa": "1437824",
+        "nombre": "Documental: Amor y sexo bajo la ocupación nazi",
+        "episodio": "",
+        "hora_inicio": 1405560000000,
+        "hora_fin": 1405564500000,
+        "duracion": 75,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1437824&e=34502292-4"
+    }, {
+        "id_programa": "1437823",
+        "nombre": "Documental: Las mujeres de Hitler",
+        "episodio": "",
+        "hora_inicio": 1405564500000,
+        "hora_fin": 1405567500000,
+        "duracion": 50,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1437823&e=34502293-4"
+    }, {
+        "id_programa": "771414",
+        "nombre": "TVE es música",
+        "episodio": "",
+        "hora_inicio": 1405567500000,
+        "hora_fin": 1405571400000,
+        "duracion": 65,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=771414&e=34268393-4"
+    }, {
+        "id_programa": "898723",
+        "nombre": "That's English",
+        "episodio": "",
+        "hora_inicio": 1405571400000,
+        "hora_fin": 1405573200000,
+        "duracion": 30,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=898723&e=34268394-4"
+    }, {
+        "id_programa": "719612",
+        "nombre": "Documental: Documental",
+        "episodio": "",
+        "hora_inicio": 1405573200000,
+        "hora_fin": 1405576800000,
+        "duracion": 60,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=719612&e=34268395-4"
+    }, {
+        "id_programa": "1173565",
+        "nombre": "Tv English",
+        "episodio": "",
+        "hora_inicio": 1405576800000,
+        "hora_fin": 1405578300000,
+        "duracion": 25,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1173565&e=34268396-4"
+    }, {
+        "id_programa": "1021860",
+        "nombre": "Documental: Los años del NO-DO",
+        "episodio": "",
+        "hora_inicio": 1405578300000,
+        "hora_fin": 1405581900000,
+        "duracion": 60,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1021860&e=34406707-4"
+    }, {
+        "id_programa": "830149",
+        "nombre": "Biodiario",
+        "episodio": "",
+        "hora_inicio": 1405581900000,
+        "hora_fin": 1405582200000,
+        "duracion": 5,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=830149&e=34268398-4"
+    }, {
+        "id_programa": "842047",
+        "nombre": "Documental: Los oficios de la cultura",
+        "episodio": "",
+        "hora_inicio": 1405582200000,
+        "hora_fin": 1405584000000,
+        "duracion": 30,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=842047&e=34406709-4"
+    }, {
+        "id_programa": "1030255",
+        "nombre": "Pueblo de Dios",
+        "episodio": "",
+        "hora_inicio": 1405584000000,
+        "hora_fin": 1405585800000,
+        "duracion": 30,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1030255&e=34268400-4"
+    }, {
+        "id_programa": "631185",
+        "nombre": "Documental: Docufilia",
+        "episodio": "",
+        "hora_inicio": 1405585800000,
+        "hora_fin": 1405589400000,
+        "duracion": 60,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=631185&e=34268401-4"
+    }, {
+        "id_programa": "719612",
+        "nombre": "Documental: Documental",
+        "episodio": "",
+        "hora_inicio": 1405589400000,
+        "hora_fin": 1405593000000,
+        "duracion": 60,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=719612&e=34268402-4"
+    }, {
+        "id_programa": "719612",
+        "nombre": "Documental: Documental",
+        "episodio": "",
+        "hora_inicio": 1405593000000,
+        "hora_fin": 1405596300000,
+        "duracion": 55,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=719612&e=34268403-4"
+    }, {
+        "id_programa": "1186053",
+        "nombre": "Don Matteo",
+        "episodio": "",
+        "hora_inicio": 1405596300000,
+        "hora_fin": 1405600200000,
+        "duracion": 65,
+        "categoria": "1",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1186053&e=34268404-4"
+    }, {
+        "id_programa": "724454",
+        "nombre": "Verano azul",
+        "episodio": "",
+        "hora_inicio": 1405600200000,
+        "hora_fin": 1405603800000,
+        "duracion": 60,
+        "categoria": "1",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=724454&e=34268405-4"
+    }, {
+        "id_programa": "813029",
+        "nombre": "Saber y ganar",
+        "episodio": "",
+        "hora_inicio": 1405603800000,
+        "hora_fin": 1405605900000,
+        "duracion": 35,
+        "categoria": "INT_2",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=813029&e=34268406-4"
+    }, {
+        "id_programa": "757206",
+        "nombre": "Documental: Grandes documentales",
+        "episodio": "",
+        "hora_inicio": 1405605900000,
+        "hora_fin": 1405612200000,
+        "duracion": 105,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=757206&e=34268407-4"
+    }, {
+        "id_programa": "631185",
+        "nombre": "Documental: Docufilia",
+        "episodio": "",
+        "hora_inicio": 1405612200000,
+        "hora_fin": 1405615200000,
+        "duracion": 50,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=631185&e=34268408-4"
+    }, {
+        "id_programa": "699265",
+        "nombre": "Documental: Paraí­sos cercanos",
+        "episodio": "",
+        "hora_inicio": 1405615200000,
+        "hora_fin": 1405618800000,
+        "duracion": 60,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=699265&e=34268409-4"
+    }, {
+        "id_programa": "730056",
+        "nombre": "Documental: El universo escondido",
+        "episodio": "",
+        "hora_inicio": 1405618800000,
+        "hora_fin": 1405620300000,
+        "duracion": 25,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=730056&e=34268410-4"
+    }, {
+        "id_programa": "1186053",
+        "nombre": "Don Matteo",
+        "episodio": "",
+        "hora_inicio": 1405620300000,
+        "hora_fin": 1405623900000,
+        "duracion": 60,
+        "categoria": "1",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1186053&e=34268411-4"
+    }, {
+        "id_programa": "631185",
+        "nombre": "Documental: Docufilia",
+        "episodio": "",
+        "hora_inicio": 1405623900000,
+        "hora_fin": 1405627200000,
+        "duracion": 55,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=631185&e=34268412-4"
+    }, {
+        "id_programa": "719612",
+        "nombre": "Documental: Documental",
+        "episodio": "",
+        "hora_inicio": 1405627200000,
+        "hora_fin": 1405633800000,
+        "duracion": 110,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=719612&e=34268413-4"
+    }, {
+        "id_programa": "721360",
+        "nombre": "Crónicas",
+        "episodio": "",
+        "hora_inicio": 1405633800000,
+        "hora_fin": 1405636500000,
+        "duracion": 45,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=721360&e=34406724-4"
+    }]
+}

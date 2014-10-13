@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <title>Guía de TV</title>
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
+    <link href="css/estilos.css" rel="stylesheet">
+    <base href="/index.html">
+</head>
+
+<body>
+
+    <h1>Guía de TV</h1>
+    <div class="contenedor">
+
+        <div class="selectorCategorias clearfix">
+            <p>Seleccione una categoría para resaltar los programas</p>
+            <ul>
+                <li class="mCine">
+                    <button>Cine</button>
+                </li>
+                <li class="mConcursos">
+                    <button>Concursos</button>
+                </li>
+                <li class="mCorazon">
+                    <button>Corazón</button>
+                </li>
+                <li class="mDeportes">
+                    <button>Deportes</button>
+                </li>
+                <li class="mInformativos">
+                    <button>Informativos</button>
+                </li>
+                <li class="mMagazines">
+                    <button>Magazines</button>
+                </li>
+                <li class="mSeries">
+                    <button>Series</button>
+                </li>
+            </ul>
+        </div>
+
+        <div class="selectorDias clearfix">
+            <ul></ul>
+        </div>
+
+        <div class="viewPort">
+            <div class="barraHorizontalHoras">
+                <div class="barraHoras clearfix"></div>
+            </div>
+
+            <div class="preload-wrapper">
+                <div class="preload"></div>
+            </div>
+
+            <div class="contCanales clearfix"></div>
+            <div class="contProgramas clearfix">
+            </div>
+            <div class="horaActual">
+                <div class="top"></div>
+                <div class="mid">
+                    <p>12:30</p>
+                </div>
+                <div class="bott"></div>
+            </div>
+            <div class="fichaPrograma">
+                <div class="contenido"></div>
+            </div>
+        </div>
+
+        <div class="selectorCanales">
+            <div class="barraLetras clearfix"></div>
+            <div class="ordenCanales">
+                <div class="nano">
+                    <div class="nano-content"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Zonas comunes / Pie de página -->
+    </div>
+
+    <!-- 3rd party libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script>
+    var jq111 = jQuery.noConflict(true);
+    </script>
+    <!-- <script src="scripts/jquery.nanoscroller.min.js"></script> -->
+    <script src="scripts/app.min.js"></script>
+</body>
+
+</html>

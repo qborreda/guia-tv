@@ -1,0 +1,861 @@
+@import "compass";
+@import "compass/reset";
+@import "compass/css3/animation";
+@import "font-awesome";
+@import "nanoscroller";
+
+//colors
+$color_0: black;
+$color_1: #333;
+$color_2: #aaa;
+$color_3: #eee;
+$color_4: #ccc;
+$color_7: #111;
+$color_9: red;
+$color_10: #666;
+
+$color_cine: #dca7a7;
+$color_concursos: #eddca7;
+$color_corazon: #edb9ca;
+$color_deportes: #a7dca7;
+$color_informativos: #b9b9ed;
+$color_magazines: #dca7dc;
+$color_series: #edcaa7;
+
+//fonts
+$font_0: Georgia;
+$font_1: Times New Roman;
+$font_2: Times;
+$font_3: serif;
+$font_4: Roboto Condensed;
+$font_5: sans-serif;
+
+$fuentes-titulos: $font_0, $font_1, $font_2, $font_3;
+$fuentes-cuerpo: Arial, $font_5;
+$fuentes-peq: $font_4, $font_5;
+
+$ancho_dia24: 4800px; // 4320px;
+$ancho_max_viewport: 1024px;
+$ancho_por_hora: $ancho_dia24 / 24; // 200px;
+
+html {
+	//Instead of the line below you could use @include box-sizing($bs)
+	box-sizing: border-box;
+}
+* {
+	//Instead of the line below you could use @include box-sizing($bs)
+	box-sizing: border-box;
+	//Instead of the line below you could use @include box-sizing($bs)
+	box-sizing: inherit;
+	&:before {
+		//Instead of the line below you could use @include box-sizing($bs)
+		box-sizing: inherit;
+	}
+	&:after {
+		//Instead of the line below you could use @include box-sizing($bs)
+		box-sizing: inherit;
+	}
+}
+body {
+	font-family: $fuentes-cuerpo;
+	font-weight: normal;
+	padding:15px;
+}
+ul {margin:0;padding:0;border:0;}
+li {margin:0; padding:0; border:0;}
+.clearfix {
+	zoom: 1;
+	&:before {
+		display: table;
+		content: " ";
+	}
+	&:after {
+		display: table;
+		content: " ";
+		clear: both;
+	}
+}
+h1 {
+	font-family: $fuentes-titulos;
+	font-weight: normal;
+	font-size: 32px;
+}
+.contenedor {
+	position:relative;
+	display:block;
+}
+
+// Preloader general para toda la parrilla
+.preload-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  margin-left: -25px;
+  margin-top: -25px;
+  z-index: 100;
+	.preload {
+	    position:relative;
+	    width:30px;
+	    height:30px;
+	    background:rgba(0,0,0,.1);
+	    border-radius:50%;
+	    @include animation(preload 1s infinite linear);
+	}
+	.preload:after {
+	    position:absolute;
+	    width:50px;
+	    height:50px;
+	    border-top:5px solid rgba(0,0,0,.1);
+	    border-bottom:5px solid rgba(0,0,0,.1);
+	    border-left:5px solid transparent;
+	    border-right:5px solid transparent;
+	    border-radius:50%;
+	    content:'';
+	    top:-10px;
+	    left:-10px;
+	    @include animation(preload_after 1s infinite linear);
+	}
+}
+@include keyframes(preload) {
+    0% {transform: rotate(0deg);}
+    50% {transform: rotate(180deg);background:rgba(0,0,0,.2)}
+    100% {transform: rotate(360deg);}
+}
+@include keyframes(preload_after) {
+    0% {border-top:5px solid rgba(0,0,0,.1);border-bottom:5px solid rgba(0,0,0,.1);}
+    50% {border-top:5px solid rgba(0,0,0,.2);border-bottom:5px solid rgba(0,0,0,.2);}
+    100% {border-top:5px solid rgba(0,0,0,.1);border-bottom:5px solid rgba(0,0,0,.1);}
+}
+
+
+
+// ViewPort general de la parrilla
+.viewPort {
+	position: relative;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	max-width: $ancho_max_viewport;
+	min-height: 490px;
+	max-height: 490px;
+	border: 1px solid $color_0;
+}
+// Contenedor de Canales
+.contCanales {
+	position: absolute;
+	z-index: 100;
+	top: 35px;
+	left: 0;
+	max-width: 70px;
+	text-align: center;
+	.itemCanal {
+		width: 70px;
+		height: 65px;
+		padding: 5px;
+		cursor: pointer;
+		border: 1px solid $color_1;
+		background-color: $color_1;
+	}
+}
+// Contenedor de Programas
+.contProgramas {
+	position: absolute;
+	top: 35px;
+	left: 0;
+	display: block;
+	overflow: visible;
+	min-width: 5000px;
+	min-height: 455px;
+	z-index: 0;
+	.lineaCanal {
+		position: relative;
+		display: block;
+		overflow: visible;
+		width: $ancho_dia24;
+		height: 65px;
+		max-height: 65px;
+	}
+	&.mCine .catCine {
+		padding: 3px;
+		border: 3px solid saturate($color_cine, 20);
+		background-color: $color_cine;
+		background-image: linear-gradient(to bottom, $color_cine, desaturate($color_cine, 20));
+		box-shadow: 0 0 4px 0 #000;
+	}
+	&.mConcursos .catConcursos {
+		padding: 3px;
+		border: 3px solid saturate($color_concursos, 20);
+		background-color: $color_concursos;
+		background-image: linear-gradient(to bottom, $color_concursos, desaturate($color_concursos, 20));
+		box-shadow: 0 0 4px 0 #000;
+	}
+	&.mCorazon .catCorazon {
+		padding: 3px;
+		border: 3px solid saturate($color_corazon, 20);
+		background-color: $color_corazon;
+		background-image: linear-gradient(to bottom, $color_corazon, desaturate($color_corazon, 20));
+		box-shadow: 0 0 4px 0 #000;
+	}
+	&.mDeportes .catDeportes {
+		padding: 3px;
+		border: 3px solid saturate($color_deportes, 20);
+		background-color: $color_deportes;
+		background-image: linear-gradient(to bottom, $color_deportes, desaturate($color_deportes, 20));
+		box-shadow: 0 0 4px 0 #000;
+	}
+	&.mInformativos .catInformativos {
+		padding: 3px;
+		border: 3px solid saturate($color_informativos, 20);
+		background-color: $color_informativos;
+		background-image: linear-gradient(to bottom, $color_informativos, desaturate($color_informativos, 20));
+		box-shadow: 0 0 4px 0 #000;
+	}
+	&.mMagazines .catMagazines {
+		padding: 3px;
+		border: 3px solid saturate($color_magazines, 20);
+		background-color: $color_magazines;
+		background-image: linear-gradient(to bottom, $color_magazines, desaturate($color_magazines, 20));
+		box-shadow: 0 0 4px 0 #000;
+	}
+	&.mSeries .catSeries {
+		padding: 3px;
+		border: 3px solid saturate($color_series, 20);
+		background-color: $color_series;
+		background-image: linear-gradient(to bottom, $color_series, desaturate($color_series, 20));
+		box-shadow: 0 0 4px 0 #000;
+	}
+}
+.itemPrograma {
+	position: absolute;
+	display: inline-block;
+	top: 0;
+	left: 0;
+	min-width: 15px;
+	margin: 0; padding: 0;
+	overflow: hidden;
+	cursor: pointer;
+	box-shadow: 0 0 2px 0 #000;
+	z-index:0;
+
+	&:hover {
+		box-shadow: 0;
+		z-index:10;
+		overflow: visible;
+	}
+
+	.itemProgramaInner {
+		position: relative;
+		display: block;
+		overflow: hidden;
+		font-size: 10px;
+		height: 65px;
+		padding: 5px;
+		width: auto;
+		min-width:$ancho_por_hora / 2;
+		border: 1px solid #AAA;
+		background-color: #EEE;
+		background-image: linear-gradient(to bottom, #CCC, #EEE);
+		transition: all 300ms ease;
+
+		.fecha {
+			font-family: $font_4, $font_5;
+			margin: 0;
+			padding: 0;
+		}
+		a {
+			text-decoration: none;
+		}
+		h4 {
+			font-family: $fuentes-titulos;
+			font-size: 12px;
+			font-weight: 400;
+			line-height: 1.1;
+			margin: 0 10px 0 0;
+			padding: 0;
+			color: #000;
+		}
+		p {
+			font-style: italic;
+			margin: 0;
+			padding: 0;
+		}
+		&:hover {
+			box-shadow: 0 0 5px 0 #000;
+			overflow: visible;
+			h4 {
+				display:block;
+			}
+		}
+		span.favorito {
+			display:inline-block;
+			position:absolute;
+			top:0; right:3px;
+			//width: 18px;
+			height:18px;
+			font-size: 18px;
+			color: rgba(0,0,0,0.5);
+		}
+		span.alerta {
+			display:inline-block;
+			position:absolute;
+			bottom:0; right:3px;
+			//width: 18px;
+			height:18px;
+			font-size: 18px;
+			color: rgba(0,0,0,0.5);
+		}
+	}
+}
+.barraHorizontalHoras {
+	position: relative;
+	top: 0;
+	right: 0;
+	left: 0;
+	display: block;
+	min-width: $ancho_dia24;
+	height: 35px;
+	background-color: $color_1;
+	background-image: linear-gradient(to bottom, $color_7, $color_1);
+	z-index: 40;
+	.barraHoras {
+		font-family: $fuentes-peq;
+		font-size: 12px;
+		position: relative;
+		top: 0;
+		left: 0;
+		display: block;
+		min-width: 5000px;
+		height: 35px;
+		color: #CCC;
+		.itemHoras {
+			position: absolute;
+			top: 0;
+			left: 0;
+			display: inline-block;
+			width: $ancho_por_hora;
+			height: 25px;
+			margin: 10px 0 0;
+			padding: 5px;
+			cursor: pointer;
+			border-left: 1px solid #CCC;
+		}
+		.itemDia {
+			position: absolute;
+			top: 0;
+			left: 0;
+			display: inline-block;
+			width: 300px;
+			max-width: 300px;
+			height: 20px;
+			padding: 0 0 0 5px;
+		}
+	}
+}
+.horaActual {
+	position: absolute;
+	top: 25px;
+	left: 0;
+	display: none;
+	width: 20px;
+	height: 465px;
+	z-index: 50;
+	.top {
+		width: 0;
+		height: 0;
+		border-width: 0 10px 10px 10px;
+		border-style: solid;
+		border-color: transparent transparent rgba(255,0,0,.5) transparent;
+	}
+	.mid {
+		height: 445px;
+		padding: 0;
+		padding-top: 200px;
+		background-color: rgba(255,0,0,.5);
+		p {
+			font-family: $fuentes-peq;
+			font-size: 12px;
+			margin: 0;
+			padding: 0;
+			transform: rotate(-90deg);
+			color: #EEE;
+			&:before {
+				content:'-';
+			}
+			&:after {
+				content: '-';
+			}
+		}
+	}
+	.bott {
+		width: 0;
+		height: 0;
+		border-width: 10px 10px 0 10px;
+		border-style: solid;
+		border-color: rgba(255,0,0,.5) transparent transparent transparent;
+	}
+}
+.fichaPrograma {
+	position: absolute;
+	z-index: 100;
+	top: 35px;
+	right: -300px;
+	width: 300px;
+	height: 455px;
+	border-left: 1px solid #000;
+	background-color: $color_1;
+	background-image: linear-gradient(to bottom, $color_1, $color_7);
+
+	.contenido {
+		width: 300px;
+		height:100%;
+
+		.foto {
+			width: 320px; height: 455px;
+			z-index:-1;
+			img {
+				width: 320px;
+				height: auto;
+				left: -10px;
+			}
+		}
+
+		/** opciones nanoScroller **/
+		.nano { position:absolute; top:10px; left:10px; z-index:5; width: 280px; height: 435px; overflow: hidden;}
+		.nano .nano-content { padding-right: 15px; }
+		.nano .nano-pane   { background-color: rgba(0,0,0,.4); }
+		.nano .nano-slider { width:8px; background-color: rgba(255,255,255,.3); }
+
+		.ficha {
+			height: 435px;
+			padding:5px 11px 5px;
+			font-family: $fuentes-cuerpo;
+			font-size: 12px;
+			color:#EEE;
+			background-color: rgba(0,0,0,.7);
+
+			h3,
+			h4 {
+				font-family: $fuentes-titulos;
+				font-size: 20px;
+				font-weight: 600;
+				color: #FFF;
+				margin:0; padding:0;
+				margin-top: 10px;
+			}
+
+			.genero {
+				color: #DDD;
+				font-size: 10px;
+				font-style: italic;
+			}
+			.episodio {
+				margin-bottom: 10px;
+
+				h4 {
+					font-size: 16px;
+					font-style: italic;
+					margin-bottom:5px;
+				}
+				p{}
+			}
+
+			ul {
+				margin-bottom: 15px;
+
+				li {
+					list-style: none;
+					color:#ddd;
+					padding: 3px 0;
+
+					strong {
+						color: #aaa;
+						font-weight: 400;
+						margin-right: 5px;
+					}
+				}
+			}
+
+			button {
+				display:block;
+				width:100%;
+				font-family: $fuentes-peq;
+				font-size: 14px;
+				margin: 0 0 15px;
+				padding: 3px 5px;
+				cursor: pointer;
+				outline: none;
+				border: none;
+				color: #000;
+				background-color: rgba(255,255,255,.6);
+				border-bottom: darken(#999, 20) 3px solid;
+				transition: all 300ms ease;
+
+				&:hover {
+					color: #000;
+					background-color: rgba(255,255,255,.6);
+					border-bottom: darken(#999, 40) 3px solid;
+				}
+			}
+		}
+	}
+	.cierra {
+		position: absolute;
+		top: 5px; right: 5px;
+		padding: 3px 5px;
+		z-index:10;
+		font-family: $font_5;
+		font-size: 16px;
+		font-weight: 400;
+		color: $color_10;
+		cursor: pointer;
+		outline: none;
+		border: none;
+		background-color: #CCC;
+		border-bottom: darken(#CCC, 20) 3px solid;
+		transition: all 300ms ease;
+
+		&:hover {
+			border-bottom: darken(#CCC, 40) 3px solid;
+		}
+	}
+}
+.selectorDias {
+	display: inline-block;
+	min-width: 320px;
+	ul {
+		display: inline-block;
+		margin: 0;
+		margin-top: 5px;
+		padding: 0;
+		li {
+			display: inline-block;
+			padding: 3px 10px;
+			min-width: 40px;
+			min-height: 30px;
+			list-style: none;
+			cursor: pointer;
+			border-right: 1px solid #CCC;
+			background-color: #000;
+			background-image: linear-gradient(to bottom, $color_7, #000);
+			border-bottom: lighten(#000, 20) 3px solid;
+
+			&.activo {
+				background-color: #000;
+			}
+			&:hover {
+				background-color: #000;
+				border-bottom: lighten(#000, 40) 3px solid;
+				background-image: linear-gradient(to bottom, lighten($color_7,20), $color_7);
+			}
+			&:last-child {
+				margin-right: 0;
+				border-right: none;
+			}
+			a {
+				font-family: $fuentes-peq;
+				font-size: 12px;
+				text-decoration: none;
+				color: #CCC;
+			}
+		}
+	}
+}
+.selectorCategorias {
+	position: absolute;
+	top: -15px; left: $ancho_max_viewport - 500px;
+	z-index: 2;
+	display: inline-block;
+	min-width: 500px;
+	margin: 0 0 5px;
+	text-align: right;
+
+	p {
+		margin:0 0 3px;
+		padding:0;
+		font-family: $fuentes-peq;
+		font-size: 12px;
+	}
+	ul {
+		display: block;
+		margin: 0;
+		padding: 0;
+
+		li {
+			display: inline-block;
+			margin-left:0 0 0 5px;
+			list-style: none;
+
+			button {
+				font-family: $fuentes-peq;
+				margin: 0;
+				padding: 3px 5px;
+				min-width: 40px;
+				min-height: 30px;
+				cursor: pointer;
+				transition: all 300ms ease;
+				outline: none;
+				border: none;
+				background-color: #CCC;
+				border-bottom: darken(#CCC, 20) 3px solid;
+
+				&:hover {
+					border-bottom: darken(#CCC, 40) 3px solid;
+				}
+			}
+
+			&.mCine button.activo {
+				background-color: $color_cine;
+				border-bottom: darken($color_cine, 20) 3px solid;
+				&:hover {
+					border-bottom: darken($color_cine, 40) 3px solid;
+				}
+			}
+			&.mConcursos button.activo {
+				background-color: $color_concursos;
+				border-bottom: darken($color_concursos, 20) 3px solid;
+				&:hover {
+					border-bottom: darken($color_concursos, 40) 3px solid;
+				}
+			}
+			&.mCorazon button.activo {
+				background-color: $color_corazon;
+				border-bottom: darken($color_corazon, 20) 3px solid;
+				&:hover {
+					border-bottom: darken($color_corazon, 40) 3px solid;
+				}
+			}
+			&.mDeportes button.activo {
+				background-color: $color_deportes;
+				border-bottom: darken($color_deportes, 20) 3px solid;
+				&:hover {
+					border-bottom: darken($color_deportes, 40) 3px solid;
+				}
+			}
+			&.mInformativos button.activo {
+				background-color: $color_informativos;
+				border-bottom: darken($color_informativos, 20) 3px solid;
+				&:hover {
+					border-bottom: darken($color_informativos, 40) 3px solid;
+				}
+			}
+			&.mMagazines button.activo {
+				background-color: $color_magazines;
+				border-bottom: darken($color_magazines, 20) 3px solid;
+				&:hover {
+					border-bottom: darken($color_magazines, 40) 3px solid;
+				}
+			}
+			&.mSeries button.activo {
+				background-color: $color_series;
+				border-bottom: darken($color_series, 20) 3px solid;
+				&:hover {
+					border-bottom: darken($color_series, 40) 3px solid;
+				}
+			}
+		}
+	}
+}
+
+// Selector de Canales para añadir
+.selectorCanales {
+	position: relative;
+	overflow: hidden;
+	max-width: $ancho_max_viewport;
+	min-height: 350px;
+	max-height: 350px;
+	margin: 10px 0;
+	border: 1px solid $color_0;
+
+	.barraLetras{
+		display: block;
+		min-width: $ancho_por_hora * 28;
+		z-index: 40;
+
+		ul {
+			list-style: none;
+			height:100%;
+			border-right: 1px solid #CCC;
+
+			.itemLetra {
+				display: inline-block;
+				float:left;
+				width: $ancho_por_hora;
+
+				h4 {
+					width: $ancho_por_hora;
+					height: 35px;
+					margin: 0;
+					padding: 5px;
+					cursor: pointer;
+					font-family: $fuentes-peq;
+					font-size: 16px;
+					font-weight: normal;
+					color: #EEE;
+					border-right: 1px solid #CCC;
+					background-color: $color_1;
+					background-image: linear-gradient(to bottom, $color_7, $color_1);
+				}
+
+				/** opciones nanoScroller **/
+				.nano { position:relative; width: $ancho_por_hora; height: 300px; overflow: hidden;}
+				.nano .nano-content { }
+				.nano .nano-pane   { background-color: rgba(0,0,0,.4); }
+				.nano .nano-slider { width:8px; background-color: rgba(255,255,255,.3); }
+
+				.divLetra {
+
+					margin-top: 10px;
+
+					ul {
+						display:block;
+						// height: 100%;
+						list-style: none;
+
+						li {
+							display:block;
+							width: $ancho_por_hora - 15px;
+							height: 25px;
+							margin: 0 5px 10px;
+							padding: 5px;
+							font-size: 12px;
+							cursor: pointer;
+							border-bottom: 1px dotted #666;
+
+							img {
+								float: left;
+								width:20px; height:auto;
+								margin-right: 5px;
+								margin-top: -5px;
+							}
+
+							.check {
+								position:relative;
+								float:right;
+								display:inline-block;
+								width: 20px;
+								height: 20px;
+								margin-top: -5px;
+								@include background( linear-gradient(top, #222 0%, #45484d 100%) );
+			    				@include border-radius( 4px );
+			    				@include box-shadow( inset 0px 1px 1px rgba(0,0,0,0.5), 0px 1px 0px rgba(255,255,255,.4) );
+
+								&:after {
+									content: '';
+									width: 10px;
+									height: 7px;
+									position: absolute;
+									top: 5px;
+									left: 5px;
+									border: 3px solid #eee;
+									border-top: none;
+									border-right: none;
+									background: transparent;
+									@include opacity( 0.1 );
+									@include transform( rotate(-60deg) );
+								}
+								&.sel:after {
+									@include opacity( 0.9 );
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	.ordenCanales {
+		position: absolute;
+		z-index: 100;
+		top: 0; right: 0;
+		width:300px;
+		height: 350px;
+		padding: 45px 15px 15px;
+		border-left: 1px solid #000;
+		background-color: $color_1;
+		background-image: linear-gradient(to bottom, $color_1, $color_7);
+
+		/** opciones nanoScroller **/
+		.nano { position:relative; width: 280px; height: 290px; overflow: hidden;}
+		.nano .nano-content { padding-right: 15px; }
+		.nano .nano-pane   { background-color: rgba(0,0,0,.4); }
+		.nano .nano-slider { width:8px; background-color: rgba(255,255,255,.3); }
+
+		ul.orden {
+			display:block;
+			height: 100%;
+			list-style: none;
+
+			li {
+				position:relative;
+				display:block;
+				cursor: pointer;
+				margin: 0 0 10px 0;
+				padding: 5px;
+				color: #EEE;
+				font-size: 12px;
+				border-bottom: 1px dotted #666;
+
+				img {
+					float: left;
+					width:20px; height:auto;
+					margin-right: 5px;
+					margin-top: -5px;
+				}
+
+				&.dragged {
+					position: absolute;
+					top: 0;
+					opacity: .5;
+					z-index: 2000;
+				}
+
+				.check {
+					position:relative;
+					float:right;
+					display:inline-block;
+					width: 20px;
+					height: 20px;
+					margin-top: -5px;
+					// @include background( linear-gradient(top, #222 0%, #45484d 100%) );
+    				@include border-radius( 4px );
+    				@include box-shadow( inset 0px 1px 1px rgba(0,0,0,0.5), 0px 1px 0px rgba(255,255,255,.4) );
+
+					&:after {
+						content: '';
+						width: 10px;
+						height: 7px;
+						position: absolute;
+						top: 5px;
+						left: 5px;
+						border: 3px solid #eee;
+						border-top: none;
+						border-right: none;
+						background: transparent;
+						@include opacity( 0.1 );
+						@include transform( rotate(-60deg) );
+					}
+					&.sel:after {
+						@include opacity( 0.9 );
+					}
+				}
+			}
+			li.placeholder {
+			        min-height: 25px;
+			    &:before {
+			        position: absolute;
+			        content: "";
+			        width: 0;
+			        height: 0;
+			        margin-top: -5px;
+			        left: -5px;
+			        top: -4px;
+			  	}
+			}
+		}
+	}
+}
+body.dragging, body.dragging * {
+  cursor: move !important;
+}

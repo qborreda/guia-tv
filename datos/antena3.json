@@ -1,0 +1,810 @@
+{
+    "canal": {
+        "id": "2",
+        "nombre": "antena3",
+        "nombre_completo": "Antena 3",
+        "icono": "/elmundo/iconos/v2.1/television/logos/grandes/antena3.gif"
+    },
+    "programas": [{
+        "id_programa": "9838",
+        "nombre": "Cine: El corruptor",
+        "episodio": "",
+        "hora_inicio": 1405288800000,
+        "hora_fin": 1405296000000,
+        "duracion": 120,
+        "categoria": "104",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=9838&e=34478571-2"
+    }, {
+        "id_programa": "112796",
+        "nombre": "Cine: Un sueño para Holly",
+        "episodio": "",
+        "hora_inicio": 1405296000000,
+        "hora_fin": 1405299600000,
+        "duracion": 60,
+        "categoria": "104",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=112796&e=34478572-2"
+    }, {
+        "id_programa": "951221",
+        "nombre": "La tienda en casa",
+        "episodio": "",
+        "hora_inicio": 1405299600000,
+        "hora_fin": 1405301400000,
+        "duracion": 30,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=951221&e=34478573-2"
+    }, {
+        "id_programa": "899795",
+        "nombre": "Minutos musicales",
+        "episodio": "",
+        "hora_inicio": 1405301400000,
+        "hora_fin": 1405310400000,
+        "duracion": 150,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=899795&e=34478574-2"
+    }, {
+        "id_programa": "899795",
+        "nombre": "Minutos musicales",
+        "episodio": "",
+        "hora_inicio": 1405310400000,
+        "hora_fin": 1405311300000,
+        "duracion": 15,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=899795&e=34501854-2"
+    }, {
+        "id_programa": "1179281",
+        "nombre": "Las noticias de la mañana",
+        "episodio": "",
+        "hora_inicio": 1405311300000,
+        "hora_fin": 1405320900000,
+        "duracion": 160,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1179281&e=34376043-2"
+    }, {
+        "id_programa": "1165665",
+        "nombre": "Espejo Público",
+        "episodio": "",
+        "hora_inicio": 1405320900000,
+        "hora_fin": 1405332900000,
+        "duracion": 200,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1165665&e=34376044-2"
+    }, {
+        "id_programa": "1165666",
+        "nombre": "Karlos Arguiñano en tu cocina",
+        "episodio": "",
+        "hora_inicio": 1405332900000,
+        "hora_fin": 1405335000000,
+        "duracion": 35,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1165666&e=34376045-2"
+    }, {
+        "id_programa": "1165667",
+        "nombre": "La ruleta de la suerte",
+        "episodio": "",
+        "hora_inicio": 1405335000000,
+        "hora_fin": 1405339200000,
+        "duracion": 70,
+        "categoria": "INT_2",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1165667&e=34376046-2"
+    }, {
+        "id_programa": "910146",
+        "nombre": "Los Simpson",
+        "episodio": "",
+        "hora_inicio": 1405339200000,
+        "hora_fin": 1405341000000,
+        "duracion": 30,
+        "categoria": "1",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=910146&e=34376047-2"
+    }, {
+        "id_programa": "910146",
+        "nombre": "Los Simpson",
+        "episodio": "",
+        "hora_inicio": 1405341000000,
+        "hora_fin": 1405342800000,
+        "duracion": 30,
+        "categoria": "1",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=910146&e=34376048-2"
+    }, {
+        "id_programa": "893957",
+        "nombre": "Antena 3 Noticias 1",
+        "episodio": "",
+        "hora_inicio": 1405342800000,
+        "hora_fin": 1405345500000,
+        "duracion": 45,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=893957&e=34376049-2"
+    }, {
+        "id_programa": "1179280",
+        "nombre": "Antena 3 Deportes 1",
+        "episodio": "",
+        "hora_inicio": 1405345500000,
+        "hora_fin": 1405346400000,
+        "duracion": 15,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1179280&e=34376050-2"
+    }, {
+        "id_programa": "742265",
+        "nombre": "La previsión de las 4",
+        "episodio": "",
+        "hora_inicio": 1405346400000,
+        "hora_fin": 1405348200000,
+        "duracion": 30,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=742265&e=34376051-2"
+    }, {
+        "id_programa": "296478",
+        "nombre": "Amar es para siempre",
+        "episodio": "Capítulo 381",
+        "hora_inicio": 1405348200000,
+        "hora_fin": 1405351800000,
+        "duracion": 60,
+        "categoria": "1",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=296478&e=34501863-2"
+    }, {
+        "id_programa": "296479",
+        "nombre": "El secreto de Puente Viejo",
+        "episodio": "Capítulo 860",
+        "hora_inicio": 1405351800000,
+        "hora_fin": 1405356300000,
+        "duracion": 75,
+        "categoria": "1",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=296479&e=34501864-2"
+    }, {
+        "id_programa": "712592",
+        "nombre": "Ahora caigo",
+        "episodio": "",
+        "hora_inicio": 1405356300000,
+        "hora_fin": 1405360800000,
+        "duracion": 75,
+        "categoria": "INT_2",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=712592&e=34376054-2"
+    }, {
+        "id_programa": "904420",
+        "nombre": "Atrapa un millón",
+        "episodio": "",
+        "hora_inicio": 1405360800000,
+        "hora_fin": 1405364400000,
+        "duracion": 60,
+        "categoria": "INT_2",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=904420&e=34376055-2"
+    }, {
+        "id_programa": "1165663",
+        "nombre": "Antena 3 Noticias 2",
+        "episodio": "",
+        "hora_inicio": 1405364400000,
+        "hora_fin": 1405366200000,
+        "duracion": 30,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1165663&e=34376056-2"
+    }, {
+        "id_programa": "1144899",
+        "nombre": "Antena 3 Deportes 2",
+        "episodio": "",
+        "hora_inicio": 1405366200000,
+        "hora_fin": 1405366800000,
+        "duracion": 10,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1144899&e=34376057-2"
+    }, {
+        "id_programa": "665034",
+        "nombre": "La previsión de las 9",
+        "episodio": "",
+        "hora_inicio": 1405366800000,
+        "hora_fin": 1405367100000,
+        "duracion": 5,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=665034&e=34376058-2"
+    }, {
+        "id_programa": "734346",
+        "nombre": "El hormiguero 3.0",
+        "episodio": "",
+        "hora_inicio": 1405367100000,
+        "hora_fin": 1405370400000,
+        "duracion": 55,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=734346&e=34501870-2"
+    }, {
+        "id_programa": "296616",
+        "nombre": "Transporter",
+        "episodio": "The General's Daughter",
+        "hora_inicio": 1405370400000,
+        "hora_fin": 1405373700000,
+        "duracion": 55,
+        "categoria": "1",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=296616&e=34502392-2"
+    }, {
+        "id_programa": "1440038",
+        "nombre": "Transporter",
+        "episodio": "Harvest",
+        "hora_inicio": 1405373700000,
+        "hora_fin": 1405377000000,
+        "duracion": 55,
+        "categoria": "1",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1440038&e=34502393-2"
+    }, {
+        "id_programa": "6511",
+        "nombre": "Cine: Glimmer Man",
+        "episodio": "",
+        "hora_inicio": 1405377000000,
+        "hora_fin": 1405383300000,
+        "duracion": 105,
+        "categoria": "104",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=6511&e=34501873-2"
+    }, {
+        "id_programa": "951221",
+        "nombre": "La tienda en casa",
+        "episodio": "",
+        "hora_inicio": 1405383300000,
+        "hora_fin": 1405385100000,
+        "duracion": 30,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=951221&e=34501874-2"
+    }, {
+        "id_programa": "899795",
+        "nombre": "Minutos musicales",
+        "episodio": "",
+        "hora_inicio": 1405385100000,
+        "hora_fin": 1405397700000,
+        "duracion": 210,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=899795&e=34501875-2"
+    }, {
+        "id_programa": "1179281",
+        "nombre": "Las noticias de la mañana",
+        "episodio": "",
+        "hora_inicio": 1405397700000,
+        "hora_fin": 1405406700000,
+        "duracion": 150,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1179281&e=34376066-2"
+    }, {
+        "id_programa": "1165665",
+        "nombre": "Espejo Público",
+        "episodio": "",
+        "hora_inicio": 1405406700000,
+        "hora_fin": 1405418400000,
+        "duracion": 195,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1165665&e=34376067-2"
+    }, {
+        "id_programa": "1165666",
+        "nombre": "Karlos Arguiñano en tu cocina",
+        "episodio": "",
+        "hora_inicio": 1405418400000,
+        "hora_fin": 1405420200000,
+        "duracion": 30,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1165666&e=34376068-2"
+    }, {
+        "id_programa": "1165667",
+        "nombre": "La ruleta de la suerte",
+        "episodio": "",
+        "hora_inicio": 1405420200000,
+        "hora_fin": 1405425600000,
+        "duracion": 90,
+        "categoria": "INT_2",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1165667&e=34376069-2"
+    }, {
+        "id_programa": "910146",
+        "nombre": "Los Simpson",
+        "episodio": "",
+        "hora_inicio": 1405425600000,
+        "hora_fin": 1405427400000,
+        "duracion": 30,
+        "categoria": "1",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=910146&e=34376070-2"
+    }, {
+        "id_programa": "910146",
+        "nombre": "Los Simpson",
+        "episodio": "",
+        "hora_inicio": 1405427400000,
+        "hora_fin": 1405429200000,
+        "duracion": 30,
+        "categoria": "1",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=910146&e=34376071-2"
+    }, {
+        "id_programa": "893957",
+        "nombre": "Antena 3 Noticias 1",
+        "episodio": "",
+        "hora_inicio": 1405429200000,
+        "hora_fin": 1405431600000,
+        "duracion": 40,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=893957&e=34376072-2"
+    }, {
+        "id_programa": "1179280",
+        "nombre": "Antena 3 Deportes 1",
+        "episodio": "",
+        "hora_inicio": 1405431600000,
+        "hora_fin": 1405432800000,
+        "duracion": 20,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1179280&e=34376073-2"
+    }, {
+        "id_programa": "742265",
+        "nombre": "La previsión de las 4",
+        "episodio": "",
+        "hora_inicio": 1405432800000,
+        "hora_fin": 1405433700000,
+        "duracion": 15,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=742265&e=34376074-2"
+    }, {
+        "id_programa": "1179283",
+        "nombre": "Amar es para siempre",
+        "episodio": "",
+        "hora_inicio": 1405433700000,
+        "hora_fin": 1405436400000,
+        "duracion": 45,
+        "categoria": "1",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1179283&e=34376075-2"
+    }, {
+        "id_programa": "680395",
+        "nombre": "El secreto de Puente Viejo",
+        "episodio": "",
+        "hora_inicio": 1405436400000,
+        "hora_fin": 1405441800000,
+        "duracion": 90,
+        "categoria": "1",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=680395&e=34376076-2"
+    }, {
+        "id_programa": "712592",
+        "nombre": "Ahora caigo",
+        "episodio": "",
+        "hora_inicio": 1405441800000,
+        "hora_fin": 1405446300000,
+        "duracion": 75,
+        "categoria": "INT_2",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=712592&e=34376077-2"
+    }, {
+        "id_programa": "904420",
+        "nombre": "Atrapa un millón",
+        "episodio": "",
+        "hora_inicio": 1405446300000,
+        "hora_fin": 1405450800000,
+        "duracion": 75,
+        "categoria": "INT_2",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=904420&e=34376078-2"
+    }, {
+        "id_programa": "1165663",
+        "nombre": "Antena 3 Noticias 2",
+        "episodio": "",
+        "hora_inicio": 1405450800000,
+        "hora_fin": 1405452600000,
+        "duracion": 30,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1165663&e=34376079-2"
+    }, {
+        "id_programa": "1144899",
+        "nombre": "Antena 3 Deportes 2",
+        "episodio": "",
+        "hora_inicio": 1405452600000,
+        "hora_fin": 1405453200000,
+        "duracion": 10,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1144899&e=34376080-2"
+    }, {
+        "id_programa": "665034",
+        "nombre": "La previsión de las 9",
+        "episodio": "",
+        "hora_inicio": 1405453200000,
+        "hora_fin": 1405453500000,
+        "duracion": 5,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=665034&e=34376081-2"
+    }, {
+        "id_programa": "80899",
+        "nombre": "Programa por determinar",
+        "episodio": "",
+        "hora_inicio": 1405453500000,
+        "hora_fin": 1405456200000,
+        "duracion": 45,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=80899&e=34376082-2"
+    }, {
+        "id_programa": "80899",
+        "nombre": "Programa por determinar",
+        "episodio": "",
+        "hora_inicio": 1405456200000,
+        "hora_fin": 1405459800000,
+        "duracion": 60,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=80899&e=34376083-2"
+    }, {
+        "id_programa": "80899",
+        "nombre": "Programa por determinar",
+        "episodio": "",
+        "hora_inicio": 1405459800000,
+        "hora_fin": 1405463400000,
+        "duracion": 60,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=80899&e=34376084-2"
+    }, {
+        "id_programa": "80899",
+        "nombre": "Programa por determinar",
+        "episodio": "",
+        "hora_inicio": 1405463400000,
+        "hora_fin": 1405467000000,
+        "duracion": 60,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=80899&e=34376085-2"
+    }, {
+        "id_programa": "997351",
+        "nombre": "Canal bingo",
+        "episodio": "",
+        "hora_inicio": 1405467000000,
+        "hora_fin": 1405476900000,
+        "duracion": 165,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=997351&e=34376086-2"
+    }, {
+        "id_programa": "1165668",
+        "nombre": "Ganing Casino",
+        "episodio": "",
+        "hora_inicio": 1405476900000,
+        "hora_fin": 1405484100000,
+        "duracion": 120,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1165668&e=34376087-2"
+    }, {
+        "id_programa": "1179281",
+        "nombre": "Las noticias de la mañana",
+        "episodio": "",
+        "hora_inicio": 1405484100000,
+        "hora_fin": 1405493100000,
+        "duracion": 150,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1179281&e=34376088-2"
+    }, {
+        "id_programa": "1165665",
+        "nombre": "Espejo Público",
+        "episodio": "",
+        "hora_inicio": 1405493100000,
+        "hora_fin": 1405504800000,
+        "duracion": 195,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1165665&e=34376089-2"
+    }, {
+        "id_programa": "1165666",
+        "nombre": "Karlos Arguiñano en tu cocina",
+        "episodio": "",
+        "hora_inicio": 1405504800000,
+        "hora_fin": 1405506600000,
+        "duracion": 30,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1165666&e=34376090-2"
+    }, {
+        "id_programa": "1165667",
+        "nombre": "La ruleta de la suerte",
+        "episodio": "",
+        "hora_inicio": 1405506600000,
+        "hora_fin": 1405512000000,
+        "duracion": 90,
+        "categoria": "INT_2",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1165667&e=34376091-2"
+    }, {
+        "id_programa": "910146",
+        "nombre": "Los Simpson",
+        "episodio": "",
+        "hora_inicio": 1405512000000,
+        "hora_fin": 1405513800000,
+        "duracion": 30,
+        "categoria": "1",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=910146&e=34376092-2"
+    }, {
+        "id_programa": "910146",
+        "nombre": "Los Simpson",
+        "episodio": "",
+        "hora_inicio": 1405513800000,
+        "hora_fin": 1405515600000,
+        "duracion": 30,
+        "categoria": "1",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=910146&e=34376093-2"
+    }, {
+        "id_programa": "893957",
+        "nombre": "Antena 3 Noticias 1",
+        "episodio": "",
+        "hora_inicio": 1405515600000,
+        "hora_fin": 1405518000000,
+        "duracion": 40,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=893957&e=34376094-2"
+    }, {
+        "id_programa": "1179280",
+        "nombre": "Antena 3 Deportes 1",
+        "episodio": "",
+        "hora_inicio": 1405518000000,
+        "hora_fin": 1405519200000,
+        "duracion": 20,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1179280&e=34376095-2"
+    }, {
+        "id_programa": "742265",
+        "nombre": "La previsión de las 4",
+        "episodio": "",
+        "hora_inicio": 1405519200000,
+        "hora_fin": 1405520100000,
+        "duracion": 15,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=742265&e=34376096-2"
+    }, {
+        "id_programa": "1179283",
+        "nombre": "Amar es para siempre",
+        "episodio": "",
+        "hora_inicio": 1405520100000,
+        "hora_fin": 1405522800000,
+        "duracion": 45,
+        "categoria": "1",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1179283&e=34376097-2"
+    }, {
+        "id_programa": "680395",
+        "nombre": "El secreto de Puente Viejo",
+        "episodio": "",
+        "hora_inicio": 1405522800000,
+        "hora_fin": 1405528200000,
+        "duracion": 90,
+        "categoria": "1",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=680395&e=34376098-2"
+    }, {
+        "id_programa": "712592",
+        "nombre": "Ahora caigo",
+        "episodio": "",
+        "hora_inicio": 1405528200000,
+        "hora_fin": 1405532700000,
+        "duracion": 75,
+        "categoria": "INT_2",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=712592&e=34376099-2"
+    }, {
+        "id_programa": "904420",
+        "nombre": "Atrapa un millón",
+        "episodio": "",
+        "hora_inicio": 1405532700000,
+        "hora_fin": 1405537200000,
+        "duracion": 75,
+        "categoria": "INT_2",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=904420&e=34376100-2"
+    }, {
+        "id_programa": "1165663",
+        "nombre": "Antena 3 Noticias 2",
+        "episodio": "",
+        "hora_inicio": 1405537200000,
+        "hora_fin": 1405539000000,
+        "duracion": 30,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1165663&e=34376101-2"
+    }, {
+        "id_programa": "1144899",
+        "nombre": "Antena 3 Deportes 2",
+        "episodio": "",
+        "hora_inicio": 1405539000000,
+        "hora_fin": 1405539600000,
+        "duracion": 10,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1144899&e=34376102-2"
+    }, {
+        "id_programa": "665034",
+        "nombre": "La previsión de las 9",
+        "episodio": "",
+        "hora_inicio": 1405539600000,
+        "hora_fin": 1405539900000,
+        "duracion": 5,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=665034&e=34376103-2"
+    }, {
+        "id_programa": "80899",
+        "nombre": "Programa por determinar",
+        "episodio": "",
+        "hora_inicio": 1405539900000,
+        "hora_fin": 1405542600000,
+        "duracion": 45,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=80899&e=34376104-2"
+    }, {
+        "id_programa": "80899",
+        "nombre": "Programa por determinar",
+        "episodio": "",
+        "hora_inicio": 1405542600000,
+        "hora_fin": 1405546200000,
+        "duracion": 60,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=80899&e=34376105-2"
+    }, {
+        "id_programa": "80899",
+        "nombre": "Programa por determinar",
+        "episodio": "",
+        "hora_inicio": 1405546200000,
+        "hora_fin": 1405549800000,
+        "duracion": 60,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=80899&e=34376106-2"
+    }, {
+        "id_programa": "80899",
+        "nombre": "Programa por determinar",
+        "episodio": "",
+        "hora_inicio": 1405549800000,
+        "hora_fin": 1405553400000,
+        "duracion": 60,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=80899&e=34376107-2"
+    }, {
+        "id_programa": "997351",
+        "nombre": "Canal bingo",
+        "episodio": "",
+        "hora_inicio": 1405553400000,
+        "hora_fin": 1405563300000,
+        "duracion": 165,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=997351&e=34376108-2"
+    }, {
+        "id_programa": "1165668",
+        "nombre": "Ganing Casino",
+        "episodio": "",
+        "hora_inicio": 1405563300000,
+        "hora_fin": 1405570500000,
+        "duracion": 120,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1165668&e=34376109-2"
+    }, {
+        "id_programa": "1179281",
+        "nombre": "Las noticias de la mañana",
+        "episodio": "",
+        "hora_inicio": 1405570500000,
+        "hora_fin": 1405579500000,
+        "duracion": 150,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1179281&e=34376110-2"
+    }, {
+        "id_programa": "1165665",
+        "nombre": "Espejo Público",
+        "episodio": "",
+        "hora_inicio": 1405579500000,
+        "hora_fin": 1405591200000,
+        "duracion": 195,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1165665&e=34376111-2"
+    }, {
+        "id_programa": "1165666",
+        "nombre": "Karlos Arguiñano en tu cocina",
+        "episodio": "",
+        "hora_inicio": 1405591200000,
+        "hora_fin": 1405593000000,
+        "duracion": 30,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1165666&e=34376112-2"
+    }, {
+        "id_programa": "1165667",
+        "nombre": "La ruleta de la suerte",
+        "episodio": "",
+        "hora_inicio": 1405593000000,
+        "hora_fin": 1405598400000,
+        "duracion": 90,
+        "categoria": "INT_2",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1165667&e=34376113-2"
+    }, {
+        "id_programa": "910146",
+        "nombre": "Los Simpson",
+        "episodio": "",
+        "hora_inicio": 1405598400000,
+        "hora_fin": 1405600200000,
+        "duracion": 30,
+        "categoria": "1",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=910146&e=34376114-2"
+    }, {
+        "id_programa": "910146",
+        "nombre": "Los Simpson",
+        "episodio": "",
+        "hora_inicio": 1405600200000,
+        "hora_fin": 1405602000000,
+        "duracion": 30,
+        "categoria": "1",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=910146&e=34376115-2"
+    }, {
+        "id_programa": "893957",
+        "nombre": "Antena 3 Noticias 1",
+        "episodio": "",
+        "hora_inicio": 1405602000000,
+        "hora_fin": 1405604400000,
+        "duracion": 40,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=893957&e=34376116-2"
+    }, {
+        "id_programa": "1179280",
+        "nombre": "Antena 3 Deportes 1",
+        "episodio": "",
+        "hora_inicio": 1405604400000,
+        "hora_fin": 1405605600000,
+        "duracion": 20,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1179280&e=34376117-2"
+    }, {
+        "id_programa": "742265",
+        "nombre": "La previsión de las 4",
+        "episodio": "",
+        "hora_inicio": 1405605600000,
+        "hora_fin": 1405606500000,
+        "duracion": 15,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=742265&e=34376118-2"
+    }, {
+        "id_programa": "1179283",
+        "nombre": "Amar es para siempre",
+        "episodio": "",
+        "hora_inicio": 1405606500000,
+        "hora_fin": 1405609200000,
+        "duracion": 45,
+        "categoria": "1",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1179283&e=34376119-2"
+    }, {
+        "id_programa": "680395",
+        "nombre": "El secreto de Puente Viejo",
+        "episodio": "",
+        "hora_inicio": 1405609200000,
+        "hora_fin": 1405614600000,
+        "duracion": 90,
+        "categoria": "1",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=680395&e=34376120-2"
+    }, {
+        "id_programa": "712592",
+        "nombre": "Ahora caigo",
+        "episodio": "",
+        "hora_inicio": 1405614600000,
+        "hora_fin": 1405619100000,
+        "duracion": 75,
+        "categoria": "INT_2",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=712592&e=34376121-2"
+    }, {
+        "id_programa": "904420",
+        "nombre": "Atrapa un millón",
+        "episodio": "",
+        "hora_inicio": 1405619100000,
+        "hora_fin": 1405623600000,
+        "duracion": 75,
+        "categoria": "INT_2",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=904420&e=34376122-2"
+    }, {
+        "id_programa": "1165663",
+        "nombre": "Antena 3 Noticias 2",
+        "episodio": "",
+        "hora_inicio": 1405623600000,
+        "hora_fin": 1405625400000,
+        "duracion": 30,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1165663&e=34376123-2"
+    }, {
+        "id_programa": "1144899",
+        "nombre": "Antena 3 Deportes 2",
+        "episodio": "",
+        "hora_inicio": 1405625400000,
+        "hora_fin": 1405626000000,
+        "duracion": 10,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1144899&e=34376124-2"
+    }, {
+        "id_programa": "665034",
+        "nombre": "La previsión de las 9",
+        "episodio": "",
+        "hora_inicio": 1405626000000,
+        "hora_fin": 1405629000000,
+        "duracion": 50,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=665034&e=34376125-2"
+    }, {
+        "id_programa": "80899",
+        "nombre": "Programa por determinar",
+        "episodio": "",
+        "hora_inicio": 1405629000000,
+        "hora_fin": 1405632600000,
+        "duracion": 60,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=80899&e=34376126-2"
+    }, {
+        "id_programa": "80899",
+        "nombre": "Programa por determinar",
+        "episodio": "",
+        "hora_inicio": 1405632600000,
+        "hora_fin": 1405636200000,
+        "duracion": 60,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=80899&e=34376127-2"
+    }]
+}

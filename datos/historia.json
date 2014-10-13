@@ -1,0 +1,1557 @@
+{
+    "canal": {
+        "id": "48",
+        "nombre": "historia",
+        "nombre_completo": "Historia",
+        "icono": "/elmundo/iconos/v2.1/television/logos/grandes/historia.gif"
+    },
+    "programas": [{
+        "id_programa": "1232559",
+        "nombre": "Documental: El precio de la historia Reino Unido",
+        "episodio": "",
+        "hora_inicio": 1405288200000,
+        "hora_fin": 1405291500000,
+        "duracion": 55,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1232559&e=33859671-148"
+    }, {
+        "id_programa": "1428568",
+        "nombre": "Documental: Alienígenas",
+        "episodio": "",
+        "hora_inicio": 1405291500000,
+        "hora_fin": 1405294200000,
+        "duracion": 45,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1428568&e=33859672-148"
+    }, {
+        "id_programa": "1428567",
+        "nombre": "Documental: Alienígenas",
+        "episodio": "",
+        "hora_inicio": 1405294200000,
+        "hora_fin": 1405296900000,
+        "duracion": 45,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1428567&e=33859673-148"
+    }, {
+        "id_programa": "1153407",
+        "nombre": "Documental: El libro de los secretos de EE.UU",
+        "episodio": "",
+        "hora_inicio": 1405296900000,
+        "hora_fin": 1405299300000,
+        "duracion": 40,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1153407&e=33859674-148"
+    }, {
+        "id_programa": "1157295",
+        "nombre": "Documental: El libro de los secretos de EE.UU",
+        "episodio": "",
+        "hora_inicio": 1405299300000,
+        "hora_fin": 1405302000000,
+        "duracion": 45,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1157295&e=33859675-148"
+    }, {
+        "id_programa": "1396596",
+        "nombre": "Documental: La Gran Guerra Marciana",
+        "episodio": "",
+        "hora_inicio": 1405302000000,
+        "hora_fin": 1405307400000,
+        "duracion": 90,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1396596&e=33859676-148"
+    }, {
+        "id_programa": "927310",
+        "nombre": "Documental: Vietnam, los archivos perdidos",
+        "episodio": "",
+        "hora_inicio": 1405307400000,
+        "hora_fin": 1405310100000,
+        "duracion": 45,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=927310&e=33859677-148"
+    }, {
+        "id_programa": "927232",
+        "nombre": "Documental: Vietnam, los archivos perdidos",
+        "episodio": "",
+        "hora_inicio": 1405310100000,
+        "hora_fin": 1405312500000,
+        "duracion": 40,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=927232&e=33859678-148"
+    }, {
+        "id_programa": "1396596",
+        "nombre": "Documental: La Gran Guerra Marciana",
+        "episodio": "",
+        "hora_inicio": 1405312500000,
+        "hora_fin": 1405317900000,
+        "duracion": 90,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1396596&e=33859679-148"
+    }, {
+        "id_programa": "1153407",
+        "nombre": "Documental: El libro de los secretos de EE.UU",
+        "episodio": "",
+        "hora_inicio": 1405317900000,
+        "hora_fin": 1405320600000,
+        "duracion": 45,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1153407&e=33859680-148"
+    }, {
+        "id_programa": "1157295",
+        "nombre": "Documental: El libro de los secretos de EE.UU",
+        "episodio": "",
+        "hora_inicio": 1405320600000,
+        "hora_fin": 1405323600000,
+        "duracion": 50,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1157295&e=33859681-148"
+    }, {
+        "id_programa": "1428568",
+        "nombre": "Documental: Alienígenas",
+        "episodio": "",
+        "hora_inicio": 1405323600000,
+        "hora_fin": 1405326600000,
+        "duracion": 50,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1428568&e=33859682-148"
+    }, {
+        "id_programa": "1428567",
+        "nombre": "Documental: Alienígenas",
+        "episodio": "",
+        "hora_inicio": 1405326600000,
+        "hora_fin": 1405329600000,
+        "duracion": 50,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1428567&e=33859683-148"
+    }, {
+        "id_programa": "1396596",
+        "nombre": "Documental: La Gran Guerra Marciana",
+        "episodio": "",
+        "hora_inicio": 1405329600000,
+        "hora_fin": 1405335900000,
+        "duracion": 105,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1396596&e=33859684-148"
+    }, {
+        "id_programa": "927310",
+        "nombre": "Documental: Vietnam, los archivos perdidos",
+        "episodio": "",
+        "hora_inicio": 1405335900000,
+        "hora_fin": 1405339200000,
+        "duracion": 55,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=927310&e=33859685-148"
+    }, {
+        "id_programa": "927232",
+        "nombre": "Documental: Vietnam, los archivos perdidos",
+        "episodio": "",
+        "hora_inicio": 1405339200000,
+        "hora_fin": 1405342500000,
+        "duracion": 55,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=927232&e=33859686-148"
+    }, {
+        "id_programa": "1428568",
+        "nombre": "Documental: Alienígenas",
+        "episodio": "",
+        "hora_inicio": 1405342500000,
+        "hora_fin": 1405345800000,
+        "duracion": 55,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1428568&e=33859687-148"
+    }, {
+        "id_programa": "1428567",
+        "nombre": "Documental: Alienígenas",
+        "episodio": "",
+        "hora_inicio": 1405345800000,
+        "hora_fin": 1405349100000,
+        "duracion": 55,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1428567&e=33859688-148"
+    }, {
+        "id_programa": "947790",
+        "nombre": "Documental: El precio de la historia",
+        "episodio": "",
+        "hora_inicio": 1405349100000,
+        "hora_fin": 1405350600000,
+        "duracion": 25,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=947790&e=33859689-148"
+    }, {
+        "id_programa": "971210",
+        "nombre": "Documental: El precio de la historia",
+        "episodio": "",
+        "hora_inicio": 1405350600000,
+        "hora_fin": 1405352100000,
+        "duracion": 25,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=971210&e=33859690-148"
+    }, {
+        "id_programa": "1232559",
+        "nombre": "Documental: El precio de la historia Reino Unido",
+        "episodio": "",
+        "hora_inicio": 1405352100000,
+        "hora_fin": 1405355400000,
+        "duracion": 55,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1232559&e=33859691-148"
+    }, {
+        "id_programa": "1004455",
+        "nombre": "Documental: Diez cosas que no sabías",
+        "episodio": "",
+        "hora_inicio": 1405355400000,
+        "hora_fin": 1405356900000,
+        "duracion": 25,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1004455&e=33859692-148"
+    }, {
+        "id_programa": "225962",
+        "nombre": "Documental: Diez cosas que no sabías",
+        "episodio": "",
+        "hora_inicio": 1405356900000,
+        "hora_fin": 1405358400000,
+        "duracion": 25,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=225962&e=33859693-148"
+    }, {
+        "id_programa": "608134",
+        "nombre": "Documental: Inventos Made In USA",
+        "episodio": "",
+        "hora_inicio": 1405358400000,
+        "hora_fin": 1405359900000,
+        "duracion": 25,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=608134&e=33859694-148"
+    }, {
+        "id_programa": "245896",
+        "nombre": "Documental: Inventos Made In USA",
+        "episodio": "",
+        "hora_inicio": 1405359900000,
+        "hora_fin": 1405361400000,
+        "duracion": 25,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=245896&e=33859695-148"
+    }, {
+        "id_programa": "956293",
+        "nombre": "Documental: Alienígenas",
+        "episodio": "",
+        "hora_inicio": 1405361400000,
+        "hora_fin": 1405364700000,
+        "duracion": 55,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=956293&e=33859696-148"
+    }, {
+        "id_programa": "952537",
+        "nombre": "Documental: El precio de la historia",
+        "episodio": "",
+        "hora_inicio": 1405364700000,
+        "hora_fin": 1405366200000,
+        "duracion": 25,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=952537&e=33859697-148"
+    }, {
+        "id_programa": "952536",
+        "nombre": "Documental: El precio de la historia",
+        "episodio": "",
+        "hora_inicio": 1405366200000,
+        "hora_fin": 1405367700000,
+        "duracion": 25,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=952536&e=33859698-148"
+    }, {
+        "id_programa": "241470",
+        "nombre": "Documental: ¿Extraterrestres?",
+        "episodio": "",
+        "hora_inicio": 1405367700000,
+        "hora_fin": 1405369500000,
+        "duracion": 30,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=241470&e=33859699-148"
+    }, {
+        "id_programa": "241466",
+        "nombre": "Documental: ¿Extraterrestres?",
+        "episodio": "",
+        "hora_inicio": 1405369500000,
+        "hora_fin": 1405371300000,
+        "duracion": 30,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=241466&e=33859700-148"
+    }, {
+        "id_programa": "1428850",
+        "nombre": "Documental: Hangar 1, archivos extraterrestres",
+        "episodio": "",
+        "hora_inicio": 1405371300000,
+        "hora_fin": 1405374600000,
+        "duracion": 55,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1428850&e=33859701-148"
+    }, {
+        "id_programa": "1232560",
+        "nombre": "Documental: El precio de la historia Reino Unido",
+        "episodio": "",
+        "hora_inicio": 1405374600000,
+        "hora_fin": 1405377900000,
+        "duracion": 55,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1232560&e=33859702-148"
+    }, {
+        "id_programa": "1428850",
+        "nombre": "Documental: Hangar 1, archivos extraterrestres",
+        "episodio": "",
+        "hora_inicio": 1405377900000,
+        "hora_fin": 1405381200000,
+        "duracion": 55,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1428850&e=33859703-148"
+    }, {
+        "id_programa": "241470",
+        "nombre": "Documental: ¿Extraterrestres?",
+        "episodio": "",
+        "hora_inicio": 1405381200000,
+        "hora_fin": 1405382700000,
+        "duracion": 25,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=241470&e=33859704-148"
+    }, {
+        "id_programa": "241466",
+        "nombre": "Documental: ¿Extraterrestres?",
+        "episodio": "",
+        "hora_inicio": 1405382700000,
+        "hora_fin": 1405384200000,
+        "duracion": 25,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=241466&e=33859705-148"
+    }, {
+        "id_programa": "956293",
+        "nombre": "Documental: Alienígenas",
+        "episodio": "",
+        "hora_inicio": 1405384200000,
+        "hora_fin": 1405386900000,
+        "duracion": 45,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=956293&e=33859706-148"
+    }, {
+        "id_programa": "1004455",
+        "nombre": "Documental: Diez cosas que no sabías",
+        "episodio": "",
+        "hora_inicio": 1405386900000,
+        "hora_fin": 1405388100000,
+        "duracion": 20,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1004455&e=33859707-148"
+    }, {
+        "id_programa": "225962",
+        "nombre": "Documental: Diez cosas que no sabías",
+        "episodio": "",
+        "hora_inicio": 1405388100000,
+        "hora_fin": 1405389600000,
+        "duracion": 25,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=225962&e=33859708-148"
+    }, {
+        "id_programa": "608134",
+        "nombre": "Documental: Inventos Made In USA",
+        "episodio": "",
+        "hora_inicio": 1405389600000,
+        "hora_fin": 1405390800000,
+        "duracion": 20,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=608134&e=33859709-148"
+    }, {
+        "id_programa": "245896",
+        "nombre": "Documental: Inventos Made In USA",
+        "episodio": "",
+        "hora_inicio": 1405390800000,
+        "hora_fin": 1405392300000,
+        "duracion": 25,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=245896&e=33859710-148"
+    }, {
+        "id_programa": "956293",
+        "nombre": "Documental: Alienígenas",
+        "episodio": "",
+        "hora_inicio": 1405392300000,
+        "hora_fin": 1405395000000,
+        "duracion": 45,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=956293&e=33859711-148"
+    }, {
+        "id_programa": "1004455",
+        "nombre": "Documental: Diez cosas que no sabías",
+        "episodio": "",
+        "hora_inicio": 1405395000000,
+        "hora_fin": 1405396200000,
+        "duracion": 20,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1004455&e=33859712-148"
+    }, {
+        "id_programa": "225962",
+        "nombre": "Documental: Diez cosas que no sabías",
+        "episodio": "",
+        "hora_inicio": 1405396200000,
+        "hora_fin": 1405397700000,
+        "duracion": 25,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=225962&e=33859713-148"
+    }, {
+        "id_programa": "639499",
+        "nombre": "Documental: El Universo",
+        "episodio": "",
+        "hora_inicio": 1405397700000,
+        "hora_fin": 1405400400000,
+        "duracion": 45,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=639499&e=33859714-148"
+    }, {
+        "id_programa": "897294",
+        "nombre": "Documental: Cazadores de nazis",
+        "episodio": "",
+        "hora_inicio": 1405400400000,
+        "hora_fin": 1405403100000,
+        "duracion": 45,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=897294&e=33859715-148"
+    }, {
+        "id_programa": "947630",
+        "nombre": "Documental: Restauradores",
+        "episodio": "",
+        "hora_inicio": 1405403100000,
+        "hora_fin": 1405404600000,
+        "duracion": 25,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=947630&e=33859716-148"
+    }, {
+        "id_programa": "608134",
+        "nombre": "Documental: Inventos Made In USA",
+        "episodio": "",
+        "hora_inicio": 1405404600000,
+        "hora_fin": 1405406100000,
+        "duracion": 25,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=608134&e=33859717-148"
+    }, {
+        "id_programa": "245896",
+        "nombre": "Documental: Inventos Made In USA",
+        "episodio": "",
+        "hora_inicio": 1405406100000,
+        "hora_fin": 1405407600000,
+        "duracion": 25,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=245896&e=33859718-148"
+    }, {
+        "id_programa": "639499",
+        "nombre": "Documental: El Universo",
+        "episodio": "",
+        "hora_inicio": 1405407600000,
+        "hora_fin": 1405410600000,
+        "duracion": 50,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=639499&e=33859719-148"
+    }, {
+        "id_programa": "909043",
+        "nombre": "Documental: Cazadores de nazis",
+        "episodio": "",
+        "hora_inicio": 1405410600000,
+        "hora_fin": 1405413900000,
+        "duracion": 55,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=909043&e=33859720-148"
+    }, {
+        "id_programa": "956293",
+        "nombre": "Documental: Alienígenas",
+        "episodio": "",
+        "hora_inicio": 1405413900000,
+        "hora_fin": 1405417200000,
+        "duracion": 55,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=956293&e=33859721-148"
+    }, {
+        "id_programa": "241470",
+        "nombre": "Documental: ¿Extraterrestres?",
+        "episodio": "",
+        "hora_inicio": 1405417200000,
+        "hora_fin": 1405418700000,
+        "duracion": 25,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=241470&e=33859722-148"
+    }, {
+        "id_programa": "241466",
+        "nombre": "Documental: ¿Extraterrestres?",
+        "episodio": "",
+        "hora_inicio": 1405418700000,
+        "hora_fin": 1405420500000,
+        "duracion": 30,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=241466&e=33859723-148"
+    }, {
+        "id_programa": "1428850",
+        "nombre": "Documental: Hangar 1, archivos extraterrestres",
+        "episodio": "",
+        "hora_inicio": 1405420500000,
+        "hora_fin": 1405423500000,
+        "duracion": 50,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1428850&e=33859724-148"
+    }, {
+        "id_programa": "1004455",
+        "nombre": "Documental: Diez cosas que no sabías",
+        "episodio": "",
+        "hora_inicio": 1405423500000,
+        "hora_fin": 1405425000000,
+        "duracion": 25,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1004455&e=33859725-148"
+    }, {
+        "id_programa": "225962",
+        "nombre": "Documental: Diez cosas que no sabías",
+        "episodio": "",
+        "hora_inicio": 1405425000000,
+        "hora_fin": 1405426500000,
+        "duracion": 25,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=225962&e=33859726-148"
+    }, {
+        "id_programa": "608134",
+        "nombre": "Documental: Inventos Made In USA",
+        "episodio": "",
+        "hora_inicio": 1405426500000,
+        "hora_fin": 1405428000000,
+        "duracion": 25,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=608134&e=33859727-148"
+    }, {
+        "id_programa": "245896",
+        "nombre": "Documental: Inventos Made In USA",
+        "episodio": "",
+        "hora_inicio": 1405428000000,
+        "hora_fin": 1405429500000,
+        "duracion": 25,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=245896&e=33859728-148"
+    }, {
+        "id_programa": "241470",
+        "nombre": "Documental: ¿Extraterrestres?",
+        "episodio": "",
+        "hora_inicio": 1405429500000,
+        "hora_fin": 1405431000000,
+        "duracion": 25,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=241470&e=33859729-148"
+    }, {
+        "id_programa": "241466",
+        "nombre": "Documental: ¿Extraterrestres?",
+        "episodio": "",
+        "hora_inicio": 1405431000000,
+        "hora_fin": 1405432800000,
+        "duracion": 30,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=241466&e=33859730-148"
+    }, {
+        "id_programa": "1428850",
+        "nombre": "Documental: Hangar 1, archivos extraterrestres",
+        "episodio": "",
+        "hora_inicio": 1405432800000,
+        "hora_fin": 1405436100000,
+        "duracion": 55,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1428850&e=33859731-148"
+    }, {
+        "id_programa": "952537",
+        "nombre": "Documental: El precio de la historia",
+        "episodio": "",
+        "hora_inicio": 1405436100000,
+        "hora_fin": 1405437300000,
+        "duracion": 20,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=952537&e=33859732-148"
+    }, {
+        "id_programa": "952536",
+        "nombre": "Documental: El precio de la historia",
+        "episodio": "",
+        "hora_inicio": 1405437300000,
+        "hora_fin": 1405438800000,
+        "duracion": 25,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=952536&e=33859733-148"
+    }, {
+        "id_programa": "1232560",
+        "nombre": "Documental: El precio de la historia Reino Unido",
+        "episodio": "",
+        "hora_inicio": 1405438800000,
+        "hora_fin": 1405442100000,
+        "duracion": 55,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1232560&e=33859734-148"
+    }, {
+        "id_programa": "1002169",
+        "nombre": "Documental: Diez cosas que no sabías",
+        "episodio": "",
+        "hora_inicio": 1405442100000,
+        "hora_fin": 1405443600000,
+        "duracion": 25,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1002169&e=33859735-148"
+    }, {
+        "id_programa": "229288",
+        "nombre": "Documental: Diez cosas que no sabías",
+        "episodio": "",
+        "hora_inicio": 1405443600000,
+        "hora_fin": 1405445100000,
+        "duracion": 25,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=229288&e=33859736-148"
+    }, {
+        "id_programa": "1101581",
+        "nombre": "Documental: Inventos Made In USA",
+        "episodio": "",
+        "hora_inicio": 1405445100000,
+        "hora_fin": 1405446600000,
+        "duracion": 25,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1101581&e=33859737-148"
+    }, {
+        "id_programa": "1086205",
+        "nombre": "Documental: Inventos Made In USA",
+        "episodio": "",
+        "hora_inicio": 1405446600000,
+        "hora_fin": 1405448100000,
+        "duracion": 25,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1086205&e=33859738-148"
+    }, {
+        "id_programa": "962663",
+        "nombre": "Documental: Alienígenas",
+        "episodio": "",
+        "hora_inicio": 1405448100000,
+        "hora_fin": 1405451400000,
+        "duracion": 55,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=962663&e=33859739-148"
+    }, {
+        "id_programa": "1031679",
+        "nombre": "Documental: El precio de la historia",
+        "episodio": "",
+        "hora_inicio": 1405451400000,
+        "hora_fin": 1405452900000,
+        "duracion": 25,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1031679&e=33859740-148"
+    }, {
+        "id_programa": "997069",
+        "nombre": "Documental: El precio de la historia",
+        "episodio": "",
+        "hora_inicio": 1405452900000,
+        "hora_fin": 1405454400000,
+        "duracion": 25,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=997069&e=33859741-148"
+    }, {
+        "id_programa": "600185",
+        "nombre": "Documental: El precio de la historia",
+        "episodio": "",
+        "hora_inicio": 1405454400000,
+        "hora_fin": 1405455900000,
+        "duracion": 25,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=600185&e=33859742-148"
+    }, {
+        "id_programa": "606298",
+        "nombre": "Documental: El precio de la historia",
+        "episodio": "",
+        "hora_inicio": 1405455900000,
+        "hora_fin": 1405457400000,
+        "duracion": 25,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=606298&e=33859743-148"
+    }, {
+        "id_programa": "1376345",
+        "nombre": "Documental: El precio de la historia",
+        "episodio": "",
+        "hora_inicio": 1405457400000,
+        "hora_fin": 1405458900000,
+        "duracion": 25,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1376345&e=33859744-148"
+    }, {
+        "id_programa": "1357744",
+        "nombre": "Documental: El precio de la historia",
+        "episodio": "",
+        "hora_inicio": 1405458900000,
+        "hora_fin": 1405460400000,
+        "duracion": 25,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1357744&e=33859745-148"
+    }, {
+        "id_programa": "952537",
+        "nombre": "Documental: El precio de la historia",
+        "episodio": "",
+        "hora_inicio": 1405460400000,
+        "hora_fin": 1405461900000,
+        "duracion": 25,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=952537&e=33859746-148"
+    }, {
+        "id_programa": "952536",
+        "nombre": "Documental: El precio de la historia",
+        "episodio": "",
+        "hora_inicio": 1405461900000,
+        "hora_fin": 1405463400000,
+        "duracion": 25,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=952536&e=33859747-148"
+    }, {
+        "id_programa": "600185",
+        "nombre": "Documental: El precio de la historia",
+        "episodio": "",
+        "hora_inicio": 1405463400000,
+        "hora_fin": 1405464900000,
+        "duracion": 25,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=600185&e=33859748-148"
+    }, {
+        "id_programa": "606298",
+        "nombre": "Documental: El precio de la historia",
+        "episodio": "",
+        "hora_inicio": 1405464900000,
+        "hora_fin": 1405466400000,
+        "duracion": 25,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=606298&e=33859749-148"
+    }, {
+        "id_programa": "1376345",
+        "nombre": "Documental: El precio de la historia",
+        "episodio": "",
+        "hora_inicio": 1405466400000,
+        "hora_fin": 1405467600000,
+        "duracion": 20,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1376345&e=33859750-148"
+    }, {
+        "id_programa": "1357744",
+        "nombre": "Documental: El precio de la historia",
+        "episodio": "",
+        "hora_inicio": 1405467600000,
+        "hora_fin": 1405469100000,
+        "duracion": 25,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1357744&e=33859751-148"
+    }, {
+        "id_programa": "962663",
+        "nombre": "Documental: Alienígenas",
+        "episodio": "",
+        "hora_inicio": 1405469100000,
+        "hora_fin": 1405471800000,
+        "duracion": 45,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=962663&e=33859752-148"
+    }, {
+        "id_programa": "603084",
+        "nombre": "Documental: El Universo",
+        "episodio": "",
+        "hora_inicio": 1405471800000,
+        "hora_fin": 1405474500000,
+        "duracion": 45,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=603084&e=33859753-148"
+    }, {
+        "id_programa": "1002169",
+        "nombre": "Documental: Diez cosas que no sabías",
+        "episodio": "",
+        "hora_inicio": 1405474500000,
+        "hora_fin": 1405476000000,
+        "duracion": 25,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1002169&e=33859754-148"
+    }, {
+        "id_programa": "229288",
+        "nombre": "Documental: Diez cosas que no sabías",
+        "episodio": "",
+        "hora_inicio": 1405476000000,
+        "hora_fin": 1405477500000,
+        "duracion": 25,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=229288&e=33859755-148"
+    }, {
+        "id_programa": "1101581",
+        "nombre": "Documental: Inventos Made In USA",
+        "episodio": "",
+        "hora_inicio": 1405477500000,
+        "hora_fin": 1405479000000,
+        "duracion": 25,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1101581&e=33859756-148"
+    }, {
+        "id_programa": "1086205",
+        "nombre": "Documental: Inventos Made In USA",
+        "episodio": "",
+        "hora_inicio": 1405479000000,
+        "hora_fin": 1405480500000,
+        "duracion": 25,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1086205&e=33859757-148"
+    }, {
+        "id_programa": "962663",
+        "nombre": "Documental: Alienígenas",
+        "episodio": "",
+        "hora_inicio": 1405480500000,
+        "hora_fin": 1405483200000,
+        "duracion": 45,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=962663&e=33859758-148"
+    }, {
+        "id_programa": "1002169",
+        "nombre": "Documental: Diez cosas que no sabías",
+        "episodio": "",
+        "hora_inicio": 1405483200000,
+        "hora_fin": 1405484700000,
+        "duracion": 25,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1002169&e=33859759-148"
+    }, {
+        "id_programa": "229288",
+        "nombre": "Documental: Diez cosas que no sabías",
+        "episodio": "",
+        "hora_inicio": 1405484700000,
+        "hora_fin": 1405486200000,
+        "duracion": 25,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=229288&e=33859760-148"
+    }, {
+        "id_programa": "603084",
+        "nombre": "Documental: El Universo",
+        "episodio": "",
+        "hora_inicio": 1405486200000,
+        "hora_fin": 1405489200000,
+        "duracion": 50,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=603084&e=33859761-148"
+    }, {
+        "id_programa": "881884",
+        "nombre": "Documental: Cazadores de nazis",
+        "episodio": "",
+        "hora_inicio": 1405489200000,
+        "hora_fin": 1405492200000,
+        "duracion": 50,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=881884&e=33859762-148"
+    }, {
+        "id_programa": "1101581",
+        "nombre": "Documental: Inventos Made In USA",
+        "episodio": "",
+        "hora_inicio": 1405492200000,
+        "hora_fin": 1405493700000,
+        "duracion": 25,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1101581&e=33859763-148"
+    }, {
+        "id_programa": "1086205",
+        "nombre": "Documental: Inventos Made In USA",
+        "episodio": "",
+        "hora_inicio": 1405493700000,
+        "hora_fin": 1405495200000,
+        "duracion": 25,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1086205&e=33859764-148"
+    }, {
+        "id_programa": "603084",
+        "nombre": "Documental: El Universo",
+        "episodio": "",
+        "hora_inicio": 1405495200000,
+        "hora_fin": 1405498200000,
+        "duracion": 50,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=603084&e=33859765-148"
+    }, {
+        "id_programa": "886233",
+        "nombre": "Documental: Cazadores de nazis",
+        "episodio": "",
+        "hora_inicio": 1405498200000,
+        "hora_fin": 1405501500000,
+        "duracion": 55,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=886233&e=33859766-148"
+    }, {
+        "id_programa": "962663",
+        "nombre": "Documental: Alienígenas",
+        "episodio": "",
+        "hora_inicio": 1405501500000,
+        "hora_fin": 1405504800000,
+        "duracion": 55,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=962663&e=33859767-148"
+    }, {
+        "id_programa": "600185",
+        "nombre": "Documental: El precio de la historia",
+        "episodio": "",
+        "hora_inicio": 1405504800000,
+        "hora_fin": 1405506300000,
+        "duracion": 25,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=600185&e=33859768-148"
+    }, {
+        "id_programa": "606298",
+        "nombre": "Documental: El precio de la historia",
+        "episodio": "",
+        "hora_inicio": 1405506300000,
+        "hora_fin": 1405507800000,
+        "duracion": 25,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=606298&e=33859769-148"
+    }, {
+        "id_programa": "1376345",
+        "nombre": "Documental: El precio de la historia",
+        "episodio": "",
+        "hora_inicio": 1405507800000,
+        "hora_fin": 1405509300000,
+        "duracion": 25,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1376345&e=33859770-148"
+    }, {
+        "id_programa": "1357744",
+        "nombre": "Documental: El precio de la historia",
+        "episodio": "",
+        "hora_inicio": 1405509300000,
+        "hora_fin": 1405510500000,
+        "duracion": 20,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1357744&e=33859771-148"
+    }, {
+        "id_programa": "1002169",
+        "nombre": "Documental: Diez cosas que no sabías",
+        "episodio": "",
+        "hora_inicio": 1405510500000,
+        "hora_fin": 1405512000000,
+        "duracion": 25,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1002169&e=33859772-148"
+    }, {
+        "id_programa": "229288",
+        "nombre": "Documental: Diez cosas que no sabías",
+        "episodio": "",
+        "hora_inicio": 1405512000000,
+        "hora_fin": 1405513500000,
+        "duracion": 25,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=229288&e=33859773-148"
+    }, {
+        "id_programa": "1101581",
+        "nombre": "Documental: Inventos Made In USA",
+        "episodio": "",
+        "hora_inicio": 1405513500000,
+        "hora_fin": 1405515000000,
+        "duracion": 25,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1101581&e=33859774-148"
+    }, {
+        "id_programa": "1086205",
+        "nombre": "Documental: Inventos Made In USA",
+        "episodio": "",
+        "hora_inicio": 1405515000000,
+        "hora_fin": 1405516800000,
+        "duracion": 30,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1086205&e=33859775-148"
+    }, {
+        "id_programa": "600185",
+        "nombre": "Documental: El precio de la historia",
+        "episodio": "",
+        "hora_inicio": 1405516800000,
+        "hora_fin": 1405518300000,
+        "duracion": 25,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=600185&e=33859776-148"
+    }, {
+        "id_programa": "606298",
+        "nombre": "Documental: El precio de la historia",
+        "episodio": "",
+        "hora_inicio": 1405518300000,
+        "hora_fin": 1405519800000,
+        "duracion": 25,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=606298&e=33859777-148"
+    }, {
+        "id_programa": "1376345",
+        "nombre": "Documental: El precio de la historia",
+        "episodio": "",
+        "hora_inicio": 1405519800000,
+        "hora_fin": 1405521300000,
+        "duracion": 25,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1376345&e=33859778-148"
+    }, {
+        "id_programa": "1357744",
+        "nombre": "Documental: El precio de la historia",
+        "episodio": "",
+        "hora_inicio": 1405521300000,
+        "hora_fin": 1405522800000,
+        "duracion": 25,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1357744&e=33859779-148"
+    }, {
+        "id_programa": "1031679",
+        "nombre": "Documental: El precio de la historia",
+        "episodio": "",
+        "hora_inicio": 1405522800000,
+        "hora_fin": 1405524000000,
+        "duracion": 20,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1031679&e=33859780-148"
+    }, {
+        "id_programa": "997069",
+        "nombre": "Documental: El precio de la historia",
+        "episodio": "",
+        "hora_inicio": 1405524000000,
+        "hora_fin": 1405525500000,
+        "duracion": 25,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=997069&e=33859781-148"
+    }, {
+        "id_programa": "952537",
+        "nombre": "Documental: El precio de la historia",
+        "episodio": "",
+        "hora_inicio": 1405525500000,
+        "hora_fin": 1405527000000,
+        "duracion": 25,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=952537&e=33859782-148"
+    }, {
+        "id_programa": "952536",
+        "nombre": "Documental: El precio de la historia",
+        "episodio": "",
+        "hora_inicio": 1405527000000,
+        "hora_fin": 1405528500000,
+        "duracion": 25,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=952536&e=33859783-148"
+    }, {
+        "id_programa": "997073",
+        "nombre": "Documental: Diez cosas que no sabías",
+        "episodio": "",
+        "hora_inicio": 1405528500000,
+        "hora_fin": 1405530000000,
+        "duracion": 25,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=997073&e=33859784-148"
+    }, {
+        "id_programa": "225876",
+        "nombre": "Documental: Diez cosas que no sabías",
+        "episodio": "",
+        "hora_inicio": 1405530000000,
+        "hora_fin": 1405531500000,
+        "duracion": 25,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=225876&e=33859785-148"
+    }, {
+        "id_programa": "1091304",
+        "nombre": "Documental: Inventos Made In USA",
+        "episodio": "",
+        "hora_inicio": 1405531500000,
+        "hora_fin": 1405533000000,
+        "duracion": 25,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1091304&e=33859786-148"
+    }, {
+        "id_programa": "608108",
+        "nombre": "Documental: Inventos Made In USA",
+        "episodio": "",
+        "hora_inicio": 1405533000000,
+        "hora_fin": 1405534500000,
+        "duracion": 25,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=608108&e=33859787-148"
+    }, {
+        "id_programa": "965840",
+        "nombre": "Documental: Alienígenas",
+        "episodio": "",
+        "hora_inicio": 1405534500000,
+        "hora_fin": 1405537800000,
+        "duracion": 55,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=965840&e=33859788-148"
+    }, {
+        "id_programa": "1283707",
+        "nombre": "Documental: El precio de la historia",
+        "episodio": "",
+        "hora_inicio": 1405537800000,
+        "hora_fin": 1405539300000,
+        "duracion": 25,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1283707&e=33859789-148"
+    }, {
+        "id_programa": "1283706",
+        "nombre": "Documental: El precio de la historia",
+        "episodio": "",
+        "hora_inicio": 1405539300000,
+        "hora_fin": 1405540800000,
+        "duracion": 25,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1283706&e=33859790-148"
+    }, {
+        "id_programa": "1136810",
+        "nombre": "Locos por los coches",
+        "episodio": "",
+        "hora_inicio": 1405540800000,
+        "hora_fin": 1405542300000,
+        "duracion": 25,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1136810&e=33859791-148"
+    }, {
+        "id_programa": "1141498",
+        "nombre": "Locos por los coches",
+        "episodio": "",
+        "hora_inicio": 1405542300000,
+        "hora_fin": 1405543800000,
+        "duracion": 25,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1141498&e=33859792-148"
+    }, {
+        "id_programa": "1160408",
+        "nombre": "Locos por los coches",
+        "episodio": "",
+        "hora_inicio": 1405543800000,
+        "hora_fin": 1405545300000,
+        "duracion": 25,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1160408&e=33859793-148"
+    }, {
+        "id_programa": "1160407",
+        "nombre": "Locos por los coches",
+        "episodio": "",
+        "hora_inicio": 1405545300000,
+        "hora_fin": 1405546800000,
+        "duracion": 25,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1160407&e=33859794-148"
+    }, {
+        "id_programa": "1031679",
+        "nombre": "Documental: El precio de la historia",
+        "episodio": "",
+        "hora_inicio": 1405546800000,
+        "hora_fin": 1405548300000,
+        "duracion": 25,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1031679&e=33859795-148"
+    }, {
+        "id_programa": "997069",
+        "nombre": "Documental: El precio de la historia",
+        "episodio": "",
+        "hora_inicio": 1405548300000,
+        "hora_fin": 1405549800000,
+        "duracion": 25,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=997069&e=33859796-148"
+    }, {
+        "id_programa": "1136810",
+        "nombre": "Locos por los coches",
+        "episodio": "",
+        "hora_inicio": 1405549800000,
+        "hora_fin": 1405551300000,
+        "duracion": 25,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1136810&e=33859797-148"
+    }, {
+        "id_programa": "1141498",
+        "nombre": "Locos por los coches",
+        "episodio": "",
+        "hora_inicio": 1405551300000,
+        "hora_fin": 1405552800000,
+        "duracion": 25,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1141498&e=33859798-148"
+    }, {
+        "id_programa": "1160408",
+        "nombre": "Locos por los coches",
+        "episodio": "",
+        "hora_inicio": 1405552800000,
+        "hora_fin": 1405554000000,
+        "duracion": 20,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1160408&e=33859799-148"
+    }, {
+        "id_programa": "1160407",
+        "nombre": "Locos por los coches",
+        "episodio": "",
+        "hora_inicio": 1405554000000,
+        "hora_fin": 1405555500000,
+        "duracion": 25,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1160407&e=33859800-148"
+    }, {
+        "id_programa": "965840",
+        "nombre": "Documental: Alienígenas",
+        "episodio": "",
+        "hora_inicio": 1405555500000,
+        "hora_fin": 1405558200000,
+        "duracion": 45,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=965840&e=33859801-148"
+    }, {
+        "id_programa": "997073",
+        "nombre": "Documental: Diez cosas que no sabías",
+        "episodio": "",
+        "hora_inicio": 1405558200000,
+        "hora_fin": 1405559700000,
+        "duracion": 25,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=997073&e=33859802-148"
+    }, {
+        "id_programa": "225876",
+        "nombre": "Documental: Diez cosas que no sabías",
+        "episodio": "",
+        "hora_inicio": 1405559700000,
+        "hora_fin": 1405560900000,
+        "duracion": 20,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=225876&e=33859803-148"
+    }, {
+        "id_programa": "1091304",
+        "nombre": "Documental: Inventos Made In USA",
+        "episodio": "",
+        "hora_inicio": 1405560900000,
+        "hora_fin": 1405562400000,
+        "duracion": 25,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1091304&e=33859804-148"
+    }, {
+        "id_programa": "608108",
+        "nombre": "Documental: Inventos Made In USA",
+        "episodio": "",
+        "hora_inicio": 1405562400000,
+        "hora_fin": 1405563900000,
+        "duracion": 25,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=608108&e=33859805-148"
+    }, {
+        "id_programa": "1136810",
+        "nombre": "Locos por los coches",
+        "episodio": "",
+        "hora_inicio": 1405563900000,
+        "hora_fin": 1405565400000,
+        "duracion": 25,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1136810&e=33859806-148"
+    }, {
+        "id_programa": "1141498",
+        "nombre": "Locos por los coches",
+        "episodio": "",
+        "hora_inicio": 1405565400000,
+        "hora_fin": 1405566900000,
+        "duracion": 25,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1141498&e=33859807-148"
+    }, {
+        "id_programa": "1160408",
+        "nombre": "Locos por los coches",
+        "episodio": "",
+        "hora_inicio": 1405566900000,
+        "hora_fin": 1405568400000,
+        "duracion": 25,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1160408&e=33859808-148"
+    }, {
+        "id_programa": "1160407",
+        "nombre": "Locos por los coches",
+        "episodio": "",
+        "hora_inicio": 1405568400000,
+        "hora_fin": 1405569900000,
+        "duracion": 25,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1160407&e=33859809-148"
+    }, {
+        "id_programa": "997073",
+        "nombre": "Documental: Diez cosas que no sabías",
+        "episodio": "",
+        "hora_inicio": 1405569900000,
+        "hora_fin": 1405571400000,
+        "duracion": 25,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=997073&e=33859810-148"
+    }, {
+        "id_programa": "225876",
+        "nombre": "Documental: Diez cosas que no sabías",
+        "episodio": "",
+        "hora_inicio": 1405571400000,
+        "hora_fin": 1405572900000,
+        "duracion": 25,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=225876&e=33859811-148"
+    }, {
+        "id_programa": "892046",
+        "nombre": "Documental: Cazadores de nazis",
+        "episodio": "",
+        "hora_inicio": 1405572900000,
+        "hora_fin": 1405575600000,
+        "duracion": 45,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=892046&e=33859812-148"
+    }, {
+        "id_programa": "1091304",
+        "nombre": "Documental: Inventos Made In USA",
+        "episodio": "",
+        "hora_inicio": 1405575600000,
+        "hora_fin": 1405577100000,
+        "duracion": 25,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1091304&e=33859813-148"
+    }, {
+        "id_programa": "608108",
+        "nombre": "Documental: Inventos Made In USA",
+        "episodio": "",
+        "hora_inicio": 1405577100000,
+        "hora_fin": 1405578600000,
+        "duracion": 25,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=608108&e=33859814-148"
+    }, {
+        "id_programa": "922872",
+        "nombre": "Documental: Cazatesoros",
+        "episodio": "",
+        "hora_inicio": 1405578600000,
+        "hora_fin": 1405581600000,
+        "duracion": 50,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=922872&e=33859815-148"
+    }, {
+        "id_programa": "1431546",
+        "nombre": "Documental: Cazatesoros",
+        "episodio": "",
+        "hora_inicio": 1405581600000,
+        "hora_fin": 1405584600000,
+        "duracion": 50,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1431546&e=33859816-148"
+    }, {
+        "id_programa": "1431545",
+        "nombre": "Documental: Cazatesoros",
+        "episodio": "",
+        "hora_inicio": 1405584600000,
+        "hora_fin": 1405587600000,
+        "duracion": 50,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1431545&e=33859817-148"
+    }, {
+        "id_programa": "922872",
+        "nombre": "Documental: Cazatesoros",
+        "episodio": "",
+        "hora_inicio": 1405587600000,
+        "hora_fin": 1405590900000,
+        "duracion": 55,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=922872&e=33859818-148"
+    }, {
+        "id_programa": "1136810",
+        "nombre": "Locos por los coches",
+        "episodio": "",
+        "hora_inicio": 1405590900000,
+        "hora_fin": 1405592400000,
+        "duracion": 25,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1136810&e=33859819-148"
+    }, {
+        "id_programa": "1141498",
+        "nombre": "Locos por los coches",
+        "episodio": "",
+        "hora_inicio": 1405592400000,
+        "hora_fin": 1405593900000,
+        "duracion": 25,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1141498&e=33859820-148"
+    }, {
+        "id_programa": "1160408",
+        "nombre": "Locos por los coches",
+        "episodio": "",
+        "hora_inicio": 1405593900000,
+        "hora_fin": 1405595400000,
+        "duracion": 25,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1160408&e=33859821-148"
+    }, {
+        "id_programa": "1160407",
+        "nombre": "Locos por los coches",
+        "episodio": "",
+        "hora_inicio": 1405595400000,
+        "hora_fin": 1405596600000,
+        "duracion": 20,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1160407&e=33859822-148"
+    }, {
+        "id_programa": "997073",
+        "nombre": "Documental: Diez cosas que no sabías",
+        "episodio": "",
+        "hora_inicio": 1405596600000,
+        "hora_fin": 1405598100000,
+        "duracion": 25,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=997073&e=33859823-148"
+    }, {
+        "id_programa": "225876",
+        "nombre": "Documental: Diez cosas que no sabías",
+        "episodio": "",
+        "hora_inicio": 1405598100000,
+        "hora_fin": 1405599600000,
+        "duracion": 25,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=225876&e=33859824-148"
+    }, {
+        "id_programa": "1091304",
+        "nombre": "Documental: Inventos Made In USA",
+        "episodio": "",
+        "hora_inicio": 1405599600000,
+        "hora_fin": 1405601100000,
+        "duracion": 25,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1091304&e=33859825-148"
+    }, {
+        "id_programa": "608108",
+        "nombre": "Documental: Inventos Made In USA",
+        "episodio": "",
+        "hora_inicio": 1405601100000,
+        "hora_fin": 1405602600000,
+        "duracion": 25,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=608108&e=33859826-148"
+    }, {
+        "id_programa": "1431546",
+        "nombre": "Documental: Cazatesoros",
+        "episodio": "",
+        "hora_inicio": 1405602600000,
+        "hora_fin": 1405605900000,
+        "duracion": 55,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1431546&e=33859827-148"
+    }, {
+        "id_programa": "1431545",
+        "nombre": "Documental: Cazatesoros",
+        "episodio": "",
+        "hora_inicio": 1405605900000,
+        "hora_fin": 1405609200000,
+        "duracion": 55,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1431545&e=33859828-148"
+    }, {
+        "id_programa": "1283707",
+        "nombre": "Documental: El precio de la historia",
+        "episodio": "",
+        "hora_inicio": 1405609200000,
+        "hora_fin": 1405610400000,
+        "duracion": 20,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1283707&e=33859829-148"
+    }, {
+        "id_programa": "1283706",
+        "nombre": "Documental: El precio de la historia",
+        "episodio": "",
+        "hora_inicio": 1405610400000,
+        "hora_fin": 1405611900000,
+        "duracion": 25,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1283706&e=33859830-148"
+    }, {
+        "id_programa": "1031679",
+        "nombre": "Documental: El precio de la historia",
+        "episodio": "",
+        "hora_inicio": 1405611900000,
+        "hora_fin": 1405613400000,
+        "duracion": 25,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1031679&e=33859831-148"
+    }, {
+        "id_programa": "997069",
+        "nombre": "Documental: El precio de la historia",
+        "episodio": "",
+        "hora_inicio": 1405613400000,
+        "hora_fin": 1405614900000,
+        "duracion": 25,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=997069&e=33859832-148"
+    }, {
+        "id_programa": "997066",
+        "nombre": "Documental: Diez cosas que no sabías",
+        "episodio": "",
+        "hora_inicio": 1405614900000,
+        "hora_fin": 1405616400000,
+        "duracion": 25,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=997066&e=33859833-148"
+    }, {
+        "id_programa": "1019561",
+        "nombre": "Documental: Diez cosas que no sabías",
+        "episodio": "",
+        "hora_inicio": 1405616400000,
+        "hora_fin": 1405617900000,
+        "duracion": 25,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1019561&e=33859834-148"
+    }, {
+        "id_programa": "609240",
+        "nombre": "Documental: Inventos Made In USA",
+        "episodio": "",
+        "hora_inicio": 1405617900000,
+        "hora_fin": 1405619400000,
+        "duracion": 25,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=609240&e=33859835-148"
+    }, {
+        "id_programa": "613688",
+        "nombre": "Documental: Inventos Made In USA",
+        "episodio": "",
+        "hora_inicio": 1405619400000,
+        "hora_fin": 1405620900000,
+        "duracion": 25,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=613688&e=33859836-148"
+    }, {
+        "id_programa": "968404",
+        "nombre": "Documental: Alienígenas",
+        "episodio": "",
+        "hora_inicio": 1405620900000,
+        "hora_fin": 1405624200000,
+        "duracion": 55,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=968404&e=33859837-148"
+    }, {
+        "id_programa": "956263",
+        "nombre": "Documental: El precio de la historia",
+        "episodio": "",
+        "hora_inicio": 1405624200000,
+        "hora_fin": 1405625700000,
+        "duracion": 25,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=956263&e=33859838-148"
+    }, {
+        "id_programa": "956262",
+        "nombre": "Documental: El precio de la historia",
+        "episodio": "",
+        "hora_inicio": 1405625700000,
+        "hora_fin": 1405627200000,
+        "duracion": 25,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=956262&e=33859839-148"
+    }, {
+        "id_programa": "889541",
+        "nombre": "Documental: El Universo",
+        "episodio": "",
+        "hora_inicio": 1405627200000,
+        "hora_fin": 1405630500000,
+        "duracion": 55,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=889541&e=33859840-148"
+    }, {
+        "id_programa": "1058761",
+        "nombre": "Documental: El Universo",
+        "episodio": "",
+        "hora_inicio": 1405630500000,
+        "hora_fin": 1405633800000,
+        "duracion": 55,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1058761&e=33859841-148"
+    }, {
+        "id_programa": "1283707",
+        "nombre": "Documental: El precio de la historia",
+        "episodio": "",
+        "hora_inicio": 1405633800000,
+        "hora_fin": 1405635300000,
+        "duracion": 25,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1283707&e=33859842-148"
+    }]
+}

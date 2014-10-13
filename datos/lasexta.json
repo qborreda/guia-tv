@@ -1,0 +1,783 @@
+{
+    "canal": {
+        "id": "510",
+        "nombre": "lasexta",
+        "nombre_completo": "laSexta",
+        "icono": "/elmundo/iconos/v2.1/television/logos/grandes/lasexta.gif"
+    },
+    "programas": [{
+        "id_programa": "1409274",
+        "nombre": "El chiringuito del Mundial",
+        "episodio": "",
+        "hora_inicio": 1405288800000,
+        "hora_fin": 1405297800000,
+        "duracion": 150,
+        "categoria": "90",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1409274&e=34478442-510"
+    }, {
+        "id_programa": "1205665",
+        "nombre": "Juega con el 8",
+        "episodio": "",
+        "hora_inicio": 1405297800000,
+        "hora_fin": 1405301400000,
+        "duracion": 60,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1205665&e=34478443-510"
+    }, {
+        "id_programa": "899795",
+        "nombre": "Minutos musicales",
+        "episodio": "",
+        "hora_inicio": 1405301400000,
+        "hora_fin": 1405310400000,
+        "duracion": 150,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=899795&e=33869766-510"
+    }, {
+        "id_programa": "899795",
+        "nombre": "Minutos musicales",
+        "episodio": "",
+        "hora_inicio": 1405310400000,
+        "hora_fin": 1405314900000,
+        "duracion": 75,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=899795&e=34499619-510"
+    }, {
+        "id_programa": "967630",
+        "nombre": "Compras de cine",
+        "episodio": "",
+        "hora_inicio": 1405314900000,
+        "hora_fin": 1405316700000,
+        "duracion": 30,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=967630&e=34499620-510"
+    }, {
+        "id_programa": "991814",
+        "nombre": "Al rojo vivo",
+        "episodio": "",
+        "hora_inicio": 1405316700000,
+        "hora_fin": 1405323000000,
+        "duracion": 105,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=991814&e=33869768-510"
+    }, {
+        "id_programa": "853033",
+        "nombre": "Documental: Crímenes imperfectos",
+        "episodio": "",
+        "hora_inicio": 1405323000000,
+        "hora_fin": 1405326600000,
+        "duracion": 60,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=853033&e=33869769-510"
+    }, {
+        "id_programa": "1439970",
+        "nombre": "Documental: Las pruebas del crimen",
+        "episodio": "",
+        "hora_inicio": 1405326600000,
+        "hora_fin": 1405328400000,
+        "duracion": 30,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1439970&e=34499623-510"
+    }, {
+        "id_programa": "1439969",
+        "nombre": "Documental: Las pruebas del crimen",
+        "episodio": "",
+        "hora_inicio": 1405328400000,
+        "hora_fin": 1405330200000,
+        "duracion": 30,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1439969&e=34499624-510"
+    }, {
+        "id_programa": "1407685",
+        "nombre": "Documental: Informe criminal",
+        "episodio": "",
+        "hora_inicio": 1405330200000,
+        "hora_fin": 1405333200000,
+        "duracion": 50,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1407685&e=33869771-510"
+    }, {
+        "id_programa": "991814",
+        "nombre": "Al rojo vivo",
+        "episodio": "",
+        "hora_inicio": 1405333200000,
+        "hora_fin": 1405339200000,
+        "duracion": 100,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=991814&e=33869772-510"
+    }, {
+        "id_programa": "888084",
+        "nombre": "La Sexta Noticias 1ª Edición",
+        "episodio": "",
+        "hora_inicio": 1405339200000,
+        "hora_fin": 1405342500000,
+        "duracion": 55,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=888084&e=33869773-510"
+    }, {
+        "id_programa": "1056942",
+        "nombre": "Jugones",
+        "episodio": "",
+        "hora_inicio": 1405342500000,
+        "hora_fin": 1405344600000,
+        "duracion": 35,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1056942&e=33869774-510"
+    }, {
+        "id_programa": "888085",
+        "nombre": "La Sexta Meteo",
+        "episodio": "",
+        "hora_inicio": 1405344600000,
+        "hora_fin": 1405345500000,
+        "duracion": 15,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=888085&e=33869775-510"
+    }, {
+        "id_programa": "1201625",
+        "nombre": "Zapeando",
+        "episodio": "",
+        "hora_inicio": 1405345500000,
+        "hora_fin": 1405350900000,
+        "duracion": 90,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1201625&e=33869776-510"
+    }, {
+        "id_programa": "970648",
+        "nombre": "Más vale tarde",
+        "episodio": "",
+        "hora_inicio": 1405350900000,
+        "hora_fin": 1405360800000,
+        "duracion": 165,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=970648&e=33869777-510"
+    }, {
+        "id_programa": "888579",
+        "nombre": "LaSexta Noticias 2ª Edición",
+        "episodio": "",
+        "hora_inicio": 1405360800000,
+        "hora_fin": 1405363500000,
+        "duracion": 45,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=888579&e=33869778-510"
+    }, {
+        "id_programa": "1305023",
+        "nombre": "La Sexta Meteo 2ª Edición",
+        "episodio": "",
+        "hora_inicio": 1405363500000,
+        "hora_fin": 1405364400000,
+        "duracion": 15,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1305023&e=33869779-510"
+    }, {
+        "id_programa": "604759",
+        "nombre": "La Sexta Deportes 2ª Edición",
+        "episodio": "",
+        "hora_inicio": 1405364400000,
+        "hora_fin": 1405366200000,
+        "duracion": 30,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=604759&e=33869780-510"
+    }, {
+        "id_programa": "1124483",
+        "nombre": "El intermedio",
+        "episodio": "",
+        "hora_inicio": 1405366200000,
+        "hora_fin": 1405369800000,
+        "duracion": 60,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1124483&e=34499635-510"
+    }, {
+        "id_programa": "96445",
+        "nombre": "Bones",
+        "episodio": "Alienígenas de la nave espacial",
+        "hora_inicio": 1405369800000,
+        "hora_fin": 1405372500000,
+        "duracion": 45,
+        "categoria": "1",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=96445&e=34499636-510"
+    }, {
+        "id_programa": "96772",
+        "nombre": "Bones",
+        "episodio": "La bruja sin cabeza del bosque",
+        "hora_inicio": 1405372500000,
+        "hora_fin": 1405375200000,
+        "duracion": 45,
+        "categoria": "1",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=96772&e=34499637-510"
+    }, {
+        "id_programa": "1409274",
+        "nombre": "El chiringuito del Mundial",
+        "episodio": "",
+        "hora_inicio": 1405375200000,
+        "hora_fin": 1405384200000,
+        "duracion": 150,
+        "categoria": "90",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1409274&e=34499638-510"
+    }, {
+        "id_programa": "1060604",
+        "nombre": "Poker Caribbean adventure",
+        "episodio": "",
+        "hora_inicio": 1405384200000,
+        "hora_fin": 1405386000000,
+        "duracion": 30,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1060604&e=34499639-510"
+    }, {
+        "id_programa": "1205665",
+        "nombre": "Juega con el 8",
+        "episodio": "",
+        "hora_inicio": 1405386000000,
+        "hora_fin": 1405389600000,
+        "duracion": 60,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1205665&e=34499640-510"
+    }, {
+        "id_programa": "899795",
+        "nombre": "Minutos musicales",
+        "episodio": "",
+        "hora_inicio": 1405389600000,
+        "hora_fin": 1405396800000,
+        "duracion": 120,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=899795&e=34499641-510"
+    }, {
+        "id_programa": "899795",
+        "nombre": "Minutos musicales",
+        "episodio": "",
+        "hora_inicio": 1405396800000,
+        "hora_fin": 1405401300000,
+        "duracion": 75,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=899795&e=34502507-510"
+    }, {
+        "id_programa": "967630",
+        "nombre": "Compras de cine",
+        "episodio": "",
+        "hora_inicio": 1405401300000,
+        "hora_fin": 1405403100000,
+        "duracion": 30,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=967630&e=34502508-510"
+    }, {
+        "id_programa": "991814",
+        "nombre": "Al rojo vivo",
+        "episodio": "",
+        "hora_inicio": 1405403100000,
+        "hora_fin": 1405409400000,
+        "duracion": 105,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=991814&e=34499689-510"
+    }, {
+        "id_programa": "853033",
+        "nombre": "Documental: Crímenes imperfectos",
+        "episodio": "",
+        "hora_inicio": 1405409400000,
+        "hora_fin": 1405413000000,
+        "duracion": 60,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=853033&e=34499690-510"
+    }, {
+        "id_programa": "1440093",
+        "nombre": "Documental: Las pruebas del crimen",
+        "episodio": "",
+        "hora_inicio": 1405413000000,
+        "hora_fin": 1405414800000,
+        "duracion": 30,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1440093&e=34502511-510"
+    }, {
+        "id_programa": "1440092",
+        "nombre": "Documental: Las pruebas del crimen",
+        "episodio": "",
+        "hora_inicio": 1405414800000,
+        "hora_fin": 1405416600000,
+        "duracion": 30,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1440092&e=34502512-510"
+    }, {
+        "id_programa": "1407685",
+        "nombre": "Documental: Informe criminal",
+        "episodio": "",
+        "hora_inicio": 1405416600000,
+        "hora_fin": 1405419600000,
+        "duracion": 50,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1407685&e=34499692-510"
+    }, {
+        "id_programa": "991814",
+        "nombre": "Al rojo vivo",
+        "episodio": "",
+        "hora_inicio": 1405419600000,
+        "hora_fin": 1405425600000,
+        "duracion": 100,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=991814&e=34499693-510"
+    }, {
+        "id_programa": "888084",
+        "nombre": "La Sexta Noticias 1ª Edición",
+        "episodio": "",
+        "hora_inicio": 1405425600000,
+        "hora_fin": 1405428900000,
+        "duracion": 55,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=888084&e=34499694-510"
+    }, {
+        "id_programa": "1056942",
+        "nombre": "Jugones",
+        "episodio": "",
+        "hora_inicio": 1405428900000,
+        "hora_fin": 1405431000000,
+        "duracion": 35,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1056942&e=34499695-510"
+    }, {
+        "id_programa": "888085",
+        "nombre": "La Sexta Meteo",
+        "episodio": "",
+        "hora_inicio": 1405431000000,
+        "hora_fin": 1405431900000,
+        "duracion": 15,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=888085&e=34499696-510"
+    }, {
+        "id_programa": "1201625",
+        "nombre": "Zapeando",
+        "episodio": "",
+        "hora_inicio": 1405431900000,
+        "hora_fin": 1405437300000,
+        "duracion": 90,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1201625&e=34499697-510"
+    }, {
+        "id_programa": "970648",
+        "nombre": "Más vale tarde",
+        "episodio": "",
+        "hora_inicio": 1405437300000,
+        "hora_fin": 1405447200000,
+        "duracion": 165,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=970648&e=34499698-510"
+    }, {
+        "id_programa": "888579",
+        "nombre": "LaSexta Noticias 2ª Edición",
+        "episodio": "",
+        "hora_inicio": 1405447200000,
+        "hora_fin": 1405449900000,
+        "duracion": 45,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=888579&e=34499699-510"
+    }, {
+        "id_programa": "1305023",
+        "nombre": "La Sexta Meteo 2ª Edición",
+        "episodio": "",
+        "hora_inicio": 1405449900000,
+        "hora_fin": 1405450800000,
+        "duracion": 15,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1305023&e=34499700-510"
+    }, {
+        "id_programa": "604759",
+        "nombre": "La Sexta Deportes 2ª Edición",
+        "episodio": "",
+        "hora_inicio": 1405450800000,
+        "hora_fin": 1405452600000,
+        "duracion": 30,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=604759&e=34499701-510"
+    }, {
+        "id_programa": "1124483",
+        "nombre": "El intermedio",
+        "episodio": "",
+        "hora_inicio": 1405452600000,
+        "hora_fin": 1405456500000,
+        "duracion": 65,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1124483&e=34502523-510"
+    }, {
+        "id_programa": "237853",
+        "nombre": "Cine: 600 kilos de oro puro",
+        "episodio": "",
+        "hora_inicio": 1405456500000,
+        "hora_fin": 1405463400000,
+        "duracion": 115,
+        "categoria": "104",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=237853&e=34502524-510"
+    }, {
+        "id_programa": "1409274",
+        "nombre": "El chiringuito del Mundial",
+        "episodio": "",
+        "hora_inicio": 1405463400000,
+        "hora_fin": 1405470600000,
+        "duracion": 120,
+        "categoria": "90",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1409274&e=34502525-510"
+    }, {
+        "id_programa": "1205665",
+        "nombre": "Juega con el 8",
+        "episodio": "",
+        "hora_inicio": 1405470600000,
+        "hora_fin": 1405474200000,
+        "duracion": 60,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1205665&e=34502526-510"
+    }, {
+        "id_programa": "899795",
+        "nombre": "Minutos musicales",
+        "episodio": "",
+        "hora_inicio": 1405474200000,
+        "hora_fin": 1405483200000,
+        "duracion": 150,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=899795&e=34502527-510"
+    }, {
+        "id_programa": "899795",
+        "nombre": "Minutos musicales",
+        "episodio": "",
+        "hora_inicio": 1405483200000,
+        "hora_fin": 1405487700000,
+        "duracion": 75,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=899795&e=34502570-510"
+    }, {
+        "id_programa": "967630",
+        "nombre": "Compras de cine",
+        "episodio": "",
+        "hora_inicio": 1405487700000,
+        "hora_fin": 1405489500000,
+        "duracion": 30,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=967630&e=34502571-510"
+    }, {
+        "id_programa": "991814",
+        "nombre": "Al rojo vivo",
+        "episodio": "",
+        "hora_inicio": 1405489500000,
+        "hora_fin": 1405495800000,
+        "duracion": 105,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=991814&e=34499707-510"
+    }, {
+        "id_programa": "853033",
+        "nombre": "Documental: Crímenes imperfectos",
+        "episodio": "",
+        "hora_inicio": 1405495800000,
+        "hora_fin": 1405499400000,
+        "duracion": 60,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=853033&e=34499708-510"
+    }, {
+        "id_programa": "1440126",
+        "nombre": "Documental: Las pruebas del crimen",
+        "episodio": "",
+        "hora_inicio": 1405499400000,
+        "hora_fin": 1405501200000,
+        "duracion": 30,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1440126&e=34502574-510"
+    }, {
+        "id_programa": "1440125",
+        "nombre": "Documental: Las pruebas del crimen",
+        "episodio": "",
+        "hora_inicio": 1405501200000,
+        "hora_fin": 1405503000000,
+        "duracion": 30,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1440125&e=34502575-510"
+    }, {
+        "id_programa": "1407685",
+        "nombre": "Documental: Informe criminal",
+        "episodio": "",
+        "hora_inicio": 1405503000000,
+        "hora_fin": 1405506000000,
+        "duracion": 50,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1407685&e=34499710-510"
+    }, {
+        "id_programa": "991814",
+        "nombre": "Al rojo vivo",
+        "episodio": "",
+        "hora_inicio": 1405506000000,
+        "hora_fin": 1405512000000,
+        "duracion": 100,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=991814&e=34499711-510"
+    }, {
+        "id_programa": "888084",
+        "nombre": "La Sexta Noticias 1ª Edición",
+        "episodio": "",
+        "hora_inicio": 1405512000000,
+        "hora_fin": 1405515300000,
+        "duracion": 55,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=888084&e=34499712-510"
+    }, {
+        "id_programa": "1056942",
+        "nombre": "Jugones",
+        "episodio": "",
+        "hora_inicio": 1405515300000,
+        "hora_fin": 1405517400000,
+        "duracion": 35,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1056942&e=34499713-510"
+    }, {
+        "id_programa": "888085",
+        "nombre": "La Sexta Meteo",
+        "episodio": "",
+        "hora_inicio": 1405517400000,
+        "hora_fin": 1405518300000,
+        "duracion": 15,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=888085&e=34499714-510"
+    }, {
+        "id_programa": "1201625",
+        "nombre": "Zapeando",
+        "episodio": "",
+        "hora_inicio": 1405518300000,
+        "hora_fin": 1405523700000,
+        "duracion": 90,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1201625&e=34499715-510"
+    }, {
+        "id_programa": "970648",
+        "nombre": "Más vale tarde",
+        "episodio": "",
+        "hora_inicio": 1405523700000,
+        "hora_fin": 1405533600000,
+        "duracion": 165,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=970648&e=34499716-510"
+    }, {
+        "id_programa": "888579",
+        "nombre": "LaSexta Noticias 2ª Edición",
+        "episodio": "",
+        "hora_inicio": 1405533600000,
+        "hora_fin": 1405536300000,
+        "duracion": 45,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=888579&e=34499717-510"
+    }, {
+        "id_programa": "1305023",
+        "nombre": "La Sexta Meteo 2ª Edición",
+        "episodio": "",
+        "hora_inicio": 1405536300000,
+        "hora_fin": 1405537200000,
+        "duracion": 15,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1305023&e=34499718-510"
+    }, {
+        "id_programa": "604759",
+        "nombre": "La Sexta Deportes 2ª Edición",
+        "episodio": "",
+        "hora_inicio": 1405537200000,
+        "hora_fin": 1405539000000,
+        "duracion": 30,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=604759&e=34499719-510"
+    }, {
+        "id_programa": "1124483",
+        "nombre": "El intermedio",
+        "episodio": "",
+        "hora_inicio": 1405539000000,
+        "hora_fin": 1405542600000,
+        "duracion": 60,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1124483&e=34502586-510"
+    }, {
+        "id_programa": "193289",
+        "nombre": "El mentalista",
+        "episodio": "Uno, dos, tres al escondite rojo inglés",
+        "hora_inicio": 1405542600000,
+        "hora_fin": 1405545300000,
+        "duracion": 45,
+        "categoria": "1",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=193289&e=34502587-510"
+    }, {
+        "id_programa": "193545",
+        "nombre": "El mentalista",
+        "episodio": "El sombrero carmesí",
+        "hora_inicio": 1405545300000,
+        "hora_fin": 1405548000000,
+        "duracion": 45,
+        "categoria": "1",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=193545&e=34502588-510"
+    }, {
+        "id_programa": "1409274",
+        "nombre": "El chiringuito del Mundial",
+        "episodio": "",
+        "hora_inicio": 1405548000000,
+        "hora_fin": 1405557000000,
+        "duracion": 150,
+        "categoria": "90",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1409274&e=34502589-510"
+    }, {
+        "id_programa": "1205665",
+        "nombre": "Juega con el 8",
+        "episodio": "",
+        "hora_inicio": 1405557000000,
+        "hora_fin": 1405560600000,
+        "duracion": 60,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1205665&e=34502590-510"
+    }, {
+        "id_programa": "899795",
+        "nombre": "Minutos musicales",
+        "episodio": "",
+        "hora_inicio": 1405560600000,
+        "hora_fin": 1405569600000,
+        "duracion": 150,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=899795&e=34502591-510"
+    }, {
+        "id_programa": "898786",
+        "nombre": "La Sexta en concierto",
+        "episodio": "",
+        "hora_inicio": 1405569600000,
+        "hora_fin": 1405575900000,
+        "duracion": 105,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=898786&e=34499724-510"
+    }, {
+        "id_programa": "991814",
+        "nombre": "Al rojo vivo",
+        "episodio": "",
+        "hora_inicio": 1405575900000,
+        "hora_fin": 1405582200000,
+        "duracion": 105,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=991814&e=34499725-510"
+    }, {
+        "id_programa": "853033",
+        "nombre": "Documental: Crímenes imperfectos",
+        "episodio": "",
+        "hora_inicio": 1405582200000,
+        "hora_fin": 1405585800000,
+        "duracion": 60,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=853033&e=34499726-510"
+    }, {
+        "id_programa": "1407685",
+        "nombre": "Documental: Informe criminal",
+        "episodio": "",
+        "hora_inicio": 1405585800000,
+        "hora_fin": 1405589400000,
+        "duracion": 60,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1407685&e=34499727-510"
+    }, {
+        "id_programa": "1407685",
+        "nombre": "Documental: Informe criminal",
+        "episodio": "",
+        "hora_inicio": 1405589400000,
+        "hora_fin": 1405592700000,
+        "duracion": 55,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1407685&e=34499728-510"
+    }, {
+        "id_programa": "991814",
+        "nombre": "Al rojo vivo",
+        "episodio": "",
+        "hora_inicio": 1405592700000,
+        "hora_fin": 1405598400000,
+        "duracion": 95,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=991814&e=34499729-510"
+    }, {
+        "id_programa": "888084",
+        "nombre": "La Sexta Noticias 1ª Edición",
+        "episodio": "",
+        "hora_inicio": 1405598400000,
+        "hora_fin": 1405601700000,
+        "duracion": 55,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=888084&e=34499730-510"
+    }, {
+        "id_programa": "1056942",
+        "nombre": "Jugones",
+        "episodio": "",
+        "hora_inicio": 1405601700000,
+        "hora_fin": 1405603800000,
+        "duracion": 35,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1056942&e=34499731-510"
+    }, {
+        "id_programa": "888085",
+        "nombre": "La Sexta Meteo",
+        "episodio": "",
+        "hora_inicio": 1405603800000,
+        "hora_fin": 1405604700000,
+        "duracion": 15,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=888085&e=34499732-510"
+    }, {
+        "id_programa": "1201625",
+        "nombre": "Zapeando",
+        "episodio": "",
+        "hora_inicio": 1405604700000,
+        "hora_fin": 1405612800000,
+        "duracion": 135,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1201625&e=34499733-510"
+    }, {
+        "id_programa": "970648",
+        "nombre": "Más vale tarde",
+        "episodio": "",
+        "hora_inicio": 1405612800000,
+        "hora_fin": 1405620000000,
+        "duracion": 120,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=970648&e=34499734-510"
+    }, {
+        "id_programa": "888579",
+        "nombre": "LaSexta Noticias 2ª Edición",
+        "episodio": "",
+        "hora_inicio": 1405620000000,
+        "hora_fin": 1405622700000,
+        "duracion": 45,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=888579&e=34499735-510"
+    }, {
+        "id_programa": "1305023",
+        "nombre": "La Sexta Meteo 2ª Edición",
+        "episodio": "",
+        "hora_inicio": 1405622700000,
+        "hora_fin": 1405623600000,
+        "duracion": 15,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=1305023&e=34499736-510"
+    }, {
+        "id_programa": "604759",
+        "nombre": "La Sexta Deportes 2ª Edición",
+        "episodio": "",
+        "hora_inicio": 1405623600000,
+        "hora_fin": 1405625400000,
+        "duracion": 30,
+        "categoria": "20",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=604759&e=34499737-510"
+    }, {
+        "id_programa": "722461",
+        "nombre": "El intermedio",
+        "episodio": "",
+        "hora_inicio": 1405625400000,
+        "hora_fin": 1405628700000,
+        "duracion": 55,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=722461&e=34499738-510"
+    }, {
+        "id_programa": "80899",
+        "nombre": "Programa por determinar",
+        "episodio": "",
+        "hora_inicio": 1405628700000,
+        "hora_fin": 1405633500000,
+        "duracion": 80,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=80899&e=34499739-510"
+    }, {
+        "id_programa": "80899",
+        "nombre": "Programa por determinar",
+        "episodio": "",
+        "hora_inicio": 1405633500000,
+        "hora_fin": 1405642500000,
+        "duracion": 150,
+        "categoria": "31",
+        "url_ficha": "/elmundo/television/fichas_programas/programa.html?p=80899&e=34499740-510"
+    }]
+}
