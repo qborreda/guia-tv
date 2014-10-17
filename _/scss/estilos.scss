@@ -35,10 +35,9 @@ $fuentes-cuerpo: Arial, $font_5;
 $fuentes-peq: $font_4, $font_5;
 
 $alto_canal: 90px;
-$pixelsPorHora: 200px;
-$ancho_dia24: $pixelsPorHora * 24; // 4320px;
+$pixelsPorHora: 260px;
+$ancho_dia24: $pixelsPorHora * 24;
 $ancho_max_viewport: 1024px;
-$ancho_por_hora: $ancho_dia24 / 24; // 200px;
 
 html {
 	//Instead of the line below you could use @include box-sizing($bs)
@@ -236,7 +235,7 @@ h1 {
 		height: $alto_canal;
 		padding: 5px;
 		width: auto;
-		min-width: $ancho_por_hora / 2;
+		min-width: $pixelsPorHora / 2;
 		background-color: #FFF;
 		// background-image: linear-gradient(to bottom, #CCC, #EEE);
 		transition: all 300ms ease;
@@ -316,7 +315,7 @@ h1 {
 			top: 0;
 			left: 0;
 			display: inline-block;
-			width: $ancho_por_hora;
+			width: $pixelsPorHora;
 			height: 25px;
 			margin: 10px 0 0;
 			padding: 5px;
@@ -652,7 +651,7 @@ h1 {
 
 	.barraLetras{
 		display: block;
-		min-width: $ancho_por_hora * 28;
+		min-width: $pixelsPorHora * 28;
 		z-index: 40;
 
 		ul {
@@ -663,10 +662,10 @@ h1 {
 			.itemLetra {
 				display: inline-block;
 				float:left;
-				width: $ancho_por_hora;
+				width: $pixelsPorHora;
 
 				h4 {
-					width: $ancho_por_hora;
+					width: $pixelsPorHora;
 					height: 35px;
 					margin: 0;
 					padding: 5px;
@@ -681,7 +680,7 @@ h1 {
 				}
 
 				/** opciones nanoScroller **/
-				.nano { position:relative; width: $ancho_por_hora; height: 300px; overflow: hidden;}
+				.nano { position:relative; width: $pixelsPorHora; height: 300px; overflow: hidden;}
 				.nano .nano-content { }
 				.nano .nano-pane   { background-color: rgba(0,0,0,.4); }
 				.nano .nano-slider { width:8px; background-color: rgba(255,255,255,.3); }
@@ -697,7 +696,7 @@ h1 {
 
 						li {
 							display:block;
-							width: $ancho_por_hora - 15px;
+							width: $pixelsPorHora - 15px;
 							height: 25px;
 							margin: 0 5px 10px;
 							padding: 5px;

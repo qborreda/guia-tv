@@ -11,9 +11,9 @@ var guiaTV = (function($) {
     var altoBarraHoras = 35,
         anchoBarraCanales = 70,
         altoCanal = 90,
-        pixelsPorHora = 200,
+        pixelsPorHora = 260,
         pixelsPorMinuto = pixelsPorHora / 60,
-        anchoPorDia = pixelsPorHora * 24; // 4320
+        anchoPorDia = pixelsPorHora * 24;
 
     // TODO Ahora mismo forzamos esta fecha de inicio
     var diaActual = new Date(),
