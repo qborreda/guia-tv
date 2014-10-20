@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"$colo",
+				"$color_cine"
+			],
+			[
 				"array",
 				"arrayCompleto"
 			],
@@ -63,7 +67,7 @@
 			"file": "_/js/app.js",
 			"settings":
 			{
-				"buffer_size": 31893,
+				"buffer_size": 32734,
 				"line_ending": "Windows"
 			}
 		},
@@ -71,7 +75,7 @@
 			"file": "_/scss/estilos.scss",
 			"settings":
 			{
-				"buffer_size": 17690,
+				"buffer_size": 18840,
 				"line_ending": "Windows"
 			}
 		}
@@ -79,13 +83,9 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 375.0,
+		"height": 211.0,
 		"selected_items":
 		[
-			[
-				"ins",
-				"Package Control: Install Package"
-			],
 			[
 				"upda",
 				"Package Control: Upgrade/Overwrite All Packages"
@@ -133,9 +133,13 @@
 			[
 				"insta",
 				"Package Control: Install Package"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
 			]
 		],
-		"width": 522.0
+		"width": 450.0
 	},
 	"console":
 	{
@@ -156,14 +160,17 @@
 	},
 	"expanded_folders":
 	[
-		"/C/Users/Quique/Dropbox/_sandbox/guia-tv",
-		"/C/Users/Quique/Dropbox/_sandbox/guia-tv/_",
-		"/C/Users/Quique/Dropbox/_sandbox/guia-tv/_/js",
-		"/C/Users/Quique/Dropbox/_sandbox/guia-tv/_/scss",
-		"/C/Users/Quique/Dropbox/_sandbox/guia-tv/scripts"
+		"/C/Users/Enrique.Borreda/Dropbox/_sandbox/guia-tv",
+		"/C/Users/Enrique.Borreda/Dropbox/_sandbox/guia-tv/_",
+		"/C/Users/Enrique.Borreda/Dropbox/_sandbox/guia-tv/_/js",
+		"/C/Users/Enrique.Borreda/Dropbox/_sandbox/guia-tv/_/js/vendor",
+		"/C/Users/Enrique.Borreda/Dropbox/_sandbox/guia-tv/datos"
 	],
 	"file_history":
 	[
+		"/C/Users/Enrique.Borreda/Dropbox/_sandbox/guia-tv/datos/antena3.json",
+		"/C/Users/Enrique.Borreda/Dropbox/_sandbox/guia-tv/.gitignore",
+		"/C/Users/Enrique.Borreda/Dropbox/_sandbox/guia-tv/stylesheets/screen.css",
 		"/C/Users/Quique/AppData/Roaming/Sublime Text 3/Packages/User/Package Control.sublime-settings",
 		"/C/Users/Quique/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
 		"/C/Users/Quique/Dropbox/_sandbox/guia-tv/_/js/app.js",
@@ -188,7 +195,6 @@
 		"/C/Users/Enrique.Borreda/Dropbox/_sandbox/guia-tv/datos/lasexta.json",
 		"/C/Users/Enrique.Borreda/Dropbox/_sandbox/guia-tv/datos/historia.json",
 		"/C/Users/Enrique.Borreda/Dropbox/_sandbox/guia-tv/datos/cuatro.json",
-		"/C/Users/Enrique.Borreda/Dropbox/_sandbox/guia-tv/datos/antena3.json",
 		"/C/Users/Enrique.Borreda/Dropbox/_sandbox/guia-tv/scripts/conversor.js",
 		"/C/Users/Enrique.Borreda/Dropbox/_sandbox/guia-tv/conversor.html",
 		"/C/Users/Enrique.Borreda/Dropbox/_sandbox/guia-tv/datos/antena3.js",
@@ -273,11 +279,11 @@
 	],
 	"find":
 	{
-		"height": 23.0
+		"height": 34.0
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 90.0,
 		"where_history":
 		[
 		]
@@ -287,6 +293,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"$alto_canales",
 			"json_canales",
 			"arrayCanales",
 			"json_canales",
@@ -321,6 +328,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"$alto_canal",
 			"arrayCanales",
 			"]);",
 			"arrayProgramas",
@@ -371,8 +379,8 @@
 						"selection":
 						[
 							[
-								292,
-								292
+								1107,
+								1107
 							]
 						],
 						"settings":
@@ -381,26 +389,31 @@
 							"SideBarAutoAddFoldersForOpenedFiles": 1,
 							"bh_regions":
 							[
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
 								"bh_default",
 								"bh_default_center",
 								"bh_default_open",
 								"bh_default_close",
 								"bh_default_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
 								"bh_single_quote",
 								"bh_single_quote_center",
 								"bh_single_quote_open",
 								"bh_single_quote_close",
 								"bh_single_quote_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
 								"bh_double_quote",
 								"bh_double_quote_center",
 								"bh_double_quote_open",
@@ -416,139 +429,33 @@
 								"bh_tag_open",
 								"bh_tag_close",
 								"bh_tag_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
 								"bh_curly",
 								"bh_curly_center",
 								"bh_curly_open",
 								"bh_curly_close",
 								"bh_curly_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content"
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content"
 							],
-							"codeintel": true,
-							"codeintel_config":
-							{
-								"JavaScript":
-								{
-									"codeintel_max_recursive_dir_depth": 2,
-									"codeintel_scan_files_in_project": false,
-									"javascriptExtraPaths":
-									[
-									]
-								},
-								"PHP":
-								{
-									"codeintel_max_recursive_dir_depth": 5,
-									"codeintel_scan_files_in_project": false,
-									"phpExtraPaths":
-									[
-									]
-								},
-								"Python":
-								{
-									"env":
-									{
-									}
-								}
-							},
-							"codeintel_enabled_languages":
-							[
-								"JavaScript",
-								"Mason",
-								"XBL",
-								"XUL",
-								"RHTML",
-								"SCSS",
-								"Python",
-								"HTML",
-								"Ruby",
-								"Python3",
-								"XML",
-								"Sass",
-								"XSLT",
-								"Django",
-								"HTML5",
-								"Perl",
-								"CSS",
-								"Twig",
-								"Less",
-								"Smarty",
-								"Node.js",
-								"Tcl",
-								"TemplateToolkit",
-								"PHP"
-							],
-							"codeintel_live": true,
-							"codeintel_live_enabled_languages":
-							[
-								"JavaScript",
-								"Mason",
-								"XBL",
-								"XUL",
-								"RHTML",
-								"SCSS",
-								"Python",
-								"HTML",
-								"Ruby",
-								"Python3",
-								"XML",
-								"Sass",
-								"XSLT",
-								"Django",
-								"HTML5",
-								"Perl",
-								"CSS",
-								"Twig",
-								"Less",
-								"Smarty",
-								"Node.js",
-								"Tcl",
-								"TemplateToolkit",
-								"PHP"
-							],
-							"codeintel_max_recursive_dir_depth": 10,
-							"codeintel_scan_exclude_dir":
-							{
-								"JavaScript":
-								[
-									"/build/",
-									"/min/"
-								]
-							},
-							"codeintel_scan_files_in_project": true,
-							"codeintel_selected_catalogs":
-							[
-								"PyWin32",
-								"jQuery",
-								"Rails"
-							],
-							"codeintel_snippets": true,
-							"codeintel_syntax_map":
-							{
-								"Python Django": "Python"
-							},
-							"codeintel_tooltips": "popup",
 							"encoding_helper_encoding": "UTF-8",
 							"incomplete_sync": null,
-							"sublime_auto_complete": true,
+							"is_xml": false,
+							"remote_loading": false,
+							"synced": false,
 							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
+							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 336.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
@@ -560,15 +467,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 31893,
+						"buffer_size": 32734,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1048,
-								1048
+								16435,
+								16435
 							]
 						],
 						"settings":
@@ -576,26 +483,31 @@
 							"BracketHighlighterBusy": false,
 							"bh_regions":
 							[
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
 								"bh_default",
 								"bh_default_center",
 								"bh_default_open",
 								"bh_default_close",
 								"bh_default_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
 								"bh_single_quote",
 								"bh_single_quote_center",
 								"bh_single_quote_open",
 								"bh_single_quote_close",
 								"bh_single_quote_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
 								"bh_double_quote",
 								"bh_double_quote_center",
 								"bh_double_quote_open",
@@ -611,141 +523,33 @@
 								"bh_tag_open",
 								"bh_tag_close",
 								"bh_tag_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
 								"bh_curly",
 								"bh_curly_center",
 								"bh_curly_open",
 								"bh_curly_close",
 								"bh_curly_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content"
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content"
 							],
-							"codeintel": true,
-							"codeintel_config":
-							{
-								"JavaScript":
-								{
-									"codeintel_max_recursive_dir_depth": 2,
-									"codeintel_scan_files_in_project": false,
-									"javascriptExtraPaths":
-									[
-									]
-								},
-								"PHP":
-								{
-									"codeintel_max_recursive_dir_depth": 5,
-									"codeintel_scan_files_in_project": false,
-									"phpExtraPaths":
-									[
-									]
-								},
-								"Python":
-								{
-									"env":
-									{
-									}
-								}
-							},
-							"codeintel_enabled_languages":
-							[
-								"JavaScript",
-								"Mason",
-								"XBL",
-								"XUL",
-								"RHTML",
-								"SCSS",
-								"Python",
-								"HTML",
-								"Ruby",
-								"Python3",
-								"XML",
-								"Sass",
-								"XSLT",
-								"Django",
-								"HTML5",
-								"Perl",
-								"CSS",
-								"Twig",
-								"Less",
-								"Smarty",
-								"Node.js",
-								"Tcl",
-								"TemplateToolkit",
-								"PHP"
-							],
-							"codeintel_live": true,
-							"codeintel_live_enabled_languages":
-							[
-								"JavaScript",
-								"Mason",
-								"XBL",
-								"XUL",
-								"RHTML",
-								"SCSS",
-								"Python",
-								"HTML",
-								"Ruby",
-								"Python3",
-								"XML",
-								"Sass",
-								"XSLT",
-								"Django",
-								"HTML5",
-								"Perl",
-								"CSS",
-								"Twig",
-								"Less",
-								"Smarty",
-								"Node.js",
-								"Tcl",
-								"TemplateToolkit",
-								"PHP"
-							],
-							"codeintel_max_recursive_dir_depth": 10,
-							"codeintel_scan_exclude_dir":
-							{
-								"JavaScript":
-								[
-									"/build/",
-									"/min/"
-								]
-							},
-							"codeintel_scan_files_in_project": true,
-							"codeintel_selected_catalogs":
-							[
-								"PyWin32",
-								"jQuery",
-								"Rails"
-							],
-							"codeintel_snippets": true,
-							"codeintel_syntax_map":
-							{
-								"Python Django": "Python"
-							},
-							"codeintel_tooltips": "popup",
 							"encoding_helper_encoding": "UTF-8",
 							"incomplete_sync": null,
+							"is_xml": false,
 							"remote_loading": false,
-							"sublime_auto_complete": true,
 							"synced": false,
 							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 6986.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
@@ -763,15 +567,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 17690,
+						"buffer_size": 18840,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								939,
-								939
+								4726,
+								4726
 							]
 						],
 						"settings":
@@ -779,26 +583,31 @@
 							"BracketHighlighterBusy": false,
 							"bh_regions":
 							[
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
 								"bh_default",
 								"bh_default_center",
 								"bh_default_open",
 								"bh_default_close",
 								"bh_default_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
 								"bh_single_quote",
 								"bh_single_quote_center",
 								"bh_single_quote_open",
 								"bh_single_quote_close",
 								"bh_single_quote_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
 								"bh_double_quote",
 								"bh_double_quote_center",
 								"bh_double_quote_open",
@@ -814,26 +623,21 @@
 								"bh_tag_open",
 								"bh_tag_close",
 								"bh_tag_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
 								"bh_curly",
 								"bh_curly_center",
 								"bh_curly_open",
 								"bh_curly_close",
 								"bh_curly_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content"
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content"
 							],
 							"encoding_helper_encoding": "UTF-8",
 							"incomplete_sync": null,
@@ -843,7 +647,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 3107.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -901,7 +705,7 @@
 	"project": "guia-tv.sublime-project",
 	"replace":
 	{
-		"height": 42.0
+		"height": 62.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -932,7 +736,7 @@
 		],
 		"width": 0.0
 	},
-	"selected_group": 0,
+	"selected_group": 1,
 	"settings":
 	{
 	},

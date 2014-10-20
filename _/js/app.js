@@ -119,13 +119,16 @@ var guiaTV = (function($) {
     function pintaParrillaPrograma(i, v) {
 
         var context = {};
-        var templatePrograma = '<div class="itemPrograma" id="{{id_programa}}" data-url="{{url_ficha}}"' +
+        var templatePrograma = '' +
+            '<div class="itemPrograma" id="{{id_programa}}" data-url="{{url_ficha}}"' +
             'style="width:{{dur}}; left:{{diffHoraDia}}; user-selected:none;">' +
             '<div class="itemProgramaInner {{clase}}">' +
-            '<span class="fecha">{{infoHoraDuracion}}</span>' +
             '<a href="http://elmundo.es/television/programa/{{id_programa}}" style="display:none;">{{nombre}}</a>' +
+            '<span class="categoria">{{categoria}}</span>' +
             '<h4>{{nombre}}</h4>' +
             '{{if episodio}}<p>{{episodio}}</p>{{/if}}' +
+            '<span class="duracion">{{duracion}}</span>' +
+            '<span class="fecha">{{infoHoraDuracion}}</span>' +
             '{{if fav}}<span class="favorito"><i class="fa fa-bookmark"></i></span>{{/if}}' +
             '{{if ale}}<span class="alerta"><i class="fa fa-clock-o"></i></span>{{/if}}' +
             '</div></div>"';
@@ -134,42 +137,58 @@ var guiaTV = (function($) {
         // mCine "104" / mConcursos "INT_2" / mCorazon / mDeportes "90" /
         // mInformativos "20" / mMagazines "31" / mSeries "1"
         var cat = v.categoria,
+            categoria,
             clase;
         switch (cat) {
             case "1":
                 clase = "catSeries";
+                categoria = "series";
                 break;
             case "104":
                 clase = "catCine";
+                categoria = "cine";
                 break;
             case "31":
                 clase = "catMagazines";
+                categoria = "magazines";
                 break;
             case "20":
                 clase = "catInformativos";
+                categoria = "informativos";
                 break;
             case "90":
                 clase = "catDeportes";
+                categoria = "deportes";
                 break;
             case "INT_2":
                 clase = "catConcursos";
+                categoria = "concursos";
                 break;
             case "INT_1":
                 clase = "catCorazon";
+                categoria = "corazón";
                 break;
         }
 
         // El ancho va a depender de la duración del programa
+        var duracion = v.duracion + ' mins.';
         var dur = Math.floor(pixelsPorMinuto * v.duracion),
-            fecha = new Date(v.hora_inicio);
-        var diffHoraDia = Math.floor(fecha - diaActual); // TODO diaActual forzado
+            hora_inicio = new Date(v.hora_inicio),
+            hora_final = new Date(v.hora_fin);
+        var diffHoraDia = Math.floor(hora_inicio - diaActual); // TODO diaActual forzado
         diffHoraDia = Math.floor(((diffHoraDia / 1000) / 60) * pixelsPorMinuto);
 
-        var hora = fecha.getHours();
-        hora = leftPad(hora, 2);
-        var mins = fecha.getMinutes();
-        mins = leftPad(mins, 2);
-        var infoHoraDuracion = '' + hora + ':' + mins + ' | ' + v.duracion + ' mins.';
+        var hora_i = hora_inicio.getHours();
+        hora_i = leftPad(hora_i, 2);
+        var mins_i = hora_inicio.getMinutes();
+        mins_i = leftPad(mins_i, 2);
+
+        var hora_f = hora_final.getHours();
+        hora_f = leftPad(hora_f, 2);
+        var mins_f = hora_final.getMinutes();
+        mins_f = leftPad(mins_f, 2);
+
+        var infoHoraDuracion = '' + hora_i + ':' + mins_i + ' - ' + hora_f + ':' + mins_f;
 
 
         // TODO Random para poder ver programas favoritos y alertas de programas. ELIMINAR
@@ -187,6 +206,8 @@ var guiaTV = (function($) {
             id_programa: v.id_programa,
             url_ficha: v.url_ficha,
             infoHoraDuracion: infoHoraDuracion,
+            duracion: duracion,
+            categoria: categoria.toUpperCase(),
             nombre: v.nombre,
             episodio: v.episodio,
             fav: fav | undefined,
@@ -396,6 +417,7 @@ var guiaTV = (function($) {
         $selectorDias.on('click', 'li', clickDia);
 
         function dragOn(event) {
+            console.log(this);
             event.preventDefault();
             this.startTop = this.offsetTop;
             this.startLeft = this.offsetLeft;
