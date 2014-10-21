@@ -8,8 +8,8 @@ var guiaTV = (function($) {
         categoriasUsuario = [],
         arrayCanales = [],
         arrayDias = [];
-    var altoBarraHoras = 35,
-        anchoBarraCanales = 70,
+    var altoBarraHoras = 60,
+        anchoBarraCanales = 150,
         altoCanal = 90,
         pixelsPorHora = 260,
         pixelsPorMinuto = pixelsPorHora / 60,
@@ -49,7 +49,7 @@ var guiaTV = (function($) {
             canales, categorias;
         setTimeout(function() {
             canales = ['telecinco', 'antena3', 'la2', 'la1', 'cuatro', 'lasexta', 'historia'];
-            categoriasUsuario = [2, 4, 5, 7];
+            categoriasUsuario = [1, 2, 3, 4, 5, 6, 7];
             def.resolve(canales);
         }, 3000);
         return def.promise();
@@ -243,6 +243,13 @@ var guiaTV = (function($) {
         var dia = new Date(),
             i, j;
 
+        var context = {};
+        context.dias = [];
+        context.horas = [];
+        var template = '' +
+            '{{dias}}<div class="itemDia" style="left:{{pos}}px">{{dia}}</div>{{/dias}}' +
+            '{{horas}}<div class="itemHoras" style="left:{{pos}}px;">{{texto}}</div>{{/horas}}';
+
         // Generamos una barra para los días (4) de los que disponemos de datos
         for (j = 0; j <= 3; j++) {
 
@@ -255,26 +262,27 @@ var guiaTV = (function($) {
             });
 
             var lDia = (j * pixelsPorHora * 24);
-            var cDia = $('<div/>').text(diaText)
-                .addClass('itemDia')
-                .css({
-                    'left': lDia
-                });
-            $barraHoras.append(cDia);
-
+            context.dias.push({
+                'dia': diaText,
+                'pos': lDia
+            });
             arrayDias.push([diaText, lDia]);
 
             for (i = 0; i < 24; i++) {
-                var t = i + ":00";
+                var t = leftPad(i, 2) + ":00";
                 var l = (j * pixelsPorHora * 24) + i * pixelsPorHora;
-                var c = $('<div/>').text(t)
-                    .addClass('itemHoras')
-                    .css({
-                        'left': l
-                    });
-                $barraHoras.append(c);
+
+                context.horas.push({
+                    'texto': t,
+                    'pos': l
+                });
             }
         }
+
+        var resultado = Mark.up(template, context);
+        console.log(resultado);
+
+        $barraHoras.append(resultado);
 
     };
 
@@ -328,7 +336,7 @@ var guiaTV = (function($) {
      * @return {}
      */
     function situaParrillaAhora() {
-        var mitadAnchoViewport = $viewPort.width() / 2;
+        var mitadAnchoViewport = $viewPort.width() * .5;
         var mueveA = parseInt($horaActual.css('left'));
         mueveA = parseInt(mitadAnchoViewport - mueveA);
 
@@ -495,7 +503,7 @@ var guiaTV = (function($) {
          */
         function clickHora(event) {
             var mueveA = parseInt($(this).css('left'));
-            mueveA = parseInt((anchoViewport / 2) - mueveA);
+            mueveA = parseInt((anchoViewport * .5) - mueveA);
             mueveProgramasAPunto(mueveA);
         };
 
@@ -524,8 +532,8 @@ var guiaTV = (function($) {
                     progId = $elemPadre.attr('id');
                 cargaFichaPrograma(progId, progUrl);
 
-                var mueveA = parseInt($elemPadre.css('left')) + $elemPadre.width() / 2;
-                mueveA = parseInt((anchoViewport / 2) - mueveA);
+                var mueveA = parseInt($elemPadre.css('left')) + $elemPadre.width() * .5;
+                mueveA = parseInt((anchoViewport * .5) - mueveA);
                 mueveProgramasAPunto(mueveA);
             }
         };
