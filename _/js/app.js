@@ -190,7 +190,6 @@ var guiaTV = (function($) {
 
         var infoHoraDuracion = '' + hora_i + ':' + mins_i + ' - ' + hora_f + ':' + mins_f;
 
-
         // TODO Random para poder ver programas favoritos y alertas de programas. ELIMINAR
         if (Math.random() * 100 < 5) {
             var fav = true;
@@ -198,6 +197,8 @@ var guiaTV = (function($) {
         if (Math.random() * 100 < 5) {
             var ale = true;
         }
+
+        // TODO Si el elemento es pequeño, aparece una cruz
 
         context = {
             clase: clase,

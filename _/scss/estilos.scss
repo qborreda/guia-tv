@@ -1,7 +1,6 @@
 @import "compass";
 @import "compass/reset";
 @import "compass/css3/animation";
-@import "compass/css3/box-shadow";
 @import "font-awesome";
 @import "nanoscroller";
 
@@ -38,10 +37,10 @@ $fuentes-cuerpo: Arial, $font_5;
 $fuentes-peq: $font_4, $font_5;
 
 $ancho-contenedor: 1029px;
+$ancho_max_viewport: 1024px;
 $alto_canal: 90px;
 $pixelsPorHora: 260px; // debe ser múltiplo de 6
 $ancho_dia24: $pixelsPorHora * 24;
-$ancho_max_viewport: 1024px;
 
 html {
 	//Instead of the line below you could use @include box-sizing($bs)
@@ -136,7 +135,18 @@ h1 {
     100% {border-top:5px solid rgba(0,0,0,.1);border-bottom:5px solid rgba(0,0,0,.1);}
 }
 
-
+%pastillaGrisClaro {
+	display:inline-block;
+	padding: 16px;
+	min-width: 40px;
+	min-height: 30px;
+	font-family: $fuentes-peq;
+	font-size: 11px;
+	text-align: center;
+	color: white;
+	background-color:$color_fondoclaro;
+	@include box-shadow(rgba(black, 0.6) 0 4px 25px);
+}
 
 // ViewPort general de la parrilla
 .viewPort {
@@ -148,22 +158,25 @@ h1 {
 	min-height: 490px;
 	max-height: 490px;
 	border: 1px solid $color_0;
+	margin: 0 auto;
 }
 // Contenedor de Canales
 .contCanales {
 	position: absolute;
-	z-index: 100;
+	z-index: 30;
 	top: 35px;
 	left: 0;
-	max-width: 70px;
+	width: 150px;
 	text-align: center;
+	background-color: white;
+
 	.itemCanal {
-		width: 70px;
+		width: 150px;
 		height: $alto_canal;
-		padding: 5px;
+		padding: 20px;
 		cursor: pointer;
-		border: 1px solid $color_1;
-		background-color: $color_1;
+		border-right: 1px solid $color_fondo;
+		border-bottom: 1px solid $color_fondo;
 	}
 }
 // Contenedor de Programas
@@ -185,32 +198,25 @@ h1 {
 		max-height: $alto_canal;
 	}
 	&.mCine .catCine {
-		border-bottom: 6px solid saturate($color_cine, 20);
-		//box-shadow: 0 0 4px 0 #000;
+		border-bottom: 6px solid $color_cine;
 	}
 	&.mConcursos .catConcursos {
-		border-bottom: 6px solid saturate($color_concursos, 20);
-		//box-shadow: 0 0 4px 0 #000;
+		border-bottom: 6px solid $color_concursos;
 	}
 	&.mCorazon .catCorazon {
-		border-bottom: 6px solid saturate($color_corazon, 20);
-		//box-shadow: 0 0 4px 0 #000;
+		border-bottom: 6px solid $color_corazon;
 	}
 	&.mDeportes .catDeportes {
-		border-bottom: 6px solid saturate($color_deportes, 20);
-		//box-shadow: 0 0 4px 0 #000;
+		border-bottom: 6px solid $color_deportes;
 	}
 	&.mInformativos .catInformativos {
-		border-bottom: 6px solid saturate($color_informativos, 20);
-		//box-shadow: 0 0 4px 0 #000;
+		border-bottom: 6px solid $color_informativos;
 	}
 	&.mMagazines .catMagazines {
-		border-bottom: 6px solid saturate($color_magazines, 20);
-		//box-shadow: 0 0 4px 0 #000;
+		border-bottom: 6px solid $color_magazines;
 	}
 	&.mSeries .catSeries {
-		border-bottom: 6px solid saturate($color_series, 20);
-		//box-shadow: 0 0 4px 0 #000;
+		border-bottom: 6px solid $color_series;
 	}
 }
 .itemPrograma {
@@ -261,43 +267,43 @@ h1 {
 			}
 		}
 		&.catCine:hover {
-			border-bottom: 6px solid saturate($color_cine, 20);
+			border-bottom: 6px solid $color_cine;
 			.categoria {
 				color: $color_cine;
 			}
 		}
 		&.catConcursos:hover {
-			border-bottom: 6px solid saturate($color_concursos, 20);
+			border-bottom: 6px solid $color_concursos;
 			.categoria {
 				color: $color_concursos;
 			}
 		}
 		&.catCorazon:hover {
-			border-bottom: 6px solid saturate($color_corazon, 20);
+			border-bottom: 6px solid $color_corazon;
 			.categoria {
 				color: $color_corazon;
 			}
 		}
 		&.catDeportes:hover {
-			border-bottom: 6px solid saturate($color_deportes, 20);
+			border-bottom: 6px solid $color_deportes;
 			.categoria {
 				color: $color_deportes;
 			}
 		}
 		&.catInformativos:hover {
-			border-bottom: 6px solid saturate($color_informativos, 20);
+			border-bottom: 6px solid $color_informativos;
 			.categoria {
 				color: $color_informativos;
 			}
 		}
 		&.catMagazines:hover {
-			border-bottom: 6px solid saturate($color_magazines, 20);
+			border-bottom: 6px solid $color_magazines;
 			.categoria {
 				color: $color_magazines;
 			}
 		}
 		&.catSeries:hover {
-			border-bottom: 6px solid saturate($color_series, 20);
+			border-bottom: 6px solid $color_series;
 			.categoria {
 				color: $color_series;
 			}
@@ -342,14 +348,14 @@ h1 {
 		}
 		span.favorito {
 			display:inline-block;
-			margin: 0 0 0 5px;
+			margin: 0 0 0 8px;
 			height:18px;
 			font-size: 18px;
 			color: rgba(0,0,0,0.5);
 		}
 		span.alerta {
 			display:inline-block;
-			margin: 0 0 0 5px;
+			margin: 0 0 0 8px;
 			height:18px;
 			font-size: 18px;
 			color: rgba(0,0,0,0.5);
@@ -357,16 +363,16 @@ h1 {
 	}
 }
 .barraHorizontalHoras {
+	display: block;
 	position: relative;
 	top: 0;
 	right: 0;
 	left: 0;
-	display: block;
+	z-index: 40;
 	min-width: $ancho_dia24;
 	height: 35px;
 	background-color: $color_1;
 	background-image: linear-gradient(to bottom, $color_7, $color_1);
-	z-index: 40;
 	.barraHoras {
 		font-family: $fuentes-peq;
 		font-size: 12px;
@@ -570,36 +576,38 @@ h1 {
 	}
 }
 .selectorDias {
-	display: inline-block;
-	min-width: 320px;
+	display: block;
+	padding: 8px;
+	background-color: $color_fondo;
+	text-align: center;
+
 	ul {
-		display: inline-block;
-		margin: 0;
-		margin-top: 5px;
+		display: block;
+		width:100%;
 		padding: 0;
+		list-style: none;
+		text-align: justify;
+		font-size: 0.1px; /* IE 9/10 don't like font-size: 0; */
+
+		&:after {
+		  content: '';
+		  width: 100%; /* Ensures there are at least 2 lines of text, so justification works */
+		  display: inline-block;
+		}
+
 		li {
+			@extend %pastillaGrisClaro;
 			display: inline-block;
-			padding: 3px 10px;
-			min-width: 40px;
-			min-height: 30px;
-			list-style: none;
 			cursor: pointer;
-			border-right: 1px solid #CCC;
-			background-color: #000;
-			background-image: linear-gradient(to bottom, $color_7, #000);
-			border-bottom: lighten(#000, 20) 3px solid;
 
 			&.activo {
-				background-color: #000;
+				background-color: darken($color_fondoclaro,20);
 			}
 			&:hover {
-				background-color: #000;
-				border-bottom: lighten(#000, 40) 3px solid;
-				background-image: linear-gradient(to bottom, lighten($color_7,20), $color_7);
+				background-color: darken($color_fondoclaro,20);
 			}
 			&:last-child {
 				margin-right: 0;
-				border-right: none;
 			}
 			a {
 				font-family: $fuentes-peq;
@@ -612,28 +620,17 @@ h1 {
 }
 .selectorCategorias {
 	display: block;
-	margin: 0 0 5px;
+	padding: 8px;
 	background-color: $color_fondo;
 
 	p {
-		display:inline-block;
 		float:left;
-		margin: 8px 0;
-		padding: 16px;
-		font-family: $fuentes-peq;
-		font-size: 11px;
-		text-align: center;
+		@extend %pastillaGrisClaro;
 		text-transform: uppercase;
-		color: white;
-		background-color:$color_fondoclaro;
-		min-width: 40px;
-		min-height: 30px;
-		@include box-shadow(rgba(black, 0.6) 0 4px 25px);
 	}
 
 	ul {
 		display: inline-block;
-		margin: 8px 0;
 		padding: 0;
 		@include box-shadow(rgba(black, 0.6) 0 4px 25px);
 
@@ -656,7 +653,7 @@ h1 {
 			outline: none;
 			border: none;
 			@include box-shadow(rgba(black, 0.4) -4px 0 16px);
-			background-color: #CCC;
+			background-color: $color_fondoclaro;
 			&:hover {
 				background-color: darken(#CCC, 20);
 			}
