@@ -1,6 +1,7 @@
 @import "compass";
 @import "compass/reset";
 @import "compass/css3/animation";
+@import "compass/css3/box-shadow";
 @import "font-awesome";
 @import "nanoscroller";
 
@@ -13,14 +14,16 @@ $color_4: #ccc;
 $color_7: #111;
 $color_9: red;
 $color_10: #666;
+$color_fondo: #454545;
+$color_fondoclaro: #707070;
 
-$color_cine: #dca7a7;
-$color_concursos: #eddca7;
-$color_corazon: #edb9ca;
-$color_deportes: #a7dca7;
-$color_informativos: #b9b9ed;
-$color_magazines: #dca7dc;
-$color_series: #edcaa7;
+$color_cine: #f34400;
+$color_concursos: #f7bb00;
+$color_corazon: #cc4a89;
+$color_deportes: #00a100;
+$color_informativos: #5dc7ff;
+$color_magazines: #b685dd;
+$color_series: #70ada7;
 
 //fonts
 $font_0: Georgia;
@@ -34,6 +37,7 @@ $fuentes-titulos: $font_0, $font_1, $font_2, $font_3;
 $fuentes-cuerpo: Arial, $font_5;
 $fuentes-peq: $font_4, $font_5;
 
+$ancho-contenedor: 1029px;
 $alto_canal: 90px;
 $pixelsPorHora: 260px; // debe ser múltiplo de 6
 $ancho_dia24: $pixelsPorHora * 24;
@@ -84,6 +88,8 @@ h1 {
 .contenedor {
 	position:relative;
 	display:block;
+	width: $ancho-contenedor;
+	background-color: $color_fondo;
 }
 
 // Preloader general para toda la parrilla
@@ -227,7 +233,6 @@ h1 {
 		overflow: visible;
 	}
 
-
 	.itemProgramaInner {
 		position: relative;
 		display: block;
@@ -240,7 +245,8 @@ h1 {
 		background-color: #FFF;
 		line-height: 1.2em;
 		transition: all 300ms ease;
-		&:hover {
+		&:hover,
+		&.activo {
 			//box-shadow: 0 0 5px 0 #000;
 			overflow: visible;
 			background-color:#333;
@@ -605,95 +611,96 @@ h1 {
 	}
 }
 .selectorCategorias {
-	position: absolute;
-	top: -15px; left: $ancho_max_viewport - 500px;
-	z-index: 2;
-	display: inline-block;
-	min-width: 500px;
+	display: block;
 	margin: 0 0 5px;
-	text-align: right;
+	background-color: $color_fondo;
 
 	p {
-		margin:0 0 3px;
-		padding:0;
+		display:inline-block;
+		float:left;
+		margin: 8px 0;
+		padding: 16px;
 		font-family: $fuentes-peq;
-		font-size: 12px;
+		font-size: 11px;
+		text-align: center;
+		text-transform: uppercase;
+		color: white;
+		background-color:$color_fondoclaro;
+		min-width: 40px;
+		min-height: 30px;
+		@include box-shadow(rgba(black, 0.6) 0 4px 25px);
 	}
+
 	ul {
-		display: block;
-		margin: 0;
+		display: inline-block;
+		margin: 8px 0;
 		padding: 0;
+		@include box-shadow(rgba(black, 0.6) 0 4px 25px);
 
 		li {
 			display: inline-block;
-			margin-left:0 0 0 5px;
+			float:left;
+			margin:0;
 			list-style: none;
 
-			button {
-				font-family: $fuentes-peq;
-				margin: 0;
-				padding: 3px 5px;
-				min-width: 40px;
-				min-height: 30px;
-				cursor: pointer;
-				transition: all 300ms ease;
-				outline: none;
-				border: none;
-				background-color: #CCC;
-				border-bottom: darken(#CCC, 20) 3px solid;
-
-				&:hover {
-					border-bottom: darken(#CCC, 40) 3px solid;
-				}
+			font-family: $fuentes-peq;
+			font-size: 11px;
+			text-align: center;
+			text-transform: uppercase;
+			padding: 16px;
+			cursor:pointer;
+			color: white;
+			min-width: 40px;
+			min-height: 30px;
+			transition: all 300ms ease;
+			outline: none;
+			border: none;
+			@include box-shadow(rgba(black, 0.4) -4px 0 16px);
+			background-color: #CCC;
+			&:hover {
+				background-color: darken(#CCC, 20);
 			}
 
-			&.mCine button.activo {
+			&.mCine.activo {
 				background-color: $color_cine;
-				border-bottom: darken($color_cine, 20) 3px solid;
 				&:hover {
-					border-bottom: darken($color_cine, 40) 3px solid;
+					background-color: darken($color_cine, 20);
 				}
 			}
-			&.mConcursos button.activo {
+			&.mConcursos.activo {
 				background-color: $color_concursos;
-				border-bottom: darken($color_concursos, 20) 3px solid;
 				&:hover {
-					border-bottom: darken($color_concursos, 40) 3px solid;
+					background-color: darken($color_concursos, 20);
 				}
 			}
-			&.mCorazon button.activo {
+			&.mCorazon.activo {
 				background-color: $color_corazon;
-				border-bottom: darken($color_corazon, 20) 3px solid;
 				&:hover {
-					border-bottom: darken($color_corazon, 40) 3px solid;
+					background-color: darken($color_corazon, 20);
 				}
 			}
-			&.mDeportes button.activo {
+			&.mDeportes.activo {
 				background-color: $color_deportes;
-				border-bottom: darken($color_deportes, 20) 3px solid;
 				&:hover {
-					border-bottom: darken($color_deportes, 40) 3px solid;
+					background-color: darken($color_deportes, 20);
 				}
 			}
-			&.mInformativos button.activo {
+			&.mInformativos.activo {
 				background-color: $color_informativos;
-				border-bottom: darken($color_informativos, 20) 3px solid;
 				&:hover {
-					border-bottom: darken($color_informativos, 40) 3px solid;
+					background-color: darken($color_informativos, 20);
 				}
 			}
-			&.mMagazines button.activo {
+			&.mMagazines.activo {
 				background-color: $color_magazines;
-				border-bottom: darken($color_magazines, 20) 3px solid;
 				&:hover {
-					border-bottom: darken($color_magazines, 40) 3px solid;
+					background-color: darken($color_magazines, 20);
 				}
 			}
-			&.mSeries button.activo {
+			&.mSeries.activo {
 				background-color: $color_series;
-				border-bottom: darken($color_series, 20) 3px solid;
 				&:hover {
-					border-bottom: darken($color_series, 40) 3px solid;
+					background-color: darken($color_series, 20);
 				}
 			}
 		}

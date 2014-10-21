@@ -584,21 +584,22 @@ var guiaTV = (function($) {
         };
 
         function marcaCategoria(event) {
-            var clase = $(event.currentTarget).attr('class');
+            var clase = $(event.currentTarget).attr('class').split(' ')[0];
+            console.log(clase);
 
             if ($contProgramas.hasClass(clase)) {
                 $contProgramas.removeClass(clase);
-                $(this).find('button').removeClass('activo');
+                $(this).removeClass('activo');
             } else {
                 $contProgramas.addClass(clase);
-                $(this).find('button').addClass('activo');
+                $(this).addClass('activo');
             };
         };
 
         function marcarCategoriasSeleccionadas() {
             if (categoriasUsuario.length >= 1) {
                 $.each(categoriasUsuario, function(i, v) {
-                    $selectorCategorias.find('li:nth-child(' + v + ')').find('button').trigger('click');
+                    $selectorCategorias.find('li:nth-child(' + v + ')').trigger('click');
                 });
             }
         };
