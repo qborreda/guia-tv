@@ -38,9 +38,10 @@ $fuentes-cuerpo: Arial, $font_5;
 $fuentes-peq: $font_4, $font_5;
 
 $ancho-contenedor: 1029px;
-$ancho_max_viewport: 1024px;
+$ancho_max_viewport: 1023px;
 $alto_max_viewport: 600px;
 $alto_canal: 90px;
+$ancho_barra_canales: 150px;
 $alto_barrahoras: 60px;
 $pixelsPorHora: 260px; // debe ser múltiplo de 6
 $ancho_dia24: $pixelsPorHora * 24;
@@ -141,14 +142,18 @@ h1 {
 %pastillaGrisClaro {
 	display:inline-block;
 	padding: 16px;
-	min-width: 40px;
-	min-height: 30px;
 	font-family: $fuentes-peq;
 	font-size: 11px;
 	text-align: center;
 	color: white;
 	background-color:$color_fondoclaro;
-	@include box-shadow(rgba(black, 0.6) 0 4px 25px);
+	@include box-shadow(rgba(black, 0.6) 0 4px 16px);
+}
+.contenidoPie {
+	display:block;
+	width:100%;
+	background-color: $color_fondo;
+	padding: 3px;
 }
 
 // ViewPort general de la parrilla
@@ -168,12 +173,12 @@ h1 {
 	z-index: 30;
 	top: $alto_barrahoras;
 	left: 0;
-	width: 150px;
+	width: $ancho_barra_canales;
 	text-align: center;
 	background-color: white;
 
 	.itemCanal {
-		width: 150px;
+		width: $ancho_barra_canales;
 		height: $alto_canal;
 		padding: 20px;
 		cursor: pointer;
@@ -595,57 +600,81 @@ h1 {
 	text-align: center;
 
 	ul {
-		display: block;
+		display: table;
 		width:100%;
 		padding: 0;
 		list-style: none;
 		text-align: justify;
 		font-size: 0.1px; /* IE 9/10 don't like font-size: 0; */
 
-		&:after {
-		  content: '';
-		  width: 100%; /* Ensures there are at least 2 lines of text, so justification works */
-		  display: inline-block;
-		}
-
 		li {
 			@extend %pastillaGrisClaro;
-			display: inline-block;
+			display: table-cell;
 			cursor: pointer;
+			margin: 0 16px 0 0;
 
-			&.activo {
-				background-color: darken($color_fondoclaro,20);
+			a {
+				display: block;
+				font-family: $fuentes-peq;
+				font-size: 12px;
+				text-decoration: none;
+				text-align: center;
+				color: #CCC;
 			}
+			&.activo,
 			&:hover {
-				background-color: darken($color_fondoclaro,20);
+				background-color: $color_fondo;
+				@include box-shadow(rgba(black, 0) 0 0 0);
+				& a {color:#E78D00;}
 			}
 			&:last-child {
 				margin-right: 0;
 			}
-			a {
-				font-family: $fuentes-peq;
-				font-size: 12px;
-				text-decoration: none;
-				color: #CCC;
-			}
 		}
 	}
 }
+.botonesCanales {
+	display:inline-block;
+	float:left;
+	width: $ancho_barra_canales;
+	margin-right: 5px;
+	min-height: 54px;
+
+	.btn {
+		@extend %pastillaGrisClaro;
+		display: block;
+		padding: 8px 16px;
+		margin-bottom:1px;
+		text-transform: uppercase;
+		color:white;
+		cursor:pointer;
+	}
+}
+.suscribirCanales {
+	@extend %pastillaGrisClaro;
+	float:left;
+	width: $ancho_barra_canales;
+	margin-right: 5px;
+	min-height: 54px;
+	text-transform: uppercase;
+	cursor:pointer;
+}
 .selectorCategorias {
-	display: block;
-	padding: 8px;
+	display:inline-block;
+	float:left;
 	background-color: $color_fondo;
 
-	p {
-		float:left;
+	div {
 		@extend %pastillaGrisClaro;
-		text-transform: uppercase;
+		width: $ancho_barra_canales;
+		float:left;
+		// text-transform: uppercase;
 	}
 
 	ul {
 		display: inline-block;
 		padding: 0;
-		@include box-shadow(rgba(black, 0.6) 0 4px 25px);
+		@include box-shadow(rgba(black, 0.6) 0 4px 16px);
 
 		li {
 			display: inline-block;
@@ -657,11 +686,9 @@ h1 {
 			font-size: 11px;
 			text-align: center;
 			text-transform: uppercase;
-			padding: 16px;
+			padding:16px;
 			cursor:pointer;
 			color: white;
-			min-width: 40px;
-			min-height: 30px;
 			transition: all 300ms ease;
 			outline: none;
 			border: none;

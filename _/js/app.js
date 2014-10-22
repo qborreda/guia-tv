@@ -9,11 +9,11 @@ var guiaTV = (function($) {
         arrayCanales = [],
         arrayDias = [];
     var altoBarraHoras = 60,
-        anchoBarraCanales = 150,
+        //anchoBarraCanales = 150,
         altoCanal = 90,
         pixelsPorHora = 260,
-        pixelsPorMinuto = pixelsPorHora / 60,
-        anchoPorDia = pixelsPorHora * 24;
+        // anchoPorDia = pixelsPorHora * 24,
+        pixelsPorMinuto = pixelsPorHora / 60;
 
     // TODO Ahora mismo forzamos esta fecha de inicio
     var diaActual = new Date(),
@@ -33,9 +33,10 @@ var guiaTV = (function($) {
     var $barraHoras = $('.barraHoras');
     var $horaActual = $('.horaActual');
     var $fichaPrograma = $('.fichaPrograma');
-    var $barrasCanales = $('.barrasCanales');
+    //var $barrasCanales = $('.barrasCanales');
     var $barraLetras = $('.barraLetras');
     var $ordenCanales = $('.ordenCanales');
+    var $botonesCanales = $('.botonesCanales');
 
     /**
      * Accede a las cookies del usuario para ver personalización de canales
@@ -46,7 +47,7 @@ var guiaTV = (function($) {
         // TODO Cargar de las cookies los canales resaltados del selectorCategorias
         // Lógica de lectura de cookies
         var def = $.Deferred(),
-            canales, categorias;
+            canales;
         setTimeout(function() {
             canales = ['telecinco', 'antena3', 'la2', 'la1', 'cuatro', 'lasexta', 'historia'];
             categoriasUsuario = [1, 2, 3, 4, 5, 6, 7];
@@ -129,7 +130,7 @@ var guiaTV = (function($) {
             '{{if episodio}}<p>{{episodio}}</p>{{/if}}' +
             '<span class="duracion">{{duracion}}</span>' +
             '<span class="fecha">{{infoHoraDuracion}}</span>' +
-            '{{if fav}}<span class="favorito"><i class="fa fa-bookmark"></i></span>{{/if}}' +
+            '{{if fav}}<span class="favorito"><i class="fa fa-star"></i></span>{{/if}}' +
             '{{if ale}}<span class="alerta"><i class="fa fa-clock-o"></i></span>{{/if}}' +
             '</div></div>"';
 
@@ -172,11 +173,11 @@ var guiaTV = (function($) {
 
         // El ancho va a depender de la duración del programa
         var duracion = v.duracion + ' mins.';
-        var dur = Math.floor(pixelsPorMinuto * v.duracion),
+        var dur = Math.ceil(pixelsPorMinuto * v.duracion),
             hora_inicio = new Date(v.hora_inicio),
             hora_final = new Date(v.hora_fin);
-        var diffHoraDia = Math.floor(hora_inicio - diaActual); // TODO diaActual forzado
-        diffHoraDia = Math.floor(((diffHoraDia / 1000) / 60) * pixelsPorMinuto);
+        var diffHoraDia = hora_inicio - diaActual;
+        diffHoraDia = Math.floor((Math.floor(diffHoraDia / 1000) / 60) * pixelsPorMinuto);
 
         var hora_i = hora_inicio.getHours();
         hora_i = leftPad(hora_i, 2);
@@ -280,8 +281,6 @@ var guiaTV = (function($) {
         }
 
         var resultado = Mark.up(template, context);
-        console.log(resultado);
-
         $barraHoras.append(resultado);
 
     };
@@ -372,13 +371,6 @@ var guiaTV = (function($) {
      */
     function lanzaHandlers() {
 
-        /*var $viewPort = $('.viewPort');
-        var $contProgramas = $('.contProgramas');
-        var $contCanales = $('.contCanales');
-        var $barraHoras = $('.barraHoras');
-        var $horaActual = $('.horaActual');
-        var $fichaPrograma = $('.fichaPrograma');*/
-
         var altoViewport = $viewPort.height(),
             anchoViewport = $viewPort.width(),
             altoContProgramas = $contProgramas.height(),
@@ -425,8 +417,10 @@ var guiaTV = (function($) {
         // Handler para selección de día
         $selectorDias.on('click', 'li', clickDia);
 
+        // Handler para botones arriba/abajo de canales
+        $botonesCanales.on('click', '.btn', clickNavCanales);
+
         function dragOn(event) {
-            console.log(this);
             event.preventDefault();
             this.startTop = this.offsetTop;
             this.startLeft = this.offsetLeft;
@@ -460,7 +454,7 @@ var guiaTV = (function($) {
 
                 var ntop = this.startTop + dY;
                 var nleft = this.startLeft + dX;
-                // Límite top (35px alto $barraHoras)
+                // Límite top (alto $barraHoras)
                 if (ntop > altoBarraHoras) {
                     ntop = altoBarraHoras;
                 }
@@ -594,7 +588,6 @@ var guiaTV = (function($) {
 
         function marcaCategoria(event) {
             var clase = $(event.currentTarget).attr('class').split(' ')[0];
-            console.log(clase);
 
             if ($contProgramas.hasClass(clase)) {
                 $contProgramas.removeClass(clase);
@@ -632,6 +625,29 @@ var guiaTV = (function($) {
             $horaActual.stop().animate({
                 'left': posX + 'px'
             }, 300);
+        };
+
+        /**
+         * Mueve el contProgramas hacía arriba/abajo
+         * @param  {event} event Objeto con toda la información del evento
+         * @return {}
+         */
+        function clickNavCanales(event) {
+            var clase = $(event.currentTarget).attr('class').split(' ')[1];
+            switch (clase) {
+                case 'btnArriba':
+                    // Si no superamos a top:altoBarraHoras movemos contProgramas y contCanales
+                    // var ntop;
+                    //if (ntop > altoBarraHoras) {}
+                    break;
+                case 'btnAbajo':
+                    // Si no superamos a top:-numeroCanales*altoCanal movemos contProgramas y contCanales
+                    // var altoTotalCanales = $contCanales.height();
+                    // if (parseInt($contProgramas.top()) + altoCanal > altoTotalCanales + altoBarraHoras) {
+                    //     console.log('uy!')
+                    // }
+                    break;
+            }
         };
     };
 
