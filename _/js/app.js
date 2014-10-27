@@ -11,7 +11,7 @@ var guiaTV = (function($) {
     var altoBarraHoras = 60,
         //anchoBarraCanales = 150,
         altoCanal = 90,
-        pixelsPorHora = 260,
+        pixelsPorHora = 320,
         // anchoPorDia = pixelsPorHora * 24,
         pixelsPorMinuto = pixelsPorHora / 60;
 
@@ -586,6 +586,11 @@ var guiaTV = (function($) {
 
         };
 
+        /**
+         * Marca como activas las categorías de programa seleccionadas
+         * @param  {Event} event Objeto de evento completo
+         * @return {}
+         */
         function marcaCategoria(event) {
             var clase = $(event.currentTarget).attr('class').split(' ')[0];
 
@@ -597,10 +602,14 @@ var guiaTV = (function($) {
                 $(this).addClass('activo');
             };
         };
-
+        /**
+         * Marca todas las categorías seleccionadas por defecto
+         * @return {}
+         */
         function marcarCategoriasSeleccionadas() {
             if (categoriasUsuario.length >= 1) {
                 $.each(categoriasUsuario, function(i, v) {
+                    v++;
                     $selectorCategorias.find('li:nth-child(' + v + ')').trigger('click');
                 });
             }
@@ -634,18 +643,30 @@ var guiaTV = (function($) {
          */
         function clickNavCanales(event) {
             var clase = $(event.currentTarget).attr('class').split(' ')[1];
+            var posYProgramas = $contProgramas.css('top').split('px')[0];
+            var posYCanales = $contCanales.css('top').split('px')[0];
+            var numCanales = $contCanales.length;
             switch (clase) {
                 case 'btnArriba':
-                    // Si no superamos a top:altoBarraHoras movemos contProgramas y contCanales
-                    // var ntop;
-                    //if (ntop > altoBarraHoras) {}
+                    // Movemos contProgramas y contCanales
+                    if (posYCanales - altoCanal > altoBarraHoras) {
+                        $contCanales.css('top', posYCanales - altoCanal);
+                        $contProgramas.css('top', posYProgramas - altoCanal);
+                    } else {
+                        $contCanales.css('top', altoBarraHoras + 'px');
+                        $contProgramas.css('top', altoBarraHoras + 'px');
+                    }
                     break;
                 case 'btnAbajo':
-                    // Si no superamos a top:-numeroCanales*altoCanal movemos contProgramas y contCanales
-                    // var altoTotalCanales = $contCanales.height();
-                    // if (parseInt($contProgramas.top()) + altoCanal > altoTotalCanales + altoBarraHoras) {
-                    //     console.log('uy!')
-                    // }
+                    // Movemos contProgramas y contCanales
+                    var max = posYCanales - numCanales * altoCanal;
+                    if (max > posYCanales + altoCanal) {
+                        $contCanales.css('top', posYCanales + altoCanal);
+                        $contProgramas.css('top', posYProgramas + altoCanal);
+                    } else {
+                        $contCanales.css('top', max + 'px');
+                        $contProgramas.css('top', max + 'px');
+                    }
                     break;
             }
         };
