@@ -31,6 +31,7 @@ var guiaTV = (function($) {
     //var $itemPrograma = $('.itemPrograma');
     var $contCanales = $('.contCanales');
     var $barraHoras = $('.barraHoras');
+    var $iconosHoras = $('.iconosHoras');
     var $horaActual = $('.horaActual');
     var $fichaPrograma = $('.fichaPrograma');
     //var $barrasCanales = $('.barrasCanales');
@@ -419,6 +420,8 @@ var guiaTV = (function($) {
 
         // Handler para botones arriba/abajo de canales
         $botonesCanales.on('click', '.btn', clickNavCanales);
+        // Handler para botones izda/drcha del viewport
+        $iconosHoras.on('click', '.btn', clickNavHoras);
 
         function dragOn(event) {
             event.preventDefault();
@@ -508,7 +511,7 @@ var guiaTV = (function($) {
          */
         function clickDia(event) {
             var mueveA = parseInt($(this).data('px')) * -1;
-            mueveProgramasAPunto(mueveA);
+            mueveProgramasAPunto(mueveA + anchoBarraCanales);
         };
 
         /**
@@ -637,7 +640,7 @@ var guiaTV = (function($) {
         };
 
         /**
-         * Mueve el contProgramas hacía arriba/abajo
+         * Desplaza la vista de viewport arriba/abajo
          * @param  {event} event Objeto con toda la información del evento
          * @return {}
          */
@@ -670,6 +673,27 @@ var guiaTV = (function($) {
                     break;
             }
         };
+
+        /**
+         * Desplaza la vista del viewport a los lados
+         * @param  {Event} event Objeto con toda la información del evento
+         * @return {}
+         */
+        function clickNavHoras(event) {
+            var clase = $(event.currentTarget).attr('class').split(' ')[1];
+            var posX = parseInt($contProgramas.css('left'));
+            event.stopPropagation();
+            console.log(posX);
+
+            switch (clase) {
+                case 'btnIzda':
+                    mueveProgramasAPunto(Math.floor(parseInt(posX + pixelsPorHora)));
+                    break;
+                case 'btnDrcha':
+                    mueveProgramasAPunto(Math.floor(parseInt(posX - pixelsPorHora)));
+                    break;
+            }
+        }
     };
 
     /**

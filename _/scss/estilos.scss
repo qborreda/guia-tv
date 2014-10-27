@@ -166,6 +166,13 @@ h1 {
 	min-height: $alto_max_viewport;
 	max-height: $alto_max_viewport;
 	margin: 0 auto;
+
+	background-color: $color_fondo;
+	-webkit-background-size: 12px 12px;
+	-moz-background-size: 12px 12px;
+	background-size: 12px 12px;
+
+	background-image: linear-gradient(-45deg, lighten($color_fondo,20) 25%, transparent 25%, transparent 50%, lighten($color_fondo,20) 50%, lighten($color_fondo,20) 75%, transparent 75%, transparent);
 }
 // Contenedor de Canales
 .contCanales {
@@ -424,6 +431,31 @@ h1 {
 			padding: 0 0 0 5px;
 		}
 	}
+	.iconosHoras {
+		display:inline-block;
+		position: absolute;
+		top: 10px;
+		left: $ancho-contenedor - 70px;
+		text-align: right;
+		z-index:10;
+
+		div {
+			display: inline-block;
+			float:left;
+			text-align: center;
+			width: 30px;
+			height: 45px;
+			margin-right: 5px;
+			padding:18px 5px;
+			background-color: white;
+			cursor: pointer;
+
+			&:hover {
+				background-color: darken(white, 20);
+			}
+		}
+
+	}
 }
 .horaActual {
 	position: absolute;
@@ -595,7 +627,6 @@ h1 {
 }
 .selectorDias {
 	display: block;
-	padding: 8px;
 	background-color: $color_fondo;
 	text-align: center;
 
@@ -608,7 +639,6 @@ h1 {
 		font-size: 0.1px; /* IE 9/10 don't like font-size: 0; */
 
 		li {
-			// @extend %pastillaGrisClaro;
 			display: table-cell;
 			cursor: pointer;
 			margin: 0 16px 0 0;
@@ -620,7 +650,7 @@ h1 {
 				font-size: 12px;
 				text-decoration: none;
 				text-align: center;
-				margin:8px 15px;
+				margin:8px 15px 3px;
 				color: #CCC;
 			}
 			&.activo,
@@ -654,12 +684,15 @@ h1 {
 		text-transform: uppercase;
 		color:white;
 		cursor:pointer;
+
+		&:hover {
+			background-color: darken($color_fondoclaro, 20);
+		}
 	}
 }
 .suscribirCanales {
 	@extend %pastillaGrisClaro;
 	float:left;
-	// width: $ancho_barra_canales;
 	width: 176px;
 	height:100%;
 	margin-right: 5px;
