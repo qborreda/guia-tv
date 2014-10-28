@@ -560,29 +560,24 @@ var guiaTV = (function($) {
                         .html(html);
                     $fichaPrograma
                         .find('.nano').nanoScroller({
-                            scroll: 'top'
+                            scroll: 'top',
+                            preventPageScrolling: true,
+                            alwaysVisible: true
                         });
                     $fichaPrograma.animate({
                         right: 0
-                    }, 500, 'swing', creaCierre);
-                });
-
-            function creaCierre() {
-                var cierra = $('<div/>')
-                    .text('X')
-                    .addClass('cierra')
-                    .appendTo($fichaPrograma)
-                    .on('click', function(event) {
-                        event.preventDefault();
-                        cierraFicha();
-                        this.remove();
+                    }, 500, 'swing', function() {
+                        $fichaPrograma.find('.cierra').on('click', function(event) {
+                            event.preventDefault();
+                            cierraFicha();
+                        })
                     });
-            };
+                });
 
             function cierraFicha() {
                 if (parseInt($fichaPrograma.css('right')) === 0) {
                     $fichaPrograma.stop().animate({
-                        right: -300
+                        right: -pixelsPorHora
                     }, 300, 'swing');
                 }
             };

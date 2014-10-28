@@ -17,13 +17,13 @@ $color_fondo: #454545;
 $color_fondoclaro: #707070;
 $color_lineas_parrilla: #808080;
 
-$color_cine: #d24506;
-$color_concursos: #e7b929;
-$color_corazon: #b14b85;
-$color_deportes: #579f25;
-$color_informativos: #85c5fd;
-$color_magazines: #a783d8;
-$color_series: #66b4a4;
+$color_cine: #ec2b00;
+$color_concursos: #f3ae02;
+$color_corazon: #bd3075;
+$color_deportes: #009301;
+$color_informativos: #4eb9ff;
+$color_magazines: #a66cd5;
+$color_series: #17aa95;
 
 //fonts
 $font_0: Georgia;
@@ -503,127 +503,181 @@ h1 {
 .fichaPrograma {
 	position: absolute;
 	z-index: 100;
-	top: 35px;
-	right: -300px;
-	width: 300px;
-	height: 455px;
+	top: $alto_barrahoras;
+	right: -$pixelsPorHora;
+	width: $pixelsPorHora;
+	height: $alto_max_viewport;
+	padding:15px 0 15px 15px;
 	border-left: 1px solid #000;
-	background-color: $color_1;
-	background-image: linear-gradient(to bottom, $color_1, $color_7);
+	background-color: $color_fondo;
+	@include box-shadow(rgba(black, 0.6) 0 -4px 16px);
 
-	.contenido {
-		width: 300px;
-		height:100%;
-
-		.foto {
-			width: 320px; height: 455px;
-			z-index:-1;
-			img {
-				width: 320px;
-				height: auto;
-				left: -10px;
-			}
-		}
-
-		/** opciones nanoScroller **/
-		.nano { position:absolute; top:10px; left:10px; z-index:5; width: 280px; height: 435px; overflow: hidden;}
-		.nano .nano-content { padding-right: 15px; }
-		.nano .nano-pane   { background-color: rgba(0,0,0,.4); }
-		.nano .nano-slider { width:8px; background-color: rgba(255,255,255,.3); }
-
-		.ficha {
-			height: 435px;
-			padding:5px 11px 5px;
-			font-family: $fuentes-cuerpo;
-			font-size: 12px;
-			color:#EEE;
-			background-color: rgba(0,0,0,.7);
-
-			h3,
-			h4 {
-				font-family: $fuentes-titulos;
-				font-size: 20px;
-				font-weight: 600;
-				color: #FFF;
-				margin:0; padding:0;
-				margin-top: 10px;
-			}
-
-			.genero {
-				color: #DDD;
-				font-size: 10px;
-				font-style: italic;
-			}
-			.episodio {
-				margin-bottom: 10px;
-
-				h4 {
-					font-size: 16px;
-					font-style: italic;
-					margin-bottom:5px;
-				}
-				p{}
-			}
-
-			ul {
-				margin-bottom: 15px;
-
-				li {
-					list-style: none;
-					color:#ddd;
-					padding: 3px 0;
-
-					strong {
-						color: #aaa;
-						font-weight: 400;
-						margin-right: 5px;
-					}
-				}
-			}
-
-			button {
-				display:block;
-				width:100%;
-				font-family: $fuentes-peq;
-				font-size: 14px;
-				margin: 0 0 15px;
-				padding: 3px 5px;
-				cursor: pointer;
-				outline: none;
-				border: none;
-				color: #000;
-				background-color: rgba(255,255,255,.6);
-				border-bottom: darken(#999, 20) 3px solid;
-				transition: all 300ms ease;
-
-				&:hover {
-					color: #000;
-					background-color: rgba(255,255,255,.6);
-					border-bottom: darken(#999, 40) 3px solid;
-				}
-			}
-		}
-	}
 	.cierra {
 		position: absolute;
-		top: 5px; right: 5px;
+		top: 10px; right: 5px;
 		padding: 3px 5px;
 		z-index:10;
 		font-family: $font_5;
 		font-size: 16px;
 		font-weight: 400;
-		color: $color_10;
+		color: #CCC;
 		cursor: pointer;
 		outline: none;
-		border: none;
-		background-color: #CCC;
-		border-bottom: darken(#CCC, 20) 3px solid;
 		transition: all 300ms ease;
 
 		&:hover {
-			border-bottom: darken(#CCC, 40) 3px solid;
+			color: darken(#CCC, 20);
 		}
 	}
+	.contenido {
+		width: 100%;
+		height:100%;
+
+		.verFicha {
+			display:block;
+			width:95%;
+			text-align: center;
+			font-family: $fuentes-peq;
+			font-size: 14px;
+			margin: 15px 15px 15px 0;
+			padding: 3px 5px;
+			cursor: pointer;
+			outline: none;
+			border: none;
+			color: #000;
+			background-color: rgba(255,255,255,.6);
+			border-bottom: darken(#999, 20) 3px solid;
+			transition: all 300ms ease;
+
+			&:hover {
+				color: #000;
+				background-color: rgba(255,255,255,.6);
+				border-bottom: darken(#999, 40) 3px solid;
+			}
+		}
+
+		.contFoto,
+		.contDescripcion {
+			display: inline-block;
+			float:left;
+			margin:0 10px 0 0;
+		}
+
+		.contFoto {
+			width: 100px;
+
+			img {
+				width: 100px;
+				height: auto;
+				max-height: 150px;
+			}
+			p {
+				font-family: $fuentes-peq;
+				font-size: 12px;
+				margin:0 0 2px 0;
+				padding:0;
+				line-height: 14px;
+				color: white;
+				.canal {
+					color: $color_fondoclaro;
+					text-transform: uppercase;
+				}
+			}
+		}
+		.contDescripcion {
+			width: 185px;
+			margin:0 0 0 0;
+			font-family: $fuentes-cuerpo;
+			font-size: 12px;
+
+			/** opciones nanoScroller **/
+			.nano {
+				// position:absolute;
+				// top:10px; left:10px;
+				width: 100%; height: 215px;
+				// z-index:5;
+				overflow: hidden;
+			}
+			.nano .nano-content { padding-right: 15px; }
+			.nano .nano-pane   {
+				margin-top:18px;
+				height: 197px;
+				background-color: rgba(0,0,0,.4);
+			}
+			.nano .nano-slider { width:8px; background-color: rgba(255,255,255,.3); }
+
+			.ficha {
+
+				.categoria {
+					font-family: $fuentes-peq;
+					font-size: 12px;
+					color: white;
+					margin:0; padding:0;
+					margin-bottom: 10px;
+
+					&.mCine {
+						color: $color_cine;
+					}
+					&.mConcursos {
+						color: $color_concursos;
+					}
+					&.mCorazon {
+						color: $color_corazon;
+					}
+					&.mDeportes {
+						color: $color_deportes;
+					}
+					&.mInformativos {
+						color: $color_informativos;
+					}
+					&.mMagazines {
+						color: $color_magazines;
+					}
+					&.mSeries {
+						color: $color_series;
+					}
+				}
+
+
+				h3,
+				h4 {
+					display:block;
+					font-family: $fuentes-cuerpo;
+					font-size: 12px;
+					font-weight: 400;
+					color: #FFF;
+					margin:0; padding:0;
+					margin-bottom: 3px;
+				}
+				h4 {
+					font-weight: 600;
+					margin-bottom: 3px;
+					color: lighten($color_fondoclaro, 20);
+				}
+				.genero {
+					color: #DDD;
+					font-size: 10px;
+					font-style: italic;
+					margin-bottom: 15px;
+				}
+				p {
+					font-family: $fuentes-cuerpo;
+					font-size: 12px;
+					margin:0 0 8px 0;
+					padding:0;
+					line-height: 14px;
+					color: white;
+				}
+			}
+		}
+		.contPubli {
+			width:300px;
+			height:250px;
+			margin-left:-5px;
+			border:1px red dotted;
+		}
+	}
+
 }
 .selectorDias {
 	display: block;
