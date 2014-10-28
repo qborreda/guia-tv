@@ -25,6 +25,8 @@ $color_informativos: #4eb9ff;
 $color_magazines: #a66cd5;
 $color_series: #17aa95;
 
+$color_linea_horas: #e78d00;
+
 //fonts
 $font_0: Georgia;
 $font_1: Times New Roman;
@@ -459,45 +461,28 @@ h1 {
 }
 .horaActual {
 	position: absolute;
-	top: 25px;
+	top: $alto_barrahoras - 18;
 	left: 0;
 	display: none;
-	width: 20px;
 	height: $alto_max_viewport;
 	z-index: 50;
-	.top {
-		width: 0;
-		height: 0;
-		border-width: 0 10px 10px 10px;
-		border-style: solid;
-		border-color: transparent transparent rgba(255,0,0,.5) transparent;
+
+	p {
+		text-align: center;
+		width:auto;
+		font-family: $fuentes-peq;
+		font-size: 12px;
+		color: white;
+		background-color: $color_linea_horas;
+		margin: 0;
+		padding: 3px 5px;
+		color: #EEE;
+		transform: translatex(-50%);
 	}
-	.mid {
-		height: $alto_max_viewport - 20;
-		padding: 0;
-		padding-top: $alto_max_viewport / 2;
-		background-color: rgba(255,0,0,.5);
-		p {
-			font-family: $fuentes-peq;
-			font-size: 12px;
-			margin: 0;
-			padding: 0;
-			transform: rotate(-90deg);
-			color: #EEE;
-			&:before {
-				content:'-';
-			}
-			&:after {
-				content: '-';
-			}
-		}
-	}
-	.bott {
-		width: 0;
-		height: 0;
-		border-width: 10px 10px 0 10px;
-		border-style: solid;
-		border-color: rgba(255,0,0,.5) transparent transparent transparent;
+	div {
+		height: $alto_max_viewport - 15;
+		margin:0; padding:0;
+		border-left:1px solid $color_linea_horas;
 	}
 }
 .fichaPrograma {
