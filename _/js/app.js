@@ -35,9 +35,11 @@ var guiaTV = (function($) {
     var $horaActual = $('.horaActual');
     var $fichaPrograma = $('.fichaPrograma');
     //var $barrasCanales = $('.barrasCanales');
+    var $selectorCanales = $('.selectorCanales');
     var $barraLetras = $('.barraLetras');
     var $ordenCanales = $('.ordenCanales');
     var $botonesCanales = $('.botonesCanales');
+    var $suscribirCanales = $('.suscribirCanales');
 
     /**
      * Accede a las cookies del usuario para ver personalización de canales
@@ -133,7 +135,9 @@ var guiaTV = (function($) {
             '<span class="fecha">{{infoHoraDuracion}}</span>' +
             '{{if fav}}<span class="favorito"><i class="fa fa-star"></i></span>{{/if}}' +
             '{{if ale}}<span class="alerta"><i class="fa fa-clock-o"></i></span>{{/if}}' +
-            '</div></div>"';
+            '</div>' +
+            '{{if saleCruz}}<div class="mascara"><i class="fa fa-plus"></i></div>{{/if}}' +
+            '</div>';
 
         // Selección de categoría
         // mCine "104" / mConcursos "INT_2" / mCorazon / mDeportes "90" /
@@ -200,7 +204,10 @@ var guiaTV = (function($) {
             var ale = true;
         }
 
-        // TODO Si el elemento es pequeño, aparece una cruz
+        // TODO Si el programa es menor de 15 minutos, aparece una cruz
+        if (v.duracion < 15) {
+            var saleCruz = true;
+        }
 
         context = {
             clase: clase,
@@ -214,7 +221,8 @@ var guiaTV = (function($) {
             nombre: v.nombre,
             episodio: v.episodio,
             fav: fav | undefined,
-            ale: ale | undefined
+            ale: ale | undefined,
+            saleCruz: saleCruz | undefined
         };
 
         var resultado = Mark.up(templatePrograma, context);
@@ -697,39 +705,48 @@ var guiaTV = (function($) {
      */
     function pintaListadoCanalesSuscripcion() {
 
-        var ulLetras = $('<ul>'),
+        var ulLetras = $('<ul class="listaCanales clearfix">'),
             fichero = 'datos/listadocanales.json';
 
-        // TODO mover la carga a una función diferente con promises
+        var contextLetras = {},
+            templateLetras = '{{letras}}<li class="itemLetra" data-letra="{{.}}">{{.}}</li>{{/letras}}';
+
+        contextLetras.letras = [];
+
         // (Genera el backend)
         $.get(fichero)
             .done(function(data) {
                 canalesGlobal = data;
 
-                var context = {};
-                var templateLetra = '<li class="itemLetra"><h4>{{letra}}</h4>' +
-                    '<div class="divLetra nano"><div class="nano-content"><ul>' +
-                    '{{canales}}<li class="itemCanal" data-idcanal="{{id_programa}}"><img src="{{icono}}" />{{nombre_completo}}<span class="check"></span></li>{{/canales}}' +
-                    '</ul></div></div></li>';
+                var contextCanales = {},
+                    templateCanales = '{{canales}}<li class="itemCanal" data-letra="{{letra}}" data-idcanal="{{id_programa}}">' +
+                    '<span class="check"></span>' +
+                    //'<img src="{{icono}}" />' +
+                    '{{nombre_completo|chop>23}}</li>{{/canales}}';
 
                 $.each(canalesGlobal, function(i, v) {
 
-                    context = {
+                    contextCanales = {
                         letra: i,
                         canales: v
                     };
 
-                    var resultLetra = Mark.up(templateLetra, context);
-                    ulLetras.append(resultLetra);
+                    contextLetras.letras.push(i);
+
+                    var resultCanales = Mark.up(templateCanales, contextCanales);
+                    ulLetras.append(resultCanales);
                 });
 
-                $barraLetras.html(ulLetras);
+                // Listado con todas las letras
+                var resultLetras = Mark.up(templateLetras, contextLetras);
+                $barraLetras.find('.listaLetras').append(resultLetras);
+                // Listado de todos los canales
+                $barraLetras.find('.nano-content').html(ulLetras);
 
-                //Comprobamos si ya estamos suscritos a ese canal
+                //Comprobamos si ya estamos suscritos a cada canal
                 $.each($barraLetras.find('.itemCanal'), function(i, v) {
 
                     if (canalesUsuario.indexOf($(this).data('idcanal')) != -1) {
-                        //console.log($(this).data('idcanal'));
                         $(this).find('.check').addClass('sel');
                     }
                 });
@@ -737,8 +754,8 @@ var guiaTV = (function($) {
                 $barraLetras
                     .find('.nano').nanoScroller({
                         scroll: 'top',
-                        flash: true,
-                        preventPageScrolling: true
+                        preventPageScrolling: true,
+                        alwaysVisible: true
                     });
 
             });
@@ -754,7 +771,10 @@ var guiaTV = (function($) {
         var ulCanales = $('<ul class="orden vertical">');
 
         var context = {};
-        var template = '<li class="itemCanal" data-idcanal="{{nombre}}"><img src="http://estaticos.elmundo.es{{icono}}" />{{nombre_completo}}<span class="check sel"></span></li>';
+        var template = '<li class="itemCanal" data-idcanal="{{nombre}}">' +
+            '<span class="check sel"></span>' +
+            //'<img src="http://estaticos.elmundo.es{{icono}}" />' +
+            '{{nombre_completo|chop>23}}</li>';
 
         $.each(arrayCanales, function(i, v) {
             context = v.canal;
@@ -764,20 +784,27 @@ var guiaTV = (function($) {
 
         $ordenCanales.find('.nano-content').html(ulCanales);
         $ordenCanales
-            .find('.nano').nanoScroller({
+            .find('.nano')
+            .nanoScroller({
                 scroll: 'top',
-                flash: true,
-                preventPageScrolling: true
+                preventPageScrolling: true,
+                alwaysVisible: true
             });
     };
 
     function lanzaHandlersSuscripicion() {
 
-        /*var $barraLetras = $('.barraLetras');
-        var $ordenCanales = $('.ordenCanales');*/
-
         // Click en items de suscripción
         $barraLetras.on('click', '.itemCanal', clickItemCanal);
+
+        // Click en checks en el panel de suscritos
+        $ordenCanales.on('click', '.check', clickCheckOrdenCanal);
+
+        // Click en suscribirCanales que hace aparecer el selector
+        $suscribirCanales.on('click', toggleSuscripcion);
+
+        // Click en letras de filtro
+        $barraLetras.on('click', '.itemLetra', clickFiltroLetra);
 
         // Reordenación de elementos de canal, drag & drop
         var adjustment;
@@ -822,12 +849,10 @@ var guiaTV = (function($) {
             }
         });
 
-        // Click en checks en el panel de suscritos
-        $ordenCanales.on('click', '.check', clickCheckOrdenCanal);
 
         /**
          * Funcionalidad de clickar en un itemCanal de la lista de canales de suscripción
-         * @param  {[event]} event Evento completo
+         * @param  {Event} event Evento completo
          * @return {}
          */
         function clickItemCanal(event) {
@@ -854,14 +879,16 @@ var guiaTV = (function($) {
             }
 
             $ordenCanales
-                .find('.nano').nanoScroller().nanoScroller({
+                .find('.nano')
+                .nanoScroller()
+                .nanoScroller({
                     scroll: 'bottom'
                 });
         };
 
         /**
          * Funcionalidad para reordenar los elementos itemCanal en el panel de orden
-         * @param  {event} event Evento completo
+         * @param  {Event} event Evento completo
          * @return {}
          */
         function clickOrdenCanal(event) {
@@ -870,7 +897,7 @@ var guiaTV = (function($) {
 
         /**
          * Funcionalidad de clickar el checkbox en los itemsCanal del panel de orden
-         * @param  {[event]} event Evento completo
+         * @param  {Event} event Evento completo
          * @return {}
          */
         function clickCheckOrdenCanal(event) {
@@ -884,19 +911,52 @@ var guiaTV = (function($) {
             $itemsCanal.find('.check').toggleClass('sel');
         };
 
+        /**
+         * Hace aparecer o desaparecer la capa con toda la información de suscripción
+         * @param  {Event} event Evento completo
+         * @return {}
+         */
+        function toggleSuscripcion(event) {
+            $(this).toggleClass('activo');
+            $selectorCanales.toggle('fast');
+            $ordenCanales
+                .find('.nano')
+                .nanoScroller()
+                .nanoScroller({
+                    scroll: 'top',
+                    alwaysVisible: true
+                });
+            $barraLetras
+                .find('.nano')
+                .nanoScroller()
+                .nanoScroller({
+                    scroll: 'top'
+                });
+        };
+
+        /**
+         * Filtra la selección de canales por su letra de comienzo
+         * @param  {Event} event Evento completo
+         * @return {}
+         */
+        function clickFiltroLetra(event) {
+            var letra = $(this).data('letra');
+            console.log(letra);
+        };
+
     };
 
     /** INIT **/
     (function init() {
 
-        //console.time('Init');
+        $selectorCanales.hide();
 
         var cargaInfoCookies = cargaCookies();
         var cargaInfoCanales = cargaInfoCookies.then(function(res) {
                 canalesUsuario = res;
                 return cargaDatosCanales(canalesUsuario);
             })
-            .done(function() {
+            .then(function() {
                 pintaCanales(canalesUsuario); // Pintar en el orden en que llegan de la cookie
                 pintaParrilla(canalesUsuario, arrayCanales); // Pintar en el orden en que llegan de la cookie
                 pintaHorasParrilla(); // Pintar la barra superior de horario
@@ -906,12 +966,10 @@ var guiaTV = (function($) {
 
                 lanzaHandlers(); // Lanza todos los event listeners
 
-                pintaListadoCanalesSuscripcion(); // Pintamos el selector de canales completo al pie
                 pintaListadoCanalesSeleccionados(); // Pintamos el área de canales seleccionados
+                pintaListadoCanalesSuscripcion(); // Pintamos el selector de canales completo al pie
 
                 lanzaHandlersSuscripicion(); // Lanza todos los events listeners de suscripción a canales
-
-                //console.timeEnd('Init');
             });
 
         //cargaInfoUsuario(); // Carga la información sobre programas favoritos y alertas de un usuario validado

@@ -25,7 +25,7 @@ $color_informativos: #4eb9ff;
 $color_magazines: #a66cd5;
 $color_series: #17aa95;
 
-$color_linea_horas: #e78d00;
+$color_highlight: #e78d00;
 
 //fonts
 $font_0: Georgia;
@@ -95,6 +95,23 @@ h1 {
 	display:block;
 	width: $ancho-contenedor;
 	background-color: $color_fondo;
+}
+
+button {
+	font-family: $fuentes-cuerpo;
+	font-size: 12px;
+	padding: 3px 5px;
+	color: white;
+	border: 1px solid lighten($color_fondoclaro,20);
+	background-color: $color_fondoclaro;
+	@include border-radius(5px);
+	cursor: pointer;
+
+	&:hover {
+		color: darken($color_fondoclaro,20);
+		background-color: white;
+		border: 1px solid darken($color_fondoclaro,20);
+	}
 }
 
 // Preloader general para toda la parrilla
@@ -249,10 +266,27 @@ h1 {
 	border-bottom:1px solid $color_lineas_parrilla;
 	z-index:0;
 
+	.mascara {
+		position:absolute;
+		top:0; left:0;
+		z-index: 5;
+		display:block;
+		width: 100%;
+		height: $alto_canal - 6;
+		padding: 10px 5px;
+		background-color: #FFF;
+		text-align: center;
+	}
+
 	&:hover {
 		box-shadow: 0;
 		z-index:10;
 		overflow: visible;
+
+		.mascara {
+			opacity: 0;
+			display:none;
+		}
 	}
 
 	.itemProgramaInner {
@@ -266,7 +300,7 @@ h1 {
 		min-width: $pixelsPorHora;
 		background-color: #FFF;
 		line-height: 1.2em;
-		transition: all 300ms ease;
+		transition: border-bottom 300ms ease;
 		* {
 			margin-bottom:3px;
 			transition: all 300ms ease;
@@ -453,7 +487,8 @@ h1 {
 			cursor: pointer;
 
 			&:hover {
-				background-color: darken(white, 20);
+				background-color: $color_highlight;
+				color: white;
 			}
 		}
 
@@ -473,7 +508,7 @@ h1 {
 		font-family: $fuentes-peq;
 		font-size: 12px;
 		color: white;
-		background-color: $color_linea_horas;
+		background-color: $color_highlight;
 		margin: 0;
 		padding: 3px 5px;
 		color: #EEE;
@@ -482,7 +517,7 @@ h1 {
 	div {
 		height: $alto_max_viewport - 15;
 		margin:0; padding:0;
-		border-left:1px solid $color_linea_horas;
+		border-left:1px solid $color_highlight;
 	}
 }
 .fichaPrograma {
@@ -499,7 +534,7 @@ h1 {
 
 	.cierra {
 		position: absolute;
-		top: 10px; right: 5px;
+		top: 10px; right: 3px;
 		padding: 3px 5px;
 		z-index:10;
 		font-family: $font_5;
@@ -521,24 +556,8 @@ h1 {
 		.verFicha {
 			display:block;
 			width:95%;
-			text-align: center;
-			font-family: $fuentes-peq;
-			font-size: 14px;
 			margin: 15px 15px 15px 0;
-			padding: 3px 5px;
-			cursor: pointer;
 			outline: none;
-			border: none;
-			color: #000;
-			background-color: rgba(255,255,255,.6);
-			border-bottom: darken(#999, 20) 3px solid;
-			transition: all 300ms ease;
-
-			&:hover {
-				color: #000;
-				background-color: rgba(255,255,255,.6);
-				border-bottom: darken(#999, 40) 3px solid;
-			}
 		}
 
 		.contFoto,
@@ -697,7 +716,7 @@ h1 {
 				background-color: $color_fondo;
 
 				& a {
-					color:#E78D00;
+					color: $color_highlight;
 					background-color: $color_fondo;
 					@include box-shadow(rgba(black, 0) 0 0 0);
 				}
@@ -725,19 +744,9 @@ h1 {
 		cursor:pointer;
 
 		&:hover {
-			background-color: darken($color_fondoclaro, 20);
+			background-color: $color_highlight;
 		}
 	}
-}
-.suscribirCanales {
-	@extend %pastillaGrisClaro;
-	float:left;
-	width: 176px;
-	height:100%;
-	margin-right: 5px;
-	padding: 12px 16px 11px;
-	text-transform: uppercase;
-	cursor:pointer;
 }
 .selectorCategorias {
 	display:inline-block;
@@ -816,128 +825,211 @@ h1 {
 		}
 	}
 }
+.suscribirCanales {
+	@extend %pastillaGrisClaro;
+	float:left;
+	width: 176px;
+	height:100%;
+	margin-right: 5px;
+	padding: 12px 16px 11px;
+	text-transform: uppercase;
+	cursor:pointer;
+	@include box-shadow(rgba(black, 0.6) 0 4px 16px);
+
+	&:hover {
+		background-color: $color_highlight;
+		color: white;
+	}
+	&.activo {
+		background-color: $color_fondo;
+		color: $color_highlight;
+		@include box-shadow(rgba(black, 0) 0 0 0);
+	}
+}
 
 // Selector de Canales para añadir
 .selectorCanales {
 	position: relative;
-	overflow: hidden;
-	max-width: $ancho_max_viewport;
-	min-height: 350px;
-	max-height: 350px;
-	margin: 10px 0;
-	border: 1px solid $color_0;
+	// overflow: hidden;
+	width: $ancho_max_viewport;
+	height: 530px;
+	// max-height: 510px;
+	margin: 0; padding: 0;
 
-	.barraLetras{
-		display: block;
-		min-width: $pixelsPorHora * 28;
-		z-index: 40;
+	h4.titular {
+		font-family: $fuentes-peq;
+		font-size: 11px;
+		text-transform: uppercase;
+		padding-bottom:5px;
+		margin-bottom: 15px;
+		color:white;
+		border-bottom: 1px solid white;
+	}
 
-		ul {
-			list-style: none;
-			height:100%;
-			border-right: 1px solid #CCC;
+	.barraLetras,
+	.ordenCanales {
+		position: relative;
+		display: inline-block;
+		float:left;
+		height: 350px;
+		padding: 15px;
+		background-color: $color_fondo;
+		color: white;
 
-			.itemLetra {
-				display: inline-block;
-				float:left;
-				width: $pixelsPorHora;
+		.check {
+			display:inline-block;
+			position:relative;
+			float:left;
+			width: 13px;
+			height: 13px;
+			margin-top: -2px;
+			margin-right: 5px;
+			border: 1px solid white;
 
-				h4 {
-					width: $pixelsPorHora;
-					height: 35px;
-					margin: 0;
-					padding: 5px;
-					cursor: pointer;
-					font-family: $fuentes-peq;
-					font-size: 16px;
-					font-weight: normal;
-					color: #EEE;
-					border-right: 1px solid #CCC;
-					background-color: $color_1;
-					background-image: linear-gradient(to bottom, $color_7, $color_1);
-				}
-
-				/** opciones nanoScroller **/
-				.nano { position:relative; width: $pixelsPorHora; height: 300px; overflow: hidden;}
-				.nano .nano-content { }
-				.nano .nano-pane   { background-color: rgba(0,0,0,.4); }
-				.nano .nano-slider { width:8px; background-color: rgba(255,255,255,.3); }
-
-				.divLetra {
-
-					margin-top: 10px;
-
-					ul {
-						display:block;
-						// height: 100%;
-						list-style: none;
-
-						li {
-							display:block;
-							width: $pixelsPorHora - 15px;
-							height: 25px;
-							margin: 0 5px 10px;
-							padding: 5px;
-							font-size: 12px;
-							cursor: pointer;
-							border-bottom: 1px dotted #666;
-
-							img {
-								float: left;
-								width:20px; height:auto;
-								margin-right: 5px;
-								margin-top: -5px;
-							}
-
-							.check {
-								position:relative;
-								float:right;
-								display:inline-block;
-								width: 20px;
-								height: 20px;
-								margin-top: -5px;
-								@include background( linear-gradient(top, #222 0%, #45484d 100%) );
-			    				@include border-radius( 4px );
-			    				@include box-shadow( inset 0px 1px 1px rgba(0,0,0,0.5), 0px 1px 0px rgba(255,255,255,.4) );
-
-								&:after {
-									content: '';
-									width: 10px;
-									height: 7px;
-									position: absolute;
-									top: 5px;
-									left: 5px;
-									border: 3px solid #eee;
-									border-top: none;
-									border-right: none;
-									background: transparent;
-									@include opacity( 0.1 );
-									@include transform( rotate(-60deg) );
-								}
-								&.sel:after {
-									@include opacity( 0.9 );
-								}
-							}
-						}
-					}
-				}
+			&:after {
+				content: '';
+				width: 12px;
+				height: 6px;
+				position: absolute;
+				border: 2px solid #eee;
+				border-top: none;
+				border-right: none;
+				background: transparent;
+				@include opacity( 0.1 );
+				@include transform( rotate(-60deg) );
+			}
+			&.sel:after {
+				@include opacity( 0.9 );
 			}
 		}
 	}
-	.ordenCanales {
-		position: absolute;
-		z-index: 100;
-		top: 0; right: 0;
-		width:300px;
-		height: 350px;
-		padding: 45px 15px 15px;
-		border-left: 1px solid #000;
-		background-color: $color_1;
-		background-image: linear-gradient(to bottom, $color_1, $color_7);
+	.barraLetras{
+		width: $ancho_max_viewport - 250;
+		height: 97%;
+		border-left: 1px solid $color_fondoclaro;
+
+		.listaLetras {
+			display:inline-block;
+			float:left;
+			list-style: none;
+			margin:0 0 15px 0; padding:0;
+
+			li.itemLetra {
+				display: inline-block;
+				width:25px; height:25px;
+				padding-top:5px;
+				font-family: $fuentes-peq;
+				font-size: 14px;
+				text-align: center;
+				color:white;
+				cursor: pointer;
+
+				&:hover {
+					background-color: $color_highlight;
+				}
+			}
+		}
+		.buscador {
+
+			display:inline-block;
+			float:right;
+
+
+			input[type='text'] {
+				display: inline-block;
+				float: left;
+				width: 150px;
+				height:20px;
+				padding: 3px 5px;
+				font-size: 11px;
+				color: $color_fondo;
+				border: none;
+				@include border-radius(5px 0 0 5px);
+
+				& + .fa {
+					height:20px;
+					margin:0;
+					padding: 5px 5px;
+					font-size: 10px;
+					color: $color_fondo;
+					background-color: white;
+					border-left:1px solid $color_fondo;
+					@include border-radius(0 5px 5px 0 );
+				}
+			}
+		}
 
 		/** opciones nanoScroller **/
-		.nano { position:relative; width: 280px; height: 290px; overflow: hidden;}
-		.nano .nano-content { padding-right: 15px; }
+		.nano {
+			position:relative;
+			width: 100%;
+			height: 425px;
+			overflow: hidden;
+		}
+		.nano .nano-content { }
+		.nano .nano-pane   { background-color: rgba(0,0,0,.4); }
+		.nano .nano-slider { width:8px; background-color: rgba(255,255,255,.3); }
+
+		ul.listaCanales {
+			list-style: none;
+			height:100%;
+
+				.itemCanal {
+					position:relative;
+					display:inline-block;
+					width: 175px;
+					cursor: pointer;
+					margin: 0 10px 5px 0;
+					padding: 5px;
+					color: #EEE;
+					font-size: 12px;
+					border-bottom: 1px dotted #666;
+
+					&:hover {
+						color: $color_highlight;
+					}
+				}
+		}
+	}
+	.ordenCanales {
+		width:250px;
+
+		p {
+			font-family: $fuentes-cuerpo;
+			font-size: 12px;
+			line-height: 14px;
+			color: white;
+			margin: 15px 0 5px;
+		}
+
+		button {
+			display:inline-block;
+			width: 48%;
+			& + button {
+				float: right;
+			}
+		}
+		input[type='text'] {
+			display: inline-block;
+			float: left;
+			width: 48%;
+			padding: 3px;
+			margin-right: 5px;
+			font-size: 11px;
+			color: $color_fondo;
+			& + button {
+				float: right;
+			}
+		}
+
+		/** opciones nanoScroller **/
+		.nano {
+			position:relative;
+			width: 100%;
+			height: 285px;
+			overflow: hidden;
+		}
+		.nano .nano-content { padding-right: 10px; }
 		.nano .nano-pane   { background-color: rgba(0,0,0,.4); }
 		.nano .nano-slider { width:8px; background-color: rgba(255,255,255,.3); }
 
@@ -950,17 +1042,16 @@ h1 {
 				position:relative;
 				display:block;
 				cursor: pointer;
-				margin: 0 0 10px 0;
+				width: 200px;
+				margin: 0 0 5px 0;
 				padding: 5px;
 				color: #EEE;
 				font-size: 12px;
-				border-bottom: 1px dotted #666;
+				border-bottom: 1px dotted $color_fondoclaro;
 
 				img {
 					float: left;
 					width:20px; height:auto;
-					margin-right: 5px;
-					margin-top: -5px;
 				}
 
 				&.dragged {
@@ -969,39 +1060,9 @@ h1 {
 					opacity: .5;
 					z-index: 2000;
 				}
-
-				.check {
-					position:relative;
-					float:right;
-					display:inline-block;
-					width: 20px;
-					height: 20px;
-					margin-top: -5px;
-					// @include background( linear-gradient(top, #222 0%, #45484d 100%) );
-    				@include border-radius( 4px );
-    				@include box-shadow( inset 0px 1px 1px rgba(0,0,0,0.5), 0px 1px 0px rgba(255,255,255,.4) );
-
-					&:after {
-						content: '';
-						width: 10px;
-						height: 7px;
-						position: absolute;
-						top: 5px;
-						left: 5px;
-						border: 3px solid #eee;
-						border-top: none;
-						border-right: none;
-						background: transparent;
-						@include opacity( 0.1 );
-						@include transform( rotate(-60deg) );
-					}
-					&.sel:after {
-						@include opacity( 0.9 );
-					}
-				}
 			}
 			li.placeholder {
-			        min-height: 25px;
+				min-height: 25px;
 			    &:before {
 			        position: absolute;
 			        content: "";
