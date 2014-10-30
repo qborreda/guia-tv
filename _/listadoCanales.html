@@ -1,0 +1,1013 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <title>Conversor de js a json de la Guía de TV</title>
+    <link href="css/estilos.css" rel="stylesheet">
+    <base href="/index.html">
+</head>
+
+<body>
+
+    <div class="contenedor">
+        <!-- Zonas comunes / Cabeceras -->
+
+        <div class="resultado">
+            <p>Resultado de la importación del archivo:
+                <span class="js-fichero"></span>
+            </p>
+            <textarea name="res" id="res" cols="70" rows="40"></textarea>
+        </div>
+        <!-- Zonas comunes / Pie de página -->
+    </div>
+
+    <div class="TabbedPanelsContentGroup">
+        <div id="div_..." class="TabbedPanelsContent" style="display: none;">
+            <div class="guiaprograma">
+                <input name="checkbox_canal_689" value="689" type="checkbox" id="id_checkbox_canal_689" onclick="onClickChannel(this);">
+                <img src="http://estaticos01.elmundo.es/elmundo/iconos/v2.1/television/logos_parrilla/med/1F/7248.gif" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_689">
+                    <span id="nombre_canal_689">13tv</span>
+                </label>
+            </div>
+            <div class="guiaprograma">
+                <input name="checkbox_canal_163" value="163" type="checkbox" id="id_checkbox_canal_163" onclick="onClickChannel(this);">
+                <img src="http://estaticos02.elmundo.es/elmundo/iconos/v2.1/television/logos/med/40tv.gif" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_163">
+                    <span id="nombre_canal_163">40 TV</span>
+                </label>
+            </div>
+            <div class="guiaprograma">
+                <input name="checkbox_canal_551" value="551" type="checkbox" id="id_checkbox_canal_551" onclick="onClickChannel(this);">
+                <img src="http://estaticos03.elmundo.es/elmundo/iconos/v2.1/television/logos/med/murcia.gif" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_551">
+                    <span id="nombre_canal_551">7 Región de Murcia</span>
+                </label>
+            </div>
+            <div class="guiaprograma">
+                <input name="checkbox_canal_586" value="586" type="checkbox" id="id_checkbox_canal_586" onclick="onClickChannel(this);">
+                <img src="http://estaticos04.elmundo.es/elmundo/iconos/v2.1/television/logos/med/8madrid.gif" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_586">
+                    <span id="nombre_canal_586">8 Madrid TV</span>
+                </label>
+            </div>
+            <div class="rompedor"></div>
+        </div>
+        <div id="div_A" class="TabbedPanelsContent" style="display: none;">
+            <div class="guiaprograma">
+                <input name="checkbox_canal_539" value="539" type="checkbox" id="id_checkbox_canal_539" onclick="onClickChannel(this);">
+                <img src="http://estaticos01.elmundo.es/elmundo/iconos/v2.1/television/logos/med/aljazeera.gif" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_539">
+                    <span id="nombre_canal_539">Al Jazeera English</span>
+                </label>
+            </div>
+            <div class="guiaprograma">
+                <input name="checkbox_canal_32" value="32" type="checkbox" id="id_checkbox_canal_32" onclick="onClickChannel(this);">
+                <img src="http://estaticos02.elmundo.es/elmundo/iconos/v2.1/television/logos/med/andaluciatv.gif" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_32">
+                    <span id="nombre_canal_32">Andalucía TV</span>
+                </label>
+            </div>
+            <div class="guiaprograma">
+                <input name="checkbox_canal_2" value="2" type="checkbox" id="id_checkbox_canal_2" onclick="onClickChannel(this);">
+                <img src="http://estaticos03.elmundo.es/elmundo/iconos/v2.1/television/logos/med/antena3.gif" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_2">
+                    <span id="nombre_canal_2">Antena 3</span>
+                </label>
+            </div>
+            <div class="guiaprograma">
+                <input name="checkbox_canal_704" value="704" type="checkbox" id="id_checkbox_canal_704" onclick="onClickChannel(this);">
+                <img src="http://estaticos04.elmundo.es/elmundo/iconos/v2.1/television/logos_parrilla/med/FB/7630.gif" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_704">
+                    <span id="nombre_canal_704">Antena 3 Internacional</span>
+                </label>
+            </div>
+            <div class="guiaprograma">
+                <input name="checkbox_canal_580" value="580" type="checkbox" id="id_checkbox_canal_580" onclick="onClickChannel(this);">
+                <img src="http://estaticos01.elmundo.es/elmundo/iconos/v2.1/television/logos/med/em2.gif" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_580">
+                    <span id="nombre_canal_580">Aprende Inglés TV</span>
+                </label>
+            </div>
+            <div class="guiaprograma">
+                <input name="checkbox_canal_522" value="522" type="checkbox" id="id_checkbox_canal_522" onclick="onClickChannel(this);">
+                <img src="http://estaticos02.elmundo.es/elmundo/iconos/v2.1/television/logos/med/aragontv.gif" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_522">
+                    <span id="nombre_canal_522">Aragón Televisión</span>
+                </label>
+            </div>
+            <div class="guiaprograma">
+                <input name="checkbox_canal_63" value="63" type="checkbox" id="id_checkbox_canal_63" onclick="onClickChannel(this);">
+                <img src="http://estaticos03.elmundo.es/elmundo/iconos/v2.1/television/logos/med/axn.gif" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_63">
+                    <span id="nombre_canal_63">AXN</span>
+                </label>
+            </div>
+            <div class="guiaprograma">
+                <input name="checkbox_canal_512" value="512" type="checkbox" id="id_checkbox_canal_512" onclick="onClickChannel(this);">
+                <img src="http://estaticos04.elmundo.es/elmundo/iconos/v2.1/television/logos/med/axnwhite.jpg" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_512">
+                    <span id="nombre_canal_512">AXN White</span>
+                </label>
+            </div>
+            <div class="guiaprograma">
+                <input name="checkbox_canal_607" value="607" type="checkbox" id="id_checkbox_canal_607" onclick="onClickChannel(this);">
+                <img src="http://estaticos01.elmundo.es/elmundo/iconos/v2.1/television/logos/med/azteca_internacional.gif" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_607">
+                    <span id="nombre_canal_607">Azteca Internacional TV</span>
+                </label>
+            </div>
+            <div class="rompedor"></div>
+        </div>
+        <div id="div_B" class="TabbedPanelsContent" style="display: none;">
+            <div class="guiaprograma">
+                <input name="checkbox_canal_155" value="155" type="checkbox" id="id_checkbox_canal_155" onclick="onClickChannel(this);">
+                <img src="http://estaticos02.elmundo.es/elmundo/iconos/v2.1/television/logos/med/barcatv.jpg" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_155">
+                    <span id="nombre_canal_155">Barça TV</span>
+                </label>
+            </div>
+            <div class="guiaprograma">
+                <input name="checkbox_canal_208" value="208" type="checkbox" id="id_checkbox_canal_208" onclick="onClickChannel(this);">
+                <img src="http://estaticos03.elmundo.es/elmundo/iconos/v2.1/television/logos/med/bbcworld.gif" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_208">
+                    <span id="nombre_canal_208">BBC World</span>
+                </label>
+            </div>
+            <div class="guiaprograma">
+                <input name="checkbox_canal_196" value="196" type="checkbox" id="id_checkbox_canal_196" onclick="onClickChannel(this);">
+                <img src="http://estaticos04.elmundo.es/elmundo/iconos/v2.1/television/logos/med/bloomberg.gif" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_196">
+                    <span id="nombre_canal_196">Bloomberg</span>
+                </label>
+            </div>
+            <div class="guiaprograma">
+                <input name="checkbox_canal_665" value="665" type="checkbox" id="id_checkbox_canal_665" onclick="onClickChannel(this);">
+                <img src="http://estaticos01.elmundo.es/elmundo/iconos/v2.1/television/logos/med/boing.gif" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_665">
+                    <span id="nombre_canal_665">Boing</span>
+                </label>
+            </div>
+            <div class="guiaprograma">
+                <input name="checkbox_canal_688" value="688" type="checkbox" id="id_checkbox_canal_688" onclick="onClickChannel(this);">
+                <img src="http://estaticos02.elmundo.es/elmundo/iconos/v2.1/television/logos/med/buzz_rojo.jpg" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_688">
+                    <span id="nombre_canal_688">Buzz Rojo / Canal 18</span>
+                </label>
+            </div>
+            <div class="rompedor"></div>
+        </div>
+        <div id="div_C" class="TabbedPanelsContent" style="display: none;">
+            <div class="guiaprograma">
+                <input name="checkbox_canal_64" value="64" type="checkbox" id="id_checkbox_canal_64" onclick="onClickChannel(this);">
+                <img src="http://estaticos03.elmundo.es/elmundo/iconos/v2.1/television/logos/med/calle13.gif" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_64">
+                    <span id="nombre_canal_64">Calle 13</span>
+                </label>
+            </div>
+            <div class="guiaprograma">
+                <input name="checkbox_canal_250" value="250" type="checkbox" id="id_checkbox_canal_250" onclick="onClickChannel(this);">
+                <img src="http://estaticos04.elmundo.es/elmundo/iconos/v2.1/television/logos/med/canal+.gif" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_250">
+                    <span id="nombre_canal_250">Canal+ 1</span>
+                </label>
+            </div>
+            <div class="guiaprograma">
+                <input name="checkbox_canal_8" value="8" type="checkbox" id="id_checkbox_canal_8" onclick="onClickChannel(this);">
+                <img src="http://estaticos01.elmundo.es/elmundo/iconos/v2.1/television/logos/med/tve24.jpg" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_8">
+                    <span id="nombre_canal_8">Canal 24 horas</span>
+                </label>
+            </div>
+            <div class="guiaprograma">
+                <input name="checkbox_canal_449" value="449" type="checkbox" id="id_checkbox_canal_449" onclick="onClickChannel(this);">
+                <img src="http://estaticos02.elmundo.es/elmundo/iconos/v2.1/television/logos/med/324.gif" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_449">
+                    <span id="nombre_canal_449">Canal 3/24</span>
+                </label>
+            </div>
+            <div class="guiaprograma">
+                <input name="checkbox_canal_183" value="183" type="checkbox" id="id_checkbox_canal_183" onclick="onClickChannel(this);">
+                <img src="http://estaticos03.elmundo.es/elmundo/iconos/v2.1/television/logos/med/cocina.gif" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_183">
+                    <span id="nombre_canal_183">Canal Cocina</span>
+                </label>
+            </div>
+            <div class="guiaprograma">
+                <input name="checkbox_canal_589" value="589" type="checkbox" id="id_checkbox_canal_589" onclick="onClickChannel(this);">
+                <img src="http://estaticos04.elmundo.es/elmundo/iconos/v2.1/television/logos/med/estrellas_europa.gif" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_589">
+                    <span id="nombre_canal_589">Canal de las Estrellas Europa</span>
+                </label>
+            </div>
+            <div class="guiaprograma">
+                <input name="checkbox_canal_582" value="582" type="checkbox" id="id_checkbox_canal_582" onclick="onClickChannel(this);">
+                <img src="http://estaticos01.elmundo.es/elmundo/iconos/v2.1/television/logos/med/extremaduratv.gif" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_582">
+                    <span id="nombre_canal_582">Canal Extremadura TV</span>
+                </label>
+            </div>
+            <div class="guiaprograma">
+                <input name="checkbox_canal_746" value="746" type="checkbox" id="id_checkbox_canal_746" onclick="onClickChannel(this);">
+                <img src="http://estaticos02.elmundo.es/elmundo/iconos/v2.1/television/logos_parrilla/med/0E/7565.gif" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_746">
+                    <span id="nombre_canal_746">Canal+ Liga</span>
+                </label>
+            </div>
+            <div class="guiaprograma">
+                <input name="checkbox_canal_698" value="698" type="checkbox" id="id_checkbox_canal_698" onclick="onClickChannel(this);">
+                <img src="http://estaticos03.elmundo.es/elmundo/iconos/v2.1/television/logos/med/panda.jpg" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_698">
+                    <span id="nombre_canal_698">Canal Panda</span>
+                </label>
+            </div>
+            <div class="guiaprograma">
+                <input name="checkbox_canal_30" value="30" type="checkbox" id="id_checkbox_canal_30" onclick="onClickChannel(this);">
+                <img src="http://estaticos04.elmundo.es/elmundo/iconos/v2.1/television/logos/med/canalsur.gif" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_30">
+                    <span id="nombre_canal_30">Canal Sur</span>
+                </label>
+            </div>
+            <div class="guiaprograma">
+                <input name="checkbox_canal_31" value="31" type="checkbox" id="id_checkbox_canal_31" onclick="onClickChannel(this);">
+                <img src="http://estaticos01.elmundo.es/elmundo/iconos/v2.1/television/logos/med/canal2andalucia.gif" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_31">
+                    <span id="nombre_canal_31">Canal Sur 2</span>
+                </label>
+            </div>
+            <div class="guiaprograma">
+                <input name="checkbox_canal_566" value="566" type="checkbox" id="id_checkbox_canal_566" onclick="onClickChannel(this);">
+                <img src="http://estaticos02.elmundo.es/elmundo/iconos/v2.1/television/logos/med/caracol.jpg" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_566">
+                    <span id="nombre_canal_566">Caracol TV</span>
+                </label>
+            </div>
+            <div class="guiaprograma">
+                <input name="checkbox_canal_296" value="296" type="checkbox" id="id_checkbox_canal_296" onclick="onClickChannel(this);">
+                <img src="http://estaticos03.elmundo.es/elmundo/iconos/v2.1/television/logos/med/cmt.gif" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_296">
+                    <span id="nombre_canal_296">Castilla - La Mancha TV</span>
+                </label>
+            </div>
+            <div class="guiaprograma">
+                <input name="checkbox_canal_656" value="656" type="checkbox" id="id_checkbox_canal_656" onclick="onClickChannel(this);">
+                <img src="http://estaticos04.elmundo.es/elmundo/iconos/v2.1/television/logos/med/cazavision.jpg" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_656">
+                    <span id="nombre_canal_656">Cazavisión</span>
+                </label>
+            </div>
+            <div class="guiaprograma">
+                <input name="checkbox_canal_60" value="60" type="checkbox" id="id_checkbox_canal_60" onclick="onClickChannel(this);">
+                <img src="http://estaticos01.elmundo.es/elmundo/iconos/v2.1/television/logos/med/ctk.gif" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_60">
+                    <span id="nombre_canal_60">Cinematk</span>
+                </label>
+            </div>
+            <div class="guiaprograma">
+                <input name="checkbox_canal_505" value="505" type="checkbox" id="id_checkbox_canal_505" onclick="onClickChannel(this);">
+                <img src="http://estaticos02.elmundo.es/elmundo/iconos/v2.1/television/logos/med/tve_clan.jpg" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_505">
+                    <span id="nombre_canal_505">Clan TVE</span>
+                </label>
+            </div>
+            <div class="guiaprograma">
+                <input name="checkbox_canal_204" value="204" type="checkbox" id="id_checkbox_canal_204" onclick="onClickChannel(this);">
+                <img src="http://estaticos03.elmundo.es/elmundo/iconos/v2.1/television/logos/med/cnbc_europe.gif" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_204">
+                    <span id="nombre_canal_204">CNBC Europe</span>
+                </label>
+            </div>
+            <div class="guiaprograma">
+                <input name="checkbox_canal_203" value="203" type="checkbox" id="id_checkbox_canal_203" onclick="onClickChannel(this);">
+                <img src="http://estaticos04.elmundo.es/elmundo/iconos/v2.1/television/logos/med/cnn.gif" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_203">
+                    <span id="nombre_canal_203">CNN Internacional</span>
+                </label>
+            </div>
+            <div class="guiaprograma">
+                <input name="checkbox_canal_493" value="493" type="checkbox" id="id_checkbox_canal_493" onclick="onClickChannel(this);">
+                <img src="http://estaticos01.elmundo.es/elmundo/iconos/v2.1/television/logos/med/paramountcomedy.gif" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_493">
+                    <span id="nombre_canal_493">Comedy Central</span>
+                </label>
+            </div>
+            <div class="guiaprograma">
+                <input name="checkbox_canal_186" value="186" type="checkbox" id="id_checkbox_canal_186" onclick="onClickChannel(this);">
+                <img src="http://estaticos02.elmundo.es/elmundo/iconos/v2.1/television/logos/med/cosmotv.gif" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_186">
+                    <span id="nombre_canal_186">Cosmopolitan</span>
+                </label>
+            </div>
+            <div class="guiaprograma">
+                <input name="checkbox_canal_691" value="691" type="checkbox" id="id_checkbox_canal_691" onclick="onClickChannel(this);">
+                <img src="http://estaticos03.elmundo.es/elmundo/iconos/v2.1/television/logos/med/crimen.gif" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_691">
+                    <span id="nombre_canal_691">Crimen &amp; Investigación</span>
+                </label>
+            </div>
+            <div class="guiaprograma">
+                <input name="checkbox_canal_496" value="496" type="checkbox" id="id_checkbox_canal_496" onclick="onClickChannel(this);">
+                <img src="http://estaticos04.elmundo.es/elmundo/iconos/v2.1/television/logos/med/cuatro.gif" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_496">
+                    <span id="nombre_canal_496">Cuatro</span>
+                </label>
+            </div>
+            <div class="guiaprograma">
+                <input name="checkbox_canal_324" value="324" type="checkbox" id="id_checkbox_canal_324" onclick="onClickChannel(this);">
+                <img src="http://estaticos01.elmundo.es/elmundo/iconos/v2.1/television/logos/med/cyltv.jpg" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_324">
+                    <span id="nombre_canal_324">CyLTV</span>
+                </label>
+            </div>
+            <div class="rompedor"></div>
+        </div>
+        <div id="div_D" class="TabbedPanelsContent" style="display: none;">
+            <div class="guiaprograma">
+                <input name="checkbox_canal_572" value="572" type="checkbox" id="id_checkbox_canal_572" onclick="onClickChannel(this);">
+                <img src="http://estaticos02.elmundo.es/elmundo/iconos/v2.1/television/logos/med/decasa.gif" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_572">
+                    <span id="nombre_canal_572">Decasa</span>
+                </label>
+            </div>
+            <div class="guiaprograma">
+                <input name="checkbox_canal_206" value="206" type="checkbox" id="id_checkbox_canal_206" onclick="onClickChannel(this);">
+                <img src="http://estaticos03.elmundo.es/elmundo/iconos/v2.1/television/logos/med/deutschewelle.gif" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_206">
+                    <span id="nombre_canal_206">Deutsche Welle</span>
+                </label>
+            </div>
+            <div class="guiaprograma">
+                <input name="checkbox_canal_146" value="146" type="checkbox" id="id_checkbox_canal_146" onclick="onClickChannel(this);">
+                <img src="http://estaticos04.elmundo.es/elmundo/iconos/v2.1/television/logos/med/discovery.gif" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_146">
+                    <span id="nombre_canal_146">Discovery Channel</span>
+                </label>
+            </div>
+            <div class="guiaprograma">
+                <input name="checkbox_canal_475" value="475" type="checkbox" id="id_checkbox_canal_475" onclick="onClickChannel(this);">
+                <img src="http://estaticos01.elmundo.es/elmundo/iconos/v2.1/television/logos/med/DMax.jpg" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_475">
+                    <span id="nombre_canal_475">Discovery MAX</span>
+                </label>
+            </div>
+            <div class="guiaprograma">
+                <input name="checkbox_canal_175" value="175" type="checkbox" id="id_checkbox_canal_175" onclick="onClickChannel(this);">
+                <img src="http://estaticos02.elmundo.es/elmundo/iconos/v2.1/television/logos/med/disney.gif" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_175">
+                    <span id="nombre_canal_175">Disney Channel</span>
+                </label>
+            </div>
+            <div class="guiaprograma">
+                <input name="checkbox_canal_2091" value="2091" type="checkbox" id="id_checkbox_canal_2091" onclick="onClickChannel(this);">
+                <img src="http://estaticos03.elmundo.es/elmundo/iconos/v2.1/television/logos_parrilla/med/07/8020.gif" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_2091">
+                    <span id="nombre_canal_2091">Disney Channel +1</span>
+                </label>
+            </div>
+            <div class="guiaprograma">
+                <input name="checkbox_canal_599" value="599" type="checkbox" id="id_checkbox_canal_599" onclick="onClickChannel(this);">
+                <img src="http://estaticos04.elmundo.es/elmundo/iconos/v2.1/television/logos/med/disney_cinemagic.gif" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_599">
+                    <span id="nombre_canal_599">Disney CineMagic</span>
+                </label>
+            </div>
+            <div class="guiaprograma">
+                <input name="checkbox_canal_600" value="600" type="checkbox" id="id_checkbox_canal_600" onclick="onClickChannel(this);">
+                <img src="http://estaticos01.elmundo.es/elmundo/iconos/v2.1/television/logos/med/disney_cinemagic.gif" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_600">
+                    <span id="nombre_canal_600">Disney CineMagic +1</span>
+                </label>
+            </div>
+            <div class="guiaprograma">
+                <input name="checkbox_canal_292" value="292" type="checkbox" id="id_checkbox_canal_292" onclick="onClickChannel(this);">
+                <img src="http://estaticos02.elmundo.es/elmundo/iconos/v2.1/television/logos/med/disneyjunior.gif" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_292">
+                    <span id="nombre_canal_292">Disney Junior</span>
+                </label>
+            </div>
+            <div class="guiaprograma">
+                <input name="checkbox_canal_174" value="174" type="checkbox" id="id_checkbox_canal_174" onclick="onClickChannel(this);">
+                <img src="http://estaticos03.elmundo.es/elmundo/iconos/v2.1/television/logos/med/disneyxd.jpg" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_174">
+                    <span id="nombre_canal_174">Disney XD</span>
+                </label>
+            </div>
+            <div class="guiaprograma">
+                <input name="checkbox_canal_683" value="683" type="checkbox" id="id_checkbox_canal_683" onclick="onClickChannel(this);">
+                <img src="http://estaticos04.elmundo.es/elmundo/iconos/v2.1/television/logos_parrilla/med/FE/7627.gif" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_683">
+                    <span id="nombre_canal_683">Disney XD +1</span>
+                </label>
+            </div>
+            <div class="guiaprograma">
+                <input name="checkbox_canal_697" value="697" type="checkbox" id="id_checkbox_canal_697" onclick="onClickChannel(this);">
+                <img src="http://estaticos01.elmundo.es/elmundo/iconos/v2.1/television/logos/med/divinity.jpg" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_697">
+                    <span id="nombre_canal_697">Divinity</span>
+                </label>
+            </div>
+            <div class="rompedor"></div>
+        </div>
+        <div id="div_E" class="TabbedPanelsContent" style="display: none;">
+            <div class="guiaprograma">
+                <input name="checkbox_canal_709" value="709" type="checkbox" id="id_checkbox_canal_709" onclick="onClickChannel(this);">
+                <img src="http://estaticos02.elmundo.es/elmundo/iconos/v2.1/television/logos/med/energy.jpg" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_709">
+                    <span id="nombre_canal_709">Energy</span>
+                </label>
+            </div>
+            <div class="guiaprograma">
+                <input name="checkbox_canal_33" value="33" type="checkbox" id="id_checkbox_canal_33" onclick="onClickChannel(this);">
+                <img src="http://estaticos03.elmundo.es/elmundo/iconos/v2.1/television/logos/med/etb1.gif" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_33">
+                    <span id="nombre_canal_33">ETB 1</span>
+                </label>
+            </div>
+            <div class="guiaprograma">
+                <input name="checkbox_canal_34" value="34" type="checkbox" id="id_checkbox_canal_34" onclick="onClickChannel(this);">
+                <img src="http://estaticos04.elmundo.es/elmundo/iconos/v2.1/television/logos/med/etb2.gif" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_34">
+                    <span id="nombre_canal_34">ETB 2</span>
+                </label>
+            </div>
+            <div class="guiaprograma">
+                <input name="checkbox_canal_35" value="35" type="checkbox" id="id_checkbox_canal_35" onclick="onClickChannel(this);">
+                <img src="http://estaticos01.elmundo.es/elmundo/iconos/v2.1/television/logos/med/etvsat.gif" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_35">
+                    <span id="nombre_canal_35">ETB Sat</span>
+                </label>
+            </div>
+            <div class="guiaprograma">
+                <input name="checkbox_canal_139" value="139" type="checkbox" id="id_checkbox_canal_139" onclick="onClickChannel(this);">
+                <img src="http://estaticos02.elmundo.es/elmundo/iconos/v2.1/television/logos/med/euronews.gif" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_139">
+                    <span id="nombre_canal_139">Euronews</span>
+                </label>
+            </div>
+            <div class="guiaprograma">
+                <input name="checkbox_canal_154" value="154" type="checkbox" id="id_checkbox_canal_154" onclick="onClickChannel(this);">
+                <img src="http://estaticos03.elmundo.es/elmundo/iconos/v2.1/television/logos/med/eurosport.gif" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_154">
+                    <span id="nombre_canal_154">Eurosport</span>
+                </label>
+            </div>
+            <div class="guiaprograma">
+                <input name="checkbox_canal_491" value="491" type="checkbox" id="id_checkbox_canal_491" onclick="onClickChannel(this);">
+                <img src="http://estaticos04.elmundo.es/elmundo/iconos/v2.1/television/logos/med/eurosport2.gif" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_491">
+                    <span id="nombre_canal_491">Eurosport 2</span>
+                </label>
+            </div>
+            <div class="guiaprograma">
+                <input name="checkbox_canal_190" value="190" type="checkbox" id="id_checkbox_canal_190" onclick="onClickChannel(this);">
+                <img src="http://estaticos01.elmundo.es/elmundo/iconos/v2.1/television/logos/med/ewtn.gif" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_190">
+                    <span id="nombre_canal_190">EWTN</span>
+                </label>
+            </div>
+            <div class="rompedor"></div>
+        </div>
+        <div id="div_F" class="TabbedPanelsContent" style="display: none;">
+            <div class="guiaprograma">
+                <input name="checkbox_canal_506" value="506" type="checkbox" id="id_checkbox_canal_506" onclick="onClickChannel(this);">
+                <img src="http://estaticos02.elmundo.es/elmundo/iconos/v2.1/television/logos/med/telecincofdf.jpg" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_506">
+                    <span id="nombre_canal_506">FDF Telecinco</span>
+                </label>
+            </div>
+            <div class="guiaprograma">
+                <input name="checkbox_canal_202" value="202" type="checkbox" id="id_checkbox_canal_202" onclick="onClickChannel(this);">
+                <img src="http://estaticos03.elmundo.es/elmundo/iconos/v2.1/television/logos/med/fox.gif" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_202">
+                    <span id="nombre_canal_202">FOX</span>
+                </label>
+            </div>
+            <div class="guiaprograma">
+                <input name="checkbox_canal_660" value="660" type="checkbox" id="id_checkbox_canal_660" onclick="onClickChannel(this);">
+                <img src="http://estaticos04.elmundo.es/elmundo/iconos/v2.1/television/logos/med/foxcrime.jpg" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_660">
+                    <span id="nombre_canal_660">Fox Crime</span>
+                </label>
+            </div>
+            <div class="guiaprograma">
+                <input name="checkbox_canal_547" value="547" type="checkbox" id="id_checkbox_canal_547" onclick="onClickChannel(this);">
+                <img src="http://estaticos01.elmundo.es/elmundo/iconos/v2.1/television/logos/med/france.gif" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_547">
+                    <span id="nombre_canal_547">France 24</span>
+                </label>
+            </div>
+            <div class="rompedor"></div>
+        </div>
+        <div id="div_G" class="TabbedPanelsContent" style="display: none;">
+            <div class="guiaprograma">
+                <input name="checkbox_canal_37" value="37" type="checkbox" id="id_checkbox_canal_37" onclick="onClickChannel(this);">
+                <img src="http://estaticos02.elmundo.es/elmundo/iconos/v2.1/television/logos/med/Tvgalicia.gif" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_37">
+                    <span id="nombre_canal_37">Galicia TV</span>
+                </label>
+            </div>
+            <div class="guiaprograma">
+                <input name="checkbox_canal_620" value="620" type="checkbox" id="id_checkbox_canal_620" onclick="onClickChannel(this);">
+                <img src="http://estaticos03.elmundo.es/elmundo/iconos/v2.1/television/logos/med/goltv.gif" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_620">
+                    <span id="nombre_canal_620">Gol TV</span>
+                </label>
+            </div>
+            <div class="rompedor"></div>
+        </div>
+        <div id="div_H" class="TabbedPanelsContent" style="display: none;">
+            <div class="guiaprograma">
+                <input name="checkbox_canal_148" value="148" type="checkbox" id="id_checkbox_canal_148" onclick="onClickChannel(this);">
+                <img src="http://estaticos04.elmundo.es/elmundo/iconos/v2.1/television/logos/med/historia.gif" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_148">
+                    <span id="nombre_canal_148">Historia</span>
+                </label>
+            </div>
+            <div class="guiaprograma">
+                <input name="checkbox_canal_61" value="61" type="checkbox" id="id_checkbox_canal_61" onclick="onClickChannel(this);">
+                <img src="http://estaticos01.elmundo.es/elmundo/iconos/v2.1/television/logos/med/hollywood.gif" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_61">
+                    <span id="nombre_canal_61">Hollywood</span>
+                </label>
+            </div>
+            <div class="guiaprograma">
+                <input name="checkbox_canal_671" value="671" type="checkbox" id="id_checkbox_canal_671" onclick="onClickChannel(this);">
+                <img src="http://estaticos02.elmundo.es/elmundo/iconos/v2.1/television/logos/med/hollywood.gif" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_671">
+                    <span id="nombre_canal_671">Hollywood +1</span>
+                </label>
+            </div>
+            <div class="rompedor"></div>
+        </div>
+        <div id="div_I" class="TabbedPanelsContent" style="display: none;">
+            <div class="guiaprograma">
+                <input name="checkbox_canal_519" value="519" type="checkbox" id="id_checkbox_canal_519" onclick="onClickChannel(this);">
+                <img src="http://estaticos03.elmundo.es/elmundo/iconos/v2.1/television/logos/med/ib3.gif" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_519">
+                    <span id="nombre_canal_519">IB3</span>
+                </label>
+            </div>
+            <div class="guiaprograma">
+                <input name="checkbox_canal_654" value="654" type="checkbox" id="id_checkbox_canal_654" onclick="onClickChannel(this);">
+                <img src="http://estaticos04.elmundo.es/elmundo/iconos/v2.1/television/logos/med/iberalia.jpg" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_654">
+                    <span id="nombre_canal_654">Iberalia</span>
+                </label>
+            </div>
+            <div class="guiaprograma">
+                <input name="checkbox_canal_189" value="189" type="checkbox" id="id_checkbox_canal_189" onclick="onClickChannel(this);">
+                <img src="http://estaticos01.elmundo.es/elmundo/iconos/v2.1/television/logos/med/inter_business.gif" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_189">
+                    <span id="nombre_canal_189">Intereconomía Business</span>
+                </label>
+            </div>
+            <div class="guiaprograma">
+                <input name="checkbox_canal_516" value="516" type="checkbox" id="id_checkbox_canal_516" onclick="onClickChannel(this);">
+                <img src="http://estaticos02.elmundo.es/elmundo/iconos/v2.1/television/logos/med/intereconomia.gif" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_516">
+                    <span id="nombre_canal_516">Intereconomía TV</span>
+                </label>
+            </div>
+            <div class="rompedor"></div>
+        </div>
+        <div id="div_K" class="TabbedPanelsContent" style="display: none;">
+            <div class="guiaprograma">
+                <input name="checkbox_canal_639" value="639" type="checkbox" id="id_checkbox_canal_639" onclick="onClickChannel(this);">
+                <img src="http://estaticos03.elmundo.es/elmundo/iconos/v2.1/television/logos/med/kisstv.jpg" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_639">
+                    <span id="nombre_canal_639">Kiss tv</span>
+                </label>
+            </div>
+            <div class="rompedor"></div>
+        </div>
+        <div id="div_L" class="TabbedPanelsContent" style="display: none;">
+            <div class="guiaprograma">
+                <input name="checkbox_canal_3" value="3" type="checkbox" id="id_checkbox_canal_3" onclick="onClickChannel(this);">
+                <img src="http://estaticos04.elmundo.es/elmundo/iconos/v2.1/television/logos/med/tve1.jpg" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_3">
+                    <span id="nombre_canal_3">La 1</span>
+                </label>
+            </div>
+            <div class="guiaprograma">
+                <input name="checkbox_canal_18" value="18" type="checkbox" id="id_checkbox_canal_18" onclick="onClickChannel(this);">
+                <img src="http://estaticos01.elmundo.es/elmundo/iconos/v2.1/television/logos/med/Tve1Ca.gif" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_18">
+                    <span id="nombre_canal_18">La 1 Catalunya</span>
+                </label>
+            </div>
+            <div class="guiaprograma">
+                <input name="checkbox_canal_690" value="690" type="checkbox" id="id_checkbox_canal_690" onclick="onClickChannel(this);">
+                <img src="http://estaticos02.elmundo.es/elmundo/iconos/v2.1/television/logos/med/tvehd.jpg" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_690">
+                    <span id="nombre_canal_690">La 1 HD</span>
+                </label>
+            </div>
+            <div class="guiaprograma">
+                <input name="checkbox_canal_4" value="4" type="checkbox" id="id_checkbox_canal_4" onclick="onClickChannel(this);">
+                <img src="http://estaticos03.elmundo.es/elmundo/iconos/v2.1/television/logos/med/tve2.jpg" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_4">
+                    <span id="nombre_canal_4">La 2</span>
+                </label>
+            </div>
+            <div class="guiaprograma">
+                <input name="checkbox_canal_280" value="280" type="checkbox" id="id_checkbox_canal_280" onclick="onClickChannel(this);">
+                <img src="http://estaticos04.elmundo.es/elmundo/iconos/v2.1/television/logos/med/La2Ca.gif" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_280">
+                    <span id="nombre_canal_280">La 2 Catalunya</span>
+                </label>
+            </div>
+            <div class="guiaprograma">
+                <input name="checkbox_canal_643" value="643" type="checkbox" id="id_checkbox_canal_643" onclick="onClickChannel(this);">
+                <img src="http://estaticos01.elmundo.es/elmundo/iconos/v2.1/television/logos/med/la8.jpg" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_643">
+                    <span id="nombre_canal_643">La 8</span>
+                </label>
+            </div>
+            <div class="guiaprograma">
+                <input name="checkbox_canal_39" value="39" type="checkbox" id="id_checkbox_canal_39" onclick="onClickChannel(this);">
+                <img src="http://estaticos02.elmundo.es/elmundo/iconos/v2.1/television/logos/med/laotra.gif" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_39">
+                    <span id="nombre_canal_39">La Otra</span>
+                </label>
+            </div>
+            <div class="guiaprograma">
+                <input name="checkbox_canal_510" value="510" type="checkbox" id="id_checkbox_canal_510" onclick="onClickChannel(this);">
+                <img src="http://estaticos03.elmundo.es/elmundo/iconos/v2.1/television/logos/med/lasexta.gif" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_510">
+                    <span id="nombre_canal_510">laSexta</span>
+                </label>
+            </div>
+            <div class="guiaprograma">
+                <input name="checkbox_canal_603" value="603" type="checkbox" id="id_checkbox_canal_603" onclick="onClickChannel(this);">
+                <img src="http://estaticos04.elmundo.es/elmundo/iconos/v2.1/television/logos/med/libertad_digital_tv.gif" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_603">
+                    <span id="nombre_canal_603">Libertad Digital TV</span>
+                </label>
+            </div>
+            <div class="rompedor"></div>
+        </div>
+        <div id="div_M" class="TabbedPanelsContent" style="display: none;">
+            <div class="guiaprograma">
+                <input name="checkbox_canal_481" value="481" type="checkbox" id="id_checkbox_canal_481" onclick="onClickChannel(this);">
+                <img src="http://estaticos01.elmundo.es/elmundo/iconos/v2.1/television/logos/med/mgm.jpg" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_481">
+                    <span id="nombre_canal_481">MGM</span>
+                </label>
+            </div>
+            <div class="guiaprograma">
+                <input name="checkbox_canal_395" value="395" type="checkbox" id="id_checkbox_canal_395" onclick="onClickChannel(this);">
+                <img src="http://estaticos02.elmundo.es/elmundo/iconos/v2.1/television/logos_parrilla/med/BE/321353.gif" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_395">
+                    <span id="nombre_canal_395">Motors tv</span>
+                </label>
+            </div>
+            <div class="guiaprograma">
+                <input name="checkbox_canal_469" value="469" type="checkbox" id="id_checkbox_canal_469" onclick="onClickChannel(this);">
+                <img src="http://estaticos03.elmundo.es/elmundo/iconos/v2.1/television/logos/med/mtv_dance_uk.gif" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_469">
+                    <span id="nombre_canal_469">MTV Dance</span>
+                </label>
+            </div>
+            <div class="guiaprograma">
+                <input name="checkbox_canal_161" value="161" type="checkbox" id="id_checkbox_canal_161" onclick="onClickChannel(this);">
+                <img src="http://estaticos04.elmundo.es/elmundo/iconos/v2.1/television/logos/med/mtv_hits_uk.gif" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_161">
+                    <span id="nombre_canal_161">MTV Hits</span>
+                </label>
+            </div>
+            <div class="guiaprograma">
+                <input name="checkbox_canal_627" value="627" type="checkbox" id="id_checkbox_canal_627" onclick="onClickChannel(this);">
+                <img src="http://estaticos01.elmundo.es/elmundo/iconos/v2.1/television/logos/med/mtvmusic.jpg" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_627">
+                    <span id="nombre_canal_627">MTV Music</span>
+                </label>
+            </div>
+            <div class="guiaprograma">
+                <input name="checkbox_canal_160" value="160" type="checkbox" id="id_checkbox_canal_160" onclick="onClickChannel(this);">
+                <img src="http://estaticos02.elmundo.es/elmundo/iconos/v2.1/television/logos/med/mtv_two_uk.gif" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_160">
+                    <span id="nombre_canal_160">MTV Rocks</span>
+                </label>
+            </div>
+            <div class="rompedor"></div>
+        </div>
+        <div id="div_N" class="TabbedPanelsContent" style="display: none;">
+            <div class="guiaprograma">
+                <input name="checkbox_canal_151" value="151" type="checkbox" id="id_checkbox_canal_151" onclick="onClickChannel(this);">
+                <img src="http://estaticos03.elmundo.es/elmundo/iconos/v2.1/television/logos/med/nationalgeographic.gif" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_151">
+                    <span id="nombre_canal_151">National Geographic</span>
+                </label>
+            </div>
+            <div class="guiaprograma">
+                <input name="checkbox_canal_681" value="681" type="checkbox" id="id_checkbox_canal_681" onclick="onClickChannel(this);">
+                <img src="http://estaticos04.elmundo.es/elmundo/iconos/v2.1/television/logos/med/natgeowild.jpg" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_681">
+                    <span id="nombre_canal_681">National Geographic Wild HD</span>
+                </label>
+            </div>
+            <div class="guiaprograma">
+                <input name="checkbox_canal_134" value="134" type="checkbox" id="id_checkbox_canal_134" onclick="onClickChannel(this);">
+                <img src="http://estaticos01.elmundo.es/elmundo/iconos/v2.1/television/logos/med/natura.gif" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_134">
+                    <span id="nombre_canal_134">Natura</span>
+                </label>
+            </div>
+            <div class="guiaprograma">
+                <input name="checkbox_canal_410" value="410" type="checkbox" id="id_checkbox_canal_410" onclick="onClickChannel(this);">
+                <img src="http://estaticos02.elmundo.es/elmundo/iconos/v2.1/television/logos/med/nautical.jpg" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_410">
+                    <span id="nombre_canal_410">Nautical Channel</span>
+                </label>
+            </div>
+            <div class="guiaprograma">
+                <input name="checkbox_canal_508" value="508" type="checkbox" id="id_checkbox_canal_508" onclick="onClickChannel(this);">
+                <img src="http://estaticos03.elmundo.es/elmundo/iconos/v2.1/television/logos/med/antenaneox.gif" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_508">
+                    <span id="nombre_canal_508">Neox</span>
+                </label>
+            </div>
+            <div class="guiaprograma">
+                <input name="checkbox_canal_200" value="200" type="checkbox" id="id_checkbox_canal_200" onclick="onClickChannel(this);">
+                <img src="http://estaticos04.elmundo.es/elmundo/iconos/v2.1/television/logos/med/nick.gif" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_200">
+                    <span id="nombre_canal_200">Nickelodeon</span>
+                </label>
+            </div>
+            <div class="guiaprograma">
+                <input name="checkbox_canal_687" value="687" type="checkbox" id="id_checkbox_canal_687" onclick="onClickChannel(this);">
+                <img src="http://estaticos01.elmundo.es/elmundo/iconos/v2.1/television/logos/med/nickj.jpg" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_687">
+                    <span id="nombre_canal_687">Nick Junior</span>
+                </label>
+            </div>
+            <div class="guiaprograma">
+                <input name="checkbox_canal_509" value="509" type="checkbox" id="id_checkbox_canal_509" onclick="onClickChannel(this);">
+                <img src="http://estaticos02.elmundo.es/elmundo/iconos/v2.1/television/logos/med/antenanova.gif" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_509">
+                    <span id="nombre_canal_509">Nova</span>
+                </label>
+            </div>
+            <div class="rompedor"></div>
+        </div>
+        <div id="div_O" class="TabbedPanelsContent" style="display: none;">
+            <div class="guiaprograma">
+                <input name="checkbox_canal_135" value="135" type="checkbox" id="id_checkbox_canal_135" onclick="onClickChannel(this);">
+                <img src="http://estaticos03.elmundo.es/elmundo/iconos/v2.1/television/logos/med/odisea.gif" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_135">
+                    <span id="nombre_canal_135">Odisea</span>
+                </label>
+            </div>
+            <div class="rompedor"></div>
+        </div>
+        <div id="div_P" class="TabbedPanelsContent" style="display: none;">
+            <div class="guiaprograma">
+                <input name="checkbox_canal_716" value="716" type="checkbox" id="id_checkbox_canal_716" onclick="onClickChannel(this);">
+                <img src="http://estaticos04.elmundo.es/elmundo/iconos/v2.1/television/logos_parrilla/med/32/321435.gif" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_716">
+                    <span id="nombre_canal_716">Paramount Channel</span>
+                </label>
+            </div>
+            <div class="guiaprograma">
+                <input name="checkbox_canal_192" value="192" type="checkbox" id="id_checkbox_canal_192" onclick="onClickChannel(this);">
+                <img src="http://estaticos01.elmundo.es/elmundo/iconos/v2.1/television/logos/med/playboytv.jpg" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_192">
+                    <span id="nombre_canal_192">Playboy TV</span>
+                </label>
+            </div>
+            <div class="rompedor"></div>
+        </div>
+        <div id="div_R" class="TabbedPanelsContent" style="display: none;">
+            <div class="guiaprograma">
+                <input name="checkbox_canal_682" value="682" type="checkbox" id="id_checkbox_canal_682" onclick="onClickChannel(this);">
+                <img src="http://estaticos02.elmundo.es/elmundo/iconos/v2.1/television/logos/med/rt.jpg" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_682">
+                    <span id="nombre_canal_682">RT español</span>
+                </label>
+            </div>
+            <div class="rompedor"></div>
+        </div>
+        <div id="div_S" class="TabbedPanelsContent TabbedPanelsContentVisible" style="display: block;">
+            <div class="guiaprograma">
+                <input name="checkbox_canal_171" value="171" type="checkbox" id="id_checkbox_canal_171" onclick="onClickChannel(this);">
+                <img src="http://estaticos03.elmundo.es/elmundo/iconos/v2.1/television/logos/med/solmusica.gif" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_171">
+                    <span id="nombre_canal_171">Sol Música</span>
+                </label>
+            </div>
+            <div class="guiaprograma">
+                <input name="checkbox_canal_501" value="501" type="checkbox" id="id_checkbox_canal_501" onclick="onClickChannel(this);">
+                <img src="http://estaticos04.elmundo.es/elmundo/iconos/v2.1/television/logos/med/somos_tv.gif" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_501">
+                    <span id="nombre_canal_501">Somos</span>
+                </label>
+            </div>
+            <div class="guiaprograma">
+                <input name="checkbox_canal_153" value="153" type="checkbox" id="id_checkbox_canal_153" onclick="onClickChannel(this);">
+                <img src="http://estaticos01.elmundo.es/elmundo/iconos/v2.1/television/logos/med/sportmania.jpg" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_153">
+                    <span id="nombre_canal_153">Sportmanía</span>
+                </label>
+            </div>
+            <div class="guiaprograma">
+                <input name="checkbox_canal_699" value="699" type="checkbox" id="id_checkbox_canal_699" onclick="onClickChannel(this);">
+                <img src="http://estaticos02.elmundo.es/elmundo/iconos/v2.1/television/logos/med/default_logo.gif" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_699">
+                    <span id="nombre_canal_699">Sundance Channel</span>
+                </label>
+            </div>
+            <div class="guiaprograma">
+                <input name="checkbox_canal_541" value="541" type="checkbox" id="id_checkbox_canal_541" onclick="onClickChannel(this);">
+                <img src="http://estaticos03.elmundo.es/elmundo/iconos/v2.1/television/logos/med/33.gif" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_541">
+                    <span id="nombre_canal_541">Super 3</span>
+                </label>
+            </div>
+            <div class="guiaprograma">
+                <input name="checkbox_canal_520" value="520" type="checkbox" id="id_checkbox_canal_520" onclick="onClickChannel(this);">
+                <img src="http://estaticos04.elmundo.es/elmundo/iconos/v2.1/television/logos/med/syfy.gif" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_520">
+                    <span id="nombre_canal_520">Syfy</span>
+                </label>
+            </div>
+            <div class="rompedor"></div>
+        </div>
+        <div id="div_T" class="TabbedPanelsContent" style="display: none;">
+            <div class="guiaprograma">
+                <input name="checkbox_canal_59" value="59" type="checkbox" id="id_checkbox_canal_59" onclick="onClickChannel(this);">
+                <img src="http://estaticos01.elmundo.es/elmundo/iconos/v2.1/television/logos/med/tcm.gif" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_59">
+                    <span id="nombre_canal_59">TCM</span>
+                </label>
+            </div>
+            <div class="guiaprograma">
+                <input name="checkbox_canal_628" value="628" type="checkbox" id="id_checkbox_canal_628" onclick="onClickChannel(this);">
+                <img src="http://estaticos02.elmundo.es/elmundo/iconos/v2.1/television/logos_parrilla/med/55/7958.gif" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_628">
+                    <span id="nombre_canal_628">TCM +1</span>
+                </label>
+            </div>
+            <div class="guiaprograma">
+                <input name="checkbox_canal_1" value="1" type="checkbox" id="id_checkbox_canal_1" onclick="onClickChannel(this);">
+                <img src="http://estaticos03.elmundo.es/elmundo/iconos/v2.1/television/logos/med/telecinco.jpg" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_1">
+                    <span id="nombre_canal_1">Telecinco</span>
+                </label>
+            </div>
+            <div class="guiaprograma">
+                <input name="checkbox_canal_9" value="9" type="checkbox" id="id_checkbox_canal_9" onclick="onClickChannel(this);">
+                <img src="http://estaticos04.elmundo.es/elmundo/iconos/v2.1/television/logos/med/tve_tdp.jpg" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_9">
+                    <span id="nombre_canal_9">Teledeporte</span>
+                </label>
+            </div>
+            <div class="guiaprograma">
+                <input name="checkbox_canal_316" value="316" type="checkbox" id="id_checkbox_canal_316" onclick="onClickChannel(this);">
+                <img src="http://estaticos01.elmundo.es/elmundo/iconos/v2.1/television/logos/med/teleElx.jpg" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_316">
+                    <span id="nombre_canal_316">Tele Elx</span>
+                </label>
+            </div>
+            <div class="guiaprograma">
+                <input name="checkbox_canal_38" value="38" type="checkbox" id="id_checkbox_canal_38" onclick="onClickChannel(this);">
+                <img src="http://estaticos02.elmundo.es/elmundo/iconos/v2.1/television/logos/med/telemadrid.gif" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_38">
+                    <span id="nombre_canal_38">Telemadrid</span>
+                </label>
+            </div>
+            <div class="guiaprograma">
+                <input name="checkbox_canal_41" value="41" type="checkbox" id="id_checkbox_canal_41" onclick="onClickChannel(this);">
+                <img src="http://estaticos03.elmundo.es/elmundo/iconos/v2.1/television/logos/med/tvcanaria.gif" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_41">
+                    <span id="nombre_canal_41">TelevisiónCanaria</span>
+                </label>
+            </div>
+            <div class="guiaprograma">
+                <input name="checkbox_canal_492" value="492" type="checkbox" id="id_checkbox_canal_492" onclick="onClickChannel(this);">
+                <img src="http://estaticos04.elmundo.es/elmundo/iconos/v2.1/television/logos/med/biography.gif" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_492">
+                    <span id="nombre_canal_492">The Biography Channel</span>
+                </label>
+            </div>
+            <div class="guiaprograma">
+                <input name="checkbox_canal_577" value="577" type="checkbox" id="id_checkbox_canal_577" onclick="onClickChannel(this);">
+                <img src="http://estaticos01.elmundo.es/elmundo/iconos/v2.1/television/logos/med/tnt.jpg" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_577">
+                    <span id="nombre_canal_577">TNT</span>
+                </label>
+            </div>
+            <div class="guiaprograma">
+                <input name="checkbox_canal_521" value="521" type="checkbox" id="id_checkbox_canal_521" onclick="onClickChannel(this);">
+                <img src="http://estaticos02.elmundo.es/elmundo/iconos/v2.1/television/logos/med/tpa.gif" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_521">
+                    <span id="nombre_canal_521">TPA</span>
+                </label>
+            </div>
+            <div class="guiaprograma">
+                <input name="checkbox_canal_43" value="43" type="checkbox" id="id_checkbox_canal_43" onclick="onClickChannel(this);">
+                <img src="http://estaticos03.elmundo.es/elmundo/iconos/v2.1/television/logos/med/tv3.gif" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_43">
+                    <span id="nombre_canal_43">TV3</span>
+                </label>
+            </div>
+            <div class="guiaprograma">
+                <input name="checkbox_canal_47" value="47" type="checkbox" id="id_checkbox_canal_47" onclick="onClickChannel(this);">
+                <img src="http://estaticos04.elmundo.es/elmundo/iconos/v2.1/television/logos/med/tvci.gif" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_47">
+                    <span id="nombre_canal_47">TV3CAT</span>
+                </label>
+            </div>
+            <div class="guiaprograma">
+                <input name="checkbox_canal_209" value="209" type="checkbox" id="id_checkbox_canal_209" onclick="onClickChannel(this);">
+                <img src="http://estaticos01.elmundo.es/elmundo/iconos/v2.1/television/logos/med/tv5europe.gif" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_209">
+                    <span id="nombre_canal_209">TV5 Monde</span>
+                </label>
+            </div>
+            <div class="guiaprograma">
+                <input name="checkbox_canal_416" value="416" type="checkbox" id="id_checkbox_canal_416" onclick="onClickChannel(this);">
+                <img src="http://estaticos02.elmundo.es/elmundo/iconos/v2.1/television/logos/med/tvchile.jpg" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_416">
+                    <span id="nombre_canal_416">TV Chile</span>
+                </label>
+            </div>
+            <div class="guiaprograma">
+                <input name="checkbox_canal_468" value="468" type="checkbox" id="id_checkbox_canal_468" onclick="onClickChannel(this);">
+                <img src="http://estaticos03.elmundo.es/elmundo/iconos/v2.1/television/logos/med/tveinternacional.gif" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_468">
+                    <span id="nombre_canal_468">TVE Internacional</span>
+                </label>
+            </div>
+            <div class="guiaprograma">
+                <input name="checkbox_canal_667" value="667" type="checkbox" id="id_checkbox_canal_667" onclick="onClickChannel(this);">
+                <img src="http://estaticos04.elmundo.es/elmundo/iconos/v2.1/television/logos_parrilla/med/77/7634.gif" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_667">
+                    <span id="nombre_canal_667">TVE Internacional Asia</span>
+                </label>
+            </div>
+            <div class="guiaprograma">
+                <input name="checkbox_canal_36" value="36" type="checkbox" id="id_checkbox_canal_36" onclick="onClickChannel(this);">
+                <img src="http://estaticos01.elmundo.es/elmundo/iconos/v2.1/television/logos/med/tvg.gif" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_36">
+                    <span id="nombre_canal_36">TVG</span>
+                </label>
+            </div>
+
+            <div class="rompedor"></div>
+        </div>
+
+        <div id="div_V" class="TabbedPanelsContent" style="display: none;">
+
+            <div class="guiaprograma">
+                <input name="checkbox_canal_165" value="165" type="checkbox" id="id_checkbox_canal_165" onclick="onClickChannel(this);">
+                <img src="http://estaticos02.elmundo.es/elmundo/iconos/v2.1/television/logos/med/vh1.gif" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_165">
+                    <span id="nombre_canal_165">VH1</span>
+                </label>
+            </div>
+
+            <div class="guiaprograma">
+                <input name="checkbox_canal_705" value="705" type="checkbox" id="id_checkbox_canal_705" onclick="onClickChannel(this);">
+                <img src="http://estaticos03.elmundo.es/elmundo/iconos/v2.1/television/logos/med/vh1classic.jpg" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_705">
+                    <span id="nombre_canal_705">VH1 Classic</span>
+                </label>
+            </div>
+
+            <div class="guiaprograma">
+                <input name="checkbox_canal_188" value="188" type="checkbox" id="id_checkbox_canal_188" onclick="onClickChannel(this);">
+                <img src="http://estaticos04.elmundo.es/elmundo/iconos/v2.1/television/logos/med/viajar.gif" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_188">
+                    <span id="nombre_canal_188">Viajar</span>
+                </label>
+            </div>
+
+            <div class="rompedor"></div>
+        </div>
+
+        <div id="div_X" class="TabbedPanelsContent" style="display: none;">
+            <div class="guiaprograma">
+                <input name="checkbox_canal_68" value="68" type="checkbox" id="id_checkbox_canal_68" onclick="onClickChannel(this);">
+                <img src="http://estaticos01.elmundo.es/elmundo/iconos/v2.1/television/logos/med/extremetv.gif" width="30" height="30" alt="">
+                <label for="id_checkbox_canal_68">
+                    <span id="nombre_canal_68">XTRM</span>
+                </label>
+            </div>
+
+            <div class="rompedor"></div>
+        </div>
+    </div>
+
+
+
+    <!-- 3rd party libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script>
+    var jq111 = jQuery.noConflict(true);
+    console.log('jq111 jQuery version: ' + jq111.fn.jquery);
+    </script>
+    <script src="scripts/listadocanales.js"></script>
+</body>
+
+</html>

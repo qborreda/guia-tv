@@ -71,48 +71,57 @@ body {
 	font-weight: normal;
 	padding:15px;
 }
-ul {margin:0;padding:0;border:0;}
-li {margin:0; padding:0; border:0;}
-.clearfix {
-	zoom: 1;
-	&:before {
-		display: table;
-		content: " ";
-	}
-	&:after {
-		display: table;
-		content: " ";
-		clear: both;
-	}
-}
-h1 {
-	font-family: $fuentes-titulos;
-	font-weight: normal;
-	font-size: 32px;
-}
-.contenedor {
+
+.contenedorGuiaTv {
 	position:relative;
 	display:block;
 	width: $ancho-contenedor;
 	background-color: $color_fondo;
-}
 
-button {
-	font-family: $fuentes-cuerpo;
-	font-size: 12px;
-	padding: 3px 5px;
-	color: white;
-	border: 1px solid lighten($color_fondoclaro,20);
-	background-color: $color_fondoclaro;
-	@include border-radius(5px);
-	cursor: pointer;
+	ul {margin:0;padding:0;border:0;}
+	li {margin:0; padding:0; border:0;}
+	.clearfix {
+		zoom: 1;
+		&:before {
+			display: table;
+			content: " ";
+		}
+		&:after {
+			display: table;
+			content: " ";
+			clear: both;
+		}
+	}
+	h1 {
+		font-family: $fuentes-titulos;
+		font-weight: normal;
+		font-size: 32px;
+	}
+	button {
+		font-family: $fuentes-cuerpo;
+		font-size: 12px;
+		padding: 3px 5px;
+		color: white;
+		border: 1px solid lighten($color_fondoclaro,20);
+		background-color: $color_fondoclaro;
+		@include border-radius(5px);
+		cursor: pointer;
 
-	&:hover {
-		color: darken($color_fondoclaro,20);
-		background-color: white;
-		border: 1px solid darken($color_fondoclaro,20);
+		&:hover {
+			color: darken($color_fondoclaro,20);
+			background-color: white;
+			border: 1px solid darken($color_fondoclaro,20);
+		}
+	}
+	.contenidoPie {
+		display:block;
+		width:100%;
+		background-color: $color_fondo;
+		padding: 3px;
 	}
 }
+
+
 
 // Preloader general para toda la parrilla
 .preload-wrapper {
@@ -168,12 +177,7 @@ button {
 	background-color:$color_fondoclaro;
 	@include box-shadow(rgba(black, 0.6) 0 4px 16px);
 }
-.contenidoPie {
-	display:block;
-	width:100%;
-	background-color: $color_fondo;
-	padding: 3px;
-}
+
 
 // ViewPort general de la parrilla
 .viewPort {
@@ -554,6 +558,7 @@ button {
 		height:100%;
 
 		.verFicha {
+			@extend button;
 			display:block;
 			width:95%;
 			margin: 15px 15px 15px 0;

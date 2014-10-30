@@ -719,13 +719,15 @@ var guiaTV = (function($) {
                 canalesGlobal = data;
 
                 var contextCanales = {},
-                    templateCanales = '{{canales}}<li class="itemCanal" data-letra="{{letra}}" data-idcanal="{{id_programa}}">' +
+                    templateCanales = '{{canales}}<li class="itemCanal" data-letra="{{currentLetra}}" ' +
+                    'data-idcanal="{{id_programa}}">' +
                     '<span class="check"></span>' +
                     //'<img src="{{icono}}" />' +
                     '{{nombre_completo|chop>23}}</li>{{/canales}}';
 
                 $.each(canalesGlobal, function(i, v) {
 
+                    Mark.globals.currentLetra = i;
                     contextCanales = {
                         letra: i,
                         canales: v
@@ -792,6 +794,10 @@ var guiaTV = (function($) {
             });
     };
 
+    /**
+     * [lanzaHandlersSuscripicion description]
+     * @return {[type]} [description]
+     */
     function lanzaHandlersSuscripicion() {
 
         // Click en items de suscripción
@@ -941,7 +947,21 @@ var guiaTV = (function($) {
          */
         function clickFiltroLetra(event) {
             var letra = $(this).data('letra');
-            console.log(letra);
+
+            var $coleccion = $barraLetras.find('.itemCanal');
+            var $sel = $coleccion.filter(function() {
+                return $(this).data('letra') == letra;
+            });
+            console.log($sel);
+            $sel.show();
+            $coleccion.not($sel).hide();
+
+            $barraLetras
+                .find('.nano')
+                .nanoScroller()
+                .nanoScroller({
+                    scroll: 'top'
+                });
         };
 
     };
