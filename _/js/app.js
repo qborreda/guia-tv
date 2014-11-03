@@ -812,6 +812,9 @@ var guiaTV = (function($) {
         // Click en letras de filtro
         $barraLetras.on('click', '.itemLetra', clickFiltroLetra);
 
+        // Introducción de texto en campo txtBuscar
+        $barraLetras.find('.fa-search').on('click', filtroCanal);
+
         // Reordenación de elementos de canal, drag & drop
         var adjustment;
         var group = $('.ordenCanales ul.orden').sortable({
@@ -898,7 +901,7 @@ var guiaTV = (function($) {
          * @return {}
          */
         function clickOrdenCanal(event) {
-            console.log('click en itemCanal');
+            //console.log('click en itemCanal');
         };
 
         /**
@@ -947,14 +950,20 @@ var guiaTV = (function($) {
          */
         function clickFiltroLetra(event) {
             var letra = $(this).data('letra');
-
             var $coleccion = $barraLetras.find('.itemCanal');
-            var $sel = $coleccion.filter(function() {
-                return $(this).data('letra') == letra;
-            });
-            console.log($sel);
-            $sel.show();
-            $coleccion.not($sel).hide();
+            var yaClickado = $(this).hasClass('activo');
+
+            if (yaClickado) {
+                $coleccion.show();
+                $(this).removeClass('activo');
+            } else {
+                var $sel = $coleccion.filter(function() {
+                    return $(this).data('letra') == letra;
+                });
+                $sel.show();
+                $coleccion.not($sel).hide();
+                $(this).addClass('activo');
+            }
 
             $barraLetras
                 .find('.nano')
@@ -962,6 +971,21 @@ var guiaTV = (function($) {
                 .nanoScroller({
                     scroll: 'top'
                 });
+        };
+        /**
+         * Filtra la selección de canales por una cadena de texto
+         * @param  {String} cadena Texto para comparar con el nombre del canal
+         * @return {}
+         */
+        function filtroCanal(event) {
+            var campoTxt = $('#txtBuscar'),
+                cadena = campoTxt.val();
+            var $coleccion = $barraLetras.find('.itemCanal');
+            if (cadena.length >= 3 && cadena != ' ' && cadena != '' && cadena != undefined) {
+                console.log(cadena);
+            }
+
+
         };
 
     };
