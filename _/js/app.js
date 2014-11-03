@@ -22,7 +22,7 @@ var guiaTV = (function($) {
             'm': leftPad(diaActual.getMinutes(), 2)
         };
     //diaActual.setTime(Date.parse("Mon, Jul 14 2014 00:00:00 GMT+0200"));
-    diaActual.setTime(Date.parse("Mon, Jul 14 2014"));
+    diaActual.setTime(Date.parse('Mon, Jul 14 2014'));
 
     var $viewPort = $('.viewPort');
     var $selectorCategorias = $('.selectorCategorias');
@@ -146,33 +146,33 @@ var guiaTV = (function($) {
             categoria,
             clase;
         switch (cat) {
-            case "1":
-                clase = "catSeries";
-                categoria = "series";
+            case '1':
+                clase = 'catSeries';
+                categoria = 'series';
                 break;
-            case "104":
-                clase = "catCine";
-                categoria = "cine";
+            case '104':
+                clase = 'catCine';
+                categoria = 'cine';
                 break;
-            case "31":
-                clase = "catMagazines";
-                categoria = "magazines";
+            case '31':
+                clase = 'catMagazines';
+                categoria = 'magazines';
                 break;
-            case "20":
-                clase = "catInformativos";
-                categoria = "informativos";
+            case '20':
+                clase = 'catInformativos';
+                categoria = 'informativos';
                 break;
-            case "90":
-                clase = "catDeportes";
-                categoria = "deportes";
+            case '90':
+                clase = 'catDeportes';
+                categoria = 'deportes';
                 break;
-            case "INT_2":
-                clase = "catConcursos";
-                categoria = "concursos";
+            case 'INT_2':
+                clase = 'catConcursos';
+                categoria = 'concursos';
                 break;
-            case "INT_1":
-                clase = "catCorazon";
-                categoria = "corazón";
+            case 'INT_1':
+                clase = 'catCorazon';
+                categoria = 'corazón';
                 break;
         }
 
@@ -279,7 +279,7 @@ var guiaTV = (function($) {
             arrayDias.push([diaText, lDia]);
 
             for (i = 0; i < 24; i++) {
-                var t = leftPad(i, 2) + ":00";
+                var t = leftPad(i, 2) + ':00';
                 var l = (j * pixelsPorHora * 24) + i * pixelsPorHora;
 
                 context.horas.push({
@@ -330,7 +330,7 @@ var guiaTV = (function($) {
 
         var divHora = $('.horaActual')
             .hide()
-            .find('p').text(horas + ":" + minutos).end()
+            .find('p').text(horas + ':' + minutos).end()
             .show();
 
         var posX = parseInt(horas) * pixelsPorHora + parseInt(minutos) * pixelsPorMinuto;
@@ -344,7 +344,7 @@ var guiaTV = (function($) {
      * @return {}
      */
     function situaParrillaAhora() {
-        var mitadAnchoViewport = $viewPort.width() * .5;
+        var mitadAnchoViewport = $viewPort.width() * 0.5;
         var mueveA = parseInt($horaActual.css('left'));
         mueveA = parseInt(mitadAnchoViewport - mueveA);
 
@@ -813,7 +813,8 @@ var guiaTV = (function($) {
         $barraLetras.on('click', '.itemLetra', clickFiltroLetra);
 
         // Introducción de texto en campo txtBuscar
-        $barraLetras.find('.fa-search').on('click', filtroCanal);
+        $barraLetras.on('click', '.fa-search', filtroCanal);
+        $('#txtBuscar').on('keyup', filtroCanal);
 
         // Reordenación de elementos de canal, drag & drop
         var adjustment;
@@ -978,14 +979,19 @@ var guiaTV = (function($) {
          * @return {}
          */
         function filtroCanal(event) {
+            // console.log(event.type);
             var campoTxt = $('#txtBuscar'),
-                cadena = campoTxt.val();
+                cadena = campoTxt.val(),
+                $sel;
             var $coleccion = $barraLetras.find('.itemCanal');
             if (cadena.length >= 3 && cadena != ' ' && cadena != '' && cadena != undefined) {
-                console.log(cadena);
+                $sel = $coleccion.filter(function() {
+                    var nombreCanal = $.trim($(this).text());
+                    return nombreCanal.indexOf(cadena) > -1;
+                });
             }
-
-
+            $sel.show();
+            $coleccion.not($sel).hide();
         };
 
     };
@@ -1004,10 +1010,10 @@ var guiaTV = (function($) {
                 pintaCanales(canalesUsuario); // Pintar en el orden en que llegan de la cookie
                 pintaParrilla(canalesUsuario, arrayCanales); // Pintar en el orden en que llegan de la cookie
                 pintaHorasParrilla(); // Pintar la barra superior de horario
-                pintaHoraActual(); // Posiciona el marcador de hora actual en la parrilla
                 pintaSelectorDias(); // Pintamos los literales de los días contemplados en parrilla
-                situaParrillaAhora(); // Posiciona la parrilla y elementos en la fecha y hora actual
 
+                pintaHoraActual(); // Posiciona el marcador de hora actual en la parrilla
+                situaParrillaAhora(); // Posiciona la parrilla y elementos en la fecha y hora actual
                 lanzaHandlers(); // Lanza todos los event listeners
 
                 pintaListadoCanalesSeleccionados(); // Pintamos el área de canales seleccionados
