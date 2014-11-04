@@ -388,13 +388,14 @@ var guiaTV = (function($) {
         var isDrag = false,
             seHaMovido = false;
 
+        // Hayamos el elemento itemPrograma más a la izquierda
         var primerosDiv = $('.contProgramas > div > div:first-child'),
             offsetsIzda = [];
         $.each(primerosDiv, function(i, v) {
             offsetsIzda.push(this.offsetLeft);
         });
         var minIzda = offsetsIzda.min();
-
+        // Hayamos el elemento itemPrograma más a la derecha
         var ultimosDiv = $('.contProgramas > div > div:last-child'),
             offsetsDrch = [];
         $.each(ultimosDiv, function(i, v) {
@@ -405,16 +406,20 @@ var guiaTV = (function($) {
         // Nos cargamos el preloader
         $viewPort.find('.preload-wrapper').remove();
 
-
-        // Generamos un handler para mousedown/touchstart
-        $contProgramas.on('mousedown touchstart', dragOn);
-        // Generamos un handler para mouseup/touchend
-        // $contProgramas.on('mouseup touchend', dragOff);
-        // Generamos un handler para mousemove/touchmove
-        // $contProgramas.on('mousemove touchmove', dragMove);
-
-        // Saca panel con información ajax de programa
-        $contProgramas.on('click', clickPrograma);
+        // Handler para eventos touch sobre contProgramas para arrastrar la parrilla
+        // Y para evento click (tap) en elementos itemPrograma
+        $contProgramas.swipe({
+            tap: function(event, target) {
+                // console.log('Tap:', event, target);
+                clickPrograma(event, target);
+            },
+            triggerOnTouchEnd: true,
+            swipeStatus: swipeStatus,
+            threshold: 20,
+            allowPageScroll: false,
+            excludedElements: $.fn.swipe.defaults.excludedElements + ', .horaActual',
+            fingers: 'all'
+        });
 
         // Handler para la selección de una hora
         $barraHoras.on('click', '.itemHoras', clickHora);
@@ -431,37 +436,30 @@ var guiaTV = (function($) {
         // Handler para botones izda/drcha del viewport
         $iconosHoras.on('click', '.btn', clickNavHoras);
 
-        function dragOn(event) {
-            event.preventDefault();
-            this.startTop = this.offsetTop;
-            this.startLeft = this.offsetLeft;
-            this.initialMouseX = event.clientX;
-            this.initialMouseY = event.clientY;
-            isDrag = true;
-            seHaMovido = false;
+        /**
+         * Función que maneja las actualizaciones de estado de la parrilla al arrastrar
+         * @param  {Event} event     Objeto completo del evento lanzado
+         * @param  {String} phase     Fase de arrastre en la que nos encontramos
+         * @param  {String} direction Dirección de arrastre
+         * @param  {Int} distance  Distancia arrastrada por el usuario
+         */
+        function swipeStatus(event, phase, direction, distance) {
 
-            // Generamos un handler para mouseup/touchend
-            $contProgramas.on('mouseup touchend', dragOff);
-            // Generamos un handler para mousemove/touchmove
-            $contProgramas.on('mousemove touchmove', dragMove);
-        };
+            if (phase == 'start') {
+                var offsets = this.offset();
+                this.startTop = offsets.top;
+                this.startLeft = offsets.left;
+                $contProgramas.addClass('dragging');
 
-        function dragOff(event) {
-            if (isDrag) {
-                isDrag = false;
-                $contProgramas.off('mouseup touchend', dragOff);
-                $contProgramas.off('mousemove touchmove', dragMove);
-            }
-        };
-
-        function dragMove(event) {
-            if (isDrag) {
-
-                var dX = event.clientX - this.initialMouseX;
-                var dY = event.clientY - this.initialMouseY;
-
-                // Marcamos con un flag si ha habido diferencia de más de 3 píxeles
-                seHaMovido = Math.abs(dX) > 2 || Math.abs(dY) > 2;
+            } else if (phase == 'move') {
+                var dX = 0,
+                    dY = 0;
+                if (direction == 'up' || direction == 'down') {
+                    dY = (direction == 'up') ? -distance : distance;
+                }
+                if (direction == 'left' || direction == 'right') {
+                    dX = (direction == 'left') ? -distance : distance;
+                }
 
                 var ntop = this.startTop + dY;
                 var nleft = this.startLeft + dX;
@@ -482,7 +480,7 @@ var guiaTV = (function($) {
                     nleft = anchoViewport - 50 - Math.abs(maxDrch);
                 }
 
-                $(this).css({
+                $contProgramas.css({
                     'top': ntop + 'px',
                     'left': nleft + 'px'
                 });
@@ -498,6 +496,13 @@ var guiaTV = (function($) {
                 $horaActual.css({
                     'left': posX + 'px'
                 });
+
+
+            } else if (phase == 'cancel') {
+                $contProgramas.removeClass('dragging');
+            } else if (phase == 'end') {
+                $contProgramas.removeClass('dragging');
+                return false;
             }
         };
 
@@ -525,11 +530,25 @@ var guiaTV = (function($) {
         /**
          * Handler del click en un itemPrograma
          * @param  {event} event Objeto evento con toda la info del click
+         * @param  {domObj} target Objeto DOM en el que hemos interactuado
          * @return {}
          */
-        function clickPrograma(event) {
+        function clickPrograma(event, target) {
+
+            var $elemPadre = $(target).is('.itemPrograma') ? $(target) : $(target).closest('.itemPrograma');
+
+            var progUrl = $elemPadre.find('a').attr('href'),
+                progId = $elemPadre.attr('id');
+            cargaFichaPrograma(progId, progUrl);
+
+            var mueveA = parseInt($elemPadre.css('left')) + $elemPadre.width() * .5;
+            mueveA = parseInt((anchoViewport * .5) - mueveA);
+            mueveProgramasAPunto(mueveA);
+
+            /* Verión no mobile
             if (!seHaMovido) {
                 isDrag = false;
+                // TODO Compatibilidad con iPad antiguos ..
                 var elem = document.elementFromPoint(event.clientX, event.clientY),
                     $elemPadre = $(elem).is('.itemPrograma') ? $(elem) : $(elem).closest('.itemPrograma');
 
@@ -541,6 +560,7 @@ var guiaTV = (function($) {
                 mueveA = parseInt((anchoViewport * .5) - mueveA);
                 mueveProgramasAPunto(mueveA);
             }
+            */
         };
 
         /**
@@ -570,7 +590,8 @@ var guiaTV = (function($) {
                         .find('.nano').nanoScroller({
                             scroll: 'top',
                             preventPageScrolling: true,
-                            alwaysVisible: true
+                            alwaysVisible: true,
+                            iOSNativeScrolling: true
                         });
                     $fichaPrograma.animate({
                         right: 0
@@ -757,7 +778,8 @@ var guiaTV = (function($) {
                     .find('.nano').nanoScroller({
                         scroll: 'top',
                         preventPageScrolling: true,
-                        alwaysVisible: true
+                        alwaysVisible: true,
+                        iOSNativeScrolling: true
                     });
 
             });
@@ -790,7 +812,8 @@ var guiaTV = (function($) {
             .nanoScroller({
                 scroll: 'top',
                 preventPageScrolling: true,
-                alwaysVisible: true
+                alwaysVisible: true,
+                iOSNativeScrolling: true
             });
     };
 
@@ -892,7 +915,8 @@ var guiaTV = (function($) {
                 .find('.nano')
                 .nanoScroller()
                 .nanoScroller({
-                    scroll: 'bottom'
+                    scroll: 'bottom',
+                    alwaysVisible: true
                 });
         };
 
@@ -940,7 +964,8 @@ var guiaTV = (function($) {
                 .find('.nano')
                 .nanoScroller()
                 .nanoScroller({
-                    scroll: 'top'
+                    scroll: 'top',
+                    alwaysVisible: true
                 });
         };
 
@@ -970,7 +995,8 @@ var guiaTV = (function($) {
                 .find('.nano')
                 .nanoScroller()
                 .nanoScroller({
-                    scroll: 'top'
+                    scroll: 'top',
+                    alwaysVisible: true
                 });
         };
         /**
