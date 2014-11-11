@@ -24,22 +24,22 @@ var guiaTV = (function($) {
     //diaActual.setTime(Date.parse("Mon, Jul 14 2014 00:00:00 GMT+0200"));
     diaActual.setTime(Date.parse('Mon, Jul 14 2014'));
 
-    var $viewPort = $('.viewPort');
-    var $selectorCategorias = $('.selectorCategorias');
-    var $selectorDias = $('.selectorDias');
-    var $contProgramas = $('.contProgramas');
+    var $viewPort = $('#viewPort');
+    var $selectorDias = $('#selectorDias');
+    var $contProgramas = $('#contProgramas');
+    var $contCanales = $('#contCanales');
     //var $itemPrograma = $('.itemPrograma');
-    var $contCanales = $('.contCanales');
-    var $barraHoras = $('.barraHoras');
-    var $iconosHoras = $('.iconosHoras');
-    var $horaActual = $('.horaActual');
-    var $fichaPrograma = $('.fichaPrograma');
+    var $barraHoras = $('#barraHoras');
+    var $iconosHoras = $('#iconosHoras');
+    var $horaActual = $('#horaActual');
+    var $fichaPrograma = $('#fichaPrograma');
     //var $barrasCanales = $('.barrasCanales');
-    var $selectorCanales = $('.selectorCanales');
-    var $barraLetras = $('.barraLetras');
-    var $ordenCanales = $('.ordenCanales');
-    var $botonesCanales = $('.botonesCanales');
-    var $suscribirCanales = $('.suscribirCanales');
+    var $selectorCategorias = $('#selectorCategorias');
+    var $botonesCanales = $('#botonesCanales');
+    var $suscribirCanales = $('#suscribirCanales');
+    var $selectorCanales = $('#selectorCanales');
+    var $ordenCanales = $('#ordenCanales');
+    var $barraLetras = $('#barraLetras');
 
     /**
      * Accede a las cookies del usuario para ver personalización de canales
@@ -328,7 +328,7 @@ var guiaTV = (function($) {
         var horas = horaActual.h,
             minutos = horaActual.m;
 
-        var divHora = $('.horaActual')
+        var divHora = $horaActual
             .hide()
             .find('p').text(horas + ':' + minutos).end()
             .show();
@@ -389,14 +389,14 @@ var guiaTV = (function($) {
             seHaMovido = false;
 
         // Hayamos el elemento itemPrograma más a la izquierda
-        var primerosDiv = $('.contProgramas > div > div:first-child'),
+        var primerosDiv = $('#contProgramas > div > div:first-child'),
             offsetsIzda = [];
         $.each(primerosDiv, function(i, v) {
             offsetsIzda.push(this.offsetLeft);
         });
         var minIzda = offsetsIzda.min();
         // Hayamos el elemento itemPrograma más a la derecha
-        var ultimosDiv = $('.contProgramas > div > div:last-child'),
+        var ultimosDiv = $('#contProgramas > div > div:last-child'),
             offsetsDrch = [];
         $.each(ultimosDiv, function(i, v) {
             offsetsDrch.push(this.offsetLeft + $(this).width());
@@ -417,7 +417,7 @@ var guiaTV = (function($) {
             swipeStatus: swipeStatus,
             threshold: 10,
             allowPageScroll: false,
-            excludedElements: $.fn.swipe.defaults.excludedElements + ', .horaActual',
+            excludedElements: $.fn.swipe.defaults.excludedElements + ', #horaActual',
             fingers: 'all'
         });
 
@@ -840,7 +840,7 @@ var guiaTV = (function($) {
 
         // Reordenación de elementos de canal, drag & drop
         var adjustment;
-        var group = $('.ordenCanales ul.orden').sortable({
+        var group = $ordenCanales.find('ul.orden').sortable({
             group: 'orden',
             pullPlaceholder: true,
             // animation on drop
@@ -863,7 +863,7 @@ var guiaTV = (function($) {
                     pointer = container.rootGroup.pointer;
 
                 // Tenemos en cuenta la posición del nanoScroller en ese momento
-                var posIniScroller = $('.ordenCanales .nano .nano-content').get(0).scrollTop;
+                var posIniScroller = $ordenCanales.find('.nano-content').get(0).scrollTop;
                 posIniScroller = Math.floor(posIniScroller);
 
                 adjustment = {
@@ -920,21 +920,14 @@ var guiaTV = (function($) {
         };
 
         /**
-         * Funcionalidad para reordenar los elementos itemCanal en el panel de orden
-         * @param  {Event} event Evento completo
-         * @return {}
-         */
-        function clickOrdenCanal(event) {
-            //console.log('click en itemCanal');
-        };
-
-        /**
          * Funcionalidad de clickar el checkbox en los itemsCanal del panel de orden
          * @param  {Event} event Evento completo
          * @return {}
          */
         function clickCheckOrdenCanal(event) {
+            event.preventDefault();
             event.stopPropagation();
+            event.stopImmediatePropagation();
             var idcanal = $(this).parent('.itemCanal').data('idcanal');
             var $itemsCanal = $barraLetras.find('.itemCanal').filter(function(index) {
                 return $(this).data('idcanal') === idcanal;
@@ -974,20 +967,24 @@ var guiaTV = (function($) {
          * @return {}
          */
         function clickFiltroLetra(event) {
-            var letra = $(this).data('letra');
+            var $letra = $(this);
+            var $hermanos = $(this).siblings('.itemLetra');
+            var letra = $letra.data('letra');
             var $coleccion = $barraLetras.find('.itemCanal');
-            var yaClickado = $(this).hasClass('activo');
+            var yaClickado = $letra.hasClass('activo');
 
             if (yaClickado) {
                 $coleccion.show();
-                $(this).removeClass('activo');
+                $letra.removeClass('activo');
+                $hermanos.removeClass('activo');
             } else {
                 var $sel = $coleccion.filter(function() {
                     return $(this).data('letra') == letra;
                 });
                 $sel.show();
                 $coleccion.not($sel).hide();
-                $(this).addClass('activo');
+                $hermanos.removeClass('activo');
+                $letra.addClass('activo');
             }
 
             $barraLetras
@@ -1005,8 +1002,8 @@ var guiaTV = (function($) {
          */
         function filtroCanal(event) {
             // console.log(event.type);
-            var campoTxt = $('#txtBuscar'),
-                cadena = campoTxt.val(),
+            var $campoTxt = $('#txtBuscar'),
+                cadena = $campoTxt.val(),
                 $sel;
             var $coleccion = $barraLetras.find('.itemCanal');
             if (cadena.length >= 3 && cadena != ' ' && cadena != '' && cadena != undefined) {
@@ -1014,9 +1011,12 @@ var guiaTV = (function($) {
                     var nombreCanal = $.trim($(this).text());
                     return nombreCanal.indexOf(cadena) > -1;
                 });
+                $sel.show();
+                $coleccion.not($sel).hide();
+            } else {
+                $barraLetras.find('.itemLetra').removeClass('activo');
+                $coleccion.show();
             }
-            $sel.show();
-            $coleccion.not($sel).hide();
         };
 
     };
