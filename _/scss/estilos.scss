@@ -272,6 +272,7 @@ h1 {
 	cursor: pointer;
 	border-left:1px solid $color_lineas_parrilla;
 	border-bottom:1px solid $color_lineas_parrilla;
+	user-selected:none;
 	z-index:0;
 
 	.mascara {

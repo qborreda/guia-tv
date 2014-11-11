@@ -125,7 +125,7 @@ var guiaTV = (function($) {
         var context = {};
         var templatePrograma = '' +
             '<div class="itemPrograma" id="{{id_programa}}" data-url="{{url_ficha}}"' +
-            'style="width:{{dur}}; left:{{diffHoraDia}}; user-selected:none;">' +
+            'style="width:{{dur}}; left:{{diffHoraDia}};">' +
             '<div class="itemProgramaInner {{clase}}">' +
             '<a href="http://elmundo.es/television/programa/{{id_programa}}" style="display:none;">{{nombre}}</a>' +
             '<span class="categoria">{{categoria}}</span>' +
@@ -415,7 +415,7 @@ var guiaTV = (function($) {
             },
             triggerOnTouchEnd: true,
             swipeStatus: swipeStatus,
-            threshold: 20,
+            threshold: 10,
             allowPageScroll: false,
             excludedElements: $.fn.swipe.defaults.excludedElements + ', .horaActual',
             fingers: 'all'
@@ -446,9 +446,8 @@ var guiaTV = (function($) {
         function swipeStatus(event, phase, direction, distance) {
 
             if (phase == 'start') {
-                var offsets = this.offset();
-                this.startTop = offsets.top;
-                this.startLeft = offsets.left;
+                this.startTop = parseInt(this.css('top'));
+                this.startLeft = parseInt(this.css('left'));
                 $contProgramas.addClass('dragging');
 
             } else if (phase == 'move') {
