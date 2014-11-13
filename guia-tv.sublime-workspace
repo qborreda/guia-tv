@@ -175,19 +175,24 @@
 			"file": "index.html",
 			"settings":
 			{
-				"buffer_size": 4760,
+				"buffer_size": 4804,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"contents": "var guiaTV = (function($) {\n\n    'use strict';\n    //console.log('Usa jQuery version: ' + $.fn.jquery);\n\n    var canalesUsuario = ['la1', 'la2', 'antena3', 'cuatro', 'telecinco', 'lasexta'],\n        canalesGlobal = {},\n        categoriasUsuario = [],\n        arrayCanales = [],\n        arrayDias = [];\n    var altoBarraHoras = 60,\n        //anchoBarraCanales = 150,\n        altoCanal = 90,\n        pixelsPorHora = 320,\n        // anchoPorDia = pixelsPorHora * 24,\n        pixelsPorMinuto = pixelsPorHora / 60;\n\n    // TODO Ahora mismo forzamos esta fecha de inicio\n    var diaActual = new Date(),\n        horaActual = {\n            'h': leftPad(diaActual.getHours(), 2),\n            'm': leftPad(diaActual.getMinutes(), 2)\n        };\n    //diaActual.setTime(Date.parse(\"Mon, Jul 14 2014 00:00:00 GMT+0200\"));\n    diaActual.setTime(Date.parse('Mon, Jul 14 2014'));\n\n    var $viewPort = $('.viewPort');\n    var $selectorCategorias = $('.selectorCategorias');\n    var $selectorDias = $('.selectorDias');\n    var $contProgramas = $('.contProgramas');\n    //var $itemPrograma = $('.itemPrograma');\n    var $contCanales = $('.contCanales');\n    var $barraHoras = $('.barraHoras');\n    var $iconosHoras = $('.iconosHoras');\n    var $horaActual = $('.horaActual');\n    var $fichaPrograma = $('.fichaPrograma');\n    //var $barrasCanales = $('.barrasCanales');\n    var $selectorCanales = $('.selectorCanales');\n    var $barraLetras = $('.barraLetras');\n    var $ordenCanales = $('.ordenCanales');\n    var $botonesCanales = $('.botonesCanales');\n    var $suscribirCanales = $('.suscribirCanales');\n\n    /**\n     * Accede a las cookies del usuario para ver personalización de canales\n     * @return {array} Lista de canales personalizados por el usuario\n     */\n    function cargaCookies() {\n        // TODO Cargar canales desde una cookie, y generar ésta cuando se accede por primera vez\n        // TODO Cargar de las cookies los canales resaltados del selectorCategorias\n        // Lógica de lectura de cookies\n        var def = $.Deferred(),\n            canales;\n        setTimeout(function() {\n            canales = ['telecinco', 'antena3', 'la2', 'la1', 'cuatro', 'lasexta', 'historia'];\n            categoriasUsuario = [1, 2, 3, 4, 5, 6, 7];\n            def.resolve(canales);\n        }, 3000);\n        return def.promise();\n    };\n\n    /**\n     * Recibe la lista de canales a cargar y hace las llamadas asíncronas\n     * @param {array} canales Listado de canales a cargar\n     * @return {json} Datos json de la programación al completo para los canales seleccionados\n     */\n    function cargaDatosCanales(canales) {\n        // Cargas asíncronas de varios canales\n        // por cada canal, carga un json\n        var json = [],\n            promises = [],\n            numElementos = canales.length;\n\n        $.when.apply(null, $.map(canales, function(canal, i) {\n            var fichero = 'datos/' + canal + '.json';\n\n            promises.push($.get(fichero).done(function(data) {\n                arrayCanales[i] = json[i] = data;\n            }).fail(function() {\n                arrayCanales[i] = json[i] = '';\n            }));\n\n        }));\n        // Resolver deferrer cuando se hayan cargado todos los json\n        return $.when.apply(null, promises).promise();\n\n    };\n\n    /**\n     * Recibe la lista de programas a pintar por canal y lanza el pintado del canal\n     * @return {[type]} [description]\n     */\n    function pintaParrilla(listaCanales, arrayCompleto) {\n        var lista = listaCanales || canalesUsuario;\n        var completo = arrayCompleto || arrayCanales;\n\n        var context = {};\n        var template = '<div id=\"{{idcanal}}\" class=\"lineaCanal clearfix\"></div>';\n\n        $.each(lista, function(i, v) {\n            context.idcanal = v;\n            var resultado = Mark.up(template, context);\n            $contProgramas.append(resultado);\n        });\n\n        // Pintamos programas en sus canales\n        $.each(completo, function(i, v) {\n            var canal = v.canal.nombre;\n            var divCanal = $('#' + canal);\n\n            $.each(v.programas, function(i, v) {\n                var div = pintaParrillaPrograma(i, v);\n                divCanal.append(div);\n            });\n        });\n    };\n\n    /**\n     * Recorre el json de programas de de un canal y los pinta en 'contProgramas'\n     * @param  {int} qCanal Identificador de qué canal pintamos\n     * @return {}\n     */\n    function pintaParrillaPrograma(i, v) {\n\n        var context = {};\n        var templatePrograma = '' +\n            '<div class=\"itemPrograma\" id=\"{{id_programa}}\" data-url=\"{{url_ficha}}\"' +\n            'style=\"width:{{dur}}; left:{{diffHoraDia}};\">' +\n            '<div class=\"itemProgramaInner {{clase}}\">' +\n            '<a href=\"http://elmundo.es/television/programa/{{id_programa}}\" style=\"display:none;\">{{nombre}}</a>' +\n            '<span class=\"categoria\">{{categoria}}</span>' +\n            '<h4>{{nombre}}</h4>' +\n            '{{if episodio}}<p>{{episodio}}</p>{{/if}}' +\n            '<span class=\"duracion\">{{duracion}}</span>' +\n            '<span class=\"fecha\">{{infoHoraDuracion}}</span>' +\n            '{{if fav}}<span class=\"favorito\"><i class=\"fa fa-star\"></i></span>{{/if}}' +\n            '{{if ale}}<span class=\"alerta\"><i class=\"fa fa-clock-o\"></i></span>{{/if}}' +\n            '</div>' +\n            '{{if saleCruz}}<div class=\"mascara\"><i class=\"fa fa-plus\"></i></div>{{/if}}' +\n            '</div>';\n\n        // Selección de categoría\n        // mCine \"104\" / mConcursos \"INT_2\" / mCorazon / mDeportes \"90\" /\n        // mInformativos \"20\" / mMagazines \"31\" / mSeries \"1\"\n        var cat = v.categoria,\n            categoria,\n            clase;\n        switch (cat) {\n            case '1':\n                clase = 'catSeries';\n                categoria = 'series';\n                break;\n            case '104':\n                clase = 'catCine';\n                categoria = 'cine';\n                break;\n            case '31':\n                clase = 'catMagazines';\n                categoria = 'magazines';\n                break;\n            case '20':\n                clase = 'catInformativos';\n                categoria = 'informativos';\n                break;\n            case '90':\n                clase = 'catDeportes';\n                categoria = 'deportes';\n                break;\n            case 'INT_2':\n                clase = 'catConcursos';\n                categoria = 'concursos';\n                break;\n            case 'INT_1':\n                clase = 'catCorazon';\n                categoria = 'corazón';\n                break;\n        }\n\n        // El ancho va a depender de la duración del programa\n        var duracion = v.duracion + ' mins.';\n        var dur = Math.ceil(pixelsPorMinuto * v.duracion),\n            hora_inicio = new Date(v.hora_inicio),\n            hora_final = new Date(v.hora_fin);\n        var diffHoraDia = hora_inicio - diaActual;\n        diffHoraDia = Math.floor((Math.floor(diffHoraDia / 1000) / 60) * pixelsPorMinuto);\n\n        var hora_i = hora_inicio.getHours();\n        hora_i = leftPad(hora_i, 2);\n        var mins_i = hora_inicio.getMinutes();\n        mins_i = leftPad(mins_i, 2);\n\n        var hora_f = hora_final.getHours();\n        hora_f = leftPad(hora_f, 2);\n        var mins_f = hora_final.getMinutes();\n        mins_f = leftPad(mins_f, 2);\n\n        var infoHoraDuracion = '' + hora_i + ':' + mins_i + ' - ' + hora_f + ':' + mins_f;\n\n        // TODO Random para poder ver programas favoritos y alertas de programas. ELIMINAR\n        if (Math.random() * 100 < 5) {\n            var fav = true;\n        }\n        if (Math.random() * 100 < 5) {\n            var ale = true;\n        }\n\n        // TODO Si el programa es menor de 15 minutos, aparece una cruz\n        if (v.duracion < 15) {\n            var saleCruz = true;\n        }\n\n        context = {\n            clase: clase,\n            dur: dur + 'px',\n            diffHoraDia: diffHoraDia + 'px',\n            id_programa: v.id_programa,\n            url_ficha: v.url_ficha,\n            infoHoraDuracion: infoHoraDuracion,\n            duracion: duracion,\n            categoria: categoria.toUpperCase(),\n            nombre: v.nombre,\n            episodio: v.episodio,\n            fav: fav | undefined,\n            ale: ale | undefined,\n            saleCruz: saleCruz | undefined\n        };\n\n        var resultado = Mark.up(templatePrograma, context);\n        return resultado;\n    };\n\n    /**\n     * Pinta los iconos de canales en el componente 'contCanales'\n     */\n    function pintaCanales(listaCanales) {\n\n        var lista = listaCanales || canalesUsuario;\n        var context = {};\n        var template = '<div class=\"itemCanal\"><img src=\"http://estaticos.elmundo.es{{icono}}\" /></div>';\n\n        $.each(lista, function(i, v) {\n            context.icono = arrayCanales[i].canal.icono;\n            var resultado = Mark.up(template, context);\n            $contCanales.append(resultado);\n        });\n    };\n\n    /**\n     * Pinta una barra horizonal con la marca de horas, que se desplaza con el viewPort\n     * @return {}\n     */\n    function pintaHorasParrilla() {\n        var dia = new Date(),\n            i, j;\n\n        var context = {};\n        context.dias = [];\n        context.horas = [];\n        var template = '' +\n            '{{dias}}<div class=\"itemDia\" style=\"left:{{pos}}px\">{{dia}}</div>{{/dias}}' +\n            '{{horas}}<div class=\"itemHoras\" style=\"left:{{pos}}px;\">{{texto}}</div>{{/horas}}';\n\n        // Generamos una barra para los días (4) de los que disponemos de datos\n        for (j = 0; j <= 3; j++) {\n\n            dia.setTime(diaActual.getTime() + (j * 86400000));\n            var diaText = dia.toLocaleDateString('es-ES', {\n                weekday: 'long',\n                //year: 'numeric',\n                month: 'long',\n                day: 'numeric'\n            });\n\n            var lDia = (j * pixelsPorHora * 24);\n            context.dias.push({\n                'dia': diaText,\n                'pos': lDia\n            });\n            arrayDias.push([diaText, lDia]);\n\n            for (i = 0; i < 24; i++) {\n                var t = leftPad(i, 2) + ':00';\n                var l = (j * pixelsPorHora * 24) + i * pixelsPorHora;\n\n                context.horas.push({\n                    'texto': t,\n                    'pos': l\n                });\n            }\n        }\n\n        var resultado = Mark.up(template, context);\n        $barraHoras.append(resultado);\n\n    };\n\n    /**\n     * Pinta un selector de acceso directo a los días incluídos en la programación\n     * Dependemos de arrayDias que ha generado datos en pintaHorasParrilla\n     * @return {}\n     */\n    function pintaSelectorDias() {\n\n        var context = {};\n        var template = '<li class=\"itemDia\" data-px=\"{{px}}\"><a href=\"javascript://\">{{diaText}}</a></li>';\n\n        arrayDias.forEach(function(item, index) {\n\n            var diaText = item[0];\n            var px = item[1];\n\n            context = {\n                diaText: diaText,\n                px: px\n            };\n\n            var resultado = Mark.up(template, context);\n            $selectorDias.find('ul').append(resultado);\n        });\n    };\n\n    /**\n     * Pinta una franja que marca la hora actual en el componente Parrilla\n     * @return {}\n     */\n    function pintaHoraActual() {\n\n        var horas = horaActual.h,\n            minutos = horaActual.m;\n\n        var divHora = $('.horaActual')\n            .hide()\n            .find('p').text(horas + ':' + minutos).end()\n            .show();\n\n        var posX = parseInt(horas) * pixelsPorHora + parseInt(minutos) * pixelsPorMinuto;\n        divHora.css({\n            'left': posX\n        });\n    };\n\n    /**\n     * Sitúa la Parrilla en el momento actual, fecha y hora\n     * @return {}\n     */\n    function situaParrillaAhora() {\n        var mitadAnchoViewport = $viewPort.width() * 0.5;\n        var mueveA = parseInt($horaActual.css('left'));\n        mueveA = parseInt(mitadAnchoViewport - mueveA);\n\n        $contProgramas.stop().animate({\n            'left': mueveA + 'px'\n        }, 300);\n        $barraHoras.stop().animate({\n            'left': mueveA + 'px'\n        }, 300);\n        var horaLeft = parseInt(horaActual.h) * pixelsPorHora;\n        var minutosLeft = parseInt(horaActual.m) * pixelsPorMinuto;\n        var posX = horaLeft + minutosLeft + mueveA;\n        $horaActual.stop().animate({\n            'left': posX + 'px'\n        }, 300);\n    };\n\n    /**\n     * Obtendríamos datos de favoritos y alertas de usuario validado (si hubiera)\n     * @return {json} Objeto json con todos los programas favoritos y alertas del usuario\n     */\n    function cargaInfoUsuario() {};\n\n    /**\n     * Decora los programas en Parrilla con las alertas y favoritos recorriendo el json de usuario\n     * @return {[type]} [description]\n     */\n    function pintaProgsUsuario() {};\n\n    /**\n     * Asocia todos los event listeners a los diferentes elementos de ui\n     * @return {[type]} [description]\n     */\n    function lanzaHandlers() {\n\n        var altoViewport = $viewPort.height(),\n            anchoViewport = $viewPort.width(),\n            altoContProgramas = $contProgramas.height(),\n            anchoContProgramas = $contProgramas.offsetWidth,\n            anchoBarraCanales = $contCanales.width();\n        var isDrag = false,\n            seHaMovido = false;\n\n        // Hayamos el elemento itemPrograma más a la izquierda\n        var primerosDiv = $('.contProgramas > div > div:first-child'),\n            offsetsIzda = [];\n        $.each(primerosDiv, function(i, v) {\n            offsetsIzda.push(this.offsetLeft);\n        });\n        var minIzda = offsetsIzda.min();\n        // Hayamos el elemento itemPrograma más a la derecha\n        var ultimosDiv = $('.contProgramas > div > div:last-child'),\n            offsetsDrch = [];\n        $.each(ultimosDiv, function(i, v) {\n            offsetsDrch.push(this.offsetLeft + $(this).width());\n        });\n        var maxDrch = offsetsDrch.max();\n\n        // Nos cargamos el preloader\n        $viewPort.find('.preload-wrapper').remove();\n\n        // Handler para eventos touch sobre contProgramas para arrastrar la parrilla\n        // Y para evento click (tap) en elementos itemPrograma\n        $contProgramas.swipe({\n            tap: function(event, target) {\n                // console.log('Tap:', event, target);\n                clickPrograma(event, target);\n            },\n            triggerOnTouchEnd: true,\n            swipeStatus: swipeStatus,\n            threshold: 10,\n            allowPageScroll: false,\n            excludedElements: $.fn.swipe.defaults.excludedElements + ', .horaActual',\n            fingers: 'all'\n        });\n\n        // Handler para la selección de una hora\n        $barraHoras.on('click', '.itemHoras', clickHora);\n\n        // Handler para filtrado por categorías\n        $selectorCategorias.on('click', 'li', marcaCategoria);\n        marcarCategoriasSeleccionadas();\n\n        // Handler para selección de día\n        $selectorDias.on('click', 'li', clickDia);\n\n        // Handler para botones arriba/abajo de canales\n        $botonesCanales.on('click', '.btn', clickNavCanales);\n        // Handler para botones izda/drcha del viewport\n        $iconosHoras.on('click', '.btn', clickNavHoras);\n\n        /**\n         * Función que maneja las actualizaciones de estado de la parrilla al arrastrar\n         * @param  {Event} event     Objeto completo del evento lanzado\n         * @param  {String} phase     Fase de arrastre en la que nos encontramos\n         * @param  {String} direction Dirección de arrastre\n         * @param  {Int} distance  Distancia arrastrada por el usuario\n         */\n        function swipeStatus(event, phase, direction, distance) {\n\n            if (phase == 'start') {\n                var offsets = this.offset();\n                this.startTop = offsets.top;\n                this.startLeft = offsets.left;\n                $contProgramas.addClass('dragging');\n\n            } else if (phase == 'move') {\n                var dX = 0,\n                    dY = 0;\n                if (direction == 'up' || direction == 'down') {\n                    dY = (direction == 'up') ? -distance : distance;\n                }\n                if (direction == 'left' || direction == 'right') {\n                    dX = (direction == 'left') ? -distance : distance;\n                }\n\n                var ntop = this.startTop + dY;\n                var nleft = this.startLeft + dX;\n                // Límite top (alto $barraHoras)\n                if (ntop > altoBarraHoras) {\n                    ntop = altoBarraHoras;\n                }\n                // Límite bottom (altoViewport - altoProgramas)\n                if (ntop < (altoViewport - altoContProgramas)) {\n                    ntop = (altoViewport - altoContProgramas);\n                }\n                // Límite right (70px ancho $contCanales)\n                if (nleft > anchoBarraCanales + Math.abs(minIzda) + 50) {\n                    nleft = anchoBarraCanales + Math.abs(minIzda) + 50;\n                }\n                // Límite left (anchoViewport menos el ancho total de programas)\n                if (nleft < anchoViewport - 50 - Math.abs(maxDrch)) {\n                    nleft = anchoViewport - 50 - Math.abs(maxDrch);\n                }\n\n                $contProgramas.css({\n                    'top': ntop + 'px',\n                    'left': nleft + 'px'\n                });\n                $contCanales.css({\n                    'top': ntop + 'px'\n                });\n                $barraHoras.css({\n                    'left': nleft + 'px'\n                });\n                var horaLeft = parseInt(horaActual.h) * pixelsPorHora,\n                    minutosLeft = parseInt(horaActual.m) * pixelsPorMinuto,\n                    posX = horaLeft + minutosLeft + nleft;\n                $horaActual.css({\n                    'left': posX + 'px'\n                });\n\n\n            } else if (phase == 'cancel') {\n                $contProgramas.removeClass('dragging');\n            } else if (phase == 'end') {\n                $contProgramas.removeClass('dragging');\n                return false;\n            }\n        };\n\n        /**\n         * Handler del click en un itemHoras\n         * @param  {event} event Objeto evento con toda la info del click\n         * @return {}\n         */\n        function clickHora(event) {\n            var mueveA = parseInt($(this).css('left'));\n            mueveA = parseInt((anchoViewport * .5) - mueveA);\n            mueveProgramasAPunto(mueveA);\n        };\n\n        /**\n         * Handler del click en un día\n         * @param  {event} event Objeto event con toda la info del click\n         * @return {}\n         */\n        function clickDia(event) {\n            var mueveA = parseInt($(this).data('px')) * -1;\n            mueveProgramasAPunto(mueveA + anchoBarraCanales);\n        };\n\n        /**\n         * Handler del click en un itemPrograma\n         * @param  {event} event Objeto evento con toda la info del click\n         * @param  {domObj} target Objeto DOM en el que hemos interactuado\n         * @return {}\n         */\n        function clickPrograma(event, target) {\n\n            var $elemPadre = $(target).is('.itemPrograma') ? $(target) : $(target).closest('.itemPrograma');\n\n            var progUrl = $elemPadre.find('a').attr('href'),\n                progId = $elemPadre.attr('id');\n            cargaFichaPrograma(progId, progUrl);\n\n            var mueveA = parseInt($elemPadre.css('left')) + $elemPadre.width() * .5;\n            mueveA = parseInt((anchoViewport * .5) - mueveA);\n            mueveProgramasAPunto(mueveA);\n\n            /* Verión no mobile\n            if (!seHaMovido) {\n                isDrag = false;\n                // TODO Compatibilidad con iPad antiguos ..\n                var elem = document.elementFromPoint(event.clientX, event.clientY),\n                    $elemPadre = $(elem).is('.itemPrograma') ? $(elem) : $(elem).closest('.itemPrograma');\n\n                var progUrl = $elemPadre.find('a').attr('href'),\n                    progId = $elemPadre.attr('id');\n                cargaFichaPrograma(progId, progUrl);\n\n                var mueveA = parseInt($elemPadre.css('left')) + $elemPadre.width() * .5;\n                mueveA = parseInt((anchoViewport * .5) - mueveA);\n                mueveProgramasAPunto(mueveA);\n            }\n            */\n        };\n\n        /**\n         * Carga por ajax la información básica de la ficha de programa\n         * @param  {int} progId  Id del programa\n         * @param  {string} progUrl Url completa de la ruta para cargar la ficha\n         * @return {}\n         */\n        function cargaFichaPrograma(progId, progUrl) {\n            // TODO Probar en entorno de pruebas elmundo.es\n            //progUrl = 'http://www.elmundo.es' + progUrl;\n            cierraFicha();\n\n            $.ajax({\n                url: \"fichaPrograma.html\",\n                data: {\n                    'progId': progId\n                },\n                dataType: 'html',\n                cache: false\n            })\n                .done(function(html) {\n                    $fichaPrograma\n                        .find('.contenido')\n                        .html(html);\n                    $fichaPrograma\n                        .find('.nano').nanoScroller({\n                            scroll: 'top',\n                            preventPageScrolling: true,\n                            alwaysVisible: true,\n                            iOSNativeScrolling: true\n                        });\n                    $fichaPrograma.animate({\n                        right: 0\n                    }, 500, 'swing', function() {\n                        $fichaPrograma.find('.cierra').on('click', function(event) {\n                            event.preventDefault();\n                            cierraFicha();\n                        })\n                    });\n                });\n\n            function cierraFicha() {\n                if (parseInt($fichaPrograma.css('right')) === 0) {\n                    $fichaPrograma.stop().animate({\n                        right: -pixelsPorHora\n                    }, 300, 'swing');\n                }\n            };\n\n        };\n\n        /**\n         * Marca como activas las categorías de programa seleccionadas\n         * @param  {Event} event Objeto de evento completo\n         * @return {}\n         */\n        function marcaCategoria(event) {\n            var clase = $(event.currentTarget).attr('class').split(' ')[0];\n\n            if ($contProgramas.hasClass(clase)) {\n                $contProgramas.removeClass(clase);\n                $(this).removeClass('activo');\n            } else {\n                $contProgramas.addClass(clase);\n                $(this).addClass('activo');\n            };\n        };\n        /**\n         * Marca todas las categorías seleccionadas por defecto\n         * @return {}\n         */\n        function marcarCategoriasSeleccionadas() {\n            if (categoriasUsuario.length >= 1) {\n                $.each(categoriasUsuario, function(i, v) {\n                    v++;\n                    $selectorCategorias.find('li:nth-child(' + v + ')').trigger('click');\n                });\n            }\n        };\n\n        /**\n         * Mueve el contProgramas a la posición dada\n         * @param  {int} coordX Coordenada left\n         * @return {}\n         */\n        function mueveProgramasAPunto(coordX) {\n            var nleft = coordX || 0;\n            $contProgramas.stop().animate({\n                'left': nleft + 'px'\n            }, 300);\n            $barraHoras.stop().animate({\n                'left': nleft + 'px'\n            }, 300);\n            var horaLeft = parseInt(horaActual.h) * pixelsPorHora;\n            var minutosLeft = parseInt(horaActual.m) * pixelsPorMinuto;\n            var posX = horaLeft + minutosLeft + nleft;\n            $horaActual.stop().animate({\n                'left': posX + 'px'\n            }, 300);\n        };\n\n        /**\n         * Desplaza la vista de viewport arriba/abajo\n         * @param  {event} event Objeto con toda la información del evento\n         * @return {}\n         */\n        function clickNavCanales(event) {\n            var clase = $(event.currentTarget).attr('class').split(' ')[1];\n            var posYProgramas = $contProgramas.css('top').split('px')[0];\n            var posYCanales = $contCanales.css('top').split('px')[0];\n            var numCanales = $contCanales.length;\n            switch (clase) {\n                case 'btnArriba':\n                    // Movemos contProgramas y contCanales\n                    if (posYCanales - altoCanal > altoBarraHoras) {\n                        $contCanales.css('top', posYCanales - altoCanal);\n                        $contProgramas.css('top', posYProgramas - altoCanal);\n                    } else {\n                        $contCanales.css('top', altoBarraHoras + 'px');\n                        $contProgramas.css('top', altoBarraHoras + 'px');\n                    }\n                    break;\n                case 'btnAbajo':\n                    // Movemos contProgramas y contCanales\n                    var max = posYCanales - numCanales * altoCanal;\n                    if (max > posYCanales + altoCanal) {\n                        $contCanales.css('top', posYCanales + altoCanal);\n                        $contProgramas.css('top', posYProgramas + altoCanal);\n                    } else {\n                        $contCanales.css('top', max + 'px');\n                        $contProgramas.css('top', max + 'px');\n                    }\n                    break;\n            }\n        };\n\n        /**\n         * Desplaza la vista del viewport a los lados\n         * @param  {Event} event Objeto con toda la información del evento\n         * @return {}\n         */\n        function clickNavHoras(event) {\n            var clase = $(event.currentTarget).attr('class').split(' ')[1];\n            var posX = parseInt($contProgramas.css('left'));\n            event.stopPropagation();\n            console.log(posX);\n\n            switch (clase) {\n                case 'btnIzda':\n                    mueveProgramasAPunto(Math.floor(parseInt(posX + pixelsPorHora)));\n                    break;\n                case 'btnDrcha':\n                    mueveProgramasAPunto(Math.floor(parseInt(posX - pixelsPorHora)));\n                    break;\n            }\n        }\n    };\n\n    /**\n     * Pinta el total de canales a los que se puede suscribir y las letras correspondientes\n     * @return {}\n     */\n    function pintaListadoCanalesSuscripcion() {\n\n        var ulLetras = $('<ul class=\"listaCanales clearfix\">'),\n            fichero = 'datos/listadocanales.json';\n\n        var contextLetras = {},\n            templateLetras = '{{letras}}<li class=\"itemLetra\" data-letra=\"{{.}}\">{{.}}</li>{{/letras}}';\n\n        contextLetras.letras = [];\n\n        // (Genera el backend)\n        $.get(fichero)\n            .done(function(data) {\n                canalesGlobal = data;\n\n                var contextCanales = {},\n                    templateCanales = '{{canales}}<li class=\"itemCanal\" data-letra=\"{{currentLetra}}\" ' +\n                    'data-idcanal=\"{{id_programa}}\">' +\n                    '<span class=\"check\"></span>' +\n                    //'<img src=\"{{icono}}\" />' +\n                    '{{nombre_completo|chop>23}}</li>{{/canales}}';\n\n                $.each(canalesGlobal, function(i, v) {\n\n                    Mark.globals.currentLetra = i;\n                    contextCanales = {\n                        letra: i,\n                        canales: v\n                    };\n\n                    contextLetras.letras.push(i);\n\n                    var resultCanales = Mark.up(templateCanales, contextCanales);\n                    ulLetras.append(resultCanales);\n                });\n\n                // Listado con todas las letras\n                var resultLetras = Mark.up(templateLetras, contextLetras);\n                $barraLetras.find('.listaLetras').append(resultLetras);\n                // Listado de todos los canales\n                $barraLetras.find('.nano-content').html(ulLetras);\n\n                //Comprobamos si ya estamos suscritos a cada canal\n                $.each($barraLetras.find('.itemCanal'), function(i, v) {\n\n                    if (canalesUsuario.indexOf($(this).data('idcanal')) != -1) {\n                        $(this).find('.check').addClass('sel');\n                    }\n                });\n\n                $barraLetras\n                    .find('.nano').nanoScroller({\n                        scroll: 'top',\n                        preventPageScrolling: true,\n                        alwaysVisible: true,\n                        iOSNativeScrolling: true\n                    });\n\n            });\n    };\n\n    /**\n     * Pinta los canales a los que está suscrito el usuario (o defecto)\n     * Permite reordenar los canales, desuscribirse y guardar la configuración\n     * @return {}\n     */\n    function pintaListadoCanalesSeleccionados() {\n\n        var ulCanales = $('<ul class=\"orden vertical\">');\n\n        var context = {};\n        var template = '<li class=\"itemCanal\" data-idcanal=\"{{nombre}}\">' +\n            '<span class=\"check sel\"></span>' +\n            //'<img src=\"http://estaticos.elmundo.es{{icono}}\" />' +\n            '{{nombre_completo|chop>23}}</li>';\n\n        $.each(arrayCanales, function(i, v) {\n            context = v.canal;\n            var result = Mark.up(template, context);\n            ulCanales.append(result);\n        });\n\n        $ordenCanales.find('.nano-content').html(ulCanales);\n        $ordenCanales\n            .find('.nano')\n            .nanoScroller({\n                scroll: 'top',\n                preventPageScrolling: true,\n                alwaysVisible: true,\n                iOSNativeScrolling: true\n            });\n    };\n\n    /**\n     * [lanzaHandlersSuscripicion description]\n     * @return {[type]} [description]\n     */\n    function lanzaHandlersSuscripicion() {\n\n        // Click en items de suscripción\n        $barraLetras.on('click', '.itemCanal', clickItemCanal);\n\n        // Click en checks en el panel de suscritos\n        $ordenCanales.on('click', '.check', clickCheckOrdenCanal);\n\n        // Click en suscribirCanales que hace aparecer el selector\n        $suscribirCanales.on('click', toggleSuscripcion);\n\n        // Click en letras de filtro\n        $barraLetras.on('click', '.itemLetra', clickFiltroLetra);\n\n        // Introducción de texto en campo txtBuscar\n        $barraLetras.on('click', '.fa-search', filtroCanal);\n        $('#txtBuscar').on('keyup', filtroCanal);\n\n        // Reordenación de elementos de canal, drag & drop\n        var adjustment;\n        var group = $('.ordenCanales ul.orden').sortable({\n            group: 'orden',\n            pullPlaceholder: true,\n            // animation on drop\n            onDrop: function($item, container, _super) {\n                var data = group.sortable(\"serialize\").get();\n                var jsonString = JSON.stringify(data, null, ' ');\n\n                var $clonedItem = $('<li/>').css({\n                    height: 0\n                });\n                $item.before($clonedItem);\n                $clonedItem.detach();\n\n                _super($item, container);\n            },\n\n            // set $item relative to cursor position\n            onDragStart: function($item, container, _super) {\n                var offset = $item.offset(),\n                    pointer = container.rootGroup.pointer;\n\n                // Tenemos en cuenta la posición del nanoScroller en ese momento\n                var posIniScroller = $('.ordenCanales .nano .nano-content').get(0).scrollTop;\n                posIniScroller = Math.floor(posIniScroller);\n\n                adjustment = {\n                    left: pointer.left - offset.left,\n                    top: pointer.top - offset.top - posIniScroller\n                };\n\n                _super($item, container);\n            },\n            onDrag: function($item, position) {\n                $item.css({\n                    left: position.left - adjustment.left,\n                    top: position.top - adjustment.top\n                });\n            }\n        });\n\n\n        /**\n         * Funcionalidad de clickar en un itemCanal de la lista de canales de suscripción\n         * @param  {Event} event Evento completo\n         * @return {}\n         */\n        function clickItemCanal(event) {\n\n            var $check = $(this).find('.check');\n            var bool = $check.hasClass('sel');\n            var idcanal = $(this).data('idcanal');\n            var $itemsCanal = $ordenCanales.find('.itemCanal').filter(function(index) {\n                return $(this).data('idcanal') === idcanal;\n            });\n\n            if (!bool) { // si nuestro elemento no está seleccionado\n\n                $check.toggleClass('sel');\n                if ($itemsCanal.length) { // si ya existe este canal en el panel de orden\n                    $itemsCanal.find('.check').toggleClass('sel');\n                } else { // si no existe este canal en el panel de orden\n                    $(this).clone().appendTo($ordenCanales.find('ul'));\n                }\n\n            } else { // si nuestro elemento está seleccionado\n                $check.toggleClass('sel');\n                $itemsCanal.find('.check').toggleClass('sel');\n            }\n\n            $ordenCanales\n                .find('.nano')\n                .nanoScroller()\n                .nanoScroller({\n                    scroll: 'bottom',\n                    alwaysVisible: true\n                });\n        };\n\n        /**\n         * Funcionalidad para reordenar los elementos itemCanal en el panel de orden\n         * @param  {Event} event Evento completo\n         * @return {}\n         */\n        function clickOrdenCanal(event) {\n            //console.log('click en itemCanal');\n        };\n\n        /**\n         * Funcionalidad de clickar el checkbox en los itemsCanal del panel de orden\n         * @param  {Event} event Evento completo\n         * @return {}\n         */\n        function clickCheckOrdenCanal(event) {\n            event.stopPropagation();\n            var idcanal = $(this).parent('.itemCanal').data('idcanal');\n            var $itemsCanal = $barraLetras.find('.itemCanal').filter(function(index) {\n                return $(this).data('idcanal') === idcanal;\n            });\n\n            $(this).toggleClass('sel');\n            $itemsCanal.find('.check').toggleClass('sel');\n        };\n\n        /**\n         * Hace aparecer o desaparecer la capa con toda la información de suscripción\n         * @param  {Event} event Evento completo\n         * @return {}\n         */\n        function toggleSuscripcion(event) {\n            $(this).toggleClass('activo');\n            $selectorCanales.toggle('fast');\n            $ordenCanales\n                .find('.nano')\n                .nanoScroller()\n                .nanoScroller({\n                    scroll: 'top',\n                    alwaysVisible: true\n                });\n            $barraLetras\n                .find('.nano')\n                .nanoScroller()\n                .nanoScroller({\n                    scroll: 'top',\n                    alwaysVisible: true\n                });\n        };\n\n        /**\n         * Filtra la selección de canales por su letra de comienzo\n         * @param  {Event} event Evento completo\n         * @return {}\n         */\n        function clickFiltroLetra(event) {\n            var letra = $(this).data('letra');\n            var $coleccion = $barraLetras.find('.itemCanal');\n            var yaClickado = $(this).hasClass('activo');\n\n            if (yaClickado) {\n                $coleccion.show();\n                $(this).removeClass('activo');\n            } else {\n                var $sel = $coleccion.filter(function() {\n                    return $(this).data('letra') == letra;\n                });\n                $sel.show();\n                $coleccion.not($sel).hide();\n                $(this).addClass('activo');\n            }\n\n            $barraLetras\n                .find('.nano')\n                .nanoScroller()\n                .nanoScroller({\n                    scroll: 'top',\n                    alwaysVisible: true\n                });\n        };\n        /**\n         * Filtra la selección de canales por una cadena de texto\n         * @param  {String} cadena Texto para comparar con el nombre del canal\n         * @return {}\n         */\n        function filtroCanal(event) {\n            // console.log(event.type);\n            var campoTxt = $('#txtBuscar'),\n                cadena = campoTxt.val(),\n                $sel;\n            var $coleccion = $barraLetras.find('.itemCanal');\n            if (cadena.length >= 3 && cadena != ' ' && cadena != '' && cadena != undefined) {\n                $sel = $coleccion.filter(function() {\n                    var nombreCanal = $.trim($(this).text());\n                    return nombreCanal.indexOf(cadena) > -1;\n                });\n            }\n            $sel.show();\n            $coleccion.not($sel).hide();\n        };\n\n    };\n\n    /** INIT **/\n    (function init() {\n\n        $selectorCanales.hide();\n\n        var cargaInfoCookies = cargaCookies();\n        var cargaInfoCanales = cargaInfoCookies.then(function(res) {\n                canalesUsuario = res;\n                return cargaDatosCanales(canalesUsuario);\n            })\n            .then(function() {\n                pintaCanales(canalesUsuario); // Pintar en el orden en que llegan de la cookie\n                pintaParrilla(canalesUsuario, arrayCanales); // Pintar en el orden en que llegan de la cookie\n                pintaHorasParrilla(); // Pintar la barra superior de horario\n                pintaSelectorDias(); // Pintamos los literales de los días contemplados en parrilla\n\n                pintaHoraActual(); // Posiciona el marcador de hora actual en la parrilla\n                situaParrillaAhora(); // Posiciona la parrilla y elementos en la fecha y hora actual\n                lanzaHandlers(); // Lanza todos los event listeners\n\n                pintaListadoCanalesSeleccionados(); // Pintamos el área de canales seleccionados\n                pintaListadoCanalesSuscripcion(); // Pintamos el selector de canales completo al pie\n\n                lanzaHandlersSuscripicion(); // Lanza todos los events listeners de suscripción a canales\n            });\n\n        //cargaInfoUsuario(); // Carga la información sobre programas favoritos y alertas de un usuario validado\n        //pintaProgsUsuario(); // Modifica las clases de los programas que el usuario tenga como favoritos o alertas\n\n    })();\n\n    /** Helper **/\n    $.fn.exists = function() {\n        return this.length > 0;\n    }\n\n    return this;\n\n})(jq111);\n\n/**\n * Crea una cookie\n * @param  {string} name  Nombre de la cookie\n * @param  {object} value Valor de la cookie\n * @param  {int} days  Número de días de vigencia\n * @return {}\n */\nfunction createCookie(name, value, days) {\n    var expires;\n\n    if (days) {\n        var date = new Date();\n        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));\n        expires = \"; expires=\" + date.toGMTString();\n    } else {\n        expires = \"\";\n    }\n    document.cookie = escape(name) + \"=\" + escape(value) + expires + \"; path=/\";\n}\n/**\n * Lee una cookie\n * @param  {string} name Nombre de la cookie\n * @return {string}      Valor de la cookie\n */\nfunction readCookie(name) {\n    var nameEQ = escape(name) + \"=\";\n    var ca = document.cookie.split(';');\n    for (var i = 0; i < ca.length; i++) {\n        var c = ca[i];\n        while (c.charAt(0) === ' ') c = c.substring(1, c.length);\n        if (c.indexOf(nameEQ) === 0) return unescape(c.substring(nameEQ.length, c.length));\n    }\n    return null;\n}\n/**\n * Elimina una cookie\n * @param  {string} name Nombre de la cookie\n * @return {}\n */\nfunction eraseCookie(name) {\n    createCookie(name, \"\", -1);\n}\n\n/**\n * Devuelve un número como cadena formateada con ceros a la izda\n * @param  {number} number       El número original\n * @param  {integer} targetLength Número de caracteres que queremos obtener\n * @return {string}              Cadena compuesta de ceros y el número original\n */\nfunction leftPad(number, targetLength) {\n    var output = number + '';\n    while (output.length < targetLength) {\n        output = '0' + output;\n    }\n    return output;\n}\n\n/**\n * Prototipo para obtener números máximo y mínimo en un array\n * @return {int} Devuelve el max/min de un array dado\n */\nArray.prototype.max = function() {\n    var max = this[0];\n    var len = this.length;\n    for (var i = 1; i < len; i++)\n        if (this[i] > max) max = this[i];\n    return max;\n};\nArray.prototype.min = function() {\n    var min = this[0];\n    var len = this.length;\n    for (var i = 1; i < len; i++)\n        if (this[i] < min) min = this[i];\n    return min;\n};",
 			"file": "_/js/app.js",
-			"file_size": 41912,
-			"file_write_time": 130596640529099859,
 			"settings":
 			{
-				"buffer_size": 40710,
+				"buffer_size": 40212,
 				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": ".jscsrc",
+			"settings":
+			{
+				"buffer_size": 676,
+				"line_ending": "Unix"
 			}
 		},
 		{
@@ -197,32 +202,34 @@
 				"buffer_size": 21578,
 				"line_ending": "Windows"
 			}
-		},
-		{
-			"file": "_/_scripts/_dragndrop.js",
-			"settings":
-			{
-				"buffer_size": 15811,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": "Package Control Messages\n========================\n\nSeti_UI:\n-------\n\n  v1.10 (10-11-2014)\n  -------------------\n  \n  1. a better folder structure for easier maintainability.\n  2. readme and instal updated.\n  3. ScreenShots updated.\n  \n\n  v1.9.2 (6-11-2014)\n  -------------------\n  \n  1. git-gutter is added for those who needs it by Jonathan (https://github.com/jonathanhirz) ,like b4 you know what to do :).\n  2. diff 'to & from' now have a different color.\n  \n\n  v1.9.1 (6-11-2014)\n  -------------------\n  \n  1. better syntax HL for diff (v1.9 re-fix).\n  \n\n  v1.9 (6-11-2014)\n  -------------------\n  \n  1. fixed the diff highlight ,sorry i didnt notice that all scopes had the same color (white).\n  2. for those who still uses Monokai ,skechboy (https://github.com/skechboy) have made a port for you so show em some love.\n  \n\n  v1.8.2 (5-11-2014)\n  -------------------\n  \n  1. re-fixed HTML scope.\n  \n  \n\n  v1.8.1 (5-11-2014)\n  -------------------\n  \n  1. fixed wrong icons for Html / Haml.\n  2. json still doesnt show its icon \"at least on my pc\" ,if any found a solution plz advice.\n  \n  \n\n  v1.8 (3-11-2014)\n  -------------------\n  \n  1. apacheconfig & blade support added ,don't forget to install the respective syntax.\n  \n\n  v1.7.3 (3-11-2014)\n  -------------------\n  \n  1. A new branch created for those who wants to make changes to the main theme ,\n  it will contain only the different files to avoid confusion.\n  \n  2. added diff syntax.\n  \n\n  v1.7.2 (1-11-2014)\n  -------------------\n  \n  1. updated readme.\n  \n\n  v1.7.1 (19-10-2014)\n  -------------------\n  \n  1. fixed fold arrows orientation.\n  \n\n  v1.7 (16-10-2014)\n  -------------------\n  \n  1. fixed right & left tabset arrows ,now it should look sharp on Retina's.\n  \n\n  v1.6.3 (08-10-2014)\n  -------------------\n  \n  1. some couldn't get the (Golang & Jade) to work without the setting files so now they are included.\n  \n\n  v1.6.1 (08-10-2014)\n  -------------------\n  \n  1. fixed theme showing corrupted graphics.\n  \n\n  v1.6 (08-10-2014)\n  -------------------\n  \n  1. Golang & Jade icons added\n  \n  2. Changed the Seti folder name to Main for easier maintenance.\n  \n  3. Cleaned up more of the un-working file-types & related icons ,which can be found in \"not-working\" folder.\n  \n\n  v1.5 (18-09-2014)\n  -------------------\n  \n  1. Added Seti_orig for those who wants the original scheme ,keep in mind that some scope still have different colors (St is not Atom)\n  \n  - you can install it by\n  ```\n  \"color_scheme\": \"Packages/Seti_UI/Seti_orig.tmTheme\",\n  ```\n  \n  2.if you don't like any of the included schemes ,i feel you & am already working on a much richer/better one so stay tuned.\n  \n\n  v1.4.1 (16-09-2014)\n  -------------------\n  \n  1. fixed Rust scope.\n  2. changed quick panel row padding to work better with other plugins that use menus.\n  \n\n  v1.4 (15-09-2014)\n  -------------------\n  \n  1. Added Rust File Icons\n  2. fixed theme folder name in readme.\n  \n\n  v1.3 (12-09-2014)\n  -------------------\n  \n  1. Updated HTML definition to include more file types.\n  \n\n  v1.2 (11-09-2014)\n  -------------------\n  1-manual install is back.\n  \n  2-scss icons are added.\n  \n  3-fixed global tag scope color\n  \n  4-added slim to html icon settings file.\n  \n  5-the html file will look different than the original Atom, I changed the scopes color intentionally for easier reading, please tell me if you want the old one.\n  \n  6-looking for a Jade icon, so if you have any ideas message me.\n  \n\n  v1.1 (10-09-2014)\n  -------------------\n  1-No more manual install as its not recommended.\n  \n  2-Fixed package name + other files so it work as soon as u install it without probs.\n  \n\n  v1.0 (9-09-2014)\n  -------------------\n  Hey there,\n  \n  \n  # Init Release\n  ==============\n  v1.0\n  \n\n\nSublimeLinter:\n-------------\n\n  ************************\n  * Good news, everyone! *\n  ************************\n  \n  We have had great support recently and are truly \n  thankful to everyone who has wished Aparajita a \n  fond farewell. We expect he will continue to \n  contribute in the future and appreciate the \n  amazing stewardship he has shown to the project.\n  \n  Please join us in welcoming Blake (@skj3gg) as \n  the new project administrator for the SublimeLinter \n  organization. We know the project will continue \n  for a long time to come with this new change in \n  leadership. Our number one priority will always be\n  to help developers craft better code.\n  \n  As a final note, all donations will continue to go\n  to Aparajita until November 14, 2014, so please\n  consider thanking him for his services before that\n  time.\n  \n\n\nSeti_UI:\n-------\n\n  # Install\n  ---------------\n  \n  Activate the UI theme and color scheme by modifying your user preferences file, which you can find using the menu item `Preferences -> Settings - User` in Sublime Text or get `Schemr` & `Themr` by [Ben Weier](https://github.com/benweier).\n  \n  \n  > Example\n  ```\n  {\n    \"theme\": \"Seti.sublime-theme\",\n    \"color_scheme\": \"Packages/Seti_UI/Scheme/Seti.tmTheme\",\n    \"caret_extra_width\": 2 // to have a wider/thicker caret\n  }\n  ```\n  \n  - copy the (fold.png) \"or edit it if you want\" to (Packages/Theme - Default) to override the _focken default yellow icon.\n  \n  - for better recognition of files types, its recommended to install [Apply​Syntax](https://sublime.wbond.net/packages/ApplySyntax) by facelessuser.\n  \n  \n  ## Folder Contents\n  ----------------------\n  \n  +Res\n  \n    |-Ext         > copy the content of this folder to your 'Packages/User' folder so (Extensions/Files) can recognize their correct language/icons.\n  \n    |-File_Types  > are for testing the icons with, if you don't need it you can simply remove it.\n  \n    |-Not_Working > are icon setting files for some files which i don't currently have any '?-syntax.tmlanguage' for, so again if you don't need any of them you can remove it as well.\n  \n",
-			"settings":
-			{
-				"buffer_size": 5865,
-				"line_ending": "Windows",
-				"name": "Package Control Messages",
-				"scratch": true
-			}
 		}
 	],
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 53.0,
+		"height": 97.0,
 		"selected_items":
 		[
+			[
+				"remove pack",
+				"Package Control: Remove Package"
+			],
+			[
+				"remove pac",
+				"Package Control: Remove Package"
+			],
+			[
+				"fixm",
+				"FixMyJS"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
 			[
 				"install pac",
 				"Package Control: Install Package"
@@ -238,10 +245,6 @@
 			[
 				"pack up",
 				"Package Control: Upgrade/Overwrite All Packages"
-			],
-			[
-				"inst",
-				"Package Control: Install Package"
 			],
 			[
 				"list",
@@ -284,10 +287,6 @@
 				"SFTP: Diff Remote File"
 			],
 			[
-				"insta",
-				"Package Control: Install Package"
-			],
-			[
 				"ins",
 				"Package Control: Install Package"
 			]
@@ -322,6 +321,17 @@
 	],
 	"file_history":
 	[
+		"/C/Users/Enrique.Borreda/AppData/Roaming/Sublime Text 3/Packages/User/SublimeLinter.sublime-settings",
+		"/C/Users/Enrique.Borreda/Dropbox/_sandbox/guia-tv/.jscsrc",
+		"/C/Users/Enrique.Borreda/Dropbox/Sublime/share-config.bat",
+		"/C/Users/Enrique.Borreda/AppData/Roaming/Sublime Text 3/Packages/JSHint Gutter/JSHint.sublime-settings",
+		"/C/Users/Enrique.Borreda/AppData/Roaming/Sublime Text 3/Packages/User/Default (Windows).sublime-keymap",
+		"/C/Users/Enrique.Borreda/AppData/Roaming/Sublime Text 3/Packages/SublimeLinter/SublimeLinter.sublime-settings",
+		"/C/Users/Enrique.Borreda/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/C/Users/Enrique.Borreda/AppData/Roaming/Sublime Text 3/Packages/User/HTML.sublime-settings",
+		"/C/Users/Enrique.Borreda/AppData/Roaming/Sublime Text 3/Packages/User/JavaScript.sublime-settings",
+		"/C/Users/Enrique.Borreda/AppData/Roaming/Sublime Text 3/Packages/Seti_UI/Scheme/Seti.tmTheme",
+		"/C/Users/Enrique.Borreda/AppData/Roaming/Sublime Text 3/Packages/User/Plain text.sublime-settings",
 		"/C/Users/Enrique.Borreda/AppData/Roaming/Sublime Text 3/Packages/GitGutter/GitGutter.sublime-settings",
 		"/C/Users/Enrique.Borreda/AppData/Roaming/Sublime Text 3/Packages/Git/Git.sublime-settings",
 		"/C/Users/Enrique.Borreda/Dropbox/_sandbox/guia-tv/_/js/jquery.touchSwipe.js",
@@ -332,9 +342,6 @@
 		"/C/Users/Enrique.Borreda/Dropbox/_sandbox/guia-tv/_/scss/_mixins.scss",
 		"/C/Users/Enrique.Borreda/Dropbox/_sandbox/guia-tv/_/scss/_bordered-pulled.scss",
 		"/C/Users/Enrique.Borreda/Dropbox/_sandbox/guia-tv/_/scss/_font-awesome.scss",
-		"/C/Users/Enrique.Borreda/AppData/Roaming/Sublime Text 3/Packages/User/JavaScript.sublime-settings",
-		"/C/Users/Enrique.Borreda/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
-		"/C/Users/Enrique.Borreda/AppData/Roaming/Sublime Text 3/Packages/User/HTML.sublime-settings",
 		"/C/Users/Enrique.Borreda/Dropbox/_sandbox/guia-tv/datos/antena3.js",
 		"/C/Users/Enrique.Borreda/Dropbox/_sandbox/guia-tv/datos/listadocanales.json",
 		"/C/Users/Enrique.Borreda/Dropbox/_sandbox/guia-tv/media-queries.css",
@@ -342,7 +349,6 @@
 		"/C/Users/Enrique.Borreda/Dropbox/_sandbox/guia-tv/css/_estilos.css",
 		"/C/Users/Enrique.Borreda/Dropbox/_sandbox/guia-tv/gulpfile.js",
 		"/C/Users/Enrique.Borreda/AppData/Roaming/Sublime Text 3/Packages/JSHint Gutter/.jshintrc",
-		"/C/Users/Enrique.Borreda/AppData/Roaming/Sublime Text 3/Packages/JSHint Gutter/JSHint.sublime-settings",
 		"/C/Users/Enrique.Borreda/AppData/Roaming/Sublime Text 3/Packages/HTML-CSS-JS Prettify/.jsbeautifyrc",
 		"/C/Users/Enrique.Borreda/AppData/Roaming/Sublime Text 3/Packages/FixMyJS/FixMyJS.sublime-settings",
 		"/C/Users/Enrique.Borreda/Dropbox/_sandbox/guia-tv/datos/antena3.json",
@@ -439,14 +445,10 @@
 		"/C/Users/Enrique.Borreda/Documents/ng-book-code/7_beginning-directives/js/wip.js",
 		"/C/_codigo/elmundo.sublime-workspace",
 		"/C/Users/Enrique.Borreda/Documents/_codigo/elmundo/uedit/web/css_movil/js/ue-utils.js",
-		"/C/Users/Enrique.Borreda/AppData/Roaming/Sublime Text 3/Packages/User/Default (Windows).sublime-keymap",
 		"/C/Users/Enrique.Borreda/Documents/_codigo/elmundo/uedit/web/css_desktop/js/ue-utils.js",
 		"/C/Users/Enrique.Borreda/Documents/_codigo/elmundo/uedit/web/css_desktop/js/ue-lbox.js",
 		"/C/Users/Enrique.Borreda/Documents/_codigo/elmundo/uedit/web/css_desktop/js/bundle.js",
-		"/C/Users/Enrique.Borreda/Documents/_codigo/elmundo/sftp-config.json",
-		"/C/Users/Enrique.Borreda/Documents/_sandbox/encapsular_jquery/css_desktop/sftp-config.json",
-		"/C/Users/Enrique.Borreda/Documents/_sandbox/encapsular_jquery/index.html",
-		"/C/Users/Enrique.Borreda/Documents/_sandbox/encapsular_jquery/constructor.js"
+		"/C/Users/Enrique.Borreda/Documents/_codigo/elmundo/sftp-config.json"
 	],
 	"find":
 	{
@@ -464,6 +466,11 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"clickCheckOrdenCanal",
+			"horaActual",
+			"situaParrillaAhora",
+			"$botonesCanales",
+			".viewPort",
 			"$contProgramas",
 			"clickPrograma",
 			"nanoScroller",
@@ -560,19 +567,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4760,
+						"buffer_size": 4804,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3135,
-								3135
-							],
-							[
-								3438,
-								3438
+								3975,
+								3975
 							]
 						],
 						"settings":
@@ -582,16 +585,21 @@
 							"apply_syntax_touched": true,
 							"bh_regions":
 							[
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
 								"bh_round",
 								"bh_round_center",
 								"bh_round_open",
@@ -602,6 +610,26 @@
 								"bh_default_open",
 								"bh_default_close",
 								"bh_default_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
 								"bh_c_define",
 								"bh_c_define_center",
 								"bh_c_define_open",
@@ -611,32 +639,7 @@
 								"bh_curly_center",
 								"bh_curly_open",
 								"bh_curly_close",
-								"bh_curly_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content"
+								"bh_curly_content"
 							],
 							"encoding_helper_encoding": "UTF-8",
 							"incomplete_sync": null,
@@ -648,10 +651,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1248.0,
+						"translation.y": 1104.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
@@ -660,15 +663,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 40710,
+						"buffer_size": 40212,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								15950,
-								15950
+								2721,
+								2721
 							]
 						],
 						"settings":
@@ -677,61 +680,61 @@
 							"apply_syntax_touched": true,
 							"bh_regions":
 							[
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
 								"bh_single_quote",
 								"bh_single_quote_center",
 								"bh_single_quote_open",
 								"bh_single_quote_close",
 								"bh_single_quote_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
 								"bh_double_quote",
 								"bh_double_quote_center",
 								"bh_double_quote_open",
 								"bh_double_quote_close",
 								"bh_double_quote_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
 								"bh_tag",
 								"bh_tag_center",
 								"bh_tag_open",
 								"bh_tag_close",
-								"bh_tag_content"
+								"bh_tag_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content"
 							],
 							"encoding_helper_encoding": "UTF-8",
 							"incomplete_sync": null,
@@ -743,20 +746,114 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 6992.0,
+						"translation.y": 1728.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": ".jscsrc",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 676,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								407,
+								407
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"apply_syntax_touched": true,
+							"bh_regions":
+							[
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content"
+							],
+							"encoding_helper_encoding": "UTF-8",
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JSON.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
 					"type": "text"
 				}
 			]
 		},
 		{
-			"selected": 2,
+			"selected": 0,
 			"sheets":
 			[
 				{
-					"buffer": 2,
+					"buffer": 3,
 					"file": "_/scss/estilos.scss",
 					"semi_transient": false,
 					"settings":
@@ -768,8 +865,8 @@
 						"selection":
 						[
 							[
-								6152,
-								6171
+								20006,
+								20006
 							]
 						],
 						"settings":
@@ -778,61 +875,61 @@
 							"apply_syntax_touched": true,
 							"bh_regions":
 							[
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
 								"bh_single_quote",
 								"bh_single_quote_center",
 								"bh_single_quote_open",
 								"bh_single_quote_close",
 								"bh_single_quote_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
 								"bh_double_quote",
 								"bh_double_quote_center",
 								"bh_double_quote_open",
 								"bh_double_quote_close",
 								"bh_double_quote_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content"
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content"
 							],
 							"encoding_helper_encoding": "UTF-8",
 							"incomplete_sync": null,
@@ -842,194 +939,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 4309.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "_/_scripts/_dragndrop.js",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 15811,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								8861,
-								8861
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"apply_syntax_touched": true,
-							"bh_regions":
-							[
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content"
-							],
-							"encoding_helper_encoding": "UTF-8",
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 6480.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 5865,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								408,
-								408
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"apply_syntax_touched": true,
-							"bh_regions":
-							[
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content"
-							],
-							"encoding_helper_encoding": "",
-							"incomplete_sync": null,
-							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"word_wrap": true
-						},
-						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 3,
 					"type": "text"
 				}
 			]
@@ -1115,7 +1028,7 @@
 		],
 		"width": 0.0
 	},
-	"selected_group": 1,
+	"selected_group": 0,
 	"settings":
 	{
 	},

@@ -496,7 +496,6 @@ var guiaTV = (function($) {
                     'left': posX + 'px'
                 });
 
-
             } else if (phase == 'cancel') {
                 $contProgramas.removeClass('dragging');
             } else if (phase == 'end') {
@@ -512,7 +511,7 @@ var guiaTV = (function($) {
          */
         function clickHora(event) {
             var mueveA = parseInt($(this).css('left'));
-            mueveA = parseInt((anchoViewport * .5) - mueveA);
+            mueveA = parseInt((anchoViewport * 0.5) - mueveA);
             mueveProgramasAPunto(mueveA);
         };
 
@@ -540,26 +539,9 @@ var guiaTV = (function($) {
                 progId = $elemPadre.attr('id');
             cargaFichaPrograma(progId, progUrl);
 
-            var mueveA = parseInt($elemPadre.css('left')) + $elemPadre.width() * .5;
-            mueveA = parseInt((anchoViewport * .5) - mueveA);
+            var mueveA = parseInt($elemPadre.css('left')) + $elemPadre.width() * 0.5;
+            mueveA = parseInt((anchoViewport * 0.5) - mueveA);
             mueveProgramasAPunto(mueveA);
-
-            /* Verión no mobile
-            if (!seHaMovido) {
-                isDrag = false;
-                // TODO Compatibilidad con iPad antiguos ..
-                var elem = document.elementFromPoint(event.clientX, event.clientY),
-                    $elemPadre = $(elem).is('.itemPrograma') ? $(elem) : $(elem).closest('.itemPrograma');
-
-                var progUrl = $elemPadre.find('a').attr('href'),
-                    progId = $elemPadre.attr('id');
-                cargaFichaPrograma(progId, progUrl);
-
-                var mueveA = parseInt($elemPadre.css('left')) + $elemPadre.width() * .5;
-                mueveA = parseInt((anchoViewport * .5) - mueveA);
-                mueveProgramasAPunto(mueveA);
-            }
-            */
         };
 
         /**
@@ -574,7 +556,7 @@ var guiaTV = (function($) {
             cierraFicha();
 
             $.ajax({
-                url: "fichaPrograma.html",
+                url: 'fichaPrograma.html',
                 data: {
                     'progId': progId
                 },
@@ -598,7 +580,7 @@ var guiaTV = (function($) {
                         $fichaPrograma.find('.cierra').on('click', function(event) {
                             event.preventDefault();
                             cierraFicha();
-                        })
+                        });
                     });
                 });
 
@@ -726,9 +708,8 @@ var guiaTV = (function($) {
     function pintaListadoCanalesSuscripcion() {
 
         var ulLetras = $('<ul class="listaCanales clearfix">'),
-            fichero = 'datos/listadocanales.json';
-
-        var contextLetras = {},
+            fichero = 'datos/listadocanales.json',
+            contextLetras = {},
             templateLetras = '{{letras}}<li class="itemLetra" data-letra="{{.}}">{{.}}</li>{{/letras}}';
 
         contextLetras.letras = [];
@@ -791,10 +772,9 @@ var guiaTV = (function($) {
      */
     function pintaListadoCanalesSeleccionados() {
 
-        var ulCanales = $('<ul class="orden vertical">');
-
-        var context = {};
-        var template = '<li class="itemCanal" data-idcanal="{{nombre}}">' +
+        var ulCanales = $('<ul class="orden vertical">'),
+            context = {},
+            template = '<li class="itemCanal" data-idcanal="{{nombre}}">' +
             '<span class="check sel"></span>' +
             //'<img src="http://estaticos.elmundo.es{{icono}}" />' +
             '{{nombre_completo|chop>23}}</li>';
@@ -839,47 +819,47 @@ var guiaTV = (function($) {
         $('#txtBuscar').on('keyup', filtroCanal);
 
         // Reordenación de elementos de canal, drag & drop
-        var adjustment;
-        var group = $ordenCanales.find('ul.orden').sortable({
-            group: 'orden',
-            pullPlaceholder: true,
-            // animation on drop
-            onDrop: function($item, container, _super) {
-                var data = group.sortable("serialize").get();
-                var jsonString = JSON.stringify(data, null, ' ');
+        var adjustment,
+            group = $ordenCanales.find('ul.orden').sortable({
+                group: 'orden',
+                pullPlaceholder: true,
+                // animation on drop
+                onDrop: function($item, container, _super) {
+                    var data = group.sortable("serialize").get();
+                    var jsonString = JSON.stringify(data, null, ' ');
 
-                var $clonedItem = $('<li/>').css({
-                    height: 0
-                });
-                $item.before($clonedItem);
-                $clonedItem.detach();
+                    var $clonedItem = $('<li/>').css({
+                        height: 0
+                    });
+                    $item.before($clonedItem);
+                    $clonedItem.detach();
 
-                _super($item, container);
-            },
+                    _super($item, container);
+                },
 
-            // set $item relative to cursor position
-            onDragStart: function($item, container, _super) {
-                var offset = $item.offset(),
-                    pointer = container.rootGroup.pointer;
+                // set $item relative to cursor position
+                onDragStart: function($item, container, _super) {
+                    var offset = $item.offset(),
+                        pointer = container.rootGroup.pointer;
 
-                // Tenemos en cuenta la posición del nanoScroller en ese momento
-                var posIniScroller = $ordenCanales.find('.nano-content').get(0).scrollTop;
-                posIniScroller = Math.floor(posIniScroller);
+                    // Tenemos en cuenta la posición del nanoScroller en ese momento
+                    var posIniScroller = $ordenCanales.find('.nano-content').get(0).scrollTop;
+                    posIniScroller = Math.floor(posIniScroller);
 
-                adjustment = {
-                    left: pointer.left - offset.left,
-                    top: pointer.top - offset.top - posIniScroller
-                };
+                    adjustment = {
+                        left: pointer.left - offset.left,
+                        top: pointer.top - offset.top - posIniScroller
+                    };
 
-                _super($item, container);
-            },
-            onDrag: function($item, position) {
-                $item.css({
-                    left: position.left - adjustment.left,
-                    top: position.top - adjustment.top
-                });
-            }
-        });
+                    _super($item, container);
+                },
+                onDrag: function($item, position) {
+                    $item.css({
+                        left: position.left - adjustment.left,
+                        top: position.top - adjustment.top
+                    });
+                }
+            });
 
 
         /**
@@ -889,12 +869,12 @@ var guiaTV = (function($) {
          */
         function clickItemCanal(event) {
 
-            var $check = $(this).find('.check');
-            var bool = $check.hasClass('sel');
-            var idcanal = $(this).data('idcanal');
-            var $itemsCanal = $ordenCanales.find('.itemCanal').filter(function(index) {
-                return $(this).data('idcanal') === idcanal;
-            });
+            var $check = $(this).find('.check'),
+                bool = $check.hasClass('sel'),
+                idcanal = $(this).data('idcanal'),
+                $itemsCanal = $ordenCanales.find('.itemCanal').filter(function(index) {
+                    return $(this).data('idcanal') === idcanal;
+                });
 
             if (!bool) { // si nuestro elemento no está seleccionado
 
@@ -928,10 +908,10 @@ var guiaTV = (function($) {
             event.preventDefault();
             event.stopPropagation();
             event.stopImmediatePropagation();
-            var idcanal = $(this).parent('.itemCanal').data('idcanal');
-            var $itemsCanal = $barraLetras.find('.itemCanal').filter(function(index) {
-                return $(this).data('idcanal') === idcanal;
-            });
+            var idcanal = $(this).parent('.itemCanal').data('idcanal'),
+                $itemsCanal = $barraLetras.find('.itemCanal').filter(function(index) {
+                    return $(this).data('idcanal') === idcanal;
+                });
 
             $(this).toggleClass('sel');
             $itemsCanal.find('.check').toggleClass('sel');
@@ -967,11 +947,11 @@ var guiaTV = (function($) {
          * @return {}
          */
         function clickFiltroLetra(event) {
-            var $letra = $(this);
-            var $hermanos = $(this).siblings('.itemLetra');
-            var letra = $letra.data('letra');
-            var $coleccion = $barraLetras.find('.itemCanal');
-            var yaClickado = $letra.hasClass('activo');
+            var $letra = $(this),
+                $hermanos = $(this).siblings('.itemLetra'),
+                letra = $letra.data('letra'),
+                $coleccion = $barraLetras.find('.itemCanal'),
+                yaClickado = $letra.hasClass('activo');
 
             if (yaClickado) {
                 $coleccion.show();
@@ -1004,8 +984,8 @@ var guiaTV = (function($) {
             // console.log(event.type);
             var $campoTxt = $('#txtBuscar'),
                 cadena = $campoTxt.val(),
-                $sel;
-            var $coleccion = $barraLetras.find('.itemCanal');
+                $sel,
+                $coleccion = $barraLetras.find('.itemCanal');
             if (cadena.length >= 3 && cadena != ' ' && cadena != '' && cadena != undefined) {
                 $sel = $coleccion.filter(function() {
                     var nombreCanal = $.trim($(this).text());
