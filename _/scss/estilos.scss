@@ -3,6 +3,7 @@
 @import "compass/css3/animation";
 @import "fontawesome/font-awesome";
 @import "nanoscroller";
+@import "mixins/no-selectable";
 
 //colors
 $color_0: black;
@@ -228,6 +229,7 @@ h1 {
 	min-width: 5000px;
 	min-height: 455px;
 	z-index: 0;
+	@include no-selectable;
 	.lineaCanal {
 		position: relative;
 		display: block;
@@ -273,7 +275,7 @@ h1 {
 	cursor: pointer;
 	border-left:1px solid $color_lineas_parrilla;
 	border-bottom:1px solid $color_lineas_parrilla;
-	user-selected:none;
+	@include no-selectable;
 	z-index:0;
 
 	.mascara {
